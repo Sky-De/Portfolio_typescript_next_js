@@ -1,6 +1,17 @@
 "use client";
 import { motion, Variants } from "framer-motion";
+import { useRef } from "react";
 export default function Home() {
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+  const handlePlay = () => {
+    const video = videoRef.current;
+    if (video) {
+      if (video.requestFullscreen) {
+        video.requestFullscreen();
+      }
+      video.play();
+    }
+  };
   return (
     <main className="main overflow-y-scroll snap-y snap-mandatory">
       <motion.section
@@ -15,7 +26,12 @@ export default function Home() {
         id="1"
         className="section snap-start snap-always border"
       >
-        intro
+        <video
+          src="https://res.cloudinary.com/dxukz1zt5/video/upload/v1698421286/portfolio/ipn7ccnmpjl2umzt4nn7.mp4"
+          controls
+          onPlay={handlePlay}
+          ref={videoRef}
+        ></video>
       </motion.section>
       <motion.section
         variants={{
