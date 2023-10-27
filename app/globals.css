@@ -3,25 +3,36 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --header: 50px;
+  --footer: 50px;
+  --max-width-container: 1200px;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.main {
+  max-height: calc(100vh - var(--header) - var(--footer));
+  scroll-behavior: smooth !important;
+}
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid red;
+  max-width: var(--max-width-container);
+  margin: 0 auto;
+  max-height: calc(100vh - var(--header) - var(--footer));
+  min-height: calc(100vh - var(--header) - var(--footer));
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.header {
+  height: var(--header);
+  border: 2px solid rgb(17, 0, 255);
 }
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.header__content {
+  max-width: var(--max-width-container);
+}
+.footer {
+  height: var(--footer);
+  border: 2px solid rgb(9, 226, 81);
 }

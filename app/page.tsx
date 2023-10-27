@@ -1,17 +1,91 @@
-import Image from "next/image";
-
+"use client";
+import { motion, Variants } from "framer-motion";
 export default function Home() {
   return (
-    <main className="flex flex-col items-center justify-between p-24 border">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <h2>By skyDe</h2>
-        </div>
-      </div>
-
-      <div className="">
-        <h1>Portfolio</h1>
-      </div>
+    <main className="main overflow-y-scroll snap-y snap-mandatory">
+      <motion.section
+        variants={{
+          hide: { opacity: 0 },
+          show: { opacity: 1 },
+        }}
+        initial="hide"
+        whileInView="show"
+        viewport={{ amount: 0.8 }}
+        transition={{ duration: 0.5, delay: 0.25 }}
+        id="1"
+        className="section snap-start snap-always border"
+      >
+        intro
+      </motion.section>
+      <motion.section
+        variants={{
+          hide: { opacity: 0 },
+          show: { opacity: 1 },
+        }}
+        initial="hide"
+        whileInView="show"
+        transition={{ duration: 0.5, delay: 0.5 }}
+        id="2"
+        className="section snap-start snap-always border"
+      >
+        skills
+      </motion.section>
+      <motion.section
+        variants={{
+          hide: { opacity: 0 },
+          show: { opacity: 1 },
+        }}
+        initial="hide"
+        whileInView="show"
+        viewport={{ amount: 0.8 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
+        id="3"
+        className="section snap-start snap-always border"
+      >
+        projects
+      </motion.section>
+      <motion.section
+        variants={{
+          hide: { opacity: 0 },
+          show: { opacity: 1 },
+        }}
+        initial="hide"
+        whileInView="show"
+        viewport={{ amount: 0.8 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
+        id="4"
+        className="section snap-start snap-always border"
+      >
+        to learn
+      </motion.section>
+      <motion.section
+        variants={{
+          hide: { opacity: 0 },
+          show: { opacity: 1 },
+        }}
+        initial="hide"
+        whileInView="show"
+        viewport={{ amount: 0.8 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
+        id="5"
+        className="section snap-start snap-always border"
+      >
+        contact
+      </motion.section>
+      <motion.section
+        variants={{
+          hide: { opacity: 0 },
+          show: { opacity: 1 },
+        }}
+        initial="hide"
+        whileInView="show"
+        viewport={{ amount: 0.8 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
+        id="6"
+        className="section snap-start snap-always border"
+      >
+        about
+      </motion.section>
     </main>
   );
 }
