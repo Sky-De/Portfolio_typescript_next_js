@@ -1,5 +1,6 @@
 "use client";
-import { motion, Variants } from "framer-motion";
+import SkillsHero from "@/components/skillsHero/SkillsHero";
+import { motion } from "framer-motion";
 import { useRef } from "react";
 export default function Home() {
   const videoRef = useRef<HTMLVideoElement | null>(null);
@@ -26,12 +27,7 @@ export default function Home() {
         id="1"
         className="section snap-start snap-always border"
       >
-        <video
-          src="https://res.cloudinary.com/dxukz1zt5/video/upload/v1698421286/portfolio/ipn7ccnmpjl2umzt4nn7.mp4"
-          controls
-          onPlay={handlePlay}
-          ref={videoRef}
-        ></video>
+        <SkillsHero />
       </motion.section>
       <motion.section
         variants={{
@@ -40,11 +36,17 @@ export default function Home() {
         }}
         initial="hide"
         whileInView="show"
+        viewport={{ amount: 0.8 }}
         transition={{ duration: 0.5, delay: 0.5 }}
-        id="2"
+        id="3"
         className="section snap-start snap-always border"
       >
-        skills
+        <video
+          src="https://res.cloudinary.com/dxukz1zt5/video/upload/v1698421286/portfolio/ipn7ccnmpjl2umzt4nn7.mp4"
+          controls
+          onPlay={handlePlay}
+          ref={videoRef}
+        ></video>
       </motion.section>
       <motion.section
         variants={{

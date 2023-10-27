@@ -36,3 +36,12 @@
   height: var(--footer);
   border: 2px solid rgb(9, 226, 81);
 }
+
+.brainItem {
+  cursor: pointer;
+  transition: opacity 0.5s ease;
+}
+
+.brainItem.active {
+  opacity: 1;
+}
