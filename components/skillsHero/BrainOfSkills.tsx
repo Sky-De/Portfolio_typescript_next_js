@@ -1,14 +1,17 @@
 "use client";
+import React from "react";
 import { useAppDispatch, useAppSelectore } from "@/hooks/reduxHooks";
 import { setActiveSkill } from "@/redux/features/skill/skillSlice";
-import React from "react";
+import { useTheme } from "next-themes";
 
-// fill="#fff"
+// fill={theme === "light" ? "#fff" : "#fff"}
 // for changing bg in dark mode
 // FIX
 
 function BrainOfSkills() {
   const { currentSkill } = useAppSelectore((state) => state.skill);
+  const { theme } = useTheme();
+
   const dispatch = useAppDispatch();
   const handleClick = (e: React.MouseEvent<SVGCircleElement, MouseEvent>) => {
     const target = e.target as HTMLElement;
@@ -138,7 +141,12 @@ function BrainOfSkills() {
         <g transform="translate(0 1)">
           <g transform="translate(230.919 116.521)">
             <g>
-              <circle cx="27.461" cy="27.461" r="27.461" fill="#fff"></circle>
+              <circle
+                cx="27.461"
+                cy="27.461"
+                r="27.461"
+                fill={theme === "light" ? "#fff" : "#fff"}
+              ></circle>
               <circle
                 cx="25.877"
                 cy="25.877"
@@ -179,7 +187,12 @@ function BrainOfSkills() {
           </g>
           <g transform="translate(181.917 166.162)">
             <g>
-              <circle cx="22.18" cy="22.18" r="22.18" fill="#fff"></circle>
+              <circle
+                cx="22.18"
+                cy="22.18"
+                r="22.18"
+                fill={theme === "light" ? "#fff" : "#fff"}
+              ></circle>
               <circle
                 cx="20.901"
                 cy="20.901"
@@ -274,7 +287,7 @@ function BrainOfSkills() {
                 cx="23.406"
                 cy="23.406"
                 r="23.406"
-                fill="#fff"
+                fill={theme === "light" ? "#fff" : "#fff"}
                 stroke="#bdbdbd"
                 strokeWidth="3"
                 transform="translate(1.433 1.433)"
@@ -367,7 +380,7 @@ function BrainOfSkills() {
             ></circle>
           </g>
           <g transform="translate(368.263 26.924)">
-            <g fill="#fff">
+            <g fill={theme === "light" ? "#fff" : "#fff"}>
               <circle cx="21.25" cy="21.25" r="21.25"></circle>
               <path
                 stroke="#bdbdbd"
@@ -409,7 +422,10 @@ function BrainOfSkills() {
             ></circle>
           </g>
           <g data-name="After effect" transform="translate(451.408 125.956)">
-            <g fill="#fff" transform="translate(-2.898 -2.898)">
+            <g
+              fill={theme === "light" ? "#fff" : "#fff"}
+              transform="translate(-2.898 -2.898)"
+            >
               <circle cx="20.089" cy="20.089" r="20.089"></circle>
               <circle
                 cx="18.93"
@@ -459,7 +475,7 @@ function BrainOfSkills() {
                 cx="20.901"
                 cy="20.901"
                 r="20.901"
-                fill="#fff"
+                fill={theme === "light" ? "#fff" : "#fff"}
                 stroke="#bdbdbd"
                 strokeWidth="3"
                 transform="translate(1.28 1.28)"
@@ -490,7 +506,7 @@ function BrainOfSkills() {
             ></circle>
           </g>
           <g transform="translate(284.449 69.424)">
-            <g fill="#fff">
+            <g fill={theme === "light" ? "#fff" : "#fff"}>
               <circle cx="24.596" cy="24.596" r="24.596"></circle>
               <circle
                 cx="23.177"
@@ -526,7 +542,7 @@ function BrainOfSkills() {
             ></circle>
           </g>
           <g transform="translate(282.419 5.951)">
-            <g fill="#fff" data-name="con-5">
+            <g fill={theme === "light" ? "#fff" : "#fff"} data-name="con-5">
               <circle
                 cx="24.668"
                 cy="24.668"
@@ -582,7 +598,7 @@ function BrainOfSkills() {
             ></circle>
           </g>
           <g transform="translate(426.789 76.245)">
-            <g fill="#fff">
+            <g fill={theme === "light" ? "#fff" : "#fff"}>
               <circle cx="16.81" cy="16.81" r="16.81"></circle>
               <circle
                 cx="15.84"
@@ -601,7 +617,7 @@ function BrainOfSkills() {
                 transform="translate(-1233.591 -242.766)"
               ></path>
               <path
-                fill="#fff"
+                fill={theme === "light" ? "#fff" : "#fff"}
                 d="M1239.6 246.288l-1.375 4.058h2.757z"
                 data-name="Path 145"
                 transform="translate(-1234.271 -243.171)"
@@ -639,7 +655,7 @@ function BrainOfSkills() {
             ></circle>
           </g>
           <g transform="translate(455.408 176.133)">
-            <g fill="#fff">
+            <g fill={theme === "light" ? "#fff" : "#fff"}>
               <circle cx="23.537" cy="23.537" r="23.537"></circle>
               <circle
                 cx="22.179"
@@ -658,7 +674,7 @@ function BrainOfSkills() {
                 transform="translate(-1242.274 -303.471)"
               ></path>
               <path
-                fill="#fff"
+                fill={theme === "light" ? "#fff" : "#fff"}
                 d="M1258.986 309.492v4.373s-2.789.735-2.789-2.048 2.789-2.325 2.789-2.325z"
                 data-name="Path 105"
                 transform="translate(-1242.526 -304.039)"
@@ -687,7 +703,7 @@ function BrainOfSkills() {
             ></circle>
           </g>
           <g data-name="Node js" transform="translate(236.199 210.541)">
-            <g fill="#fff" data-name="con-10">
+            <g fill={theme === "light" ? "#fff" : "#fff"} data-name="con-10">
               <circle
                 cx="24.821"
                 cy="24.821"
@@ -754,7 +770,7 @@ function BrainOfSkills() {
           </g>
           <g data-name="Mongo db" transform="translate(307.787 316.533)">
             <g
-              fill="#fff"
+              fill={theme === "light" ? "#fff" : "#fff"}
               data-name="con-10"
               transform="translate(1.258 1.258)"
             >
@@ -799,7 +815,7 @@ function BrainOfSkills() {
             ></circle>
           </g>
           <g data-name="Next js" transform="translate(357.428 267.7)">
-            <g fill="#fff" data-name="con-10">
+            <g fill={theme === "light" ? "#fff" : "#fff"} data-name="con-10">
               <circle
                 cx="22.18"
                 cy="22.18"
@@ -851,7 +867,7 @@ function BrainOfSkills() {
           </g>
           <g data-name="Express js" transform="translate(299.389 249.912)">
             <g
-              fill="#fff"
+              fill={theme === "light" ? "#fff" : "#fff"}
               data-name="con-10"
               transform="translate(-2.909 -2.909)"
             >
@@ -901,7 +917,7 @@ function BrainOfSkills() {
           </g>
           <g transform="translate(364.951 159.775)">
             <g
-              fill="#fff"
+              fill={theme === "light" ? "#fff" : "#fff"}
               data-name="con-10"
               transform="translate(-1.484 -1.484)"
             >
@@ -971,7 +987,7 @@ function BrainOfSkills() {
           </g>
           <g transform="translate(420.515 237.884)">
             <g
-              fill="#fff"
+              fill={theme === "light" ? "#fff" : "#fff"}
               data-name="con-10"
               transform="translate(-1.484 -1.484)"
             >
@@ -1040,7 +1056,7 @@ function BrainOfSkills() {
                 cx="20.294"
                 cy="20.294"
                 r="20.294"
-                fill="#fff"
+                fill={theme === "light" ? "#fff" : "#fff"}
                 stroke="#bdbdbd"
                 strokeWidth="3"
                 data-name="border"
@@ -1136,7 +1152,7 @@ function BrainOfSkills() {
                   transform="translate(10.373 9.938)"
                 ></path>
                 <path
-                  fill="#fff"
+                  fill={theme === "light" ? "#fff" : "#fff"}
                   d="M3.313.5A2.816 2.816 0 00.5 3.313a2.816 2.816 0 002.813 2.814 2.816 2.816 0 002.814-2.814A2.816 2.816 0 003.313.5m0-.5a3.313 3.313 0 110 6.627 3.313 3.313 0 010-6.627z"
                   transform="translate(10.373 9.938)"
                 ></path>
@@ -1159,7 +1175,11 @@ function BrainOfSkills() {
             ></circle>
           </g>
           <g transform="translate(286.84 147.541)">
-            <g fill="#fff" strokeWidth="3" data-name="con-4">
+            <g
+              fill={theme === "light" ? "#fff" : "#fff"}
+              strokeWidth="3"
+              data-name="con-4"
+            >
               <circle
                 cx="32.039"
                 cy="32.039"
