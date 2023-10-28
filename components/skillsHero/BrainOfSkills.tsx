@@ -1,6 +1,6 @@
 import React from "react";
 
-function SkillsHero() {
+function BrainOfSkills() {
   const handleClick = (e: React.MouseEvent<SVGCircleElement, MouseEvent>) => {
     const target = e.target as HTMLElement;
     console.log(target.id);
@@ -8,14 +8,12 @@ function SkillsHero() {
     activeElm?.classList.remove("active");
     target.classList.add("active");
   };
-
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="368.461"
       height="361.182"
       viewBox="0 0 368.461 361.182"
-      className="p-2"
     >
       <defs>
         <linearGradient
@@ -129,43 +127,42 @@ function SkillsHero() {
           ></circle>
         </g>
         <g transform="translate(0 1)">
-          <g transform="translate(282.419 143.147)">
+          <g transform="translate(230.919 116.521)">
             <g>
-              <circle cx="33.162" cy="33.162" r="33.162" fill="#fff"></circle>
+              <circle cx="27.461" cy="27.461" r="27.461" fill="#fff"></circle>
               <circle
-                cx="31.249"
-                cy="31.249"
-                r="31.249"
+                cx="25.877"
+                cy="25.877"
+                r="25.877"
                 fill="none"
                 stroke="#bdbdbd"
                 strokeWidth="3"
-                transform="translate(1.914 1.913)"
+                transform="translate(1.585 1.584)"
               ></circle>
             </g>
-            <g fill="#f5ce0f" transform="translate(13.869 21.08)">
+            <g fill="#f5ce0f" transform="translate(11.484 17.456)">
               <path
-                d="M1053.629 273.822h5.219v18.213s.426 7.285-8.026 7.482a8.947 8.947 0 01-7.59-4.936l4.245-2.283a3.722 3.722 0 003.343 2.6c2.542 0 2.809-2.867 2.809-2.867z"
+                d="M1051.841 273.822h4.321V288.9s.353 6.032-6.646 6.2a7.409 7.409 0 01-6.285-4.087l3.515-1.89a3.082 3.082 0 002.768 2.156c2.106 0 2.326-2.374 2.326-2.374z"
                 data-name="Path 134"
-                transform="translate(-1043.231 -273.445)"
+                transform="translate(-1043.231 -273.509)"
               ></path>
               <path
-                d="M1075.187 280.3l4.129-2.668a9.1 9.1 0 00-7.846-4.2c-3.751.353-6.451 2.138-7.157 5.619-.609 6.406 4.337 8.3 4.337 8.3l3.972 1.862s3.044.788 2.9 3.252a3.373 3.373 0 01-4.045 2.44 6.4 6.4 0 01-4.615-3.253l-4.22 2.518s3.038 5.137 8.836 5.232c1.789.013 7.7-.055 9.367-5.963a8.807 8.807 0 00-5.5-8.839c-3.2-1.522-2.575-.609-4.782-2.188a2.457 2.457 0 01.916-4.513c1.864-.318 3.708 2.401 3.708 2.401z"
+                d="M1073.03 279.115l3.419-2.209a7.532 7.532 0 00-6.5-3.479c-3.106.292-5.342 1.771-5.926 4.653-.5 5.305 3.591 6.875 3.591 6.875l3.289 1.541s2.521.652 2.4 2.693a2.793 2.793 0 01-3.349 2.02 5.3 5.3 0 01-3.822-2.694l-3.495 2.085s2.516 4.253 7.317 4.332c1.481.011 6.372-.046 7.756-4.938a7.292 7.292 0 00-4.555-7.319c-2.649-1.26-2.132-.5-3.96-1.812a2.035 2.035 0 01.759-3.737c1.546-.26 3.076 1.989 3.076 1.989z"
                 data-name="Path 135"
-                transform="translate(-1044.178 -273.425)"
+                transform="translate(-1047.352 -273.425)"
               ></path>
             </g>
             <circle
-              cx="31.249"
-              cy="31.249"
-              r="31.249"
+              cx="25.877"
+              cy="25.877"
+              r="25.877"
               fill="rgba(255,255,255,0)"
               stroke="#f5ce0f"
-              strokeWidth="4"
-              opacity="0.13"
-              id="js"
+              strokeWidth="5"
+              opacity="0.09"
               className="brainItem hover:opacity-100 active"
               onClick={handleClick}
-              transform="translate(1.953 1.881)"
+              transform="translate(1.617 1.557)"
             ></circle>
           </g>
           <g transform="translate(181.917 166.162)">
@@ -243,9 +240,8 @@ function SkillsHero() {
               r="20.901"
               fill="rgba(245,245,245,0)"
               stroke="#0062ad"
-              strokeWidth="4"
-              opacity="0.13"
-              id="webpack"
+              strokeWidth="5"
+              opacity="0.09"
               className="brainItem hover:opacity-100"
               onClick={handleClick}
               transform="translate(1.319 1.248)"
@@ -345,9 +341,8 @@ function SkillsHero() {
               r="23.406"
               fill="rgba(255,255,255,0)"
               stroke="#9adff4"
-              strokeWidth="4"
-              opacity="0.13"
-              id="react"
+              strokeWidth="5"
+              opacity="0.09"
               className="brainItem hover:opacity-100"
               onClick={handleClick}
               transform="translate(1.472 1.401)"
@@ -385,9 +380,8 @@ function SkillsHero() {
               r="20.024"
               fill="rgba(255,255,255,0)"
               stroke="#1baebb"
-              strokeWidth="4"
-              opacity="0.13"
-              id="tailwind"
+              strokeWidth="5"
+              opacity="0.09"
               className="brainItem hover:opacity-100"
               onClick={handleClick}
               transform="translate(1.335 1.725)"
@@ -427,9 +421,8 @@ function SkillsHero() {
               r="18.93"
               fill="rgba(255,255,255,0)"
               stroke="#bc9bc9"
-              strokeWidth="4"
-              opacity="0.13"
-              id="ae"
+              strokeWidth="5"
+              opacity="0.09"
               className="brainItem hover:opacity-100"
               onClick={handleClick}
               transform="translate(-1.699 -1.77)"
@@ -462,9 +455,8 @@ function SkillsHero() {
               r="20.901"
               fill="rgba(255,255,255,0)"
               stroke="#ef4923"
-              strokeWidth="4"
-              opacity="0.13"
-              id="html"
+              strokeWidth="5"
+              opacity="0.09"
               className="brainItem hover:opacity-100"
               onClick={handleClick}
               transform="translate(1.319 1.248)"
@@ -496,9 +488,8 @@ function SkillsHero() {
               r="23.177"
               fill="rgba(255,255,255,0)"
               stroke="#4159a7"
-              strokeWidth="4"
-              opacity="0.13"
-              id="css"
+              strokeWidth="5"
+              opacity="0.09"
               className="brainItem hover:opacity-100"
               onClick={handleClick}
               transform="translate(1.458 1.387)"
@@ -550,9 +541,8 @@ function SkillsHero() {
               r="23.245"
               fill="rgba(255,255,255,0)"
               stroke="#ca73ae"
-              strokeWidth="4"
-              opacity="0.13"
-              id="sass"
+              strokeWidth="5"
+              opacity="0.09"
               className="brainItem hover:opacity-100"
               onClick={handleClick}
               transform="translate(1.463 1.391)"
@@ -605,9 +595,8 @@ function SkillsHero() {
               r="15.84"
               fill="rgba(255,255,255,0)"
               stroke="#f5841f"
-              strokeWidth="4"
-              opacity="0.13"
-              id="ai"
+              strokeWidth="5"
+              opacity="0.09"
               className="brainItem hover:opacity-100"
               onClick={handleClick}
               transform="translate(1.008 .938)"
@@ -651,9 +640,8 @@ function SkillsHero() {
               r="22.179"
               fill="rgba(255,255,255,0)"
               stroke="#d15a9b"
-              strokeWidth="4"
-              opacity="0.13"
-              id="xd"
+              strokeWidth="5"
+              opacity="0.09"
               className="brainItem hover:opacity-100"
               onClick={handleClick}
               transform="translate(1.397 1.326)"
@@ -715,9 +703,8 @@ function SkillsHero() {
               r="23.389"
               fill="rgba(255,255,255,0)"
               stroke="#46903e"
-              strokeWidth="4"
-              opacity="0.13"
-              id="node"
+              strokeWidth="5"
+              opacity="0.09"
               className="brainItem hover:opacity-100"
               onClick={handleClick}
               transform="translate(1.471 1.4)"
@@ -759,9 +746,8 @@ function SkillsHero() {
               r="22.203"
               fill="rgba(255,255,255,0)"
               stroke="#5fa241"
-              strokeWidth="4"
-              opacity="0.13"
-              id="moongodb"
+              strokeWidth="5"
+              opacity="0.09"
               className="brainItem hover:opacity-100"
               onClick={handleClick}
               transform="translate(2.657 2.585)"
@@ -808,9 +794,8 @@ function SkillsHero() {
               r="20.901"
               fill="rgba(255,255,255,0)"
               stroke="#000"
-              strokeWidth="4"
-              opacity="0.13"
-              id="next"
+              strokeWidth="5"
+              opacity="0.09"
               className="brainItem hover:opacity-100"
               onClick={handleClick}
               transform="translate(1.319 1.248)"
@@ -856,9 +841,8 @@ function SkillsHero() {
               r="21.794"
               fill="rgba(255,255,255,0)"
               stroke="#000"
-              strokeWidth="4"
-              opacity="0.13"
-              id="express"
+              strokeWidth="5"
+              opacity="0.09"
               className="brainItem hover:opacity-100"
               onClick={handleClick}
               transform="translate(-1.535 -1.607)"
@@ -924,9 +908,8 @@ function SkillsHero() {
               r="19.496"
               fill="rgba(255,255,255,0)"
               stroke="#1e9bd8"
-              strokeWidth="4"
-              opacity="0.13"
-              id="mui"
+              strokeWidth="5"
+              opacity="0.09"
               className="brainItem hover:opacity-100"
               onClick={handleClick}
               transform="translate(-.251 -.323)"
@@ -980,9 +963,8 @@ function SkillsHero() {
               r="20.69"
               fill="rgba(255,255,255,0)"
               stroke="#6e54a4"
-              strokeWidth="4"
-              opacity="0.13"
-              id="redux"
+              strokeWidth="5"
+              opacity="0.09"
               className="brainItem hover:opacity-100"
               onClick={handleClick}
               transform="translate(-1.445 -1.516)"
@@ -1109,50 +1091,48 @@ function SkillsHero() {
               r="20.294"
               fill="rgba(255,255,255,0)"
               stroke="#e1426a"
-              strokeWidth="4"
-              opacity="0.13"
-              id="git"
+              strokeWidth="5"
+              opacity="0.09"
               className="brainItem hover:opacity-100"
               onClick={handleClick}
               transform="translate(1.282 1.186)"
             ></circle>
           </g>
-          <g transform="translate(239.62 126.267)">
+          <g transform="translate(286.84 147.541)">
             <g fill="#fff" strokeWidth="3" data-name="con-4">
               <circle
-                cx="21.4"
-                cy="21.4"
-                r="21.4"
+                cx="32.039"
+                cy="32.039"
+                r="32.039"
                 stroke="#707070"
                 opacity="0.33"
               ></circle>
               <path
                 stroke="#bdbdbd"
-                d="M21.399 1.234A20.165 20.165 0 111.234 21.399 20.165 20.165 0 0121.399 1.234z"
+                d="M32.038 1.848a30.19 30.19 0 11-30.19 30.19 30.19 30.19 0 0130.19-30.19z"
                 data-name="border-4"
               ></path>
             </g>
-            <g data-name="typescript" transform="translate(7.017 12.679)">
+            <g data-name="typescript" transform="translate(10.506 18.983)">
               <path
                 fill="#047bcc"
                 fillRule="evenodd"
-                d="M77.5 49.487a5.34 5.34 0 00-3.4 2.89 6.455 6.455 0 00.011 4.105c.692 1.563 2.089 2.66 5.013 3.933a11.159 11.159 0 012.293 1.266 1.294 1.294 0 01.526 1.23 1.326 1.326 0 01-.443 1.177 3.579 3.579 0 01-3.895.326 5.587 5.587 0 01-1.3-1.087l-.679-.772-1.4.839c-.772.461-1.47.863-1.551.893-.337.125 1.32 2.08 2.293 2.7 2.719 1.745 7.079 1.613 9.227-.278a6.1 6.1 0 001.146-1.437 3.862 3.862 0 00.421-2.358 4.708 4.708 0 00-.333-2.28c-.718-1.553-2.26-2.723-5.227-3.967-1.844-.767-2.622-1.467-2.622-2.355 0-1.782 2.368-2.3 3.655-.793.353.412.623.6.781.538a19.943 19.943 0 002.654-1.81c.052-.084-.382-.636-.964-1.225a4.9 4.9 0 00-1.838-1.346 10.2 10.2 0 00-4.365-.191m-20.4 1c-.055.579-.1 1.35-.1 1.715v.663h5.457v15.124h3.74V52.864h5.3v-3.43H57.2l-.1 1.052"
+                d="M87.695 49.565a7.994 7.994 0 00-5.089 4.327 9.664 9.664 0 00.016 6.146c1.035 2.341 3.128 3.983 7.5 5.889a16.707 16.707 0 013.433 1.895 1.937 1.937 0 01.787 1.841 1.985 1.985 0 01-.663 1.763c-1.265 1.265-3.88 1.484-5.831.489a8.364 8.364 0 01-1.942-1.627l-1.017-1.155-2.1 1.256c-1.155.69-2.2 1.292-2.322 1.337-.5.187 1.977 3.114 3.433 4.048 4.07 2.612 10.6 2.415 13.815-.416a9.128 9.128 0 001.716-2.151c.563-1.068.631-1.445.631-3.53a7.048 7.048 0 00-.5-3.413c-1.075-2.325-3.383-4.077-7.826-5.94-2.764-1.159-3.93-2.207-3.93-3.534 0-2.668 3.546-3.438 5.472-1.187.528.617.933.9 1.169.806a29.857 29.857 0 003.973-2.71c.078-.126-.571-.952-1.443-1.834a7.336 7.336 0 00-2.752-2.015 15.271 15.271 0 00-6.536-.285m-30.543 1.5c-.082.866-.15 2.022-.151 2.568v.992h8.17v22.638h5.6V54.621h7.936v-5.135H57.3l-.149 1.576"
                 data-name="Path 232"
                 transform="translate(-57 -49.329)"
               ></path>
             </g>
             <circle
-              cx="20.024"
-              cy="20.024"
-              r="20.024"
+              cx="29.98"
+              cy="29.98"
+              r="29.98"
               fill="rgba(255,255,255,0)"
               stroke="#047bcc"
-              strokeWidth="4"
-              opacity="0.13"
-              id="ts"
+              strokeWidth="5"
+              opacity="0.09"
               className="brainItem hover:opacity-100"
               onClick={handleClick}
-              transform="translate(1.415 1.095)"
+              transform="translate(2.118 1.639)"
             ></circle>
           </g>
         </g>
@@ -1161,4 +1141,4 @@ function SkillsHero() {
   );
 }
 
-export default SkillsHero;
+export default BrainOfSkills;

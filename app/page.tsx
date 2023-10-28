@@ -1,5 +1,5 @@
 "use client";
-import SkillsHero from "@/components/skillsHero/SkillsHero";
+import BrainOfSkills from "@/components/skillsHero/BrainOfSkills";
 import { motion } from "framer-motion";
 import { useRef } from "react";
 export default function Home() {
@@ -27,7 +27,7 @@ export default function Home() {
         id="1"
         className="section snap-start snap-always border"
       >
-        <SkillsHero />
+        <BrainOfSkills />
       </motion.section>
       <motion.section
         variants={{
