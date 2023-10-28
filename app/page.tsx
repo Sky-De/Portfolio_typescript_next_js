@@ -1,6 +1,5 @@
 "use client";
 import Skills from "@/components/sections/Skills";
-import BrainOfSkills from "@/components/skillsHero/BrainOfSkills";
 import { motion } from "framer-motion";
 import { useRef } from "react";
 export default function Home() {
@@ -39,7 +38,7 @@ export default function Home() {
         whileInView="show"
         viewport={{ amount: 0.8 }}
         transition={{ duration: 0.5, delay: 0.5 }}
-        id="3"
+        id="2"
         className="section snap-start snap-always border"
       >
         <Skills />

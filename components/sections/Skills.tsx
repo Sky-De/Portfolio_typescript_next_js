@@ -6,9 +6,9 @@ const Skills = () => {
   console.log(currentSkill);
 
   return (
-    <section className="skills flex flex-row-reverse justify-between items-center border w-full h-full px-4">
+    <section className="skills flex flex-col-reverse lg:flex-row-reverse items-center w-full h-full px-4">
       <BrainOfSkills />
-      <div className="skillShow">{currentSkill}</div>
+      <div className="skillShow border w-full h-[250px]">{currentSkill}</div>
     </section>
   );
 };

@@ -16,10 +16,10 @@
   /* background: #b39c9c; */
 }
 .section {
+  /* background: #000; */
   display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid red;
+  /* border: 5px solid red; */
+
   max-width: var(--max-width-container);
   margin: 0 auto;
   max-height: calc(100vh - var(--header) - var(--footer));

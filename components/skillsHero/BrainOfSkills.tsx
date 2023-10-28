@@ -3,6 +3,10 @@ import { useAppDispatch, useAppSelectore } from "@/hooks/reduxHooks";
 import { setActiveSkill } from "@/redux/features/skill/skillSlice";
 import React from "react";
 
+// fill="#fff"
+// for changing bg in dark mode
+// FIX
+
 function BrainOfSkills() {
   const { currentSkill } = useAppSelectore((state) => state.skill);
   const dispatch = useAppDispatch();
@@ -18,7 +22,7 @@ function BrainOfSkills() {
       width="368.461"
       height="361.182"
       viewBox="0 0 368.461 361.182"
-      className="p-2"
+      className="p-2 w-[70%]"
     >
       <defs>
         <linearGradient
