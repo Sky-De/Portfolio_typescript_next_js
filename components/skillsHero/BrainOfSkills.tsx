@@ -1,12 +1,16 @@
+"use client";
+import { useAppDispatch, useAppSelectore } from "@/hooks/reduxHooks";
+import { setActiveSkill } from "@/redux/features/skill/skillSlice";
 import React from "react";
 
 function BrainOfSkills() {
+  const { currentSkill } = useAppSelectore((state) => state.skill);
+  const dispatch = useAppDispatch();
   const handleClick = (e: React.MouseEvent<SVGCircleElement, MouseEvent>) => {
     const target = e.target as HTMLElement;
     console.log(target.id);
-    const activeElm = document.querySelector(".active");
-    activeElm?.classList.remove("active");
-    target.classList.add("active");
+    //
+    dispatch(setActiveSkill(target.id));
   };
   return (
     <svg
@@ -14,6 +18,7 @@ function BrainOfSkills() {
       width="368.461"
       height="361.182"
       viewBox="0 0 368.461 361.182"
+      className="p-2"
     >
       <defs>
         <linearGradient
@@ -160,7 +165,10 @@ function BrainOfSkills() {
               stroke="#f5ce0f"
               strokeWidth="5"
               opacity="0.09"
-              className="brainItem hover:opacity-100 active"
+              id="JS"
+              className={`brainItem hover:opacity-100 ${
+                currentSkill === "JS" ? "active" : ""
+              }`}
               onClick={handleClick}
               transform="translate(1.617 1.557)"
             ></circle>
@@ -242,7 +250,10 @@ function BrainOfSkills() {
               stroke="#0062ad"
               strokeWidth="5"
               opacity="0.09"
-              className="brainItem hover:opacity-100"
+              id="WEBPACK"
+              className={`brainItem hover:opacity-100 ${
+                currentSkill === "WEBPACK" ? "active" : ""
+              }`}
               onClick={handleClick}
               transform="translate(1.319 1.248)"
             ></circle>
@@ -343,7 +354,10 @@ function BrainOfSkills() {
               stroke="#9adff4"
               strokeWidth="5"
               opacity="0.09"
-              className="brainItem hover:opacity-100"
+              id="REACT"
+              className={`brainItem hover:opacity-100 ${
+                currentSkill === "REACT" ? "active" : ""
+              }`}
               onClick={handleClick}
               transform="translate(1.472 1.401)"
             ></circle>
@@ -382,7 +396,10 @@ function BrainOfSkills() {
               stroke="#1baebb"
               strokeWidth="5"
               opacity="0.09"
-              className="brainItem hover:opacity-100"
+              id="TAILWIND"
+              className={`brainItem hover:opacity-100 ${
+                currentSkill === "TAILWIND" ? "active" : ""
+              }`}
               onClick={handleClick}
               transform="translate(1.335 1.725)"
             ></circle>
@@ -423,7 +440,10 @@ function BrainOfSkills() {
               stroke="#bc9bc9"
               strokeWidth="5"
               opacity="0.09"
-              className="brainItem hover:opacity-100"
+              id="AE"
+              className={`brainItem hover:opacity-100 ${
+                currentSkill === "AE" ? "active" : ""
+              }`}
               onClick={handleClick}
               transform="translate(-1.699 -1.77)"
             ></circle>
@@ -457,7 +477,10 @@ function BrainOfSkills() {
               stroke="#ef4923"
               strokeWidth="5"
               opacity="0.09"
-              className="brainItem hover:opacity-100"
+              id="HTML"
+              className={`brainItem hover:opacity-100 ${
+                currentSkill === "HTML" ? "active" : ""
+              }`}
               onClick={handleClick}
               transform="translate(1.319 1.248)"
             ></circle>
@@ -490,7 +513,10 @@ function BrainOfSkills() {
               stroke="#4159a7"
               strokeWidth="5"
               opacity="0.09"
-              className="brainItem hover:opacity-100"
+              id="CSS"
+              className={`brainItem hover:opacity-100 ${
+                currentSkill === "CSS" ? "active" : ""
+              }`}
               onClick={handleClick}
               transform="translate(1.458 1.387)"
             ></circle>
@@ -543,7 +569,10 @@ function BrainOfSkills() {
               stroke="#ca73ae"
               strokeWidth="5"
               opacity="0.09"
-              className="brainItem hover:opacity-100"
+              id="SASS"
+              className={`brainItem hover:opacity-100 ${
+                currentSkill === "SASS" ? "active" : ""
+              }`}
               onClick={handleClick}
               transform="translate(1.463 1.391)"
             ></circle>
@@ -597,7 +626,10 @@ function BrainOfSkills() {
               stroke="#f5841f"
               strokeWidth="5"
               opacity="0.09"
-              className="brainItem hover:opacity-100"
+              id="AI"
+              className={`brainItem hover:opacity-100 ${
+                currentSkill === "AI" ? "active" : ""
+              }`}
               onClick={handleClick}
               transform="translate(1.008 .938)"
             ></circle>
@@ -642,7 +674,10 @@ function BrainOfSkills() {
               stroke="#d15a9b"
               strokeWidth="5"
               opacity="0.09"
-              className="brainItem hover:opacity-100"
+              id="XD"
+              className={`brainItem hover:opacity-100 ${
+                currentSkill === "XD" ? "active" : ""
+              }`}
               onClick={handleClick}
               transform="translate(1.397 1.326)"
             ></circle>
@@ -705,7 +740,10 @@ function BrainOfSkills() {
               stroke="#46903e"
               strokeWidth="5"
               opacity="0.09"
-              className="brainItem hover:opacity-100"
+              id="NODE"
+              className={`brainItem hover:opacity-100 ${
+                currentSkill === "NODE" ? "active" : ""
+              }`}
               onClick={handleClick}
               transform="translate(1.471 1.4)"
             ></circle>
@@ -748,7 +786,10 @@ function BrainOfSkills() {
               stroke="#5fa241"
               strokeWidth="5"
               opacity="0.09"
-              className="brainItem hover:opacity-100"
+              id="MONGODB"
+              className={`brainItem hover:opacity-100 ${
+                currentSkill === "MONGODB" ? "active" : ""
+              }`}
               onClick={handleClick}
               transform="translate(2.657 2.585)"
             ></circle>
@@ -796,7 +837,10 @@ function BrainOfSkills() {
               stroke="#000"
               strokeWidth="5"
               opacity="0.09"
-              className="brainItem hover:opacity-100"
+              id="NEXT"
+              className={`brainItem hover:opacity-100 ${
+                currentSkill === "NEXT" ? "active" : ""
+              }`}
               onClick={handleClick}
               transform="translate(1.319 1.248)"
             ></circle>
@@ -843,7 +887,10 @@ function BrainOfSkills() {
               stroke="#000"
               strokeWidth="5"
               opacity="0.09"
-              className="brainItem hover:opacity-100"
+              id="EXPRESS"
+              className={`brainItem hover:opacity-100 ${
+                currentSkill === "EXPRESS" ? "active" : ""
+              }`}
               onClick={handleClick}
               transform="translate(-1.535 -1.607)"
             ></circle>
@@ -910,7 +957,10 @@ function BrainOfSkills() {
               stroke="#1e9bd8"
               strokeWidth="5"
               opacity="0.09"
-              className="brainItem hover:opacity-100"
+              id="MUI"
+              className={`brainItem hover:opacity-100 ${
+                currentSkill === "MUI" ? "active" : ""
+              }`}
               onClick={handleClick}
               transform="translate(-.251 -.323)"
             ></circle>
@@ -965,7 +1015,10 @@ function BrainOfSkills() {
               stroke="#6e54a4"
               strokeWidth="5"
               opacity="0.09"
-              className="brainItem hover:opacity-100"
+              id="REDUX"
+              className={`brainItem hover:opacity-100 ${
+                currentSkill === "REDUX" ? "active" : ""
+              }`}
               onClick={handleClick}
               transform="translate(-1.445 -1.516)"
             ></circle>
@@ -1093,7 +1146,10 @@ function BrainOfSkills() {
               stroke="#e1426a"
               strokeWidth="5"
               opacity="0.09"
-              className="brainItem hover:opacity-100"
+              id="GIT"
+              className={`brainItem hover:opacity-100 ${
+                currentSkill === "GIT" ? "active" : ""
+              }`}
               onClick={handleClick}
               transform="translate(1.282 1.186)"
             ></circle>
@@ -1130,7 +1186,10 @@ function BrainOfSkills() {
               stroke="#047bcc"
               strokeWidth="5"
               opacity="0.09"
-              className="brainItem hover:opacity-100"
+              id="TS"
+              className={`brainItem hover:opacity-100 ${
+                currentSkill === "TS" ? "active" : ""
+              }`}
               onClick={handleClick}
               transform="translate(2.118 1.639)"
             ></circle>

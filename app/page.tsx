@@ -1,4 +1,5 @@
 "use client";
+import Skills from "@/components/sections/Skills";
 import BrainOfSkills from "@/components/skillsHero/BrainOfSkills";
 import { motion } from "framer-motion";
 import { useRef } from "react";
@@ -27,7 +28,7 @@ export default function Home() {
         id="1"
         className="section snap-start snap-always border"
       >
-        <BrainOfSkills />
+        Intro
       </motion.section>
       <motion.section
         variants={{
@@ -41,12 +42,7 @@ export default function Home() {
         id="3"
         className="section snap-start snap-always border"
       >
-        <video
-          src="https://res.cloudinary.com/dxukz1zt5/video/upload/v1698421286/portfolio/ipn7ccnmpjl2umzt4nn7.mp4"
-          controls
-          onPlay={handlePlay}
-          ref={videoRef}
-        ></video>
+        <Skills />
       </motion.section>
       <motion.section
         variants={{
