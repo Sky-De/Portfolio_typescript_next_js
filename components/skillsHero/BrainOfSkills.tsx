@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { useAppDispatch, useAppSelectore } from "@/hooks/reduxHooks";
+import { useAppDispatch, useAppSelector } from "@/hooks/reduxHooks";
 import { setActiveSkill } from "@/redux/features/skill/skillSlice";
 import { useTheme } from "next-themes";
 
@@ -9,7 +9,7 @@ import { useTheme } from "next-themes";
 // FIX
 
 function BrainOfSkills() {
-  const { currentSkill } = useAppSelectore((state) => state.skill);
+  const { currentSkill } = useAppSelector((state) => state.skill);
   const { theme } = useTheme();
 
   const dispatch = useAppDispatch();
@@ -25,7 +25,7 @@ function BrainOfSkills() {
       width="368.461"
       height="361.182"
       viewBox="0 0 368.461 361.182"
-      className="p-2 w-[70%]"
+      className="p-2 w-[60%] sm:w-[70%] h-[40%] lg:h-[75%]"
     >
       <defs>
         <linearGradient

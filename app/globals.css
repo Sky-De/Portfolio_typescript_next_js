@@ -9,7 +9,7 @@
 }
 ::-webkit-scrollbar {
   display: none;
-  /* color: #bebdbd; */
+  /* color: #e0e0e0; */
 }
 .main {
   max-height: calc(100vh - var(--header) - var(--footer));

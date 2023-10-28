@@ -25,7 +25,7 @@ export default function Home() {
         viewport={{ amount: 0.8 }}
         transition={{ duration: 0.5, delay: 0.25 }}
         id="1"
-        className="section snap-start snap-always border"
+        className="section snap-start snap-always"
       >
         Intro
       </motion.section>
@@ -37,9 +37,9 @@ export default function Home() {
         initial="hide"
         whileInView="show"
         viewport={{ amount: 0.8 }}
-        transition={{ duration: 0.5, delay: 0.5 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
         id="2"
-        className="section snap-start snap-always border"
+        className="section snap-start snap-always"
       >
         <Skills />
       </motion.section>
@@ -53,7 +53,7 @@ export default function Home() {
         viewport={{ amount: 0.8 }}
         transition={{ duration: 0.5, delay: 0.5 }}
         id="3"
-        className="section snap-start snap-always border"
+        className="section snap-start snap-always"
       >
         projects
       </motion.section>
@@ -67,7 +67,7 @@ export default function Home() {
         viewport={{ amount: 0.8 }}
         transition={{ duration: 0.5, delay: 0.5 }}
         id="4"
-        className="section snap-start snap-always border"
+        className="section snap-start snap-always"
       >
         to learn
       </motion.section>
@@ -81,7 +81,7 @@ export default function Home() {
         viewport={{ amount: 0.8 }}
         transition={{ duration: 0.5, delay: 0.5 }}
         id="5"
-        className="section snap-start snap-always border"
+        className="section snap-start snap-always"
       >
         contact
       </motion.section>
@@ -95,7 +95,7 @@ export default function Home() {
         viewport={{ amount: 0.8 }}
         transition={{ duration: 0.5, delay: 0.5 }}
         id="6"
-        className="section snap-start snap-always border"
+        className="section snap-start snap-always"
       >
         about
       </motion.section>
