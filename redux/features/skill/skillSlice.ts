@@ -7,7 +7,7 @@ type SkillState = {
 type SkillPayload = string;
 
 const SkillInitialState: SkillState = {
-  currentSkill: "JS",
+  currentSkill: "SKY",
 };
 
 const skillSlice = createSlice({

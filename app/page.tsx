@@ -1,5 +1,6 @@
 "use client";
-import Skills from "@/components/sections/Skills";
+import Introduction from "@/components/sections/Intro";
+import Skill from "@/components/sections/Skill";
 import { motion } from "framer-motion";
 import { useRef } from "react";
 export default function Home() {
@@ -15,34 +16,8 @@ export default function Home() {
   };
   return (
     <main className="main overflow-y-scroll snap-y snap-mandatory">
-      <motion.section
-        variants={{
-          hide: { opacity: 0 },
-          show: { opacity: 1 },
-        }}
-        initial="hide"
-        whileInView="show"
-        viewport={{ amount: 0.8 }}
-        transition={{ duration: 0.5, delay: 0.25 }}
-        id="1"
-        className="section snap-start snap-always"
-      >
-        Intro
-      </motion.section>
-      <motion.section
-        variants={{
-          hide: { opacity: 0 },
-          show: { opacity: 1 },
-        }}
-        initial="hide"
-        whileInView="show"
-        viewport={{ amount: 0.8 }}
-        transition={{ duration: 0.5, delay: 0.2 }}
-        id="2"
-        className="section snap-start snap-always"
-      >
-        <Skills />
-      </motion.section>
+      <Introduction />
+      <Skill />
       <motion.section
         variants={{
           hide: { opacity: 0 },

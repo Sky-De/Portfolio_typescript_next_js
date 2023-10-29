@@ -2,6 +2,7 @@ import BrainOfSkills from "../skillsHero/BrainOfSkills";
 import { skillsDetails } from "@/constants/skillsDetail";
 import { useAppSelector } from "@/hooks/reduxHooks";
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 type SkillType = {
   id: string;
@@ -12,7 +13,7 @@ type SkillType = {
   features: string[];
 };
 
-const Skills = () => {
+const Skill = () => {
   const { currentSkill } = useAppSelector((state) => state.skill);
   const [skill, setSkill] = useState<SkillType>({
     id: "",
@@ -44,20 +45,21 @@ const Skills = () => {
   }, [currentSkill]);
 
   return (
-    <section className="skills flex flex-col lg:flex-row-reverse items-center w-full px-4 justify-evenly">
-      <BrainOfSkills />
-      <div className="skillShow w-full h-[250px]">
-        <h3 className="text-4xl font-bold">{skill.title}</h3>
-        <ul className=" flex flex-col flex-wrap list-disc px-6 h-full overflow-scroll gap-6 md:gap-2 md:py-4">
-          {skill.features.map((item, index) => (
-            <li className="" key={index}>
-              {item}
-            </li>
-          ))}
-        </ul>
-      </div>
-    </section>
+    <motion.section
+      variants={{
+        hide: { opacity: 0 },
+        show: { opacity: 1 },
+      }}
+      initial="hide"
+      whileInView="show"
+      viewport={{ amount: 0.8 }}
+      transition={{ duration: 0.5, delay: 0.25 }}
+      id="1"
+      className="section snap-start snap-always w-full"
+    >
+      skill
+    </motion.section>
   );
 };
 
-export default Skills;
+export default Skill;
