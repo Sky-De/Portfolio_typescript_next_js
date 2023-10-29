@@ -688,6 +688,92 @@ function BrainOfSkill() {
               transform="translate(1.458 1.387)"
             ></circle>
           </g>
+          <g id="Jest" transform="translate(230.271 54.227)">
+            <g id="con-7-2" fill="#fff" data-name="con-7">
+              <circle
+                id="back-7-2"
+                cx="20.602"
+                cy="20.602"
+                r="20.602"
+                data-name="back-7"
+              ></circle>
+              <circle
+                id="border-7-2"
+                cx="19.413"
+                cy="19.413"
+                r="19.413"
+                stroke="#bdbdbd"
+                strokeWidth="3"
+                data-name="border-7"
+                transform="translate(1.189 1.189)"
+              ></circle>
+            </g>
+            <g
+              id="JEST-2"
+              fillRule="evenodd"
+              data-name="JEST"
+              transform="translate(10.649 10.365)"
+            >
+              <path
+                id="Path_237"
+                fill="#b1405d"
+                d="M117.5 34.5h10.667A49.99 49.99 0 01125.5 42q-1.4-2.392-2.667-4.833-1.272 2.294-2.417 4.667a.278.278 0 01-.417.083q-1.324-3.683-2.499-7.417z"
+                data-name="Path 237"
+                transform="translate(-110.178 -34.5)"
+              ></path>
+              <path
+                id="Path_238"
+                fill="#b1405f"
+                d="M141.833 64.477a.3.3 0 01.333.167l1.5 3a3.055 3.055 0 00-.667 1q-1.972.8-2.5-1.167z"
+                data-name="Path 238"
+                transform="translate(-129.345 -59.477)"
+              ></path>
+              <path
+                id="Path_239"
+                fill="#b1415e"
+                d="M79.909 85.5q2.829.078 1.75 2.667-2.732 1.385-2.667-1.667a2.664 2.664 0 01.917-1z"
+                data-name="Path 239"
+                transform="translate(-78.088 -77)"
+              ></path>
+              <path
+                id="Path_240"
+                fill="#b1415d"
+                d="M120.8 85.445q2.377-.165 2.083 2.167a1.553 1.553 0 01-1.583 1 1.607 1.607 0 01-1.417-2 1.958 1.958 0 01.917-1.167z"
+                data-name="Path 240"
+                transform="translate(-112.142 -76.945)"
+              ></path>
+              <path
+                id="Path_241"
+                fill="#b1405e"
+                d="M162.276 85.5q2.381.006 1.917 2.333-1.436 1.647-2.833 0a1.773 1.773 0 01.916-2.333z"
+                data-name="Path 241"
+                transform="translate(-146.621 -77)"
+              ></path>
+              <path
+                id="Path_242"
+                fill="#b1405d"
+                d="M85.393 97.5h1.833q.82 3.118 3.833 1.833a1.176 1.176 0 01.5 1.167 3.017 3.017 0 01-2.167 3.083q-2.076.443-4.167.833-2.78 1.182-5.5 2.5a5.162 5.162 0 01-4.667 0 4.355 4.355 0 01-1.25-4.75l1-2.333a1.08 1.08 0 01.75-.167 3.5 3.5 0 001.333 3.583 1.39 1.39 0 001.167.167 9.6 9.6 0 004.333-3.583 2.739 2.739 0 003.002-2.333z"
+                data-name="Path 242"
+                transform="translate(-73.571 -87)"
+              ></path>
+            </g>
+            <circle
+              id="JEST"
+              cx="19.413"
+              cy="19.413"
+              r="19.413"
+              fill="rgba(255,255,255,0)"
+              stroke="#b1405d"
+              strokeWidth="5"
+              data-name="JEST"
+              opacity="0.13"
+              onClick={handleClick}
+              className={`brainItem hover:opacity-100 ${
+                currentSkill === "JEST" ? "active" : ""
+              }`}
+              transform="translate(1.221 1.162)"
+            ></circle>
+          </g>
           <g id="Sass" transform="translate(282.419 5.951)">
             <g id="con-5-2" fill="#fff" data-name="con-5">
               <circle

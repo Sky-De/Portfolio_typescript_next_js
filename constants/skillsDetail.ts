@@ -1,5 +1,13 @@
 export const skillsDetails = [
   {
+    id: "JEST",
+    alt: "JEST LOGO SVG",
+    title: "JEST",
+    icon: "Jest",
+    description: "HTML asr qwer fdsaf asfgaste wegfsadf sdfwef saefsadf asdf",
+    features: ["1", "2", "3", "4 / 5", "6 / 7", "8 / 9", "10", "11"],
+  },
+  {
     id: "HTML",
     alt: "HTML LOGO SVG",
     title: "HTML",
