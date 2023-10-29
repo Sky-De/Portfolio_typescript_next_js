@@ -3,6 +3,7 @@ import { skillsDetails } from "@/constants/skillsDetail";
 import { useAppSelector } from "@/hooks/reduxHooks";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import JobOfferBtn from "../buttons/JobOfferBtn";
 
 type SkillType = {
   id: string;
@@ -57,7 +58,7 @@ const Introduction = () => {
       id="1"
       className="section snap-start snap-always w-full"
     >
-      <div className="skills flex flex-col lg:flex-row-reverse items-center px-4 justify-evenly w-full">
+      <div className="skills flex flex-col-reverse lg:flex-row-reverse items-center px-4 justify-evenly w-full">
         <BrainOfSkills />
         <div className="skillShow w-full h-[250px]">
           <h3 className="text-4xl font-bold">{skill.title}</h3>
@@ -66,13 +67,14 @@ const Introduction = () => {
               <h2 className="font-bold text-3xl">
                 SkyDe | Briliant, Self-Taught <p>Web Developer</p>
               </h2>
-              <p className="w-1/2 text-lg text-gray-600 mt-3">
+              <p className="hidden sm:block w-1/2 text-lg text-gray-500 mt-3">
                 Supercharge your business growth with my innovative web
                 development solutions
               </p>
-              <button className="mt-6 text-white bg-black px-4 py-3 w-1/2 rounded-2xl">
+              <button className="mt-6 text-white bg-black dark:text-black dark:bg-white px-4 py-3 w-1/2 rounded-2xl">
                 JOB OFFER
               </button>
+              {/* <JobOfferBtn /> */}
             </div>
           ) : (
             // intro structure goes here

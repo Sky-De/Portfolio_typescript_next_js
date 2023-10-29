@@ -7,6 +7,7 @@ import Footer from "@/components/layout/Footer";
 import { Provider } from "react-redux";
 import { store } from "@/redux/store/store";
 import { ThemeProvider } from "next-themes";
+import AppProviders from "@/providers/AppProviders";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,13 +24,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} flex flex-col`}>
-        <Provider store={store}>
-          <ThemeProvider>
-            <Header />
-            {children}
-            <Footer />
-          </ThemeProvider>
-        </Provider>
+        <AppProviders>
+          <Header />
+          {children}
+          <Footer />
+        </AppProviders>
       </body>
     </html>
   );

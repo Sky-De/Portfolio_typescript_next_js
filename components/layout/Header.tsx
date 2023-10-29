@@ -5,8 +5,8 @@ import { ThemeBtn } from "../buttons/ThemeBtn";
 const Header = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   return (
-    <header className="header border header sticky top-0 w-full">
-      <div className="header__content flex items-center border-2 border-red-500 h-full relative mx-auto px-2">
+    <header className="header border header sticky top-0 w-ful">
+      <div className="header__content flex items-center h-full relative mx-auto px-2">
         <div className="logo">logo</div>
         <ThemeBtn />
         {isOpen && (
