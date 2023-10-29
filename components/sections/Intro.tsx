@@ -62,7 +62,18 @@ const Introduction = () => {
         <div className="skillShow w-full h-[250px]">
           <h3 className="text-4xl font-bold">{skill.title}</h3>
           {currentSkill === "SKY" ? (
-            <>HI</>
+            <div className="h-full">
+              <h2 className="font-bold text-3xl">
+                SkyDe | Briliant, Self-Taught <p>Web Developer</p>
+              </h2>
+              <p className="w-1/2 text-lg text-gray-600 mt-3">
+                Supercharge your business growth with my innovative web
+                development solutions
+              </p>
+              <button className="mt-6 text-white bg-black px-4 py-3 w-1/2 rounded-2xl">
+                JOB OFFER
+              </button>
+            </div>
           ) : (
             // intro structure goes here
             <ul className=" flex flex-col flex-wrap list-disc px-6 h-full overflow-scroll gap-6 md:gap-2 md:py-4">
