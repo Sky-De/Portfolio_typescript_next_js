@@ -2,6 +2,7 @@
 import { useAppDispatch, useAppSelector } from "@/hooks/reduxHooks";
 import { setActiveSkill } from "@/redux/features/skill/skillSlice";
 import { useTheme } from "next-themes";
+import { motion } from "framer-motion";
 
 function BrainOfSkill() {
   const { currentSkill } = useAppSelector((state) => state.skill);
@@ -16,7 +17,15 @@ function BrainOfSkill() {
   };
 
   return (
-    <svg
+    <motion.svg
+      variants={{
+        hide: { x: 50 },
+        show: { x: 0 },
+      }}
+      initial="hide"
+      whileInView="show"
+      viewport={{ amount: 0.8 }}
+      transition={{ duration: 0.75, delay: 0.25 }}
       xmlns="http://www.w3.org/2000/svg"
       width="380.628"
       height="361.182"
@@ -1552,7 +1561,7 @@ function BrainOfSkill() {
           </g>
         </g>
       </g>
-    </svg>
+    </motion.svg>
   );
 }
 

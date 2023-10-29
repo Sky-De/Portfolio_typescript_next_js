@@ -3,6 +3,7 @@ import { skillsDetails } from "@/constants/skillsDetail";
 import { useAppSelector } from "@/hooks/reduxHooks";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import Introduction from "./Intro";
 
 type SkillType = {
   id: string;
@@ -45,20 +46,21 @@ const Skill = () => {
   }, [currentSkill]);
 
   return (
-    <motion.section
-      variants={{
-        hide: { opacity: 0 },
-        show: { opacity: 1 },
-      }}
-      initial="hide"
-      whileInView="show"
-      viewport={{ amount: 0.8 }}
-      transition={{ duration: 0.5, delay: 0.25 }}
-      id="1"
-      className="section snap-start snap-always w-full"
-    >
-      skill
-    </motion.section>
+    // <motion.section
+    //   variants={{
+    //     hide: { opacity: 0 },
+    //     show: { opacity: 1 },
+    //   }}
+    //   initial="hide"
+    //   whileInView="show"
+    //   viewport={{ amount: 0.8 }}
+    //   transition={{ duration: 0.5, delay: 0.25 }}
+    //   id="1"
+    //   className="section snap-start snap-always w-full"
+    // >
+    //   skill
+    // </motion.section>
+    <Introduction />
   );
 };
 
