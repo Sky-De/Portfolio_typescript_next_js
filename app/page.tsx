@@ -1,5 +1,6 @@
 "use client";
 import Introduction from "@/components/sections/Intro";
+import QuickIntro from "@/components/sections/QuickIntro";
 import Skill from "@/components/sections/Skill";
 import { motion } from "framer-motion";
 import { useRef } from "react";
@@ -17,7 +18,7 @@ export default function Home() {
   return (
     <main className="main overflow-y-scroll snap-y snap-mandatory">
       <Introduction />
-      <Skill />
+      <QuickIntro />
       <motion.section
         variants={{
           hide: { opacity: 0 },

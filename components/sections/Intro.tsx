@@ -84,7 +84,7 @@ const Introduction = () => {
                 viewport={{ amount: 0.8 }}
                 transition={{ duration: 0.25, delay: 0.25 }}
               >
-                SkyDe | Briliant, Self-Taught <p>Web Developer</p>
+                SkyDe | Briliant, Self-Taught <h2>Web Developer</h2>
               </motion.h2>
               <motion.p
                 className="w-2/3 lg:w-1/2 text-lg text-gray-500 mt-3 mx-auto lg:mx-0 hidden sm:block"
@@ -113,7 +113,6 @@ const Introduction = () => {
               >
                 JOB OFFER
               </motion.button>
-              {/* <JobOfferBtn /> */}
             </motion.div>
           ) : (
             <>
