@@ -58,12 +58,12 @@ const Introduction = () => {
       id="1"
       className="section snap-start snap-always w-full"
     >
-      <div className="skills flex flex-col-reverse lg:flex-row-reverse items-center px-4 justify-evenly w-full">
+      <div className="skills flex flex-col lg:flex-row-reverse items-center px-4 justify-evenly w-full">
         <BrainOfSkills />
         <div className="skillShow w-full h-[250px]">
           {currentSkill === "SKY" ? (
             <motion.div
-              className="h-full"
+              className="h-full text-center lg:text-start pt-5 lg:pt-0"
               variants={{
                 hide: { opacity: 0 },
                 show: { opacity: 1 },
@@ -87,7 +87,7 @@ const Introduction = () => {
                 SkyDe | Briliant, Self-Taught <p>Web Developer</p>
               </motion.h2>
               <motion.p
-                className="hidden sm:block w-1/2 text-lg text-gray-500 mt-3"
+                className="w-2/3 lg:w-1/2 text-lg text-gray-500 mt-3 mx-auto lg:mx-0 hidden sm:block"
                 variants={{
                   hide: { x: -50, opacity: 0 },
                   show: { x: 0, opacity: 1 },
@@ -127,7 +127,7 @@ const Introduction = () => {
                 whileInView="show"
                 viewport={{ amount: 0.8 }}
                 transition={{ duration: 0.5, delay: 0.25 }}
-                className="text-4xl font-bold"
+                className="text-4xl font-bold text-center lg:text-start"
               >
                 {skill.title}
               </motion.h2>
@@ -142,7 +142,7 @@ const Introduction = () => {
                 whileInView="show"
                 viewport={{ amount: 0.8 }}
                 transition={{ duration: 0.5, delay: 0.25 }}
-                className=" flex flex-col flex-wrap list-disc px-6 h-full overflow-scroll gap-6 md:gap-2 md:py-4"
+                className=" flex flex-col flex-wrap list-disc px-6 h-full overflow-scroll gap-6 md:gap-2 md:py-4 mt-4 md:mt-0"
               >
                 {skill.features.map((item, index) => (
                   <li className="" key={index}>
