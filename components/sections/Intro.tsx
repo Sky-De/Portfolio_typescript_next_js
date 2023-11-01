@@ -58,7 +58,7 @@ const Introduction = () => {
       id="1"
       className="section snap-start snap-always w-full"
     >
-      <div className="skills flex flex-col lg:flex-row-reverse items-center px-4 justify-evenly w-full">
+      <div className="skills flex flex-col lg:flex-row-reverse items-center px-4 w-full pt-6 lg:pt-0 gap-2">
         <BrainOfSkills />
         <div className="skillShow w-full h-[250px]">
           {currentSkill === "SKY" ? (
