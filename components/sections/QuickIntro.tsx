@@ -40,7 +40,7 @@ const QuickIntro = () => {
           // poster=""
           ref={vidRef}
           onPlay={requestFullScrennHandler}
-          src="https://res.cloudinary.com/dxukz1zt5/video/upload/v1698421286/portfolio/ipn7ccnmpjl2umzt4nn7.mp4"
+          src="https://res.cloudinary.com/dxukz1zt5/video/upload/v1698935521/usjfr8feensbwisrgarw.mp4"
           controls
         ></video>
         <p className="mt-3 leading-7 text-center">
