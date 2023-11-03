@@ -18,23 +18,30 @@ const QuickIntro = () => {
       whileInView="show"
       viewport={{ amount: 0.8 }}
       transition={{ duration: 0.75, delay: 0.25 }}
-      id="1"
+      id="qintro"
       className="section snap-start snap-always w-full flex flex-col justify-evenly lg:flex-row lg:items-center p-2"
     >
       <div className="textContent text-center lg:text-start">
         <h3 className="text-3xl lg:text-5xl font-bold mb-6">Quick Intro</h3>
-        <p className="w-full md:w-2/3">
+        <p className="w-full md:w-2/3 apply__body">
           I am enthusiastic about utilizing any tool that can assist in
           achieving objectives in a suitable manner. In this video, I have used
-          <span className="font-bold"> Adobe Illustrator</span> and{" "}
-          <span className="font-bold"> Adobe After Effects</span> to produce a
-          brief, enjoyable explanation of how I acquired knowledge in web
-          development and who i am!
+          <span className="font-bold text-black dark:text-white">
+            {" "}
+            Adobe Illustrator
+          </span>{" "}
+          and{" "}
+          <span className="font-bold text-black dark:text-white">
+            {" "}
+            Adobe After Effects
+          </span>{" "}
+          to produce a brief, enjoyable explanation of how I acquired knowledge
+          in web development and who i am, Enjoy!
         </p>
       </div>
       <div className="mediaContent rounded-lg">
         <video
-          className="rounded-lg"
+          className="rounded-lg border"
           controlsList="nodownload"
           // design and add poster here--FIX
           // poster=""
@@ -43,10 +50,9 @@ const QuickIntro = () => {
           src="https://res.cloudinary.com/dxukz1zt5/video/upload/v1698935521/usjfr8feensbwisrgarw.mp4"
           controls
         ></video>
-        <p className="mt-3 leading-7 text-center">
-          <span className="bg-yellow-700 p-2 rounded-sm">Warning</span> This
-          video contains music, so please be sure to adjust your volume
-          accordingly.
+        <p className="mt-3 leading-7 text-center apply__body text-xs">
+          <span className="text-warning rounded-sm">Warning: </span> This video
+          contains music, so please be sure to adjust your volume accordingly.
         </p>
       </div>
     </motion.section>

@@ -28,7 +28,7 @@ export default function Home() {
         whileInView="show"
         viewport={{ amount: 0.8 }}
         transition={{ duration: 0.5, delay: 0.5 }}
-        id="3"
+        id="projects"
         className="section snap-start snap-always"
       >
         projects
@@ -42,7 +42,7 @@ export default function Home() {
         whileInView="show"
         viewport={{ amount: 0.8 }}
         transition={{ duration: 0.5, delay: 0.5 }}
-        id="4"
+        id="learn"
         className="section snap-start snap-always"
       >
         to learn
@@ -56,10 +56,10 @@ export default function Home() {
         whileInView="show"
         viewport={{ amount: 0.8 }}
         transition={{ duration: 0.5, delay: 0.5 }}
-        id="5"
+        id="about"
         className="section snap-start snap-always"
       >
-        contact
+        about
       </motion.section>
       <motion.section
         variants={{
@@ -70,10 +70,10 @@ export default function Home() {
         whileInView="show"
         viewport={{ amount: 0.8 }}
         transition={{ duration: 0.5, delay: 0.5 }}
-        id="6"
+        id="contact"
         className="section snap-start snap-always"
       >
-        about
+        contact
       </motion.section>
     </main>
   );

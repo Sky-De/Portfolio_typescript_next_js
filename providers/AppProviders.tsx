@@ -10,7 +10,9 @@ type Props = {
 export const AppProviders: FC<Props> = ({ children }: Props) => {
   return (
     <Provider store={store}>
-      <ThemeProvider>{children}</ThemeProvider>
+      <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        {children}
+      </ThemeProvider>
     </Provider>
   );
 };

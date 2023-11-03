@@ -268,6 +268,7 @@ export const skillsDetails = [
       "Routing",
       "Dynamic routing",
       "Data fetching",
+      "Server actions",
     ],
   },
   {

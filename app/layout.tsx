@@ -23,7 +23,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} flex flex-col`}>
+      <head>
+        <link
+          href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+          rel="stylesheet"
+        ></link>
+      </head>
+      <body
+        className={`${inter.className} flex flex-col bg-bg-primary-light dark:bg-bg-primary-dark`}
+      >
         <AppProviders>
           <Header />
           {children}

@@ -56,7 +56,7 @@ const Introduction = () => {
       whileInView="show"
       viewport={{ amount: 0.8 }}
       transition={{ duration: 0.75, delay: 0.25 }}
-      id="1"
+      id="skills"
       className="section snap-start snap-always w-full"
     >
       <div className="skills flex flex-col lg:flex-row-reverse items-center px-4 w-full pt-6 lg:pt-0 gap-2">
@@ -75,7 +75,7 @@ const Introduction = () => {
               transition={{ duration: 0.5, delay: 0.25 }}
             >
               <motion.h2
-                className="font-bold text-3xl"
+                className="font-bold text-3xl apply__title"
                 variants={{
                   hide: { x: -50, opacity: 0 },
                   show: { x: 0, opacity: 1 },
@@ -90,7 +90,7 @@ const Introduction = () => {
                 <p>Web Developer</p>
               </motion.h2>
               <motion.p
-                className="w-2/3 lg:w-1/2 text-lg text-gray-500 mt-3 mx-auto lg:mx-0 hidden sm:block"
+                className="w-2/3 lg:w-1/2 text-lg mt-3 mx-auto lg:mx-0 hidden sm:block apply__body"
                 variants={{
                   hide: { x: -50, opacity: 0 },
                   show: { x: 0, opacity: 1 },
@@ -100,7 +100,7 @@ const Introduction = () => {
                 viewport={{ amount: 0.8 }}
                 transition={{ duration: 0.5, delay: 0.25 }}
               >
-                Supercharge your business growth with my innovative web
+                # Supercharge your business growth with my innovative web
                 development solutions
               </motion.p>
               <motion.button
@@ -112,7 +112,7 @@ const Introduction = () => {
                 whileInView="show"
                 viewport={{ amount: 0.8 }}
                 transition={{ duration: 0.75, delay: 0.25 }}
-                className="mt-6 text-white bg-black px-4 py-3 w-1/2 rounded-2xl"
+                className="mt-6 text-white bg-black dark:text-black dark:bg-white px-4 py-3 w-1/2 rounded-2xl "
               >
                 JOB OFFER
               </motion.button>

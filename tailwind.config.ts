@@ -6,8 +6,9 @@ const config: Config = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  darkMode: ["class"],
   theme: {
-    darkMode: ["class"],
+    // darkMode: "class",
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -15,11 +16,28 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       colors: {
-        skillBg: {
-          light: "#fff", // Light red
-          dark: "#bebdbd", // Dark blue
-          // You can add more shades or variations of the 'title' color here if needed
+        bg: {
+          primary: {
+            light: "#FFFFFF", // White for light mode
+            dark: "#000000", // Black for dark mode
+          },
+          secondary: {
+            light: "#000000", // Black for light mode
+            dark: "#FFFFFF", // White for dark mode
+          },
         },
+        heading: {
+          light: "#000000", // Black for light mode headings
+          dark: "#FFFFFF", // White for dark mode headings
+        },
+        body: {
+          // light: "#858585",
+          light: "#636363",
+          dark: "#d6d6d6", // Dark grey for dark mode body text
+        },
+        warning: "#FFB300", // Material Design warning color (amber)
+        error: "#F44336", // Material Design error color (red)
+        success: "#4CAF50", // Material Design success color (green)
       },
     },
   },
