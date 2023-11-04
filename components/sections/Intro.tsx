@@ -3,7 +3,10 @@ import BrainOfSkills from "../skillsHero/BrainOfSkills";
 import { skillsDetails } from "@/constants/skillsDetail";
 import { useAppSelector } from "@/hooks/reduxHooks";
 import { useEffect, useState } from "react";
-import { motion, useAnimation } from "framer-motion";
+import { motion } from "framer-motion";
+import CallToActionBtn from "../buttons/CallToActionBtn";
+import { useRef } from "react";
+import { useIsInView } from "@/hooks/useIsInVeiw";
 // import JobOfferBtn from "../buttons/JobOfferBtn";
 
 type SkillType = {
@@ -17,6 +20,10 @@ type SkillType = {
 
 const Introduction = () => {
   const { currentSkill } = useAppSelector((state) => state.skill);
+  const introRef = useRef<HTMLElement>(null);
+  // checks and actives navItems depend on related sections
+  useIsInView({ navName: "Skills", ref: introRef });
+
   const [skill, setSkill] = useState<SkillType>({
     id: "",
     alt: "",
@@ -48,6 +55,7 @@ const Introduction = () => {
 
   return (
     <motion.section
+      ref={introRef}
       variants={{
         hide: { opacity: 0 },
         show: { opacity: 1 },
@@ -57,7 +65,7 @@ const Introduction = () => {
       viewport={{ amount: 0.8 }}
       transition={{ duration: 0.75, delay: 0.25 }}
       id="skills"
-      className="section snap-start snap-always w-full"
+      className="section snap-start snap-always w-full SECTION"
     >
       <div className="skills flex flex-col lg:flex-row-reverse items-center px-4 w-full pt-6 lg:pt-0 gap-2">
         <BrainOfSkills />
@@ -103,19 +111,7 @@ const Introduction = () => {
                 # Supercharge your business growth with my innovative web
                 development solutions
               </motion.p>
-              <motion.button
-                variants={{
-                  hide: { x: 50, opacity: 0 },
-                  show: { x: 0, opacity: 1 },
-                }}
-                initial="hide"
-                whileInView="show"
-                viewport={{ amount: 0.8 }}
-                transition={{ duration: 0.75, delay: 0.25 }}
-                className="mt-6 text-white bg-black dark:text-black dark:bg-white px-4 py-3 w-1/2 rounded-2xl "
-              >
-                JOB OFFER
-              </motion.button>
+              <CallToActionBtn label="Scale your hiring" />
             </motion.div>
           ) : (
             <>

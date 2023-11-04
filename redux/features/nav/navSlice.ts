@@ -16,6 +16,7 @@ const navSlice = createSlice({
   reducers: {
     setActiveNav(state, action: PayloadAction<NavPayload>) {
       state.currentPath = action.payload;
+      console.log(state.currentPath);
     },
   },
 });

@@ -1,12 +1,10 @@
 "use client";
 import { useAppDispatch, useAppSelector } from "@/hooks/reduxHooks";
 import { setActiveSkill } from "@/redux/features/skill/skillSlice";
-import { useTheme } from "next-themes";
 import { motion } from "framer-motion";
 
 function BrainOfSkill() {
   const { currentSkill } = useAppSelector((state) => state.skill);
-  const { theme } = useTheme();
 
   const dispatch = useAppDispatch();
   const handleClick = (e: React.MouseEvent<SVGCircleElement, MouseEvent>) => {
@@ -19,8 +17,8 @@ function BrainOfSkill() {
   return (
     <motion.svg
       variants={{
-        hide: { x: 50 },
-        show: { x: 0 },
+        hide: { scale: 0.8, opacity: 0 },
+        show: { scale: 1, opacity: 1 },
       }}
       initial="hide"
       whileInView="show"

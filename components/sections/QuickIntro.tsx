@@ -1,25 +1,34 @@
 "use clinet";
+import { useIsInView } from "@/hooks/useIsInVeiw";
 import { motion } from "framer-motion";
 import { useRef } from "react";
+
 const QuickIntro = () => {
+  const VIDEO_URL: string =
+    "https://res.cloudinary.com/dxukz1zt5/video/upload/v1699099168/portfolio/oletia8zsswk7ry41cy5.mp4";
   const vidRef = useRef<HTMLVideoElement>(null);
+  const qIntroRef = useRef<HTMLElement>(null);
+  // checks and actives navItems depend on related sections
+  useIsInView({ navName: "Q-Intro", ref: qIntroRef });
   const requestFullScrennHandler = () => {
     if (vidRef.current) {
       vidRef.current.requestFullscreen();
     }
   };
+
   return (
     <motion.section
       variants={{
         hide: { opacity: 0 },
         show: { opacity: 1 },
       }}
+      ref={qIntroRef}
       initial="hide"
       whileInView="show"
       viewport={{ amount: 0.8 }}
       transition={{ duration: 0.75, delay: 0.25 }}
       id="qintro"
-      className="section snap-start snap-always w-full flex flex-col justify-evenly lg:flex-row lg:items-center p-2"
+      className="section snap-start snap-always w-full flex flex-col justify-evenly lg:flex-row lg:items-center p-2 SECTION"
     >
       <div className="textContent text-center lg:text-start">
         <h3 className="text-3xl lg:text-5xl font-bold mb-6">Quick Intro</h3>
@@ -47,12 +56,15 @@ const QuickIntro = () => {
           // poster=""
           ref={vidRef}
           onPlay={requestFullScrennHandler}
-          src="https://res.cloudinary.com/dxukz1zt5/video/upload/v1698935521/usjfr8feensbwisrgarw.mp4"
+          src={VIDEO_URL}
           controls
         ></video>
         <p className="mt-3 leading-7 text-center apply__body text-xs">
-          <span className="text-warning rounded-sm">Warning: </span> This video
-          contains music, so please be sure to adjust your volume accordingly.
+          <span className="text-warning rounded-sm font-bold text-sm">
+            Attention:
+          </span>{" "}
+          this video contains music, so please be sure to adjust your volume
+          accordingly.
         </p>
       </div>
     </motion.section>
