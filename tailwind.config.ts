@@ -10,6 +10,13 @@ const config: Config = {
   theme: {
     // darkMode: "class",
     extend: {
+      dropShadow: {
+        light: ["0 0 5px rgba(0, 0, 0, 0.2)", "0 0 6px rgba(0, 0, 0, 0.1)"],
+        dark: [
+          "0 0 3px rgba(255, 255, 255, 0.2)",
+          "0 0 4px rgba(255, 255, 255, 0.1)",
+        ],
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":

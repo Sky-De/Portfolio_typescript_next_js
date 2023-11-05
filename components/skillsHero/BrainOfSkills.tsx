@@ -28,7 +28,7 @@ function BrainOfSkill() {
       width="380.628"
       height="361.182"
       viewBox="0 0 380.628 361.182"
-      className="p-2 w-[60%] sm:w-[70%] h-[40%] lg:h-[75%]"
+      className="p-2 w-[100%] sm:w-[70%] h-[40%] lg:h-[75%]"
     >
       <defs>
         <linearGradient

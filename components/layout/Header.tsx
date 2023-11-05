@@ -6,6 +6,7 @@ import { NavItems } from "@/constants/navItems";
 import { useAppDispatch, useAppSelector } from "@/hooks/reduxHooks";
 import { setActiveNav } from "@/redux/features/nav/navSlice";
 import { useSearchParams } from "next/navigation";
+import { motion } from "framer-motion";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -16,22 +17,48 @@ const Header = () => {
   const dispatch = useAppDispatch();
 
   return (
-    <header className=" header sticky top-0 w-ful after:bg-bg-secondary-light dark:after:bg-bg-secondary-dark">
+    <header className=" header sticky top-0 w-ful after:bg-bg-secondary-light dark:after:bg-bg-secondary-dark z-30">
       <div className="header__content flex items-center h-full relative mx-auto px-2">
-        <div className="logo">logo</div>
-        <ThemeBtn />
+        <Link
+          href="/"
+          className="logo flex items-center justify-center text-5xl px-1 cursor-pointer"
+        >
+          DE{" "}
+          <span className="inline-flex flex-col text-sm ml-1 font-bold">
+            <span>SIGN</span>
+            <span>VELOP</span>
+          </span>
+        </Link>
+        <ThemeBtn type="desktop" />
         {/* seprate component / reusable */}
-        {/* {isOpen && (
-          <nav className="absolute border w-full h-auto top-[100%] sm:hidden flex flex-col items-center py-2 gap-2">
-            <a href="#1">skyDe</a>
-            <a href="#2">skills</a>
-            <a href="#3">projects</a>
-            <a href="#4">to learn</a>
-            <a href="#5">contact</a>
-            <a href="#6">about</a>
-          </nav>
-        )} */}
-        <nav className="hidden sm:flex sm:items-center sm:ml-auto absolute right-0 bottom-[-6px] apply__nav z-10">
+        {isOpen && (
+          <motion.nav
+            variants={{
+              hide: { x: -100, opacity: 0 },
+              show: { x: 0, opacity: 1 },
+            }}
+            initial="hide"
+            whileInView="show"
+            viewport={{ amount: 0.8 }}
+            transition={{ duration: 0.5, delay: 0.25 }}
+            className="absolute py-8 bg-white dark:bg-black w-full h-auto top-[100%] md:hidden flex flex-col items-center gap-2 z-20 backdrop-blur-3xl bg-transparent dark:bg-transparent"
+          >
+            {NavItems.map((item) => (
+              <Link
+                // onClick={() => dispatch(setActiveNav(item.name))}
+                className={`apply__navItem ${
+                  currentPath === item.name ? "active" : ""
+                }`}
+                href={item.path}
+                key={item.id}
+              >
+                {item.name}
+              </Link>
+            ))}
+            <ThemeBtn type="mobile" />
+          </motion.nav>
+        )}
+        <nav className="hidden md:flex sm:items-center sm:ml-auto absolute right-0 bottom-[-6px] apply__nav z-10 drop-shadow-light dark:drop-shadow-dark">
           {NavItems.map((item) => (
             <Link
               // onClick={() => dispatch(setActiveNav(item.name))}
@@ -45,12 +72,11 @@ const Header = () => {
             </Link>
           ))}
         </nav>
+        {/* Ham-------------- */}
         <div
-          className={`apply__ham sm:hidden ml-auto ${isOpen ? "active" : ""}`}
+          className={`apply__ham md:hidden ml-auto ${isOpen ? "active" : ""}`}
           onClick={() => setIsOpen(!isOpen)}
-        >
-          {/* Ham */}
-        </div>
+        ></div>
       </div>
     </header>
   );

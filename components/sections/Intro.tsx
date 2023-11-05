@@ -83,7 +83,7 @@ const Introduction = () => {
               transition={{ duration: 0.5, delay: 0.25 }}
             >
               <motion.h2
-                className="font-bold text-3xl apply__title"
+                className="font-bold text-2xl md:text-3xl apply__title"
                 variants={{
                   hide: { x: -50, opacity: 0 },
                   show: { x: 0, opacity: 1 },
