@@ -16,7 +16,7 @@ const Header = () => {
   const dispatch = useAppDispatch();
 
   return (
-    <header className="header border header sticky top-0 w-ful">
+    <header className=" header sticky top-0 w-ful after:bg-bg-secondary-light dark:after:bg-bg-secondary-dark">
       <div className="header__content flex items-center h-full relative mx-auto px-2">
         <div className="logo">logo</div>
         <ThemeBtn />
@@ -46,10 +46,10 @@ const Header = () => {
           ))}
         </nav>
         <div
-          className="ham sm:hidden ml-auto"
+          className={`apply__ham sm:hidden ml-auto ${isOpen ? "active" : ""}`}
           onClick={() => setIsOpen(!isOpen)}
         >
-          Ham
+          {/* Ham */}
         </div>
       </div>
     </header>

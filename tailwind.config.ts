@@ -22,8 +22,8 @@ const config: Config = {
             dark: "#000000", // Black for dark mode
           },
           secondary: {
-            light: "#000000", // Black for light mode
-            dark: "#FFFFFF", // White for dark mode
+            light: "#ededed", // Black for light mode
+            dark: "#131313", // White for dark mode
           },
         },
         heading: {
