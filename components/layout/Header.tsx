@@ -6,15 +6,16 @@ import { NavItems } from "@/constants/navItems";
 import { useAppDispatch, useAppSelector } from "@/hooks/reduxHooks";
 import { setActiveNav } from "@/redux/features/nav/navSlice";
 import { useSearchParams } from "next/navigation";
-import { motion } from "framer-motion";
+import { motion, useCycle, AnimatePresence } from "framer-motion";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const { currentPath } = useAppSelector((state) => state.nav);
-  const te = useSearchParams();
-  console.log(te);
-
   const dispatch = useAppDispatch();
+
+  const handleClose = () => {
+    setIsOpen(!isOpen);
+  };
 
   return (
     <header className=" header sticky top-0 w-ful after:bg-bg-secondary-light dark:after:bg-bg-secondary-dark z-30">
@@ -30,34 +31,43 @@ const Header = () => {
           </span>
         </Link>
         <ThemeBtn type="desktop" />
-        {/* seprate component / reusable */}
-        {isOpen && (
-          <motion.nav
-            variants={{
-              hide: { x: -100, opacity: 0 },
-              show: { x: 0, opacity: 1 },
-            }}
-            initial="hide"
-            whileInView="show"
-            viewport={{ amount: 0.8 }}
-            transition={{ duration: 0.5, delay: 0.25 }}
-            className="absolute py-8 bg-white dark:bg-black w-full h-auto top-[100%] md:hidden flex flex-col items-center gap-2 z-20 backdrop-blur-3xl bg-transparent dark:bg-transparent"
-          >
-            {NavItems.map((item) => (
-              <Link
-                // onClick={() => dispatch(setActiveNav(item.name))}
-                className={`apply__navItem ${
-                  currentPath === item.name ? "active" : ""
-                }`}
-                href={item.path}
-                key={item.id}
-              >
-                {item.name}
-              </Link>
-            ))}
-            <ThemeBtn type="mobile" />
-          </motion.nav>
-        )}
+        {/* MOBILE NAV---------------------------- */}
+        <AnimatePresence>
+          {isOpen && (
+            <motion.nav
+              variants={{
+                hidden: { opacity: 0 },
+                visible: { opacity: 1 },
+              }}
+              initial="hidden"
+              animate="visible"
+              exit="hidden"
+              transition={{ duration: 0.5, delay: 0.25 }}
+              className="absolute py-8 overflow-hidden bg-bg-secondary-light dark:bg-bg-secondary-dark w-full h-auto top-[100%] left-0 md:hidden flex flex-col items-center gap-2 z-20 "
+            >
+              {NavItems.map((item) => (
+                <Link
+                  onClick={() => {
+                    const delayToClose = setTimeout(() => {
+                      setIsOpen(false);
+                    }, 800);
+                    delayToClose;
+                  }}
+                  className={`apply__navItem ${
+                    currentPath === item.name ? "active" : ""
+                  }`}
+                  href={item.path}
+                  key={item.id}
+                >
+                  {item.name}
+                </Link>
+              ))}
+              <ThemeBtn type="mobile" />
+            </motion.nav>
+          )}
+        </AnimatePresence>
+
+        {/* !MOBILE NAV---------------------------- */}
         <nav className="hidden md:flex sm:items-center sm:ml-auto absolute right-0 bottom-[-6px] apply__nav z-10 drop-shadow-light dark:drop-shadow-dark">
           {NavItems.map((item) => (
             <Link
@@ -75,7 +85,7 @@ const Header = () => {
         {/* Ham-------------- */}
         <div
           className={`apply__ham md:hidden ml-auto ${isOpen ? "active" : ""}`}
-          onClick={() => setIsOpen(!isOpen)}
+          onClick={handleClose}
         ></div>
       </div>
     </header>

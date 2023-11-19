@@ -4,10 +4,9 @@ import { skillsDetails } from "@/constants/skillsDetail";
 import { useAppSelector } from "@/hooks/reduxHooks";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import CallToActionBtn from "../buttons/CallToActionBtn";
 import { useRef } from "react";
 import { useIsInView } from "@/hooks/useIsInVeiw";
-// import JobOfferBtn from "../buttons/JobOfferBtn";
+import CallToActionBtn from "../buttons/CallToActionBtn";
 
 type SkillType = {
   id: string;
@@ -17,6 +16,14 @@ type SkillType = {
   description: string;
   features: string[];
 };
+const InitialSkill: SkillType = {
+  id: "",
+  alt: "",
+  title: "",
+  icon: "",
+  description: "",
+  features: [],
+};
 
 const Introduction = () => {
   const { currentSkill } = useAppSelector((state) => state.skill);
@@ -24,14 +31,7 @@ const Introduction = () => {
   // checks and actives navItems depend on related sections
   useIsInView({ navName: "Skills", ref: introRef });
 
-  const [skill, setSkill] = useState<SkillType>({
-    id: "",
-    alt: "",
-    title: "",
-    icon: "",
-    description: "",
-    features: [],
-  });
+  const [skill, setSkill] = useState<SkillType>(InitialSkill);
 
   useEffect(() => {
     const filteredSkills = skillsDetails.filter(
@@ -42,14 +42,7 @@ const Introduction = () => {
     } else {
       // Handle the case when no skill matches the currentSkill
       // For instance, set a default state or handle an empty result
-      setSkill({
-        id: "",
-        alt: "",
-        title: "",
-        icon: "",
-        description: "",
-        features: [],
-      });
+      setSkill(InitialSkill);
     }
   }, [currentSkill]);
 
@@ -62,7 +55,6 @@ const Introduction = () => {
       }}
       initial="hide"
       whileInView="show"
-      viewport={{ amount: 0.8 }}
       transition={{ duration: 0.75, delay: 0.25 }}
       id="skills"
       className="section snap-start snap-always w-full SECTION"
@@ -118,14 +110,14 @@ const Introduction = () => {
               <motion.h2
                 key={currentSkill}
                 variants={{
-                  hide: { y: -10, opacity: 0 },
-                  show: { y: 0, opacity: 1 },
+                  hide: { opacity: 0 },
+                  show: { opacity: 1 },
                 }}
                 initial="hide"
                 whileInView="show"
-                viewport={{ amount: 0.8 }}
+                // exit="hide"
                 transition={{ duration: 0.5, delay: 0.25 }}
-                className="text-4xl font-bold text-center lg:text-start"
+                className="text-3xl md:text-4xl font-bold text-center lg:text-start"
               >
                 {skill.title}
               </motion.h2>
@@ -133,11 +125,12 @@ const Introduction = () => {
               <motion.ul
                 key={skill.alt}
                 variants={{
-                  hide: { opacity: 0, x: -25 },
-                  show: { opacity: 1, x: 0 },
+                  hide: { opacity: 0 },
+                  show: { opacity: 1 },
                 }}
                 initial="hide"
                 whileInView="show"
+                // exit="hide"
                 viewport={{ amount: 0.8 }}
                 transition={{ duration: 0.5, delay: 0.25 }}
                 className=" flex flex-col flex-wrap list-disc px-6 h-full overflow-scroll gap-6 md:gap-2 md:py-4 mt-4 md:mt-0"
