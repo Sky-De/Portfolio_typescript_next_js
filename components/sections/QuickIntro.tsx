@@ -5,7 +5,7 @@ import { useRef } from "react";
 
 const QuickIntro = () => {
   const VIDEO_URL: string =
-    "https://res.cloudinary.com/dxukz1zt5/video/upload/v1699099168/portfolio/oletia8zsswk7ry41cy5.mp4";
+    "https://res.cloudinary.com/dxukz1zt5/video/upload/v1700577963/portfolio/xpsjucuadkodkagebztp.mp4";
   const vidRef = useRef<HTMLVideoElement>(null);
   const qIntroRef = useRef<HTMLElement>(null);
   // checks and actives navItems depend on related sections
