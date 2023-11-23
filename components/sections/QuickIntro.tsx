@@ -50,6 +50,7 @@ const QuickIntro = () => {
       </div>
       <div className="mediaContent rounded-lg">
         <video
+          poster="./vidPoster.png"
           className="rounded-lg border"
           controlsList="nodownload"
           // design and add poster here--FIX
