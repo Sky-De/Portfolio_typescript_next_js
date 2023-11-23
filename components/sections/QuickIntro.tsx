@@ -28,11 +28,11 @@ const QuickIntro = () => {
       viewport={{ amount: 0.8 }}
       transition={{ duration: 0.75, delay: 0.25 }}
       id="qintro"
-      className="section snap-start snap-always w-full flex flex-col justify-evenly lg:flex-row lg:items-center p-2 SECTION"
+      className="SECTION section snap-start snap-always w-full flex flex-col justify-evenly lg:flex-row lg:items-center p-2 "
     >
-      <div className="textContent text-center lg:text-start">
+      <div className="textContent text-center lg:text-start mb-4 lg:mb-0">
         <h3 className="text-3xl lg:text-5xl font-bold mb-6">Quick Intro</h3>
-        <p className="w-full md:w-2/3 apply__body">
+        <p className="w-full mx-auto lg:mx-0 md:w-2/3 apply__body">
           I am enthusiastic about utilizing any tool that can assist in
           achieving objectives in a suitable manner. In this video, I have used
           <span className="font-bold text-black dark:text-white">
@@ -48,13 +48,11 @@ const QuickIntro = () => {
           in web development and who i am, Enjoy!
         </p>
       </div>
-      <div className="mediaContent rounded-lg">
+      <div className="mediaContent rounded-lg dark:border pb-3">
         <video
           poster="./vidPoster.png"
-          className="rounded-lg border"
+          className="rounded-lg "
           controlsList="nodownload"
-          // design and add poster here--FIX
-          // poster=""
           ref={vidRef}
           onPlay={requestFullScrennHandler}
           src={VIDEO_URL}
