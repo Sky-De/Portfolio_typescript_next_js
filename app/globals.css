@@ -116,3 +116,7 @@
 .apply__ham.active::after {
   transform: rotate(45deg) translateY(5px) translateX(3px);
 }
+/* crousel btn -------------------------------------*/
+.apply__carousel--btn {
+  @apply text-heading-dark rounded-full bg-bg-primary-dark dark:bg-bg-primary-light dark:text-heading-light mx-2 xl:mx-0 p-1;
+}
