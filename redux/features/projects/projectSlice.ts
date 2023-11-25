@@ -8,6 +8,7 @@ export type ProjectState = {
   features: string[];
   id: number;
   description: string;
+  otherTechs: string[];
 };
 type ProjectsState = {
   projects: ProjectState[];

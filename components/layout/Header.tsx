@@ -1,17 +1,14 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { ThemeBtn } from "../buttons/ThemeBtn";
 import Link from "next/link";
 import { NavItems } from "@/constants/navItems";
-import { useAppDispatch, useAppSelector } from "@/hooks/reduxHooks";
-import { setActiveNav } from "@/redux/features/nav/navSlice";
-import { useSearchParams } from "next/navigation";
-import { motion, useCycle, AnimatePresence } from "framer-motion";
+import { useAppSelector } from "@/hooks/reduxHooks";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const { currentPath } = useAppSelector((state) => state.nav);
-  const dispatch = useAppDispatch();
 
   const handleClose = () => {
     setIsOpen(!isOpen);
@@ -21,7 +18,7 @@ const Header = () => {
     <header className=" header sticky top-0 w-ful after:bg-bg-secondary-light dark:after:bg-bg-secondary-dark z-30">
       <div className="header__content flex items-center h-full relative mx-auto px-2">
         <Link
-          href="/"
+          href="/#skills"
           className="logo flex items-center justify-center text-5xl px-1 cursor-pointer"
         >
           DE{" "}
@@ -71,7 +68,6 @@ const Header = () => {
         <nav className="hidden md:flex sm:items-center sm:ml-auto absolute right-0 bottom-[-6px] apply__nav z-10 drop-shadow-light dark:drop-shadow-dark">
           {NavItems.map((item) => (
             <Link
-              // onClick={() => dispatch(setActiveNav(item.name))}
               className={`apply__navItem ${
                 currentPath === item.name ? "active" : ""
               }`}
