@@ -45,6 +45,9 @@ const config: Config = {
         warning: "#FFB300", // Material Design warning color (amber)
         error: "#F44336", // Material Design error color (red)
         success: "#4CAF50", // Material Design success color (green)
+        learnA: "#26619C", // Material Design success color (green)
+        learnB: "#FF9800", // Material Design success color (green)
+        learnC: "#C62828", // Material Design success color (green)
       },
     },
   },

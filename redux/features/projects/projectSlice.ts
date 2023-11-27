@@ -1,10 +1,11 @@
 import { projectsData } from "@/constants/projectsData";
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
+import { StaticImageData } from "next/image";
 
 export type ProjectState = {
   title: string;
   techIcons: string[];
-  images: string[];
+  images: StaticImageData[];
   features: string[];
   id: number;
   description: string;

@@ -46,20 +46,6 @@ const Skill = () => {
   }, [currentSkill]);
 
   return (
-    // <motion.section
-    //   variants={{
-    //     hide: { opacity: 0 },
-    //     show: { opacity: 1 },
-    //   }}
-    //   initial="hide"
-    //   whileInView="show"
-    //   viewport={{ amount: 0.8 }}
-    //   transition={{ duration: 0.5, delay: 0.25 }}
-    //   id="1"
-    //   className="section snap-start snap-always w-full"
-    // >
-    //   skill
-    // </motion.section>
     <Introduction />
   );
 };

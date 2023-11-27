@@ -31,7 +31,7 @@ export const projectsData: ProjectState[] = [
     ],
     images: [RactDashbordImage],
     techIcons: [HtmlIcon, CssIcon, JsIcon, ReactIcon, MuiIcon, GitIcon],
-    otherTechs: ["nivo charts", "calendar"],
+    otherTechs: ["nivo-charts", "calendar"],
   },
   {
     id: 2,
@@ -45,7 +45,7 @@ export const projectsData: ProjectState[] = [
     ],
     images: [RactDashbordImage],
     techIcons: [HtmlIcon, CssIcon, JsIcon, ReactIcon, MuiIcon, GitIcon],
-    otherTechs: ["nivo charts", "calendar"],
+    otherTechs: ["nivo-charts", "calendar"],
   },
   {
     id: 3,

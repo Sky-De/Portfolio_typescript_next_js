@@ -3,7 +3,7 @@
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
-
+/* FIX--tablet design */
 :root {
   --header: 70px;
   --footer: 50px;
@@ -119,4 +119,15 @@
 /* crousel btn -------------------------------------*/
 .apply__carousel--btn {
   @apply text-heading-dark rounded-full bg-bg-primary-dark dark:bg-bg-primary-light dark:text-heading-light mx-2 xl:mx-0 p-1;
+}
+
+/* LEARN SECTION */
+.apply__learn--list {
+  @apply flex w-full flex-wrap justify-center gap-2;
+}
+.apply__learn--item {
+  @apply p-1 md:p-2 cursor-pointer hover:opacity-60 font-semibold border bg-bg-primary-dark dark:bg-bg-primary-light text-heading-dark dark:text-heading-light  rounded-md;
+}
+.apply__learn--section {
+  @apply w-full flex flex-col items-center gap-4 pb-2 mb-4;
 }
