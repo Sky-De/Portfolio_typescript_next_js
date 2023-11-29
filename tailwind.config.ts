@@ -29,7 +29,8 @@ const config: Config = {
             dark: "#000000", // Black for dark mode
           },
           secondary: {
-            light: "#ededed", // Black for light mode
+            // light: "#ededed", // Black for light mode
+            light: "#e3e3e3", // Black for light mode
             dark: "#131313", // White for dark mode
           },
         },
@@ -45,9 +46,6 @@ const config: Config = {
         warning: "#FFB300", // Material Design warning color (amber)
         error: "#F44336", // Material Design error color (red)
         success: "#4CAF50", // Material Design success color (green)
-        learnA: "#26619C", // Material Design success color (green)
-        learnB: "#FF9800", // Material Design success color (green)
-        learnC: "#C62828", // Material Design success color (green)
       },
     },
   },

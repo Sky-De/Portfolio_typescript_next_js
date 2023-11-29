@@ -84,6 +84,9 @@ const Header = () => {
           onClick={handleClose}
         ></div>
       </div>
+      <p className="z-20 opacity-40 p-4 text-secondary-light bg-bg-primary-light dark:text-secondary-dark dark:bg-bg-primary-dark">
+        {currentPath}
+      </p>
     </header>
   );
 };

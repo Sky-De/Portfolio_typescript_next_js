@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { useIsInView } from "@/hooks/useIsInVeiw";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const About = () => {
   const aboutRef = useRef<HTMLElement>(null);
@@ -18,9 +19,20 @@ const About = () => {
       viewport={{ amount: 0.8 }}
       transition={{ duration: 0.5, delay: 0.5 }}
       id="about"
-      className="section snap-start snap-always"
+      className="section snap-start snap-always border"
     >
-      About
+      <div className="about flex flex-col items-center justify-evenly w-full md:flex-row-reverse">
+        <div className="about--image w-[200px] h-[200px]">
+          <Image
+            src="/avatar.jpg"
+            alt="psk"
+            width={200}
+            height={200}
+            className="about--image"
+          />
+        </div>
+        <div className="about__content border-2 border-blue-700 w-[300px] h-[300px] "></div>
+      </div>
     </motion.section>
   );
 };
