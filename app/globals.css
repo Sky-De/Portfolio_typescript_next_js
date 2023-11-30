@@ -123,7 +123,7 @@
   @apply text-heading-dark rounded-full bg-bg-primary-dark dark:bg-bg-primary-light dark:text-heading-light mx-2 xl:mx-0 p-1;
 }
 
-/* LEARN SECTION */
+/* LEARN SECTION ------------------------------------*/
 .apply__learn--list {
   @apply flex w-full flex-wrap justify-center gap-2;
 }

@@ -17,7 +17,7 @@ const LearnList = ({ title, learnListItems = [] }: LearnListProps) => {
             //
             <li
               key={item}
-              className={`apply__learn--item bg-bg-secondary-dark dark:bg-bg-secondary-light dark:text-heading-light`}
+              className={`apply__learn--item bg-bg-secondary-dark dark:bg-bg-secondary-light dark:text-heading-light text-sm md:text-base`}
             >
               {item}
             </li>
