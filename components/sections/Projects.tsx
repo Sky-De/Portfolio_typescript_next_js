@@ -9,6 +9,7 @@ import {
 } from "@/redux/features/projects/projectSlice";
 import Image from "next/image";
 import Link from "next/link";
+import { v4 as uuid } from "uuid";
 
 const Projects = () => {
   const { projects, selectedProject, selectedProjectId } = useAppSelector(
@@ -63,14 +64,14 @@ const Projects = () => {
                     ? "bg-bg-primary-dark px-2 dark:bg-bg-primary-light"
                     : ""
                 }`}
-                key={pro.id}
+                key={uuid()}
               ></span>
             ))}
           </div>
           {selectedProject && (
             <p
               className="text-body-light dark:text-body-dark mt-0 md:mt-2 text-sm"
-              key={selectedProject.id}
+              key={uuid()}
             >
               {selectedProject.id} of {projects.length}
             </p>
@@ -95,7 +96,7 @@ const Projects = () => {
             <div className="project--info flex flex-col gap-1 items-center md:items-start md:w-2/5 md:gap-4">
               <h2
                 className="text-heading-light dark:text-heading-dark font-bold text-3xl md:text-4xl py-4"
-                key={selectedProject.id}
+                key={uuid()}
               >
                 {selectedProject.title}
               </h2>
@@ -107,14 +108,14 @@ const Projects = () => {
                       src={icon}
                       width={30}
                       height={30}
-                      key={icon.toString()}
+                      key={uuid()}
                       alt={icon.toString()}
                     />
                   ))}
                 {selectedProject.otherTechs.map((tech) => (
                   <span
                     className="text-body-light dark:text-body-dark text-sm"
-                    key={tech}
+                    key={uuid()}
                   >
                     {tech}
                   </span>

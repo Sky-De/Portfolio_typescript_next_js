@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { useRef } from "react";
 import { useIsInView } from "@/hooks/useIsInVeiw";
+import { v4 as uuid } from "uuid";
 import CallToActionBtn from "../buttons/CallToActionBtn";
 
 type SkillType = {
@@ -108,7 +109,7 @@ const Introduction = () => {
           ) : (
             <>
               <motion.h2
-                key={currentSkill}
+                // key={currentSkill}
                 variants={{
                   hide: { opacity: 0 },
                   show: { opacity: 1 },
@@ -123,7 +124,7 @@ const Introduction = () => {
               </motion.h2>
 
               <motion.ul
-                key={skill.alt}
+                // key={skill.alt}
                 variants={{
                   hide: { opacity: 0 },
                   show: { opacity: 1 },
@@ -136,7 +137,7 @@ const Introduction = () => {
                 className=" flex flex-col flex-wrap list-disc px-6 h-full overflow-scroll gap-6 md:gap-2 md:py-4 mt-4 md:mt-0"
               >
                 {skill.features.map((item, index) => (
-                  <li className="" key={index}>
+                  <li className="" key={uuid()}>
                     {item}
                   </li>
                 ))}

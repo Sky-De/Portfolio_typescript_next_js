@@ -19,19 +19,19 @@ const About = () => {
       viewport={{ amount: 0.8 }}
       transition={{ duration: 0.5, delay: 0.5 }}
       id="about"
-      className="section snap-start snap-always border"
+      className="section snap-start snap-always"
     >
       <div className="about flex flex-col items-center justify-evenly w-full md:flex-row-reverse">
-        <div className="about--image w-[200px] h-[200px]">
+        <div className="about--image w-[350px] h-[350px] border grid place-content-center">
           <Image
             src="/avatar.jpg"
             alt="psk"
-            width={200}
-            height={200}
-            className="about--image"
+            width={350}
+            height={350}
+            className="about--image border"
           />
         </div>
-        <div className="about__content border-2 border-blue-700 w-[300px] h-[300px] "></div>
+        <div className="about__content border-2 border-blue-700 w-[350px] max-w-full h-[300px] "></div>
       </div>
     </motion.section>
   );

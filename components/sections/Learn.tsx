@@ -26,7 +26,7 @@ const Learn = () => {
       id="learn"
       className="section snap-start snap-always"
     >
-      <div className="flex  w-full items-center flex-col lg:flex-row px-2 md:justify-center my-auto">
+      <div className="flex w-full items-center flex-col lg:flex-row px-2 md:justify-center my-auto">
         <div className="learn__intro lg:w-2/3">
           <h2 className=" mx-auto lg:mx-0 mb-8 md:mb-0 pt-8 md:pt-10 text-2xl md:text-3xl xl:text-4xl font-bold text-center sm:w-2/3 lg:text-start lg:w-2/3">
             {`A Web Developer's Journey of Continuous

@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { ThemeBtn } from "../buttons/ThemeBtn";
 import Link from "next/link";
+import { v4 as uuid } from "uuid";
 import { NavItems } from "@/constants/navItems";
 import { useAppSelector } from "@/hooks/reduxHooks";
 import { motion, AnimatePresence } from "framer-motion";
@@ -54,7 +55,7 @@ const Header = () => {
                     currentPath === item.name ? "active" : ""
                   }`}
                   href={item.path}
-                  key={item.id}
+                  key={uuid()}
                 >
                   {item.name}
                 </Link>
@@ -72,7 +73,7 @@ const Header = () => {
                 currentPath === item.name ? "active" : ""
               }`}
               href={item.path}
-              key={item.id}
+              key={uuid()}
             >
               {item.name}
             </Link>

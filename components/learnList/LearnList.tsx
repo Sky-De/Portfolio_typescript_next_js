@@ -1,3 +1,5 @@
+import { v4 as uuid } from "uuid";
+
 export type LearnListProps = {
   title: string;
   learnListItems: string[];
@@ -11,12 +13,11 @@ const LearnList = ({ title, learnListItems = [] }: LearnListProps) => {
         {learnListItems.length > 0 &&
           learnListItems.map((item) => (
             // colored items
-            // <li key={item} className={`apply__learn--item bg-${item}`}>
+            // <li key={uuid()} className={`apply__learn--item bg-${item}`}>
             //   {item}
             // </li>
-            //
             <li
-              key={item}
+              key={uuid()}
               className={`apply__learn--item bg-bg-secondary-dark dark:bg-bg-secondary-light dark:text-heading-light text-sm md:text-base`}
             >
               {item}
