@@ -1,9 +1,10 @@
 import { useInView } from "framer-motion";
+import { RefObject } from "react";
 import { useAppDispatch } from "./reduxHooks";
 import { setActiveNav } from "@/redux/features/nav/navSlice";
 
 type UseIsInViewProps = {
-  ref: any;
+  ref: RefObject<HTMLElement>;
   navName: string;
 };
 

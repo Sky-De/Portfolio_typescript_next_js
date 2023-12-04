@@ -9,6 +9,7 @@ import { store } from "@/redux/store/store";
 import { ThemeProvider } from "next-themes";
 import AppProviders from "@/providers/AppProviders";
 import { useEffect } from "react";
+import ContactModel from "@/components/contactModel/ContactModel";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -31,10 +32,11 @@ export default function RootLayout({
         ></link>
       </head>
       <body
-        className={`${inter.className} flex flex-col bg-bg-primary-light dark:bg-bg-primary-dark`}
+        className={`${inter.className} flex flex-col bg-bg-primary-light dark:bg-bg-primary-dark relative`}
       >
         <AppProviders>
           <Header />
+          <ContactModel />
           {children}
           <Footer />
         </AppProviders>

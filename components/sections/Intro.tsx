@@ -1,51 +1,19 @@
 "use client";
 import BrainOfSkills from "../skillsHero/BrainOfSkills";
-import { skillsDetails } from "@/constants/skillsDetail";
 import { useAppSelector } from "@/hooks/reduxHooks";
-import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { useRef } from "react";
 import { useIsInView } from "@/hooks/useIsInVeiw";
 import { v4 as uuid } from "uuid";
 import CallToActionBtn from "../buttons/CallToActionBtn";
 
-type SkillType = {
-  id: string;
-  alt: string;
-  title: string;
-  icon: string;
-  description: string;
-  features: string[];
-};
-const InitialSkill: SkillType = {
-  id: "",
-  alt: "",
-  title: "",
-  icon: "",
-  description: "",
-  features: [],
-};
-
 const Introduction = () => {
-  const { currentSkill } = useAppSelector((state) => state.skill);
+  const { currentSkill, currentSkillData: skill } = useAppSelector(
+    (state) => state.skill
+  );
   const introRef = useRef<HTMLElement>(null);
   // checks and actives navItems depend on related sections
   useIsInView({ navName: "Skills", ref: introRef });
-
-  const [skill, setSkill] = useState<SkillType>(InitialSkill);
-
-  useEffect(() => {
-    const filteredSkills = skillsDetails.filter(
-      (skill) => skill.id === currentSkill
-    );
-    if (filteredSkills.length > 0) {
-      setSkill(filteredSkills[0]); // Take the first item from the filtered array
-    } else {
-      // Handle the case when no skill matches the currentSkill
-      // For instance, set a default state or handle an empty result
-      setSkill(InitialSkill);
-    }
-  }, [currentSkill]);
 
   return (
     <motion.section
@@ -63,6 +31,7 @@ const Introduction = () => {
       <div className="skills flex flex-col lg:flex-row-reverse items-center px-4 w-full pt-6 lg:pt-0 gap-2">
         <BrainOfSkills />
         <div className="skillShow w-full h-[250px]">
+          {/* developer intro---------------------- */}
           {currentSkill === "SKY" ? (
             <motion.div
               className="h-full text-center lg:text-start pt-5 lg:pt-0"
@@ -108,8 +77,9 @@ const Introduction = () => {
             </motion.div>
           ) : (
             <>
+              {/* skills show case ---------------------- */}
               <motion.h2
-                // key={currentSkill}
+                key={currentSkill}
                 variants={{
                   hide: { opacity: 0 },
                   show: { opacity: 1 },
@@ -124,14 +94,14 @@ const Introduction = () => {
               </motion.h2>
 
               <motion.ul
-                // key={skill.alt}
+                key={skill.alt}
                 variants={{
                   hide: { opacity: 0 },
                   show: { opacity: 1 },
                 }}
                 initial="hide"
                 whileInView="show"
-                // exit="hide"
+                exit="hide"
                 viewport={{ amount: 0.8 }}
                 transition={{ duration: 0.5, delay: 0.25 }}
                 className=" flex flex-col flex-wrap list-disc px-6 h-full overflow-scroll gap-6 md:gap-2 md:py-4 mt-4 md:mt-0"

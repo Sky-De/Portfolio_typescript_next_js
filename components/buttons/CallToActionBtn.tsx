@@ -1,9 +1,14 @@
+"use client";
 import React, { FC } from "react";
 import { motion } from "framer-motion";
+import { useAppDispatch } from "@/hooks/reduxHooks";
+import { openContatctModel } from "@/redux/features/models/modelSlice";
 
 const CallToActionBtn: FC<{ label: string }> = ({ label }) => {
+  const dispatch = useAppDispatch();
   return (
     <motion.button
+      onClick={() => dispatch(openContatctModel())}
       variants={{
         hide: { x: 50, opacity: 0 },
         show: { x: 0, opacity: 1 },
