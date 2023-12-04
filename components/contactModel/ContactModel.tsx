@@ -18,10 +18,13 @@ const ContactModel = () => {
       transition={{ duration: 1.5, delay: 1.25 }}
       className={`${
         contactModel.isOpen === false ? "hidden" : "block"
-      } border absolute top-0 left-0 w-full h-full z-40 backdrop-blur-3xl`}
+      } border absolute top-0 left-0 w-full h-full z-40 backdrop-blur-sm flex items-center`}
       onClick={() => dispatch(closeContatctModel())}
     >
-      <div onClick={(e) => e.stopPropagation()} className="border w-full h-1/2">
+      <div
+        onClick={(e) => e.stopPropagation()}
+        className="border w-full h-1/2 bg-black"
+      >
         form
       </div>
     </motion.div>

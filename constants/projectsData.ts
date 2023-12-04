@@ -16,6 +16,7 @@ import SassIcon from "@/public/skillIcons/Sass.svg";
 import TsIcon from "@/public/skillIcons/Ts.svg";
 import WebpackIcon from "@/public/skillIcons/Webpack.svg";
 import XdIcon from "@/public/skillIcons/Xd.svg";
+import ReduxIcon from "@/public/skillIcons/Redux.svg";
 
 import RactDashbordImage from "@/public/adminDashboard.png";
 export const projectsData: ProjectState[] = [
@@ -30,7 +31,26 @@ export const projectsData: ProjectState[] = [
       "another thibng",
     ],
     images: [RactDashbordImage],
-    techIcons: [HtmlIcon, CssIcon, JsIcon, ReactIcon, MuiIcon, GitIcon],
+    techIcons: [
+      ReduxIcon,
+      AeIcon,
+      AiIcon,
+      CssIcon,
+      ExpressIcon,
+      GitIcon,
+      HtmlIcon,
+      JestIcon,
+      JsIcon,
+      MongodbIcon,
+      MuiIcon,
+      NextIcon,
+      NodeIcon,
+      ReactIcon,
+      SassIcon,
+      TsIcon,
+      WebpackIcon,
+      XdIcon,
+    ],
     otherTechs: ["nivo-charts", "calendar"],
   },
   {

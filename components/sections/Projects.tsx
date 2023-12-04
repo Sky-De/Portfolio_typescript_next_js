@@ -106,8 +106,8 @@ const Projects = () => {
                   selectedProject.techIcons.map((icon) => (
                     <Image
                       src={icon}
-                      width={30}
-                      height={30}
+                      width={40}
+                      height={40}
                       key={uuid()}
                       alt={icon.toString()}
                     />
@@ -137,7 +137,9 @@ const Projects = () => {
         )}
         {/* project links------------------- */}
         <div className="project--links flex flex-col justify-center items-center gap-3 mb-auto md:items-start md:w-full md:ml-44">
-          <span className="font-bold hidden md:inline">More details</span>
+          <span className="font-bold hidden md:inline">
+            Explore more details
+          </span>
           <Link
             href={"#"}
             target="_blank"
