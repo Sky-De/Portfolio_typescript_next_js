@@ -18,7 +18,14 @@ import WebpackIcon from "@/public/skillIcons/Webpack.svg";
 import XdIcon from "@/public/skillIcons/Xd.svg";
 import ReduxIcon from "@/public/skillIcons/Redux.svg";
 
-import RactDashbordImage from "@/public/adminDashboard.png";
+
+export type MockupProps = {
+  mobileCoverUrl: string;
+  tableCoverUrl: string;
+  laptopCoverUrl: string;
+};
+
+
 export const projectsData: ProjectState[] = [
   {
     id: 1,
@@ -30,7 +37,14 @@ export const projectsData: ProjectState[] = [
       "representing data within Data Grid",
       "another thibng",
     ],
-    images: [RactDashbordImage],
+    images: {
+      mobileCoverUrl:
+        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1702644156/portfolio/snzsm8fzun5sqlunes5j.png",
+      tableCoverUrl:
+        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1702643661/portfolio/jldvgrexoc8lj8apgu2e.png",
+      laptopCoverUrl:
+        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1702644156/portfolio/lwwqbjdffjy0eon7mqaj.png",
+    },
     techIcons: [
       ReduxIcon,
       AeIcon,
@@ -39,17 +53,6 @@ export const projectsData: ProjectState[] = [
       ExpressIcon,
       GitIcon,
       HtmlIcon,
-      JestIcon,
-      JsIcon,
-      MongodbIcon,
-      MuiIcon,
-      NextIcon,
-      NodeIcon,
-      ReactIcon,
-      SassIcon,
-      TsIcon,
-      WebpackIcon,
-      XdIcon,
     ],
     otherTechs: ["nivo-charts", "calendar"],
   },
@@ -63,7 +66,11 @@ export const projectsData: ProjectState[] = [
       "representing data within Data Grid",
       "another thibng",
     ],
-    images: [RactDashbordImage],
+    images: {
+      mobileCoverUrl: "",
+      tableCoverUrl: "",
+      laptopCoverUrl: "",
+    },
     techIcons: [HtmlIcon, CssIcon, JsIcon, ReactIcon, MuiIcon, GitIcon],
     otherTechs: ["nivo-charts", "calendar"],
   },
@@ -77,7 +84,11 @@ export const projectsData: ProjectState[] = [
       "representing data within Data Grid",
       "another thibng",
     ],
-    images: [RactDashbordImage],
+    images: {
+      mobileCoverUrl: "",
+      tableCoverUrl: "",
+      laptopCoverUrl: "",
+    },
     techIcons: [AeIcon, AiIcon, CssIcon],
     otherTechs: ["test", "anotehr"],
   },
@@ -91,7 +102,11 @@ export const projectsData: ProjectState[] = [
       "representing data within Data Grid",
       "another thibng",
     ],
-    images: [RactDashbordImage],
+    images: {
+      mobileCoverUrl: "",
+      tableCoverUrl: "",
+      laptopCoverUrl: "",
+    },
     techIcons: [AeIcon, AiIcon, CssIcon],
     otherTechs: ["test", "anotehr"],
   },
@@ -105,7 +120,11 @@ export const projectsData: ProjectState[] = [
       "representing data within Data Grid",
       "another thibng",
     ],
-    images: [RactDashbordImage],
+    images: {
+      mobileCoverUrl: "",
+      tableCoverUrl: "",
+      laptopCoverUrl: "",
+    },
     techIcons: [AeIcon, AiIcon, CssIcon],
     otherTechs: ["test", "anotehr"],
   },
@@ -119,7 +138,11 @@ export const projectsData: ProjectState[] = [
       "representing data within Data Grid",
       "another thibng",
     ],
-    images: [RactDashbordImage],
+    images: {
+      mobileCoverUrl: "",
+      tableCoverUrl: "",
+      laptopCoverUrl: "",
+    },
     techIcons: [AeIcon, AiIcon, CssIcon],
     otherTechs: ["test", "anotehr"],
   },
@@ -133,7 +156,11 @@ export const projectsData: ProjectState[] = [
       "representing data within Data Grid",
       "another thibng",
     ],
-    images: [RactDashbordImage],
+    images: {
+      mobileCoverUrl: "",
+      tableCoverUrl: "",
+      laptopCoverUrl: "",
+    },
     techIcons: [AeIcon, AiIcon, CssIcon],
     otherTechs: ["test", "anotehr"],
   },
@@ -147,7 +174,11 @@ export const projectsData: ProjectState[] = [
       "representing data within Data Grid",
       "another thibng",
     ],
-    images: [RactDashbordImage],
+    images: {
+      mobileCoverUrl: "",
+      tableCoverUrl: "",
+      laptopCoverUrl: "",
+    },
     techIcons: [AeIcon, AiIcon, CssIcon],
     otherTechs: ["test", "anotehr"],
   },
@@ -161,7 +192,11 @@ export const projectsData: ProjectState[] = [
       "representing data within Data Grid",
       "another thibng",
     ],
-    images: [RactDashbordImage],
+    images: {
+      mobileCoverUrl: "",
+      tableCoverUrl: "",
+      laptopCoverUrl: "",
+    },
     techIcons: [AeIcon, AiIcon, CssIcon],
     otherTechs: ["test", "anotehr"],
   },
@@ -175,7 +210,11 @@ export const projectsData: ProjectState[] = [
       "representing data within Data Grid",
       "another thibng",
     ],
-    images: [RactDashbordImage],
+    images: {
+      mobileCoverUrl: "",
+      tableCoverUrl: "",
+      laptopCoverUrl: "",
+    },
     techIcons: [AeIcon, AiIcon, CssIcon],
     otherTechs: ["test", "anotehr"],
   },
@@ -189,7 +228,11 @@ export const projectsData: ProjectState[] = [
       "representing data within Data Grid",
       "another thibng",
     ],
-    images: [RactDashbordImage],
+    images: {
+      mobileCoverUrl: "",
+      tableCoverUrl: "",
+      laptopCoverUrl: "",
+    },
     techIcons: [AeIcon, AiIcon, CssIcon],
     otherTechs: ["test", "anotehr"],
   },
@@ -203,7 +246,11 @@ export const projectsData: ProjectState[] = [
       "representing data within Data Grid",
       "another thibng",
     ],
-    images: [RactDashbordImage],
+    images: {
+      mobileCoverUrl: "",
+      tableCoverUrl: "",
+      laptopCoverUrl: "",
+    },
     techIcons: [AeIcon, AiIcon, CssIcon],
     otherTechs: ["test", "anotehr"],
   },
@@ -217,7 +264,11 @@ export const projectsData: ProjectState[] = [
       "representing data within Data Grid",
       "another thibng",
     ],
-    images: [RactDashbordImage],
+    images: {
+      mobileCoverUrl: "",
+      tableCoverUrl: "",
+      laptopCoverUrl: "",
+    },
     techIcons: [AeIcon, AiIcon, CssIcon],
     otherTechs: ["test", "anotehr"],
   },
@@ -231,7 +282,11 @@ export const projectsData: ProjectState[] = [
       "representing data within Data Grid",
       "another thibng",
     ],
-    images: [RactDashbordImage],
+    images: {
+      mobileCoverUrl: "",
+      tableCoverUrl: "",
+      laptopCoverUrl: "",
+    },
     techIcons: [AeIcon, AiIcon, CssIcon],
     otherTechs: ["test", "anotehr"],
   },

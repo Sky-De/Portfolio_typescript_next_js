@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -H 192.168.2.198",
     "build": "next build",
-    "start": "next start",
+    "start": "next start --host 192.168.2.198 --port 3000",
     "lint": "next lint"
   },
   "dependencies": {
@@ -17,6 +17,7 @@
     "react": "^18",
     "react-dom": "^18",
     "react-redux": "^8.1.3",
+    "sass": "^1.69.5",
     "uuid": "^9.0.1"
   },
   "devDependencies": {

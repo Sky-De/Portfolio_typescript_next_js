@@ -9,7 +9,8 @@ import { store } from "@/redux/store/store";
 import { ThemeProvider } from "next-themes";
 import AppProviders from "@/providers/AppProviders";
 import { useEffect } from "react";
-import ContactModel from "@/components/contactModel/ContactModel";
+import ContactModel from "@/components/Models/ContactModel";
+import ProjectImageModel from "@/components/Models/ProjectImageModel";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -36,6 +37,7 @@ export default function RootLayout({
       >
         <AppProviders>
           <Header />
+          <ProjectImageModel />
           <ContactModel />
           {children}
           <Footer />

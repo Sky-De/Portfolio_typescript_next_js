@@ -1,6 +1,6 @@
 import About from "@/components/sections/About";
 import Contact from "@/components/sections/Contact";
-import Introduction from "@/components/sections/Intro";
+import Introduction from "@/components/sections/Introduction";
 import Learn from "@/components/sections/Learn";
 import Projects from "@/components/sections/Projects";
 import QuickIntro from "@/components/sections/QuickIntro";

@@ -26,11 +26,11 @@ const Introduction = () => {
       whileInView="show"
       transition={{ duration: 0.75, delay: 0.25 }}
       id="skills"
-      className="section snap-start snap-always w-full SECTION"
+      className="section snap-start snap-always w-full"
     >
       <div className="skills flex flex-col lg:flex-row-reverse items-center px-4 w-full pt-6 lg:pt-0 gap-2">
         <BrainOfSkills />
-        <div className="skillShow w-full h-[250px]">
+        <div className="skillShow w-full h-[250px] my-auto">
           {/* developer intro---------------------- */}
           {currentSkill === "SKY" ? (
             <motion.div

@@ -10,6 +10,7 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { v4 as uuid } from "uuid";
+import Mockup from "../mockups/Mockup";
 
 const Projects = () => {
   const { projects, selectedProject, selectedProjectId } = useAppSelector(
@@ -121,22 +122,17 @@ const Projects = () => {
                   </span>
                 ))}
               </div>
-              <p className="text-center md:text-start w-3/4 mb-4 text-body-light dark:text-body-dark">
+              <p className="hidden md:block text-center md:text-start w-3/4 mb-4 text-body-light dark:text-body-dark">
                 {selectedProject.description}
               </p>
             </div>
             {/* FIX--get make this dynamic */}
-            <Image
-              src="/adminDashboard.png"
-              width={300}
-              height={300}
-              className="project--image w-[300px] h-auto md:w-[400px]"
-              alt="project image"
-            />
+           
+            <Mockup laptopCoverUrl={selectedProject.images.laptopCoverUrl} tableCoverUrl={selectedProject.images.tableCoverUrl} mobileCoverUrl={selectedProject.images.mobileCoverUrl}/>
           </div>
         )}
         {/* project links------------------- */}
-        <div className="project--links flex flex-col justify-center items-center gap-3 mb-auto md:items-start md:w-full md:ml-44">
+        <div className="project--links flex flex-col justify-center items-center gap-3 md:items-start md:w-full md:ml-44 my-auto">
           <span className="font-bold hidden md:inline">
             Explore more details
           </span>

@@ -19,10 +19,12 @@
 }
 .section {
   display: flex;
+  border: 1px solid red;
+  /* overflow: hidden; */
   max-width: var(--max-width-container);
   margin: 0 auto;
-  max-height: calc(100vh - var(--header) - var(--footer));
-  min-height: calc(100vh - var(--header) - var(--footer));
+  max-height: calc(100svh - var(--header) - var(--footer));
+  min-height: calc(100svh - var(--header) - var(--footer));
 }
 
 .header {
