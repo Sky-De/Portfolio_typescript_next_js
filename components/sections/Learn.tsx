@@ -29,7 +29,7 @@ const Learn = () => {
       <div className="flex w-full items-center flex-col lg:flex-row px-2 md:justify-center my-auto">
         <div className="learn__intro lg:w-2/3">
           <h2 className=" mx-auto lg:mx-0 mb-8 md:mb-0 pt-8 md:pt-10 text-2xl md:text-3xl xl:text-4xl font-bold text-center sm:w-2/3 lg:text-start lg:w-2/3">
-            {`A Web Developer's Journey of Continuous
+            {`A Journey of Continuous
           Learning`}
           </h2>
           <p className="hidden sm:block w-2/3 lg:w-4/5 text-center lg:text-start  mx-auto lg:mx-0 lg:block apply__body  pb-8 md:pb-10 pt-4">
