@@ -61,9 +61,9 @@ const Projects = () => {
             {projects.map((pro) => (
               <span
                 onClick={() => dispatch(setActiveProject(pro.id))}
-                className={`transition-all duration-700 rounded-full cursor-pointer block p-1 border border-heading-light dark:border-heading-dark ${
+                className={`transition-all duration-700 rounded-full cursor-pointer block p-[0.30rem] border border-heading-light dark:border-heading-dark ${
                   pro.id === selectedProjectId
-                    ? "bg-bg-primary-dark px-2 dark:bg-bg-primary-light"
+                    ? "bg-bg-primary-dark px-[0.6rem] dark:bg-bg-primary-light"
                     : ""
                 }`}
                 key={uuid()}
@@ -137,7 +137,7 @@ const Projects = () => {
           </div>
         )}
         {/* project links------------------- */}
-        <div className="project--links flex flex-col justify-center items-center gap-3 md:items-start md:w-full md:ml-28 my-auto">
+        <div className="project--links flex flex-col justify-center items-center gap-3 md:items-start md:w-full md:ml-32 my-auto">
           <span className="font-bold hidden md:inline">
             Explore more details
           </span>

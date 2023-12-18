@@ -20,12 +20,12 @@ const ProjectFeaturesModel = () => {
       transition={{ duration: 1.5, delay: 1.25 }}
       className={`${
         featuresModel.isOpen === false ? "hidden" : "block"
-      } border absolute top-0 left-0 w-full h-full z-40 backdrop-blur-sm flex items-center`}
+      }  absolute top-0 left-0 w-full h-full z-40 backdrop-blur-sm flex items-center`}
       onClick={() => dispatch(closefeatureModel())}
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        className="border w-full h-1/2 bg-black text-white"
+        className=" w-full h-1/2 bg-bg-primary-dark dark:bg-bg-primary-light text-heading-dark dark:text-heading-light mx-2"
       >
         <CloseBtn handleClick={()=> dispatch(closefeatureModel())}/>
         <ol className="p-2 ml-6 list-disc">

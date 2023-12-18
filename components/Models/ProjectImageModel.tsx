@@ -29,12 +29,12 @@ const ProjectImageModel = () => {
         className=" w-full bg-[background-color: rgb(0 0 0 / 0.2)] px-8 md:px-16"
       >
         {/* FIX-- replace all img tag with Image from next js */}
+        <CloseBtn handleClick={closeModelHandler} />
         <img
           className="max-h-[90svh] md:p-8 m-auto"
           src={imageModel.imageUrl}
           alt="project"
         />
-        <CloseBtn handleClick={closeModelHandler} />
       </div>
     </motion.div>
   );
