@@ -11,6 +11,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { v4 as uuid } from "uuid";
 import Mockup from "../mockups/Mockup";
+import { openfeatureModel } from "@/redux/features/models/modelSlice";
 
 const Projects = () => {
   const { projects, selectedProject, selectedProjectId } = useAppSelector(
@@ -93,8 +94,8 @@ const Projects = () => {
         className="flex flex-col items-center gap-5  w-full  mx-12 py-5"
       >
         {selectedProject && (
-          <div className="flex flex-col md:flex-row md:mt-auto md:px-4 items-center md:justify-evenly">
-            <div className="project--info flex flex-col gap-1 items-center md:items-start md:w-2/5 md:gap-4">
+          <div className="flex flex-col lg:flex-row md:mt-auto md:px-4 items-center md:justify-evenly">
+            <div className="project--info flex flex-col gap-1 items-center md:items-start lg:w-2/5 md:gap-4">
               <h2
                 className="text-heading-light dark:text-heading-dark font-bold text-3xl md:text-4xl py-4"
                 key={uuid()}
@@ -127,8 +128,12 @@ const Projects = () => {
               </p>
             </div>
             {/* FIX--get make this dynamic */}
-           
-            <Mockup laptopCoverUrl={selectedProject.images.laptopCoverUrl} tableCoverUrl={selectedProject.images.tableCoverUrl} mobileCoverUrl={selectedProject.images.mobileCoverUrl}/>
+
+            <Mockup
+              laptopCoverUrl={selectedProject.images.laptopCoverUrl}
+              tableCoverUrl={selectedProject.images.tableCoverUrl}
+              mobileCoverUrl={selectedProject.images.mobileCoverUrl}
+            />
           </div>
         )}
         {/* project links------------------- */}
@@ -136,14 +141,14 @@ const Projects = () => {
           <span className="font-bold hidden md:inline">
             Explore more details
           </span>
-          <Link
-            href={"#"}
-            target="_blank"
+          <button
+          onClick={()=> {dispatch(openfeatureModel({features:["asd","fdsf"]}))}}
             className="flex items-center opacity-100 md:opacity-70 gap-2 hover:opacity-100 transition-opacity"
           >
-            <i className="bx bxl-github apply__footer--item "></i>
-            Github Repositorty{" "}
-          </Link>
+            <i className="bx bx-hive apply__footer--item"></i>
+            Features{" "}
+          </button>
+
           <Link
             href={"#"}
             target="_blank"
@@ -151,6 +156,14 @@ const Projects = () => {
           >
             <i className="bx bxl-netlify apply__footer--item"></i>
             Live Demo
+          </Link>
+          <Link
+            href={"#"}
+            target="_blank"
+            className="flex items-center opacity-100 md:opacity-70 gap-2 hover:opacity-100 transition-opacity"
+          >
+            <i className="bx bxl-github apply__footer--item "></i>
+            Github Repositorty{" "}
           </Link>
           <Link href={"#"}></Link>
         </div>

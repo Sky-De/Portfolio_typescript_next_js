@@ -29,8 +29,8 @@ function Mockup({laptopCoverUrl,mobileCoverUrl,tableCoverUrl}:MockupProps) {
         </defs>
         <g
           fill="none"
-          className="frame__mobile--item"
-          stroke="#000"
+          className="frame__mobile--item "
+          // stroke="#000"
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth="10"
@@ -63,7 +63,7 @@ function Mockup({laptopCoverUrl,mobileCoverUrl,tableCoverUrl}:MockupProps) {
         <g
           fill="none"
           className="frame__tablet--item"
-          stroke="#000"
+          // stroke="#000"
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth="15"
@@ -102,7 +102,7 @@ function Mockup({laptopCoverUrl,mobileCoverUrl,tableCoverUrl}:MockupProps) {
         <g
           fill="none"
           className="frame__laptop--item"
-          stroke="#000"
+          // stroke="#000"
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth="15"

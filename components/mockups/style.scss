@@ -1,5 +1,6 @@
 .frame{
     cursor: pointer;
+    @apply stroke-heading-light dark:stroke-heading-dark;
 }
 .frame__mobile{
     &--con{

@@ -3,6 +3,9 @@ import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 type ImageModelPayload = {
   imageUrl: string;
 }
+type FeaturesModelPayload = {
+  features: string[];
+}
 
 type ModelState = {
   contactModel: {
@@ -11,7 +14,11 @@ type ModelState = {
   imageModel: {
     isOpen: boolean;
     imageUrl: string;
-  }
+  };
+  featuresModel: {
+    isOpen: boolean;
+    features: string[];
+  };
 };
 
 const initialModelState: ModelState = {
@@ -21,6 +28,10 @@ const initialModelState: ModelState = {
   imageModel: {
     isOpen: false,
     imageUrl: ""
+  },
+  featuresModel: {
+    isOpen:false,
+    features:[]
   }
 };
 
@@ -28,7 +39,7 @@ const modelSlice = createSlice({
   name: "models",
   initialState: initialModelState,
   reducers: {
-    // Contct
+    // Contact
     openContatctModel(state) {
       state.contactModel.isOpen = true;
     },
@@ -44,8 +55,17 @@ const modelSlice = createSlice({
       state.imageModel.isOpen = false;
       state.imageModel.imageUrl = "";
     },
+    //Project features
+    openfeatureModel(state, action: PayloadAction<FeaturesModelPayload>) {
+      state.featuresModel.features = action.payload.features;
+      state.featuresModel.isOpen = true;
+    },
+    closefeatureModel(state) {
+      state.featuresModel.isOpen = false;
+      state.featuresModel.features = [];
+    },
   },
 });
 
-export const { closeContatctModel, openContatctModel, closeImageModel, openImageModel } = modelSlice.actions;
+export const { closeContatctModel, openContatctModel, closeImageModel, openImageModel, closefeatureModel, openfeatureModel } = modelSlice.actions;
 export default modelSlice.reducer;
