@@ -34,7 +34,7 @@ const Projects = () => {
       viewport={{ amount: 0.8 }}
       transition={{ duration: 0.5, delay: 0.5 }}
       id="projects"
-      className="section snap-start snap-always relative"
+      className="section snap-start snap-always relative" 
     >
       {/* ABSOLUTE BTNS */}
       {/* controlls middle------------ */}
@@ -94,7 +94,7 @@ const Projects = () => {
         className="flex flex-col items-center gap-5  w-full  mx-12 py-5"
       >
         {selectedProject && (
-          <div className="flex flex-col lg:flex-row md:mt-auto md:px-4 items-center md:justify-evenly">
+          <div className="flex flex-col lg:flex-row md:mt-auto md:px-16 items-center md:justify-evenly">
             <div className="project--info flex flex-col gap-1 items-center md:items-start lg:w-2/5 md:gap-4">
               <h2
                 className="text-heading-light dark:text-heading-dark font-bold text-3xl md:text-4xl py-4"
@@ -137,7 +137,7 @@ const Projects = () => {
           </div>
         )}
         {/* project links------------------- */}
-        <div className="project--links flex flex-col justify-center items-center gap-3 md:items-start md:w-full md:ml-44 my-auto">
+        <div className="project--links flex flex-col justify-center items-center gap-3 md:items-start md:w-full md:ml-28 my-auto">
           <span className="font-bold hidden md:inline">
             Explore more details
           </span>
