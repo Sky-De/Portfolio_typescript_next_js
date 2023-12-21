@@ -1575,7 +1575,20 @@ function BrainOfSkill() {
           </g>
         </g>
       </motion.svg>
-      <span className="text-body-light dark:text-body-dark font-bold opacity-75 text-sm"><span className="lg:hidden">Tap</span><span className="hidden lg:inline-block">Click </span></span>
+      <motion.span
+        variants={{
+          hide: { scale: 0.5, opacity: 0 },
+          show: { scale: 1, opacity: 1 },
+        }}
+        initial="hide"
+        whileInView="show"
+        viewport={{ amount: 0.8 }}
+        transition={{ duration: 0.75, delay: 0.25 }}
+        className="text-body-light dark:text-body-dark font-bold opacity-75 text-sm"
+      >
+        <span className="lg:hidden">Tap</span>
+        <span className="hidden lg:inline-block">Click </span>
+      </motion.span>
     </>
   );
 }

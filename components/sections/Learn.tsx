@@ -22,16 +22,16 @@ const Learn = () => {
       initial="hide"
       whileInView="show"
       viewport={{ amount: 0.8 }}
-      transition={{ duration: 0.5, delay: 0.5 }}
+      transition={{ duration: 0.5, delay: 0 }}
       id="learn"
       className="section snap-start snap-always"
     >
       <div className="flex w-full items-center flex-col lg:flex-row px-2 md:justify-center my-auto">
         <div className="learn__intro lg:w-2/3">
-          <h2 className=" mx-auto lg:mx-0 mb-8 md:mb-0 pt-8 md:pt-10 text-2xl md:text-3xl xl:text-4xl font-bold text-center sm:w-2/3 lg:text-start lg:w-2/3">
+          <motion.h2  className=" mx-auto font-extrabold lg:mx-0 mb-8 md:mb-0 pt-8 md:pt-10 text-2xl md:text-3xl xl:text-4xl text-center sm:w-2/3 lg:text-start lg:w-2/3">
             {`A Journey of Continuous
           Learning`}
-          </h2>
+          </motion.h2>
           <p className="hidden sm:block w-2/3 lg:w-4/5 text-center lg:text-start  mx-auto lg:mx-0 lg:block apply__body  pb-8 md:pb-10 pt-4">
             As a web developer, I am committed to lifelong learning and
             continuous professional development.{" "}

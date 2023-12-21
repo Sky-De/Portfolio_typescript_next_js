@@ -1,13 +1,24 @@
-import React from "react";
+"use client";
 import "./style.scss";
 import { MockupProps } from "@/constants/projectsData";
 import { openImageModel } from "@/redux/features/models/modelSlice";
 import { useAppDispatch } from "@/hooks/reduxHooks";
+import { motion } from "framer-motion";
 
 function Mockup({laptopCoverUrl,mobileCoverUrl,tableCoverUrl}:MockupProps) {
   const dispatch = useAppDispatch();
   return (
-    <section className="h-auto md:w-2/3 w-full flex items-center gap-2 my-2">
+    <motion.section
+      variants={{
+        hide: { opacity: 0, x: 200},
+        show: { opacity: 1, x: 0 },
+      }}
+      initial="hide"
+      whileInView="show"
+      viewport={{ amount: 0.3 }}
+      transition={{ duration: 0.5, delay: 0.75 }}
+      className="h-auto md:w-2/3 w-full flex items-center gap-2 mt-8"
+    >
       {/* Mobile SVG */}
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -15,7 +26,7 @@ function Mockup({laptopCoverUrl,mobileCoverUrl,tableCoverUrl}:MockupProps) {
         height="667"
         viewBox="0 0 375 667"
         className="frame__mobile--con frame"
-        onClick={() => dispatch(openImageModel({imageUrl: mobileCoverUrl}))}
+        onClick={() => dispatch(openImageModel({ imageUrl: mobileCoverUrl }))}
       >
         <defs>
           <pattern
@@ -48,7 +59,7 @@ function Mockup({laptopCoverUrl,mobileCoverUrl,tableCoverUrl}:MockupProps) {
         height="1180"
         viewBox="0 0 820 1180"
         className="frame__tablet--con frame"
-        onClick={() => dispatch(openImageModel({imageUrl: tableCoverUrl}))}
+        onClick={() => dispatch(openImageModel({ imageUrl: tableCoverUrl }))}
       >
         <defs>
           <pattern
@@ -81,7 +92,7 @@ function Mockup({laptopCoverUrl,mobileCoverUrl,tableCoverUrl}:MockupProps) {
         height="869"
         viewBox="0 0 1920 869"
         className="frame__laptop--con frame min-w-[70%]"
-        onClick={() => dispatch(openImageModel({imageUrl: laptopCoverUrl}))}
+        onClick={() => dispatch(openImageModel({ imageUrl: laptopCoverUrl }))}
       >
         <defs>
           <pattern
@@ -112,7 +123,7 @@ function Mockup({laptopCoverUrl,mobileCoverUrl,tableCoverUrl}:MockupProps) {
           <path d="M7.5 7.5H1912.5V861.5H7.5z" fill="url(#laptopImage)"></path>
         </g>
       </svg>
-    </section>
+    </motion.section>
   );
 }
 

@@ -31,10 +31,10 @@ const About = () => {
             alt="psk"
             width={250}
             height={250}
-            className="about--image border"
+            className="about--image"
           />
         </div>
-        <div className="about__content border-2 border-blue-700 w-[350px] h-[400px] max-w-full overflow-scroll">
+        <div className="about__content  w-[350px] h-[400px] max-w-full overflow-scroll my-4">
           {AboutItemsData.map((item) => (
             <AboutItem key={uuid()} {...item} />
           ))}

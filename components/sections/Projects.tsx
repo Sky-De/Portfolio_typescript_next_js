@@ -34,7 +34,7 @@ const Projects = () => {
       viewport={{ amount: 0.8 }}
       transition={{ duration: 0.5, delay: 0.5 }}
       id="projects"
-      className="section snap-start snap-always relative" 
+      className="section snap-start snap-always relative"
     >
       {/* ABSOLUTE BTNS */}
       {/* controlls middle------------ */}
@@ -82,20 +82,25 @@ const Projects = () => {
       )}
 
       {/* Project content------------------------------------------------- */}
-      <motion.div
+      <div
         key={selectedProjectId}
-        variants={{
-          hide: { opacity: 0 },
-          show: { opacity: 1 },
-        }}
-        initial="hide"
-        whileInView="show"
-        transition={{ duration: 0.5, delay: 0.5 }}
         className="flex flex-col items-center gap-5  w-full  mx-12 py-5"
       >
         {selectedProject && (
-          <div className="flex flex-col lg:flex-row md:mt-auto md:px-16 items-center md:justify-evenly">
-            <div className="project--info flex flex-col gap-1 items-center md:items-start lg:w-2/5 md:gap-4">
+          <div
+            className="flex flex-col lg:flex-row md:mt-auto md:px-16 items-center md:justify-evenly"
+          >
+            <motion.div
+              variants={{
+                hide: { opacity: 0, x:-100 },
+                show: { opacity: 1, x:0 },
+              }}
+              initial="hide"
+              whileInView="show"
+              viewport={{amount: 0.3}}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              className="project--info flex flex-col gap-1 items-center md:items-start lg:w-2/5 md:gap-4"
+            >
               <h2
                 className="text-heading-light dark:text-heading-dark font-bold text-3xl md:text-4xl py-4"
                 key={uuid()}
@@ -108,8 +113,8 @@ const Projects = () => {
                   selectedProject.techIcons.map((icon) => (
                     <Image
                       src={icon}
-                      width={40}
-                      height={40}
+                      width={30}
+                      height={30}
                       key={uuid()}
                       alt={icon.toString()}
                     />
@@ -126,7 +131,7 @@ const Projects = () => {
               <p className="hidden md:block text-center md:text-start w-3/4 mb-4 text-body-light dark:text-body-dark">
                 {selectedProject.description}
               </p>
-            </div>
+            </motion.div>
             {/* FIX--get make this dynamic */}
 
             <Mockup
@@ -137,12 +142,24 @@ const Projects = () => {
           </div>
         )}
         {/* project links------------------- */}
-        <div className="project--links flex flex-col justify-center items-center gap-3 md:items-start md:w-full md:ml-32 my-auto">
+        <motion.div
+          variants={{
+            hide: { opacity: 0, y: 100 },
+            show: { opacity: 1, y: 0 },
+          }}
+          initial="hide"
+          whileInView="show"
+          viewport={{ amount: 0.2 }}
+          transition={{ duration: 0.5, delay: 1 }}
+          className="project--links flex flex-col justify-center items-center gap-3 md:items-start md:w-full md:ml-32 my-auto"
+        >
           <span className="font-bold hidden md:inline">
             Explore more details
           </span>
           <button
-          onClick={()=> {dispatch(openfeatureModel({features:["asd","fdsf"]}))}}
+            onClick={() => {
+              dispatch(openfeatureModel({ features: ["asd", "fdsf"] }));
+            }}
             className="flex items-center opacity-100 md:opacity-70 gap-2 hover:opacity-100 transition-opacity"
           >
             <i className="bx bx-hive apply__footer--item"></i>
@@ -166,8 +183,8 @@ const Projects = () => {
             Github Repositorty{" "}
           </Link>
           <Link href={"#"}></Link>
-        </div>
-      </motion.div>
+        </motion.div>
+      </div>
     </motion.section>
   );
 };

@@ -14,6 +14,14 @@ const Header = () => {
   const handleClose = () => {
     setIsOpen(!isOpen);
   };
+  
+  // navigates to selected section and closes menu of mobile with delay 
+  const navAndCloseHandler = () => {
+     const delayToClose = setTimeout(() => {
+       setIsOpen(false);
+     }, 800);
+     delayToClose;
+  }
 
   return (
     <header className=" header sticky top-0 w-ful after:bg-bg-secondary-light dark:after:bg-bg-secondary-dark z-30">
@@ -45,12 +53,7 @@ const Header = () => {
             >
               {NavItems.map((item) => (
                 <Link
-                  onClick={() => {
-                    const delayToClose = setTimeout(() => {
-                      setIsOpen(false);
-                    }, 800);
-                    delayToClose;
-                  }}
+                  onClick={navAndCloseHandler}
                   className={`apply__navItem ${
                     currentPath === item.name ? "active" : ""
                   }`}

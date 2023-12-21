@@ -137,7 +137,7 @@
 }
 .apply__learn--item {
   /* bg-bg-secondary-dark dark:bg-bg-secondary-light text-heading-dark dark:text-heading-light */
-  @apply py-1 px-2 md:py-2 md:px-4 cursor-pointer hover:opacity-60 font-semibold rounded-xl text-heading-dark;
+  @apply py-2 px-3 md:py-3 md:px-4 cursor-pointer hover:opacity-60 font-semibold rounded-xl text-heading-dark;
 }
 .apply__learn--section {
   @apply w-full flex flex-col items-center gap-4 pb-2 mb-4;
@@ -195,4 +195,56 @@
 }
 .bg-Next-js {
   background: #131313;
+}
+
+
+
+/* contact form ------------ */
+.steps{
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  margin: 2rem;
+}
+
+.steps div p{
+  background: #d3bfbf;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  position: relative;
+}
+
+.steps div p::before{
+  background: rgb(130, 130, 130);
+  content: "";
+  border-radius: 4px;
+  /* width: 3rem; */
+  position: absolute;
+  height: 5px;
+  left: 120%;
+}
+.steps div:last-child  p::before{
+  content: "";
+  width: 0;
+}
+.steps div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .4rem;
+}
+
+
+.steps div.activeStep p::before{
+  background: #0288d1;
+}
+.steps div.activeStep h4{
+  color: #0288d1;
+  /* font-weight: bold; */
+}
+.steps div.activeStep p{
+  background: #0288d1;
 }
