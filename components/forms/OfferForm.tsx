@@ -1,5 +1,7 @@
 import { useState } from "react";
 import Input, { CheckBox } from "./Input";
+import JobForm from "./JobForm";
+import CompanyForm from "./CompanyForm";
 
 const OfferForm = () => {
   const [step, setStep] = useState<number>(1);
@@ -14,13 +16,17 @@ const OfferForm = () => {
    }
    
   return (
-    <section className="">
+    <section className="border relative h-full">
       <div className="steps">
-        <div className={`activeStep`}>
+        <div className={`activeStep ${step > 1 ? "activeLine" : ""}`}>
           <p>1</p>
           <h4>JOB</h4>
         </div>
-        <div className={`${step > 1 ? "activeStep" : ""}`}>
+        <div
+          className={`${step > 1 ? "activeStep" : ""} ${
+            step > 2 ? "activeLine" : ""
+          }`}
+        >
           <p>2</p>
           <h4>COMPANY</h4>
         </div>
@@ -30,12 +36,30 @@ const OfferForm = () => {
         </div>
       </div>
 
-      <div className="gap-3 flex border justify-between">
-        <button className={`${step === 3 ? "text-gray-600" : ""}`} onClick={handleNextStep}>Next</button>
-        <button className={`${step === 1 ? "text-gray-600" : ""}`} onClick={handlePreStep}>Back</button>
+      {step === 1 && <JobForm />}
+      {step === 2 && <CompanyForm />}
+      {step === 3 && (
+        <h2 className="flex flex-col justify-center items-center h-full">
+          Review
+        </h2>
+      )}
+
+      <div className="gap-3 absolute bottom-0 border w-full flex justify-around">
+        <button
+          className={`border p-2 ${step === 1 ? "text-gray-600" : ""}`}
+          onClick={handlePreStep}
+        >
+          Back
+        </button>
+        <button
+          className={`border p-2 ${step === 3 ? "text-gray-600" : ""}`}
+          onClick={handleNextStep}
+        >
+          Next
+        </button>
       </div>
     </section>
   );
 }
 
-export default OfferForm
+export default OfferForm;

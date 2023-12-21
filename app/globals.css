@@ -98,7 +98,7 @@
 }
 .apply__ham::after,
 .apply__ham::before {
-  transition: all 0.3s ease-in;
+  transition: all 0.6s ease-in;
   transform: rotate(0) translateY(0) translateX(0);
   border-radius: 50px;
   content: "";
@@ -205,6 +205,7 @@
   justify-content: center;
   gap: 5rem;
   margin: 2rem;
+  transition: all 0.6s ease;
 }
 
 .steps div p{
@@ -215,18 +216,27 @@
   place-items: center;
   border-radius: 50%;
   position: relative;
+  transition: all .5s ease;
+
+}
+.steps div h4{
+  /* color: #0288d1; */
+  font-weight: bold;
+  transition: all 0.6s ease;
 }
 
 .steps div p::before{
+  transition: all .5s ease;
   background: rgb(130, 130, 130);
   content: "";
   border-radius: 4px;
-  /* width: 3rem; */
+  /* width: 5rem; */
+  width: 0;
   position: absolute;
   height: 5px;
-  left: 120%;
+  left: 130%;
 }
-.steps div:last-child  p::before{
+.steps div:last-child p::before{
   content: "";
   width: 0;
 }
@@ -238,12 +248,17 @@
 }
 
 
-.steps div.activeStep p::before{
+.steps div.activeStep:last-child p::before{
   background: #0288d1;
+  width: 0;
+}
+.steps div.activeStep.activeLine p::before{
+  background: #0288d1;
+  width: 5rem;
 }
 .steps div.activeStep h4{
   color: #0288d1;
-  /* font-weight: bold; */
+  font-weight: bold;
 }
 .steps div.activeStep p{
   background: #0288d1;
