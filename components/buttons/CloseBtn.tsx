@@ -3,7 +3,7 @@ type CloseBtnProps = {
 }
 const CloseBtn = ({ handleClick }: CloseBtnProps) => {
   return (
-    <button onClick={handleClick} className="apply__closeBtn px-2 py-1 my-1 absolute right-4 top-4">
+    <button onClick={handleClick} className="apply__closeBtn px-4 py-2 my-1 rounded-full absolute left-[50%] translate-x-[-50%] top-4">
       X
     </button>
   );

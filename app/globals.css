@@ -87,6 +87,13 @@
   @apply hover:opacity-70 transition-opacity dark:text-black;
 }
 
+.bx.bx-check {
+  /* FIX replace fontSize with tailwind fontsize config */
+  font-size: 1.8rem;
+  cursor: pointer;
+  @apply text-heading-dark;
+}
+
 /* footer-social media --------------------*/
 .apply__footer--item {
   @apply text-heading-light dark:text-heading-dark;
@@ -198,9 +205,9 @@
 }
 
 
-
-/* contact form ------------ */
-.steps{
+/* contact form --------------------------- */
+.stepper{
+  --color: #F87C56;
   display: flex;
   justify-content: center;
   gap: 5rem;
@@ -208,7 +215,7 @@
   transition: all 0.6s ease;
 }
 
-.steps div p{
+.stepper div p{
   background: #d3bfbf;
   width: 2.5rem;
   height: 2.5rem;
@@ -219,28 +226,27 @@
   transition: all .5s ease;
 
 }
-.steps div h4{
+.stepper div h4{
   /* color: #0288d1; */
   font-weight: bold;
   transition: all 0.6s ease;
 }
 
-.steps div p::before{
+.stepper div p::before{
   transition: all .5s ease;
   background: rgb(130, 130, 130);
   content: "";
   border-radius: 4px;
-  /* width: 5rem; */
   width: 0;
   position: absolute;
   height: 5px;
   left: 130%;
 }
-.steps div:last-child p::before{
+.stepper div:last-child p::before{
   content: "";
   width: 0;
 }
-.steps div{
+.stepper div{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -248,18 +254,17 @@
 }
 
 
-.steps div.activeStep:last-child p::before{
-  background: #0288d1;
+.stepper div.activeStep:last-child p::before{
   width: 0;
 }
-.steps div.activeStep.activeLine p::before{
-  background: #0288d1;
+.stepper div.activeStep.activeLine p::before{
+  background: var(--color);
   width: 5rem;
 }
-.steps div.activeStep h4{
-  color: #0288d1;
+.stepper div.activeStep h4{
+  color: var(--color);
   font-weight: bold;
 }
-.steps div.activeStep p{
-  background: #0288d1;
+.stepper div.activeStep p{
+  background: var(--color);
 }

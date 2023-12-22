@@ -21,7 +21,7 @@ const ProjectImageModel = () => {
       transition={{ duration: 1.5, delay: 1.25 }}
       className={`${
         imageModel.isOpen === false ? "hidden" : "block"
-      } absolute top-0 left-0 w-full h-full z-40 backdrop-blur-sm flex items-center`}
+      } absolute top-0 left-0 w-full h-full z-40 backdrop-blur-3xl flex items-center`}
       onClick={() => dispatch(closeImageModel())}
     >
       <div

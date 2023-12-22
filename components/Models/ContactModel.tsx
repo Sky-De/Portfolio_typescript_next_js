@@ -20,12 +20,12 @@ const ContactModel = () => {
       transition={{ duration: .3, delay: 0 }}
       className={`${
         contactModel.isOpen === false ? "hidden" : "block"
-      } absolute top-0 left-0 w-full h-full z-40 backdrop-blur-sm flex items-center px-8`}
+      } absolute top-0 left-0 w-full h-full z-40 backdrop-blur-lg flex items-center px-8`}
       onClick={() => dispatch(closeContatctModel())}
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        className="border w-full h-4/5 bg-black"
+        className="border w-full h-4/5 bg-bg-secondary-dark dark:bg-bg-secondary-light"
       >
         <OfferForm/>
       </div>
