@@ -26,17 +26,24 @@ const config: Config = {
         stepColor: "#F87C56",
         bg: {
           primary: {
-            light: "#FFFFFF", // White for light mode
-            dark: "#000000", // Black for dark mode
+            light: "#ffffff",
+            dark: "#1f1f1f",
           },
           secondary: {
-            // light: "#ededed", // Black for light mode
-            light: "#e3e3e3", // Black for light mode
-            dark: "#131313", // White for dark mode
+            light: "#f3f6fc",
+            dark: "#2d2f31",
           },
+          //   primary: {
+          //     light: "#FFFFFF",
+          //     dark: "#000000",
+          //   },
+          // secondary: {
+          //   light: "#e3e3e3",
+          //   dark: "#131313",
+          // },
         },
         heading: {
-          light: "#000000", // Black for light mode headings
+          light: "#1f1f1f", // Black for light mode headings
           dark: "#FFFFFF", // White for dark mode headings
         },
         body: {
