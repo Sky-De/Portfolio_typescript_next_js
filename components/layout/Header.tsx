@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { ThemeBtn } from "../buttons/ThemeBtn";
+import { LogoThemeBtn } from "../buttons/LogoThemeBtn";
 import Link from "next/link";
 import { v4 as uuid } from "uuid";
 import { NavItems } from "@/constants/navItems";
@@ -26,17 +26,7 @@ const Header = () => {
   return (
     <header className=" header sticky top-0 w-ful after:bg-bg-secondary-light dark:after:bg-bg-secondary-dark z-30">
       <div className="header__content flex items-center h-full relative mx-auto px-2">
-        <Link
-          href="/#skills"
-          className="logo flex items-center justify-center text-5xl px-1 cursor-pointer"
-        >
-          DE{" "}
-          <span className="inline-flex flex-col text-sm ml-1 font-bold">
-            <span>SIGN</span>
-            <span>VELOP</span>
-          </span>
-        </Link>
-        <ThemeBtn type="desktop" />
+        <LogoThemeBtn type="desktop" />
         {/* MOBILE NAV---------------------------- */}
         <AnimatePresence>
           {isOpen && (
@@ -63,7 +53,6 @@ const Header = () => {
                   {item.name}
                 </Link>
               ))}
-              <ThemeBtn type="mobile" />
             </motion.nav>
           )}
         </AnimatePresence>

@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev -H 192.168.2.198",
+    "dev": "next dev",
     "build": "next build",
-    "start": "next start --host 192.168.2.198 --port 3000",
+    "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {

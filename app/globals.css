@@ -87,6 +87,10 @@
   @apply hover:opacity-70 transition-opacity dark:text-black;
 }
 
+.bx-sun,.bxs-moon {
+  font-size: 1.4rem;
+}
+
 .bx.bx-check {
   /* FIX replace fontSize with tailwind fontsize config */
   font-size: 1.8rem;
@@ -224,7 +228,6 @@
   border-radius: 50%;
   position: relative;
   transition: all .5s ease;
-
 }
 .stepper div h4{
   /* color: #0288d1; */
@@ -253,13 +256,19 @@
   gap: .4rem;
 }
 
-
 .stepper div.activeStep:last-child p::before{
   width: 0;
 }
 .stepper div.activeStep.activeLine p::before{
   background: var(--color);
-  width: 5rem;
+  /* width: 5.5rem; */
+  width: 230%;
+}
+@media screen and (max-width:767px) {
+.stepper div.activeStep.activeLine p::before{
+  width: 3.5rem;
+}
+  
 }
 .stepper div.activeStep h4{
   color: var(--color);
