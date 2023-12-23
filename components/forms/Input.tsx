@@ -7,8 +7,8 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
 
 
 const Input: FC<InputProps> = ({ label, ...props }) => (
-  <div className="input__control flex gap-2 cursor-pointer">
-    <label>{label}</label>
+  <div className="input__control flex flex-col border border-red-400 gap-1 cursor-pointer my-6 md:my-2">
+    <label className="text-stepColor">{label}</label>
     <input {...props} />
   </div>
 );
@@ -20,10 +20,12 @@ export const CheckBox: FC<InputProps> = ({ label, ...props }) => {
   const [isChecked, setIschecked] = useState<boolean>(false);
   const handleCheckBox = () => setIschecked(!isChecked);
   return(
-  <div className="input__control flex gap-2 cursor-pointer select-none" onClick={handleCheckBox}>
-    <label>{label}</label>
-    <input checked={isChecked} type="checkbox" {...props} />
+  <div className="input__control flex gap-2 cursor-pointer select-none  text-heading-light dark:text-heading-dark" onClick={handleCheckBox}>
+    <label className="cursor-pointer">{label}</label>
+    <input className="cursor-pointer" checked={isChecked} type="checkbox" {...props} />
   </div>
 );}
+
+
 
 

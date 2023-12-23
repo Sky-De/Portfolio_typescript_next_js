@@ -277,3 +277,10 @@
 .stepper div.activeStep p{
   background: var(--color);
 }
+/* ---------- */
+.apply__mainColor{
+  @apply text-heading-light dark:text-heading-dark
+}
+.apply__mainColorOp{
+  @apply dark:text-heading-light text-heading-dark
+}
