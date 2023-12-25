@@ -1,12 +1,12 @@
-import React, { MouseEventHandler } from 'react'
-type ContactFromActionProps = {
+import React, { MouseEventHandler } from 'react';
+type ContactFormActionProps = {
   step: number;
   handlePreStep: MouseEventHandler<HTMLButtonElement>;
   handleNextStep: MouseEventHandler<HTMLButtonElement>;
   handleSubmit: MouseEventHandler<HTMLButtonElement>;
 };
 
-const ContactFromAction = ({step, handlePreStep, handleNextStep, handleSubmit}:ContactFromActionProps) => {
+const ContactFormAction = ({step, handlePreStep, handleNextStep, handleSubmit}:ContactFormActionProps) => {
   return (
     <div className="gap-3 absolute bottom-0 w-full flex justify-around py-4">
       <button
@@ -39,4 +39,4 @@ const ContactFromAction = ({step, handlePreStep, handleNextStep, handleSubmit}:C
   );
 }
 
-export default ContactFromAction;
+export default ContactFormAction;

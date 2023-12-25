@@ -25,7 +25,7 @@ const ContactModel = () => {
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        className="border w-full h-4/5 bg-bg-secondary-light dark:bg-bg-secondary-dark"
+        className="w-full h-4/5 bg-bg-secondary-light dark:bg-bg-secondary-dark border border-red-700"
       >
         <OfferForm/>
       </div>

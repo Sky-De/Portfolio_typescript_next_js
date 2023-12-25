@@ -8,7 +8,7 @@ const Stepper = ({step = 1 } :{ step:number }) => {
         <p className="apply__mainColorOp text-white">
           {step > 1 ? <i className="bx bx-check "></i> : 1}
         </p>
-        <h4 className="hidden md:block">POSITION</h4>
+        <h4 className="apply__stepperTitle">POSITION</h4>
       </div>
 
       <div
@@ -19,14 +19,14 @@ const Stepper = ({step = 1 } :{ step:number }) => {
         <p className="apply__mainColorOp text-white">
           {step > 2 ? <i className="bx bx-check "></i> : 2}
         </p>
-        <h4 className="hidden md:block">COMPANY</h4>
+        <h4 className="apply__stepperTitle">COMPANY</h4>
       </div>
 
       <div className={`${step > 2 ? "activeStep" : ""}`}>
         <p className="apply__mainColorOp text-white">
           {step > 3 ? <i className="bx bx-check text-red-50"></i> : 3}
         </p>
-        <h4 className="hidden md:block">SUBMIT</h4>
+        <h4 className="apply__stepperTitle">SUBMIT</h4>
       </div>
     </div>
   );
