@@ -14,7 +14,7 @@ const SalaryRangePicker = () => {
         thumbClassName="slider__thumb"
         trackClassName="slider__track"
         min={15}
-        max={30}
+        max={40}
         defaultValue={[22, 25]}
         ariaLabel={["Lower thumb", "Upper thumb"]}
         ariaValuetext={(state) => `Thumb value ${state.valueNow}`}

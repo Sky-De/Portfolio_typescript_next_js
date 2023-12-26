@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Stepper = ({step = 1 } :{ step:number }) => {
-    console.log(step);
+    // console.log(step);
   return (
     <div className="steps stepper">
       <div className={`activeStep ${step > 1 ? "activeLine" : ""}`}>

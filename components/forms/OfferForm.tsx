@@ -4,33 +4,110 @@ import ContactFromAction from "../buttons/ContactFormAction";
 import InputWrapper from "./InputWrapper";
 import ReactSlider from "react-slider";
 import { useStep } from "@/hooks/useStep";
+import { useState } from "react";
+
+type FormDataState = {
+  type: {
+    partTime: boolean;
+    fullTime: boolean;
+    contract: boolean;
+  };
+  role: string;
+  description: string;
+  salaryRange: [number,number];
+  userRole: string;
+  userName: string;
+  userEmail: string;
+  timeZone: string;
+  userWebsiteUrl: string;
+};
+
+const initialFormDataState: FormDataState = {
+  type: {
+    contract:false,
+    fullTime:false,
+    partTime:false
+  },
+  role: "",
+  description: "",
+  timeZone: "",
+  userEmail: "",
+  userName: "",
+  userRole: "",
+  userWebsiteUrl: "",
+  salaryRange: [22, 25],
+};
 
 const OfferForm = () => {
-  const {step, handleNextStep, handlePreStep, handleSubmit} = useStep();
-   
+  const { step, handleNextStep, handlePreStep, submitIsDone} = useStep();
+  const [formData, setFormData] = useState<FormDataState>(initialFormDataState);
+
+  const handleSliderChange = (newValue:any) => {
+    setFormData({...formData, salaryRange: newValue});
+  };
+
+  const handleFormSubmit = () => {
+    submitIsDone();
+    console.log(formData);
+  }
+  
+  const handelChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+   setFormData({...formData, [e.target.name] : e.target.value});
+  }
+
+  const checkBoxHandler = (e : React.ChangeEvent<HTMLInputElement>) => {
+    setFormData({...formData, type: {...formData.type ,[e.target.name] : e.target.checked}})
+  }
   return (
     <section className="relative h-full my-auto border-2 flex flex-col border-green-900">
       <Stepper step={step} />
 
-      <form className="">
+      <form className="" onSubmit={handleFormSubmit}>
+        {/* step ----------------------------------- 1 */}
         <div
           className={`flex flex-col justify-center items-center gap-6 lg:gap-2 mt-4 ${
             step !== 1 ? "hidden" : ""
           }`}
         >
-          <InputWrapper title="type" iconClass="bx-time-five" >
+          <InputWrapper title="type" iconClass="bx-time-five">
             <div className="flex gap-4 items-center flex-wrap justify-center">
-              <CheckBox label="Part-time" />
-              <CheckBox label="Full-time" />
-              <CheckBox label="Contract" />
+              <CheckBox
+                label="Part-time"
+                name="partTime"
+                onChange={checkBoxHandler}
+              />
+              <CheckBox
+                label="Full-time"
+                name="fullTime"
+                onChange={checkBoxHandler}
+              />
+              <CheckBox
+                label="Contract"
+                name="contract"
+                onChange={checkBoxHandler}
+              />
             </div>
           </InputWrapper>
+
           <InputWrapper title="role" iconClass="bx-laptop">
-            <input type="text" name="" id="" />
+            <input
+              type="text"
+              name="role"
+              id=""
+              value={formData.role}
+              onChange={handelChange}
+            />
           </InputWrapper>
+
           <InputWrapper title="description" iconClass="bx-message-square-dots">
-            <textarea name="" id=""></textarea>
+            <textarea
+              name="description"
+              id=""
+              value={formData.description}
+              onChange={handelChange}
+            ></textarea>
           </InputWrapper>
+
           <InputWrapper
             title="salary range"
             iconClass="bx-dollar-circle"
@@ -41,6 +118,8 @@ const OfferForm = () => {
                 className="slider border"
                 thumbClassName="slider__thumb"
                 trackClassName="slider__track"
+                onChange={handleSliderChange}
+                value={formData.salaryRange}
                 min={15}
                 max={30}
                 defaultValue={[20, 50]}
@@ -60,33 +139,63 @@ const OfferForm = () => {
           </InputWrapper>
         </div>
 
+        {/* step ----------------------------------- 2 */}
         <div
           className={`flex flex-col justify-center items-center gap-6 lg:gap-2 mt-4 ${
             step !== 2 ? "hidden" : ""
           }`}
         >
           <InputWrapper title="your role" iconClass="bx-user">
-            <input type="text" />
+            <input
+              type="text"
+              name="userRole"
+              value={formData.userRole}
+              onChange={handelChange}
+            />
           </InputWrapper>
+
           <InputWrapper title="name" iconClass="bx-info-circle">
-            <input type="text" />
+            <input
+              type="text"
+              name="userName"
+              value={formData.userName}
+              onChange={handelChange}
+            />
           </InputWrapper>
+
           <InputWrapper title="email" iconClass="bx-envelope">
-            <input type="email" />
+            <input
+              type="email"
+              name="userEmail"
+              value={formData.userEmail}
+              onChange={handelChange}
+            />
           </InputWrapper>
+
           <InputWrapper
             title="time-zone"
             exteraStyle="hidden lg:flex"
             iconClass="bx-time"
           >
-            <input type="text" />
+            <input
+              type="text"
+              name="timeZone"
+              value={formData.timeZone}
+              onChange={handelChange}
+            />
           </InputWrapper>
+
           <InputWrapper title="company-website / linkedin" iconClass="bx-world">
-            <input type="text" />
+            <input
+              type="text"
+              name="userWebsiteUrl"
+              value={formData.userWebsiteUrl}
+              onChange={handelChange}
+            />
           </InputWrapper>
         </div>
 
-
+        {/* step ----------------------------------- 3 */}
         <div
           className={`flex flex-col justify-center items-center gap-6 lg:gap-2 mt-4 ${
             step !== 3 ? "hidden" : ""
@@ -94,15 +203,12 @@ const OfferForm = () => {
         >
           dskfj
         </div>
-
-        
       </form>
-
 
       <ContactFromAction
         handleNextStep={handleNextStep}
         handlePreStep={handlePreStep}
-        handleSubmit={handleSubmit}
+        handleSubmit={handleFormSubmit}
         step={step}
       />
     </section>
