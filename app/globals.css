@@ -311,3 +311,19 @@ input, textarea{
     border-radius: 50%;
     @apply bg-bg-primary-dark dark:bg-bg-primary-light text-heading-dark dark:text-heading-light border border-black
 }
+
+
+
+
+/* form action btn */
+.formAction{
+
+}
+
+.formAction button {
+  @apply bg-bg-primary-dark text-heading-dark dark:bg-bg-primary-light dark:text-heading-light px-3 py-2 hover:opacity-70 transition-opacity duration-500 rounded-sm cursor-pointer;
+}
+
+.formAction button:disabled {
+  @apply opacity-50 hover:opacity-50;
+}

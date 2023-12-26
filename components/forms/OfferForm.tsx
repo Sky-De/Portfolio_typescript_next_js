@@ -5,8 +5,9 @@ import InputWrapper from "./InputWrapper";
 import ReactSlider from "react-slider";
 import { useStep } from "@/hooks/useStep";
 import { useState } from "react";
+import GoogleReCAPTCHA from "../reCAPTCHA/GoogleReCAPTCHA";
 
-type FormDataState = {
+export type FormDataState = {
   type: {
     partTime: boolean;
     fullTime: boolean;
@@ -39,15 +40,18 @@ const initialFormDataState: FormDataState = {
 };
 
 const OfferForm = () => {
-  const { step, handleNextStep, handlePreStep, submitIsDone} = useStep();
+  const { step, handleNextStep, handlePreStep, submitIsDone } = useStep();
   const [formData, setFormData] = useState<FormDataState>(initialFormDataState);
-
+  const [captcha, setCaptcha] = useState<string | null>();
+  
   const handleSliderChange = (newValue:any) => {
     setFormData({...formData, salaryRange: newValue});
   };
 
   const handleFormSubmit = () => {
+    if(!captcha) return 
     submitIsDone();
+    setFormData(initialFormDataState);
     console.log(formData);
   }
   
@@ -59,7 +63,7 @@ const OfferForm = () => {
     setFormData({...formData, type: {...formData.type ,[e.target.name] : e.target.checked}})
   }
   return (
-    <section className="relative h-full my-auto border-2 flex flex-col border-green-900">
+    <section className="relative h-full my-auto border-2 flex flex-col">
       <Stepper step={step} />
 
       <form className="" onSubmit={handleFormSubmit}>
@@ -141,7 +145,7 @@ const OfferForm = () => {
 
         {/* step ----------------------------------- 2 */}
         <div
-          className={`flex flex-col justify-center items-center gap-6 lg:gap-2 mt-4 ${
+          className={`flex flex-col justify-center items-center gap-3 lg:gap-2 mt-4 ${
             step !== 2 ? "hidden" : ""
           }`}
         >
@@ -201,15 +205,22 @@ const OfferForm = () => {
             step !== 3 ? "hidden" : ""
           }`}
         >
-          dskfj
+          
+          <GoogleReCAPTCHA setCaptcha={setCaptcha}/>
         </div>
       </form>
+      {
+        step > 3 && (
+          <h2 className="text-center font-bold my-auto">Thanks for submition, i will make sure to respond</h2>
+        ) 
+      }
 
       <ContactFromAction
         handleNextStep={handleNextStep}
         handlePreStep={handlePreStep}
         handleSubmit={handleFormSubmit}
         step={step}
+        captcha={captcha}
       />
     </section>
   );
