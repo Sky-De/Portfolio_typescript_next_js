@@ -1,6 +1,5 @@
 import { v4 as uuid } from "uuid";
 import LearnItem from "./LearnItem";
-import { motion } from "framer-motion";
 
 export type LearnListProps = {
   title: string;
@@ -18,14 +17,7 @@ const LearnList = ({ title, learnListItems = [] }: LearnListProps) => {
             // <li key={uuid()} className={`apply__learn--item bg-${item}`}>
             //   {item}
             // </li>
-
             <LearnItem key={uuid()} index={index} item={item}/>
-            // <li
-            //   key={uuid()}
-            //   className={`apply__learn--item bg-bg-secondary-dark dark:bg-bg-secondary-light dark:text-heading-light text-sm md:text-base`}
-            // >
-            //   {item}
-            // </li>
           ))}
       </ul>
     </section>

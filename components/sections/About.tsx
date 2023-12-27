@@ -27,15 +27,26 @@ const About = () => {
         show: { opacity: 1 },
       }}
       initial="hide"
-      animate="show"
-      // whileInView="show"
-      viewport={{ amount: 0.01 }}
+      // animate="show"
+      whileInView="show"
+      viewport={{ amount: 0.8 }}
       transition={{ duration: 0.5, delay: 0.5 }}
       id="about"
       className="section snap-start snap-always"
     >
       <div className="about flex flex-col items-center justify-evenly w-full md:flex-row-reverse">
-        <div className="about--image w-[250px] h-[250px] border grid place-content-center">
+        <motion.div
+          variants={{
+            hide: { opacity: 0, scale: 0.8 },
+            show: { opacity: 1, scale: 1 },
+          }}
+          initial="hide"
+          // animate="show"
+          whileInView="show"
+          viewport={{ amount: 0.8 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
+          className="about--image w-[250px] h-[250px] border grid place-content-center"
+        >
           <Image
             src="/avatar.jpg"
             alt="psk"
@@ -43,8 +54,19 @@ const About = () => {
             height={250}
             className="about--image"
           />
-        </div>
-        <div className="about__content  w-[350px] h-[400px] max-w-full overflow-scroll my-4 flex flex-col gap-1">
+        </motion.div>
+        <motion.div
+          variants={{
+            hide: { opacity: 0, x: -100 },
+            show: { opacity: 1, x: 0 },
+          }}
+          initial="hide"
+          // animate="show"
+          whileInView="show"
+          // viewport={{ amount: 0.8 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
+          className="about__content  w-[350px] h-[400px] max-w-full overflow-scroll my-4 flex flex-col gap-1"
+        >
           {AboutItemsData.map((item, i) => (
             <AboutItem
               key={uuid()}
@@ -55,7 +77,7 @@ const About = () => {
               ) => handleItemClick(i, e)}
             />
           ))}
-        </div>
+        </motion.div>
       </div>
     </motion.section>
   );

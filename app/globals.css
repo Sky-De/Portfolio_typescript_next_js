@@ -153,7 +153,7 @@ input, textarea{
 }
 .apply__learn--item {
   /* bg-bg-secondary-dark dark:bg-bg-secondary-light text-heading-dark dark:text-heading-light */
-  @apply py-2 px-3 md:py-3 md:px-4 cursor-pointer hover:opacity-60 font-semibold rounded-xl text-heading-dark;
+  @apply py-2 px-3 cursor-pointer hover:opacity-60 font-semibold rounded-xl text-heading-dark;
 }
 .apply__learn--section {
   @apply w-full flex flex-col items-center gap-4 pb-2 mb-4;
@@ -339,7 +339,7 @@ summary {
           list-style: none; /* Remove default list-style */
           cursor: pointer;
           position: relative;
-          padding-left: 20px; /* Add padding to position the custom icon */
+          padding: 5px 0px 5px 10px!important; /* Add padding to position the custom icon */
           user-select: none; /* Disable text selection */
           transition: border 1s ease;
           @apply border-2 border-heading-light dark:border-heading-dark py-2
