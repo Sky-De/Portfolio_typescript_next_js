@@ -2,6 +2,7 @@
 import { useAppDispatch, useAppSelector } from "@/hooks/reduxHooks";
 import { setActiveSkill } from "@/redux/features/skill/skillSlice";
 import { motion } from "framer-motion";
+import LoaderCircle from "../loader/LoaderCircle";
 
 function BrainOfSkill() {
   const { currentSkill } = useAppSelector((state) => state.skill);
@@ -1586,8 +1587,11 @@ function BrainOfSkill() {
         transition={{ duration: 0.75, delay: 0.25 }}
         className="text-body-light dark:text-body-dark font-bold opacity-75 text-sm"
       >
-        <span className="lg:hidden">Tap</span>
-        <span className="hidden lg:inline-block">Click </span>
+        <LoaderCircle >
+          <span className="lg:hidden">Tap</span>
+          <span className="hidden lg:inline-block tracking-wider">Click </span>
+        </LoaderCircle>
+
       </motion.span>
     </>
   );
