@@ -20,6 +20,7 @@ input, textarea{
 .main {
   max-height: calc(100svh - var(--header) - var(--footer));
   scroll-behavior: smooth !important;
+  overflow-x: hidden;
 }
 .section {
   display: flex;
@@ -327,3 +328,23 @@ input, textarea{
 .formAction button:disabled {
   @apply opacity-50 hover:opacity-50;
 }
+
+
+
+
+
+
+/* ---------------- */
+summary {
+          list-style: none; /* Remove default list-style */
+          cursor: pointer;
+          position: relative;
+          padding-left: 20px; /* Add padding to position the custom icon */
+          user-select: none; /* Disable text selection */
+          transition: border 1s ease;
+          @apply border-2 border-heading-light dark:border-heading-dark py-2
+        }
+        summary::before {
+          display: none;
+        }
+        

@@ -1,6 +1,8 @@
 export type AboutProps = {
   title: string;
   desc: string;
+  isOpan?: boolean;
+  handleClick?: (e: React.MouseEvent<HTMLDetailsElement, MouseEvent>) => void;
 };
 
 export const AboutItemsData: AboutProps[] = [

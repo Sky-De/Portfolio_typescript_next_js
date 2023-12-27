@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { useIsInView } from "@/hooks/useIsInVeiw";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -10,6 +10,15 @@ const About = () => {
   const aboutRef = useRef<HTMLElement>(null);
   // checks and actives navItems depend on related sections
   useIsInView({ navName: "About", ref: aboutRef });
+  const [openIndex, setOpenIndex] = useState<number>(0);
+
+  const handleItemClick = (
+    index: number,
+    e: React.MouseEvent<HTMLDetailsElement, MouseEvent>
+  ) => {
+    e.preventDefault(); // Prevents default open/close behavior
+    setOpenIndex(index === openIndex ? openIndex : index);
+  };
   return (
     <motion.section
       ref={aboutRef}
@@ -18,8 +27,9 @@ const About = () => {
         show: { opacity: 1 },
       }}
       initial="hide"
-      whileInView="show"
-      viewport={{ amount: 0.8 }}
+      animate="show"
+      // whileInView="show"
+      viewport={{ amount: 0.01 }}
       transition={{ duration: 0.5, delay: 0.5 }}
       id="about"
       className="section snap-start snap-always"
@@ -34,9 +44,16 @@ const About = () => {
             className="about--image"
           />
         </div>
-        <div className="about__content  w-[350px] h-[400px] max-w-full overflow-scroll my-4">
-          {AboutItemsData.map((item) => (
-            <AboutItem key={uuid()} {...item} />
+        <div className="about__content  w-[350px] h-[400px] max-w-full overflow-scroll my-4 flex flex-col gap-1">
+          {AboutItemsData.map((item, i) => (
+            <AboutItem
+              key={uuid()}
+              {...item}
+              isOpan={i === openIndex}
+              handleClick={(
+                e: React.MouseEvent<HTMLDetailsElement, MouseEvent>
+              ) => handleItemClick(i, e)}
+            />
           ))}
         </div>
       </div>
