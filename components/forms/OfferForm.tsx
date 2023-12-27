@@ -7,6 +7,7 @@ import { useStep } from "@/hooks/useStep";
 import { useState } from "react";
 import GoogleReCAPTCHA from "../reCAPTCHA/GoogleReCAPTCHA";
 import { useFormSender } from "@/hooks/useFormSender";
+import LoaderCube from "../loader/LoaderCube";
 
 export type FormDataState = {
   type: {
@@ -81,16 +82,19 @@ const OfferForm = () => {
                 label="Part-time"
                 name="partTime"
                 onChange={checkBoxHandler}
+                key={"part-time"}
               />
               <CheckBox
                 label="Full-time"
                 name="fullTime"
                 onChange={checkBoxHandler}
+                key={"full-time"}
               />
               <CheckBox
                 label="Contract"
                 name="contract"
                 onChange={checkBoxHandler}
+                key={"contract"}
               />
             </div>
           </InputWrapper>
@@ -131,9 +135,15 @@ const OfferForm = () => {
                 defaultValue={[20, 50]}
                 ariaLabel={["Lower thumb", "Upper thumb"]}
                 ariaValuetext={(state) => `Thumb value ${state.valueNow}`}
-                renderThumb={(props, state) => (
-                  <div {...props}>{state.valueNow}</div>
-                )}
+                renderThumb={(props, state) => {
+                  // key extracted to prevent key spreed warning
+                  const { key, ...otherProps } = props;
+                  return (
+                    <div key={key} {...otherProps}>
+                      {state.valueNow}
+                    </div>
+                  );
+                }}
                 pearling
                 minDistance={3}
                 step={1}
@@ -214,12 +224,10 @@ const OfferForm = () => {
         <>
           {isSended && (
             <h2 className="text-center font-bold my-auto">
-              Thanks for submition, i will make sure to respond
+              Form has been sended, i will make sure to respond
             </h2>
           )}
-          {isLoading && (
-            <h2 className="text-center font-bold my-auto">LOADING...</h2>
-          )}
+          {isLoading && <LoaderCube />}
           {isError && (
             <h2 className="text-center font-bold my-auto">ERROR...</h2>
           )}
@@ -232,6 +240,7 @@ const OfferForm = () => {
         handleSubmit={handleFormSubmit}
         step={step}
         captcha={captcha}
+        isLoading = {isLoading}
       />
     </section>
   );

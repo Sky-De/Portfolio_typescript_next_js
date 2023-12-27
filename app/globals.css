@@ -18,7 +18,7 @@ input, textarea{
   @apply rounded-sm p-1 px-2;
 }
 .main {
-  max-height: calc(100vh - var(--header) - var(--footer));
+  max-height: calc(100svh - var(--header) - var(--footer));
   scroll-behavior: smooth !important;
 }
 .section {

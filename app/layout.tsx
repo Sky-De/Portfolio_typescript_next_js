@@ -1,16 +1,7 @@
 "use client";
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
 import AppProviders from "@/providers/AppProviders";
-
-import ContactModel from "@/components/Models/ContactModel";
-import ProjectImageModel from "@/components/Models/ProjectImageModel";
-import ProjectFeaturesModel from "@/components/Models/ProjectFeaturesModel";
-
-const inter = Inter({ subsets: ["latin"] });
+import { Header, Footer, ContactModel, ProjectFeaturesModel, ProjectImageModel } from "@/components";
 
 // export const metadata: Metadata = {
 //   title: "Create Next App",
@@ -31,7 +22,7 @@ export default function RootLayout({
         ></link>
       </head>
       <body
-        className={`${inter.className} flex flex-col bg-bg-primary-light dark:bg-bg-primary-dark relative`}
+        className={`flex flex-col bg-bg-primary-light dark:bg-bg-primary-dark relative`}
       >
         <AppProviders>
           <Header />

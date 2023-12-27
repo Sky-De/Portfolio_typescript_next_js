@@ -6,14 +6,14 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
 }
 
 
-const Input: FC<InputProps> = ({ label, ...props }) => (
-  <div className="input__control flex flex-col border border-red-400 gap-1 cursor-pointer my-6 md:my-2">
-    <label className="text-stepColor">{label}</label>
-    <input {...props} />
-  </div>
-);
+// const Input: FC<InputProps> = ({ label, ...props }) => (
+//   <div className="input__control flex flex-col border border-red-400 gap-1 cursor-pointer my-6 md:my-2">
+//     <label className="text-stepColor">{label}</label>
+//     <input {...props} />
+//   </div>
+// );
 
-export default Input;
+// export default Input;
 
 
 export const CheckBox: FC<InputProps> = ({ label, ...props }) => { 
