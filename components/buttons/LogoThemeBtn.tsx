@@ -9,7 +9,7 @@ type ThemeBtnProps = {
 export const LogoThemeBtn: FC<ThemeBtnProps> = ({ type }) => {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
-  console.log(theme);
+  // console.log(theme);
   useEffect(() => {
     setMounted(true);
   }, []);

@@ -14,7 +14,7 @@ const ContactFormAction = ({step, captcha, handlePreStep, handleNextStep, handle
   const dispatch = useAppDispatch();
   const handleCloseModel = () => dispatch(closeContatctModel());
   return (
-    <div className="formAction gap-3 absolute bottom-0 w-full flex justify-around py-4">
+    <div className="formAction gap-3 absolute bottom-0 flex  w-[85%] justify-between py-4 lg:w-[48%] left-[50%] translate-x-[-50%]">
       {step < 4 && (
         <button
           disabled={step === 1 || captcha ? true: false}
@@ -41,6 +41,7 @@ const ContactFormAction = ({step, captcha, handlePreStep, handleNextStep, handle
       )}
       {step > 3 && (
         <button
+        className='mx-auto'
           onClick={handleCloseModel}
         >
           close

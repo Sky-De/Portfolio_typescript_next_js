@@ -6,6 +6,7 @@ import ReactSlider from "react-slider";
 import { useStep } from "@/hooks/useStep";
 import { useState } from "react";
 import GoogleReCAPTCHA from "../reCAPTCHA/GoogleReCAPTCHA";
+import { useFormSender } from "@/hooks/useFormSender";
 
 export type FormDataState = {
   type: {
@@ -40,19 +41,20 @@ const initialFormDataState: FormDataState = {
 };
 
 const OfferForm = () => {
-  const { step, handleNextStep, handlePreStep, submitIsDone } = useStep();
   const [formData, setFormData] = useState<FormDataState>(initialFormDataState);
   const [captcha, setCaptcha] = useState<string | null>();
-  
+  const { step, handleNextStep, handlePreStep, submitIsDone } = useStep();
+  const { isError, isLoading, isSended, sendForm } = useFormSender();
+
   const handleSliderChange = (newValue:any) => {
     setFormData({...formData, salaryRange: newValue});
   };
 
   const handleFormSubmit = () => {
     if(!captcha) return 
+    sendForm({...formData});
     submitIsDone();
     setFormData(initialFormDataState);
-    console.log(formData);
   }
   
   const handelChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -63,7 +65,7 @@ const OfferForm = () => {
     setFormData({...formData, type: {...formData.type ,[e.target.name] : e.target.checked}})
   }
   return (
-    <section className="relative h-full my-auto border-2 flex flex-col">
+    <section className="relative h-full my-auto border-2 border-black dark:border-white flex flex-col">
       <Stepper step={step} />
 
       <form className="" onSubmit={handleFormSubmit}>
@@ -205,15 +207,24 @@ const OfferForm = () => {
             step !== 3 ? "hidden" : ""
           }`}
         >
-          
-          <GoogleReCAPTCHA setCaptcha={setCaptcha}/>
+          <GoogleReCAPTCHA setCaptcha={setCaptcha} />
         </div>
       </form>
-      {
-        step > 3 && (
-          <h2 className="text-center font-bold my-auto">Thanks for submition, i will make sure to respond</h2>
-        ) 
-      }
+      {step > 3 && (
+        <>
+          {isSended && (
+            <h2 className="text-center font-bold my-auto">
+              Thanks for submition, i will make sure to respond
+            </h2>
+          )}
+          {isLoading && (
+            <h2 className="text-center font-bold my-auto">LOADING...</h2>
+          )}
+          {isError && (
+            <h2 className="text-center font-bold my-auto">ERROR...</h2>
+          )}
+        </>
+      )}
 
       <ContactFromAction
         handleNextStep={handleNextStep}
