@@ -157,7 +157,7 @@ const OfferForm = () => {
 
         {/* step ----------------------------------- 2 */}
         <div
-          className={`flex flex-col justify-center items-center gap-3 lg:gap-2 mt-4 ${
+          className={`flex flex-col justify-center items-center gap-1 lg:gap-2 mt-0 lg:mt-4 ${
             step !== 2 ? "hidden" : ""
           }`}
         >
