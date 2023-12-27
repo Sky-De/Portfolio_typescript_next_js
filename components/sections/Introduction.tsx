@@ -60,7 +60,7 @@ const Introduction = () => {
                 <p>Web Developer</p>
               </motion.h2>
               <motion.p
-                className="w-2/3 lg:w-1/2 text-lg mt-3 mx-auto lg:mx-0 hidden sm:block apply__body"
+                className="w-2/3 lg:w-1/2 text-lg mt-3 mx-auto lg:mx-0 hidden sm:block apply__body mb-6"
                 variants={{
                   hide: { x: -50, opacity: 0 },
                   show: { x: 0, opacity: 1 },

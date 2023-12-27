@@ -342,9 +342,56 @@ summary {
           padding: 5px 0px 5px 10px!important; /* Add padding to position the custom icon */
           user-select: none; /* Disable text selection */
           transition: border 1s ease;
-          @apply border-2 border-heading-light dark:border-heading-dark py-2
+          @apply border-4 border-gray-300 py-2 dark:border-gray-600 rounded-sm;
         }
         summary::before {
           display: none;
         }
-        
+
+/* --------------------------- */
+.contactSection {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 50px 1fr;
+  padding: 1rem;
+  justify-items: center;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .contactSection {
+  grid-template-columns: 1fr 10px 1fr;
+  grid-template-rows: 1fr;
+}
+  
+}
+.apply__contact--item {
+  transition: all .4s ease;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  gap: 2rem;
+  border: 2px solid;
+  padding: .7rem 1rem;
+  @apply rounded-sm bg-bg-primary-light dark:bg-bg-primary-dark;
+}
+.apply__contact--item:hover{
+  filter: invert(100%);
+
+}
+.apply__contact--item, .apply__contact--item i{
+  @apply text-heading-light dark:text-heading-dark;
+}
+.apply__contact--item i{
+  font-size: 2.5rem;
+  @apply text-heading-light dark:text-heading-dark;
+}
+
+/* btn */
+.callToActionBtn{
+  transition: opacity 0.6s ease;
+  
+}
+.callToActionBtn:hover{
+  opacity: 0.5!important;
+  
+}
