@@ -1587,10 +1587,8 @@ function BrainOfSkill() {
         transition={{ duration: 0.75, delay: 0.25 }}
         className="text-body-light dark:text-body-dark font-bold opacity-75 text-sm"
       >
-        <LoaderCircle >
           <span className="lg:hidden">Tap</span>
           <span className="hidden lg:inline-block tracking-wider">Click </span>
-        </LoaderCircle>
 
       </motion.span>
     </>
