@@ -67,7 +67,7 @@ const OfferForm = () => {
   }
   return (
     <section className="relative h-full my-auto border-2 border-black dark:border-white flex flex-col">
-      <Stepper step={step} />
+      <Stepper step={step} isDone={isSended}/>
 
       <form className="" onSubmit={handleFormSubmit}>
         {/* step ----------------------------------- 1 */}

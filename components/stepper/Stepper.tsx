@@ -1,7 +1,6 @@
 import React from 'react';
 
-const Stepper = ({step = 1 } :{ step:number }) => {
-    // console.log(step);
+const Stepper = ({step = 1, isDone } :{ step:number, isDone:boolean }) => {
   return (
     <div className="steps stepper">
       <div className={`activeStep ${step > 1 ? "activeLine" : ""}`}>
@@ -24,7 +23,7 @@ const Stepper = ({step = 1 } :{ step:number }) => {
 
       <div className={`${step > 2 ? "activeStep" : ""}`}>
         <p className="apply__mainColorOp text-white">
-          {step > 3 ? <i className="bx bx-check text-red-50"></i> : 3}
+          { step > 3 && isDone ? <i className="bx bx-check text-red-50"></i> : 3 }
         </p>
         <h4 className="apply__stepperTitle">SUBMIT</h4>
       </div>
