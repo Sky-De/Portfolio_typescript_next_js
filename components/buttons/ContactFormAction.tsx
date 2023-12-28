@@ -33,7 +33,7 @@ const ContactFormAction = ({
       )}
       {step < 3 && <button onClick={handleNextStep}>Next</button>}
       {step === 3 && (
-        <button disabled={captcha ? false : true} onClick={handleSubmit}>
+        <button disabled={captcha || isLoading ? false : true} onClick={handleSubmit}>
           SEND
         </button>
       )}
