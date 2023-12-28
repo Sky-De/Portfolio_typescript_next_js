@@ -22,6 +22,6 @@ export const AboutItemsData: AboutProps[] = [
   },
   {
     title: "Abilities",
-    desc: ["Prior to embarking on my web development journey, I enriched my experience with an impressive @7+ years in the engineering field.", "This includes @2.5+ years of involvement in high-level national project for electric train connections", "Followed by 4@.5 years of self-employed work on various contracts.", "they have instilled in me the ability to thrive in collaborative environments and meet @deadlines under pressure."],
+    desc: ["Prior to embarking on my web development journey, I enriched my experience with an impressive @7+ @years in the engineering field.", "This includes @2.5+ @years of involvement in high-level national project for electric train connections", "Followed by @4.5 @years of self-employed work on various contracts.", "they have instilled in me the ability to thrive in collaborative environments and meet @deadlines under pressure."],
   },
 ];

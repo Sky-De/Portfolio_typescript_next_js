@@ -1,6 +1,5 @@
 import { MockupProps, projectsData } from "@/constants/projectsData";
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
-import { StaticImageData } from "next/image";
 
 export type ProjectState = {
   title: string;

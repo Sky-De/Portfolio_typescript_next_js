@@ -65,7 +65,7 @@ const About = () => {
           whileInView="show"
           // viewport={{ amount: 0.8 }}
           transition={{ duration: 0.5, delay: 0.5 }}
-          className="about__content  w-[350px] h-[400px] max-w-full overflow-scroll my-4 flex flex-col gap-1"
+          className="about__content w-[350px] lg:w-[400px] h-[700px] max-w-full overflow-scroll my-4 flex flex-col justify-center gap-1"
         >
           {AboutItemsData.map((item, i) => (
             <AboutItem

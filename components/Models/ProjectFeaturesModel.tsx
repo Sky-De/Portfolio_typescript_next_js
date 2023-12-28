@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { useAppDispatch, useAppSelector } from "@/hooks/reduxHooks";
-import { closeContatctModel, closefeatureModel } from "@/redux/features/models/modelSlice";
+import { closefeatureModel } from "@/redux/features/models/modelSlice";
 import { motion } from "framer-motion";
 import CloseBtn from "../buttons/CloseBtn";
 import { v4 as uuid } from "uuid";
@@ -25,7 +25,7 @@ const ProjectFeaturesModel = () => {
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        className=" w-full h-1/2 bg-bg-primary-dark dark:bg-bg-primary-light text-heading-dark dark:text-heading-light mx-2"
+        className=" w-full h-1/2 bg-bg-secondary-light dark:bg-bg-secondary-dark text-heading-light dark:text-heading-dark mx-2"
       >
         <CloseBtn handleClick={()=> dispatch(closefeatureModel())}/>
         <ol className="p-2 ml-6 list-disc">

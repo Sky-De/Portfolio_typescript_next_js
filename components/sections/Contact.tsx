@@ -23,6 +23,7 @@ const Contact = () => {
       className="section contactSection snap-start snap-always"
     >
       <div className="flex flex-col gap-3 mt-8">
+        <h3 className="font-bold text-center lg:text-start">Connect Now</h3>
         <ContactItem
           delay={1}
           iconClass="bxl-linkedin-square"

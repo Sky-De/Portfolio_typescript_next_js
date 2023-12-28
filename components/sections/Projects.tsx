@@ -17,6 +17,7 @@ const Projects = () => {
   const { projects, selectedProject, selectedProjectId } = useAppSelector(
     (state) => state.projects
   );
+  
   const dispatch = useAppDispatch();
 
   const projectsRef = useRef<HTMLElement>(null);
@@ -158,7 +159,7 @@ const Projects = () => {
           </span>
           <button
             onClick={() => {
-              dispatch(openfeatureModel({ features: ["asd", "fdsf"] }));
+              dispatch(openfeatureModel({ features: selectedProject ? selectedProject.features : [] }));
             }}
             className="flex items-center opacity-100 md:opacity-70 gap-2 hover:opacity-100 transition-opacity"
           >
