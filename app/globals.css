@@ -71,9 +71,13 @@ input, textarea{
   /* color: #636363; */
   @apply dark:text-body-dark text-body-light;
 }
+/* nav--------------------------------------------------------- */
 .apply__navItem {
   font-family: "Roboto", sans-serif;
-  @apply capitalize dark:text-heading-dark text-heading-light h-[45px] px-6 flex justify-center items-center hover:translate-y-[-3px] transition-transform;
+  @apply capitalize dark:text-heading-dark text-heading-light h-[45px] px-6 flex justify-center items-center;
+}
+.apply__navItem:hover {
+  animation: wiggle 0.5s;
 }
 .apply__nav {
   /* box-shadow: 0px 0px 3px 3px rgb(207, 207, 207); */
@@ -83,7 +87,11 @@ input, textarea{
 .active {
   @apply bg-heading-light dark:bg-heading-dark text-heading-dark dark:text-heading-light rounded-sm;
 }
-
+@keyframes wiggle {
+  0%{ transform: rotate(0deg);}
+  50%{ transform: rotate(5deg);}
+  100%{ transform: rotate(0deg);}
+}
 /* ---------------------------------------------------------------- */
 .bx {
   /* FIX replace fontSize with tailwind fontsize config */
