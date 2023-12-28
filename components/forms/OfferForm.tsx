@@ -67,7 +67,7 @@ const OfferForm = () => {
     setFormData({...formData, type: {...formData.type ,[e.target.name] : e.target.checked}})
   }
   return (
-    <section className="relative h-full my-auto border-2 border-black dark:border-white flex flex-col">
+    <section className="relative h-full my-auto border-4 dark:border-black border-white flex flex-col">
       <Stepper step={step} isDone={isSended}/>
 
       <form className="" onSubmit={handleFormSubmit}>
