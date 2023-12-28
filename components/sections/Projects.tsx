@@ -38,12 +38,12 @@ const Projects = () => {
       className="section snap-start snap-always relative"
     >
       {/* ABSOLUTE BTNS */}
-      {/* controlls middle------------ */}
+      {/* controlls - middle------------ */}
       <button
         onClick={() => {
           dispatch(setPreProject());
         }}
-        className="absolute bottom-[10%] sm:bottom-[50%] left-0 text-3xl dark:text-white hover:opacity-50"
+        className="absolute bottom-[10%] sm:bottom-[40%] left-0 text-3xl dark:text-white hover:opacity-50"
       >
         <i className="bx bx-chevron-left apply__carousel--btn"></i>
       </button>
@@ -51,20 +51,20 @@ const Projects = () => {
         onClick={() => {
           dispatch(setNextProject());
         }}
-        className="absolute bottom-[10%] sm:bottom-[50%] right-0 dark:text-white hover:opacity-50"
+        className="absolute bottom-[10%] sm:bottom-[40%] right-0 dark:text-white hover:opacity-50"
       >
         <i className="bx bx-chevron-right apply__carousel--btn"></i>
       </button>
-      {/* controlls bottom -----------------------------------*/}
+      {/* controlls - bottom -----------------------------------*/}
       {projects && (
         <div className="flex absolute bottom-4 md:bottom-10 flex-col items-center  w-full justify-center gap-2">
           <div className="hidden md:flex  w-full justify-center gap-2">
             {projects.map((pro) => (
               <span
                 onClick={() => dispatch(setActiveProject(pro.id))}
-                className={`transition-all duration-700 rounded-full cursor-pointer block p-[0.30rem] border border-heading-light dark:border-heading-dark ${
+                className={`transition-all duration-700 rounded-full cursor-pointer block px-[0.30rem] py-[0.30rem] border border-heading-light dark:border-heading-dark ${
                   pro.id === selectedProjectId
-                    ? "bg-bg-primary-dark px-[0.6rem] dark:bg-bg-primary-light"
+                    ? "bg-bg-primary-dark px-[0.60rem] dark:bg-bg-primary-light"
                     : ""
                 }`}
                 key={uuid()}
@@ -88,17 +88,15 @@ const Projects = () => {
         className="flex flex-col items-center gap-5  w-full  mx-12 py-5"
       >
         {selectedProject && (
-          <div
-            className="flex flex-col lg:flex-row md:mt-auto md:px-16 items-center md:justify-evenly"
-          >
+          <div className="flex flex-col lg:flex-row md:mt-auto md:px-16 items-center md:justify-evenly lg:gap-4">
             <motion.div
               variants={{
-                hide: { opacity: 0, x:-100 },
-                show: { opacity: 1, x:0 },
+                hide: { opacity: 0, x: -100 },
+                show: { opacity: 1, x: 0 },
               }}
               initial="hide"
               whileInView="show"
-              viewport={{amount: 0.3}}
+              viewport={{ amount: 0.3 }}
               transition={{ duration: 0.5, delay: 0.5 }}
               className="project--info flex flex-col gap-1 items-center md:items-start lg:w-2/5 md:gap-4"
             >
@@ -159,7 +157,11 @@ const Projects = () => {
           </span>
           <button
             onClick={() => {
-              dispatch(openfeatureModel({ features: selectedProject ? selectedProject.features : [] }));
+              dispatch(
+                openfeatureModel({
+                  features: selectedProject ? selectedProject.features : [],
+                })
+              );
             }}
             className="flex items-center opacity-100 md:opacity-70 gap-2 hover:opacity-100 transition-opacity"
           >

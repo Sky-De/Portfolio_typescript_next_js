@@ -18,7 +18,7 @@ export const AboutItemsData: AboutProps[] = [
   },
   {
     title: "Online work",
-    desc: ["In addition to my technical expertise, I bring forth valuable assets such as my substantial contributions to open-source projects on GitHub.", "This experience has equipped me with the proficiency to navigate the intricacies of forking to pull requests within the Git ecosystem.", "Furthermore, my ability to work remotely, facilitated by my mastery of Git and version control techniques and my great communication skill, enables me to seamlessly integrate into any team, regardless of geographical constraints."],
+    desc: ["In addition to my technical expertise, I bring forth valuable assets such as my substantial contributions to open-source projects on GitHub.", "This experience has equipped me with the proficiency to navigate the intricacies of forking to pull requests within the Git ecosystem.", "Furthermore, my ability to work remotely, facilitated by my mastery of Git and version control techniques and my great communication skill, enables me to seamlessly integrate into any team,admi."],
   },
   {
     title: "Abilities",

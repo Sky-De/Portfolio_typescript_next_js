@@ -8,6 +8,7 @@ import { useState } from "react";
 import GoogleReCAPTCHA from "../reCAPTCHA/GoogleReCAPTCHA";
 import { useFormSender } from "@/hooks/useFormSender";
 import LoaderCube from "../loader/LoaderCube";
+import Message from "../message/Message";
 
 export type FormDataState = {
   type: {
@@ -222,14 +223,13 @@ const OfferForm = () => {
       </form>
       {step > 3 && (
         <>
-          {isSended && (
-            <h2 className="text-center font-bold my-auto">
-              Form has been sended, i will make sure to respond
-            </h2>
-          )}
           {isLoading && <LoaderCube />}
+
+          {isSended && (
+            <Message type="success" messagge="Form submitted successfully, i will make sure to respond, thanks!"/>
+          )}
           {isError && (
-            <h2 className="text-center font-bold my-auto">ERROR...</h2>
+            <Message type="error" messagge="Check your connection and try again!"/>
           )}
         </>
       )}

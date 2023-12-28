@@ -402,3 +402,11 @@ summary {
   opacity: 0.5!important;
   
 }
+
+/* --------------------message */
+.message.success i {
+color: rgb(34 197 94)!important;
+}
+.message.erro i {
+color: rgb(239 68 68)!important;
+}

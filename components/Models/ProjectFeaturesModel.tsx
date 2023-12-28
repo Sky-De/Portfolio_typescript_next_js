@@ -8,6 +8,7 @@ import { v4 as uuid } from "uuid";
 
 const ProjectFeaturesModel = () => {
   const { featuresModel } = useAppSelector((state) => state.models);
+  
   const dispatch = useAppDispatch();
   return (
     <motion.div
