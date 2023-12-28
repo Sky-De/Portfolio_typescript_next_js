@@ -12,8 +12,9 @@ const GoogleReCAPTCHA = ({ setCaptcha }: GoogleReCAPTCHAProps) => {
   return (
     <>
       <p className="w-[90%] md:w-1/3 text-center mt-16">
-        I did not make any field required for smoother UX, but i need
-        to make sure you are a human !
+        Before submitting the form, make sure to verify your information. You
+        will not be able to edit after the verification process. Additionally,
+        the form cannot be submitted without verification.
       </p>
       <ReCAPTCHA
         className="my-4"

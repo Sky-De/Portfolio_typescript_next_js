@@ -55,7 +55,7 @@ const Contact = () => {
         />
       </div>
       <div className="m-4">OR</div>
-      <CallToActionBtn label="Scale your hiring" />
+      <CallToActionBtn label="Scale your hiring " />
     </motion.section>
   );
 };

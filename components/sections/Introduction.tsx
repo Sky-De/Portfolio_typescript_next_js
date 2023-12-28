@@ -45,7 +45,7 @@ const Introduction = () => {
               transition={{ duration: 0.5, delay: 0.25 }}
             >
               <motion.h2
-                className="font-bold text-2xl md:text-3xl apply__title"
+                className="font-bold text-2xl md:text-3xl apply__title mb-8 md:mb-0"
                 variants={{
                   hide: { x: -50, opacity: 0 },
                   show: { x: 0, opacity: 1 },
@@ -73,7 +73,7 @@ const Introduction = () => {
                 # Supercharge your business growth with my innovative web
                 development solutions
               </motion.p>
-              <CallToActionBtn label="Scale your hiring" />
+              <CallToActionBtn label="Let's Collaborate" />
             </motion.div>
           ) : (
             <>

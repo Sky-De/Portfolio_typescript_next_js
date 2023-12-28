@@ -1,5 +1,8 @@
+"use client";
 import { AboutProps } from "@/constants/aboutItems";
 import React from "react";
+import TextMarker from "../textMarker/TextMarker";
+import {v4 as uuid} from "uuid";
 
 const AboutItem = ({ desc, title, isOpan, handleClick }: AboutProps) => {
   return (
@@ -11,9 +14,10 @@ const AboutItem = ({ desc, title, isOpan, handleClick }: AboutProps) => {
       >
         {title}
       </summary>
-      <p className={`text-body-light dark:text-body-dark text-sm ml-1 mb-1 first-letter:ml-1`}>
-        {desc}
-      </p>
+      <ul className="list-disc flex flex-col gap-1">
+        {desc.length > 0 &&
+          desc.map((item) => <TextMarker key={uuid()} text={item} />)}
+      </ul>
     </details>
   );
 };

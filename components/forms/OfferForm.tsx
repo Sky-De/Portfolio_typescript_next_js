@@ -131,7 +131,7 @@ const OfferForm = () => {
                 onChange={handleSliderChange}
                 value={formData.salaryRange}
                 min={15}
-                max={30}
+                max={40}
                 defaultValue={[20, 50]}
                 ariaLabel={["Lower thumb", "Upper thumb"]}
                 ariaValuetext={(state) => `Thumb value ${state.valueNow}`}
@@ -145,7 +145,7 @@ const OfferForm = () => {
                   );
                 }}
                 pearling
-                minDistance={3}
+                minDistance={4}
                 step={1}
               />
               <span className="text-sm text-body-light dark:text-body-dark">

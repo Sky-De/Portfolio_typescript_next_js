@@ -1,20 +1,8 @@
 "use client";
 import React, { FC, InputHTMLAttributes, useState } from "react";
-
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   label: string;
 }
-
-
-// const Input: FC<InputProps> = ({ label, ...props }) => (
-//   <div className="input__control flex flex-col border border-red-400 gap-1 cursor-pointer my-6 md:my-2">
-//     <label className="text-stepColor">{label}</label>
-//     <input {...props} />
-//   </div>
-// );
-
-// export default Input;
-
 
 export const CheckBox: FC<InputProps> = ({ label, ...props }) => { 
   const [isChecked, setIschecked] = useState<boolean>(false);
