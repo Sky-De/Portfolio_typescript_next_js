@@ -30,7 +30,11 @@ const Introduction = () => {
     >
       <div className="skills flex flex-col lg:flex-row-reverse items-center px-4 w-full pt-6 lg:pt-0 gap-2">
         <BrainOfSkills />
-        <div className="skillShow w-full h-[250px] my-auto">
+        <div
+          className={`skillShow w-full  h-[250px] ${
+            currentSkill === "SKY" ? "lg:h-auto" : "lg:h-[250px]"
+          }  my-auto`}
+        >
           {/* developer intro---------------------- */}
           {currentSkill === "SKY" ? (
             <motion.div
@@ -45,7 +49,7 @@ const Introduction = () => {
               transition={{ duration: 0.5, delay: 0.25 }}
             >
               <motion.h2
-                className="font-bold text-2xl md:text-3xl apply__title mb-8 md:mb-0"
+                className="font-bold text-3xl md:text-4xl xl:text-5xl apply__title mb-8 md:mb-0"
                 variants={{
                   hide: { x: -50, opacity: 0 },
                   show: { x: 0, opacity: 1 },

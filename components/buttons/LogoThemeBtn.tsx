@@ -21,15 +21,15 @@ export const LogoThemeBtn: FC<ThemeBtnProps> = ({ type }) => {
   return (
     <h1
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-      className="logo flex items-center justify-center text-5xl px-1 cursor-pointer relative select-none"
+      className="logo flex items-center justify-center text-[3rem] px-1 cursor-pointer relative select-none"
     >
       DE{" "}
       <span className="inline-flex flex-col text-sm ml-1 font-bold">
         <span className="translate-y-[-3px] md:translate-y-[1px]">SIGN</span>
         <span className="translate-y-[1px] md:translate-y-[3px]">VELOP</span>
         <i
-          className={`absolute top-0 left-[100%] bx ${
-            theme === "light" ? "bxs-moon text-black" : "bx-sun dark:text-white"
+          className={`absolute top-2 left-[95%] bx ${
+            theme === "light" ? "bx-sun text-black" : "bxs-moon dark:text-white"
           }`}
         ></i>
       </span>

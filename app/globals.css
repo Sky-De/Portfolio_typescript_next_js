@@ -347,10 +347,10 @@ summary {
           list-style: none; /* Remove default list-style */
           cursor: pointer;
           position: relative;
-          padding: 5px 0px 5px 10px!important; /* Add padding to position the custom icon */
+          /* padding: 5px 0px 5px 10px!important;  */
           user-select: none; /* Disable text selection */
           transition: border 1s ease;
-          @apply border-2 border-gray-300 py-2 dark:border-gray-600 rounded-sm;
+          @apply border-2 border-gray-300 py-2 lg:py-4 dark:border-gray-600 rounded-sm;
         }
         summary::before {
           display: none;

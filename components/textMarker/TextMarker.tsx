@@ -5,7 +5,7 @@ const TextMarker = ({ text }: { text: string }) => {
 
   return (
     <li
-      className={`text-body-light dark:text-body-dark text-sm  ml-1 mb-1 first-letter:ml-1 list-item`}
+      className={`text-body-light dark:text-body-dark text-sm lg:text-base  ml-1 mb-1 first-letter:ml-1 list-item`}
     >
       {words.map((word, index) => {
         if (word.startsWith("@")) {

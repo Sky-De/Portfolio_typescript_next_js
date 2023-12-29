@@ -21,7 +21,7 @@ const InputWrapper: React.FC<InputWrapperProps> = ({
     >
       <div className="input-header flex gap-2 items-center p-1 rounded-sm">
         <i className={`icon bx ${iconClass} apply__mainColor`}></i>
-        <h3 className="capitalize">{title}</h3>
+        <h3 className="capitalize font-semibold">{title}</h3>
       </div>
       <div className="input-content">{children}</div>
     </div>

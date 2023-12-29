@@ -39,7 +39,7 @@ const initialFormDataState: FormDataState = {
   userName: "",
   userRole: "",
   userWebsiteUrl: "",
-  salaryRange: [22, 25],
+  salaryRange: [23, 32],
 };
 
 const OfferForm = () => {
@@ -133,7 +133,7 @@ const OfferForm = () => {
                 value={formData.salaryRange}
                 min={15}
                 max={40}
-                defaultValue={[20, 50]}
+                // defaultValue={[20, 50]}
                 ariaLabel={["Lower thumb", "Upper thumb"]}
                 ariaValuetext={(state) => `Thumb value ${state.valueNow}`}
                 renderThumb={(props, state) => {
