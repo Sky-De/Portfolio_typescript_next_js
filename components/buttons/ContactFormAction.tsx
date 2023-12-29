@@ -22,7 +22,7 @@ const ContactFormAction = ({
   const dispatch = useAppDispatch();
   const handleCloseModel = () => dispatch(closeContatctModel());
   return (
-    <div className="formAction gap-3 absolute bottom-0 flex  w-[85%] justify-between py-4 lg:w-[48%] left-[50%] translate-x-[-50%]">
+    <div className="formAction border-t w-full border-red-500 apply__dashBorder--top gap-3 absolute bottom-0 flex  justify-between py-4 pt-5 px-4 lg:justify-around left-[50%] translate-x-[-50%]">
       {step < 4 && (
         <button
           disabled={step === 1 || captcha ? true : false}
@@ -33,12 +33,15 @@ const ContactFormAction = ({
       )}
       {step < 3 && <button onClick={handleNextStep}>Next</button>}
       {step === 3 && (
-        <button disabled={captcha || isLoading ? false : true} onClick={handleSubmit}>
-          SEND
+        <button
+          disabled={captcha || isLoading ? false : true}
+          onClick={handleSubmit}
+        >
+          Send
         </button>
       )}
-      {(step > 3 && !isLoading) && (
-        <button className="mx-auto" onClick={handleCloseModel}>
+      {step > 3  && (
+        <button disabled={isLoading} className="mx-auto" onClick={handleCloseModel}>
           close
         </button>
       )}

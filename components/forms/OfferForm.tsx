@@ -67,13 +67,13 @@ const OfferForm = () => {
     setFormData({...formData, type: {...formData.type ,[e.target.name] : e.target.checked}})
   }
   return (
-    <section className="relative h-full my-auto border-4 dark:border-black border-white flex flex-col">
-      <Stepper step={step} isDone={isSended}/>
+    <section className="relative h-full flex flex-col rounded-sm model__shadow">
+      <Stepper step={step} isDone={isSended} />
 
-      <form className="" onSubmit={handleFormSubmit}>
+      <form className="pt-4 pb-6" onSubmit={handleFormSubmit}>
         {/* step ----------------------------------- 1 */}
         <div
-          className={`flex flex-col justify-center items-center gap-6 lg:gap-2 mt-4 ${
+          className={`flex flex-col justify-center items-center gap-5 lg:gap-0 mt-4 ${
             step !== 1 ? "hidden" : ""
           }`}
         >
@@ -110,7 +110,7 @@ const OfferForm = () => {
             />
           </InputWrapper>
 
-          <InputWrapper title="description" iconClass="bx-message-square-dots">
+          <InputWrapper title="description" iconClass="bx-message-square-dots" exteraStyle="hidden lg:flex">
             <textarea
               name="description"
               id=""
@@ -171,7 +171,11 @@ const OfferForm = () => {
             />
           </InputWrapper>
 
-          <InputWrapper title="name" iconClass="bx-info-circle">
+          <InputWrapper
+            title="name"
+            iconClass="bx-info-circle"
+            exteraStyle="hidden lg:flex"
+          >
             <input
               type="text"
               name="userName"
@@ -179,7 +183,6 @@ const OfferForm = () => {
               onChange={handelChange}
             />
           </InputWrapper>
-
           <InputWrapper title="email" iconClass="bx-envelope">
             <input
               type="email"
@@ -188,7 +191,6 @@ const OfferForm = () => {
               onChange={handelChange}
             />
           </InputWrapper>
-
           <InputWrapper
             title="time-zone"
             exteraStyle="hidden lg:flex"
@@ -201,7 +203,6 @@ const OfferForm = () => {
               onChange={handelChange}
             />
           </InputWrapper>
-
           <InputWrapper title="company-website / linkedin" iconClass="bx-world">
             <input
               type="text"
@@ -226,10 +227,16 @@ const OfferForm = () => {
           {isLoading && <LoaderCube />}
 
           {isSended && (
-            <Message type="success" messagge="Form submitted successfully, i will make sure to respond, thanks!"/>
+            <Message
+              type="success"
+              messagge="Form submitted successfully, i will make sure to respond, thanks!"
+            />
           )}
           {isError && (
-            <Message type="error" messagge="Check your connection and try again!"/>
+            <Message
+              type="error"
+              messagge="Check your connection and try again!"
+            />
           )}
         </>
       )}
@@ -240,7 +247,7 @@ const OfferForm = () => {
         handleSubmit={handleFormSubmit}
         step={step}
         captcha={captcha}
-        isLoading = {isLoading}
+        isLoading={isLoading}
       />
     </section>
   );

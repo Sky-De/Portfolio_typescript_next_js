@@ -2,7 +2,7 @@ import React from 'react';
 
 const Stepper = ({step = 1, isDone } :{ step:number, isDone:boolean }) => {
   return (
-    <div className="steps stepper">
+    <div className="steps stepper border-b border-heading-light pb-6 ">
       <div className={`activeStep ${step > 1 ? "activeLine" : ""}`}>
         <p className="apply__mainColorOp text-white">
           {step > 1 ? <i className="bx bx-check "></i> : 1}
