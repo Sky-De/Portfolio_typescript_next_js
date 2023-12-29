@@ -1,8 +1,18 @@
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const Footer = () => {
   return (
-    <footer className="bg-bg-secondary-light dark:bg-bg-secondary-dark footer  mt-auto footer sticky bottom-0 w-full flex justify-center items-center gap-4">
+    <motion.footer
+      variants={{
+        hidden: { opacity: 0, y: 200 },
+        visible: { opacity: 1, y: 0 },
+      }}
+      initial="hidden"
+      animate="visible"
+      transition={{ duration: 0.8 }}
+      className="bg-bg-secondary-light dark:bg-bg-secondary-dark footer  mt-auto footer sticky bottom-0 w-full flex justify-center items-center gap-4"
+    >
       <Link href="https://www.linkedin.com/in/sky-de-763248228">
         <i className="bx bxl-linkedin-square apply__footer--item"></i>
       </Link>
@@ -12,7 +22,7 @@ const Footer = () => {
       <Link href="https://github.com/Sky-De">
         <i className="bx bxl-github apply__footer--item"></i>
       </Link>
-    </footer>
+    </motion.footer>
   );
 };
 

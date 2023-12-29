@@ -24,36 +24,45 @@ const Header = () => {
   }
 
   return (
-    <header className=" header sticky top-0 w-ful after:bg-bg-secondary-light dark:after:bg-bg-secondary-dark z-30">
+    <motion.header
+      variants={{
+        hidden: { opacity: 0, y: -200 },
+        visible: { opacity: 1, y: 0 },
+      }}
+      initial="hidden"
+      animate="visible"
+      transition={{ duration: .8}}
+      className=" header sticky top-0 w-ful after:bg-bg-secondary-light dark:after:bg-bg-secondary-dark z-30"
+    >
       <div className="header__content flex items-center h-full relative mx-auto px-2">
         <LogoThemeBtn type="desktop" />
         {/* MOBILE NAV---------------------------- */}
         <AnimatePresence>
           {isOpen && (
-              <motion.nav
-                variants={{
-                  hidden: { opacity: 0 },
-                  visible: { opacity: 1 },
-                }}
-                initial="hidden"
-                animate="visible"
-                exit="hidden"
-                transition={{ duration: 0.5, delay: 0.25 }}
-                className="absolute py-8 overflow-hidden bg-bg-secondary-light dark:bg-bg-secondary-dark w-full h-auto top-[100%] left-0 md:hidden flex flex-col items-center gap-2 z-20 "
-              >
-                {NavItems.map((item) => (
-                  <Link
-                    onClick={navAndCloseHandler}
-                    className={`apply__navItem ${
-                      currentPath === item.name ? "active" : ""
-                    }`}
-                    href={item.path}
-                    key={uuid()}
-                  >
-                    {item.name}
-                  </Link>
-                ))}
-              </motion.nav>
+            <motion.nav
+              variants={{
+                hidden: { opacity: 0 },
+                visible: { opacity: 1 },
+              }}
+              initial="hidden"
+              animate="visible"
+              exit="hidden"
+              transition={{ duration: 0.5, delay: 0.25 }}
+              className="absolute py-8 overflow-hidden bg-bg-secondary-light dark:bg-bg-secondary-dark w-full h-auto top-[100%] left-0 md:hidden flex flex-col items-center gap-2 z-20 "
+            >
+              {NavItems.map((item) => (
+                <Link
+                  onClick={navAndCloseHandler}
+                  className={`apply__navItem ${
+                    currentPath === item.name ? "active" : ""
+                  }`}
+                  href={item.path}
+                  key={uuid()}
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </motion.nav>
           )}
         </AnimatePresence>
 
@@ -77,7 +86,7 @@ const Header = () => {
           onClick={handleClose}
         ></div>
       </div>
-    </header>
+    </motion.header>
   );
 };
 

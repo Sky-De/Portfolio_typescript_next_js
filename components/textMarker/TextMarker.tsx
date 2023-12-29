@@ -5,12 +5,16 @@ const TextMarker = ({ text }: { text: string }) => {
 
   return (
     <li
-      className={`text-body-light dark:text-body-dark text-sm lg:text-base  ml-1 mb-1 first-letter:ml-1 list-item`}
+      className={`apply__body lg:text-base  ml-1 mb-1 first-letter:ml-1`}
     >
       {words.map((word, index) => {
         if (word.startsWith("@")) {
           const trimmedWord = word.substring(1);
-          return <strong key={index}>{trimmedWord} </strong>;
+          return (
+            <strong className="apply__heading" key={index}>
+              {trimmedWord}{" "}
+            </strong>
+          );
         }
         return <React.Fragment key={index}>{word} </React.Fragment>;
       })}

@@ -66,6 +66,12 @@ input, textarea{
 .apply__title {
   font-family: "Montserrat", sans-serif;
 }
+.apply__heading {
+  @apply dark:text-heading-dark text-heading-light;
+}
+.apply__title {
+  font-family: "Montserrat", sans-serif;
+}
 .apply__body {
   font-family: "Roboto", sans-serif;
   /* color: #636363; */

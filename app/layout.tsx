@@ -2,6 +2,8 @@
 import "./globals.css";
 import AppProviders from "@/providers/AppProviders";
 import { Header, Footer, ContactModel, ProjectFeaturesModel, ProjectImageModel } from "@/components";
+import { useEffect, useState } from "react";
+import LoaderCube from "@/components/loader/LoaderCube";
 
 // export const metadata: Metadata = {
 //   title: "Create Next App",
@@ -13,6 +15,15 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+   const [loading, setLoading] = useState(true);
+
+   useEffect(() => {
+     const timer = setTimeout(() => {
+       setLoading(false);
+     }, 700);
+     return () => clearTimeout(timer);
+   }, []);
+
   return (
     <html lang="en">
       <head>
@@ -24,14 +35,20 @@ export default function RootLayout({
       <body
         className={`flex flex-col bg-bg-primary-light dark:bg-bg-primary-dark relative`}
       >
-        <AppProviders>
-          <Header />
-          <ProjectImageModel />
-          <ProjectFeaturesModel />
-          <ContactModel />
-          {children}
-          <Footer />
-        </AppProviders>
+        {loading ? (
+          <div className="h-[100svh] grid place-items-center">
+            <LoaderCube />
+          </div>
+        ) : (
+          <AppProviders>
+            <Header />
+            <ProjectImageModel />
+            <ProjectFeaturesModel />
+            <ContactModel />
+            {children}
+            <Footer />
+          </AppProviders>
+        )}
       </body>
     </html>
   );
