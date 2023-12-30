@@ -35,6 +35,9 @@ export const projectsData: ProjectState[] = [
     features: [
       "Light/Dark mode",
       "representing data within Data Grid",
+      "CRUD operation for user",
+      "email auth",
+      "google auth",
       "another thibng",
     ],
     images: {
