@@ -101,7 +101,7 @@ const Projects = () => {
               className="project--info flex flex-col gap-1 items-center md:items-start lg:w-2/5 md:gap-4"
             >
               <h2
-                className="text-heading-light dark:text-heading-dark font-bold text-3xl md:text-4xl py-4 transition-colors"
+                className="apply__title font-semibold text-3xl md:text-4xl py-4 transition-colors"
                 key={uuid()}
               >
                 {selectedProject.title}
@@ -149,7 +149,7 @@ const Projects = () => {
           initial="hide"
           whileInView="show"
           viewport={{ amount: 0.2 }}
-          transition={{ duration: 0.5, delay: 1 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
           className="project--links flex flex-col justify-center items-center gap-3 md:items-start md:w-full md:ml-32 my-auto"
         >
           <span className="font-bold hidden md:inline">

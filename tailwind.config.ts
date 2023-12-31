@@ -16,9 +16,9 @@ const config: Config = {
     lg: ['18px', '21.94px'],
     xl: ['20px', '24.38px'],
     '2xl': ['24px', '29.26px'],
-    '3xl': ['28px', '45px'],
-    '4xl': ['34px', '52px'],
-    '5xl': ['48px', '58px'],
+    '3xl': ['28px', '43px'],
+    '4xl': ['34px', '48px'],
+    '5xl': ['41px', '52px'],
     '8xl': ['96px', '106px'],
   },
     extend: {

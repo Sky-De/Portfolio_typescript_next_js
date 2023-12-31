@@ -60,7 +60,7 @@ const Introduction = () => {
                 transition={{ duration: 0.25, delay: 0.25 }}
               >
                 SkyDe <span className="hidden sm:inline">|</span>{" "}
-                <p className="block sm:inline-block">Briliant, Self-Taught</p>{" "}
+                <p className="block ">Briliant, Self-Taught</p>{" "}
                 <p>Web Developer</p>
               </motion.h2>
               <motion.p

@@ -236,7 +236,6 @@ input, textarea{
   justify-content: center;
   gap: 5rem;
   margin-top: 2rem;
-  border-bottom: 1px dashed black!important;
   transition: all 0.6s ease;
 }
 .apply__stepperTitle{
@@ -344,10 +343,10 @@ input, textarea{
 
 /*  */
 .apply__dashBorder--top {
-  @apply border-t border-dashed border-black
+  @apply border-t-4 border-dashed border-heading-dark dark:border-heading-light
 }
 .apply__dashBorder--bot {
-  @apply border-b border-dashed border-black 
+  @apply border-b-4 border-dashed border-heading-dark  dark:border-heading-light
 }
 
 
@@ -443,3 +442,4 @@ color: rgb(239 68 68)!important;
 i.bx.wideOnly{
   @apply hidden lg:inline-block
 }
+

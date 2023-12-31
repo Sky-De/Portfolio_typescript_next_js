@@ -77,7 +77,7 @@ const OfferForm = () => {
             step !== 1 ? "hidden" : ""
           }`}
         >
-          <h3 className="text-xl mb-4 apply__mainColor">About Positon</h3>
+          <h3 className="text-xl mb-4 apply__mainColor lg:hidden">About Positon</h3>
           <InputWrapper title="type" iconClass="bx-time-five">
             <div className="flex gap-4 items-center flex-wrap justify-center">
               <CheckBox
@@ -167,7 +167,7 @@ const OfferForm = () => {
             step !== 2 ? "hidden" : ""
           }`}
         >
-          <h3 className="text-xl mb-4 apply__mainColor">About Company</h3>
+          <h3 className="text-xl mb-4 apply__mainColor lg:hidden">About Company</h3>
           <InputWrapper title="your role" iconClass="bx-user">
             <input
               type="text"

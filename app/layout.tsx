@@ -43,7 +43,7 @@ export default function RootLayout({
         ></link>
       </head>
       <body
-        className={`flex flex-col bg-bg-primary-light dark:bg-bg-primary-dark relative transition-colors duration-1000`}
+        className={`flex flex-col bg-bg-primary-light dark:bg-bg-primary-dark relative transition-colors duration-700`}
       >
         {loading ? (
           <div className="h-[100svh] grid place-items-center">

@@ -8,7 +8,7 @@ const AboutItem = ({ desc, title, isOpan, handleClick }: AboutProps) => {
   return (
     <details className="" open={isOpan} onClick={handleClick}>
       <summary
-        className={`text-xl md:text-2xl font-bold mb-[0.1rem] md:mb-1 text-center ${
+        className={`apply__title apply__neon text-lg md:text-xl font-bold mb-[0.1rem] md:mb-1 text-center ${
           isOpan ? "border-heading-light dark:border-heading-dark" : ""
         }`}
       >

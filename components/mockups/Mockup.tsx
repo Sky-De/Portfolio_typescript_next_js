@@ -16,7 +16,7 @@ function Mockup({laptopCoverUrl,mobileCoverUrl,tableCoverUrl}:MockupProps) {
       initial="hide"
       whileInView="show"
       viewport={{ amount: 0.3 }}
-      transition={{ duration: 0.5, delay: 0.75 }}
+      transition={{ duration: 0.5, delay: 0.5 }}
       className="h-auto md:w-2/3 w-full flex items-center gap-2 mt-8"
     >
       {/* Mobile SVG */}

@@ -22,7 +22,7 @@ const ContactFormAction = ({
   const dispatch = useAppDispatch();
   const handleCloseModel = () => dispatch(closeContatctModel());
   return (
-    <div className="formAction border-t w-full border-red-500 apply__dashBorder--top gap-3 absolute bottom-0 flex  justify-between py-4 pt-5 px-4 lg:justify-around left-[50%] translate-x-[-50%]">
+    <div className="formAction border-t w-full apply__dashBorder--top gap-3 absolute bottom-0 flex  justify-between py-4 pt-5 px-4 lg:justify-around left-[50%] translate-x-[-50%]">
       {step < 4 && (
         <button
           disabled={step === 1 || captcha ? true : false}

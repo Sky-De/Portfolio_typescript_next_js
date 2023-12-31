@@ -28,8 +28,9 @@ const Learn = () => {
     >
       <div className="flex w-full items-center flex-col lg:flex-row px-2 md:justify-center my-auto">
         <div className="learn__intro lg:w-2/3">
-          <motion.h2 className=" mx-auto font-extrabold lg:mx-0 mb-8 md:mb-0 pt-8 md:pt-10 text-2xl md:text-3xl xl:text-4xl text-center sm:w-2/3 lg:text-start lg:w-2/3">
-            <span>A Journey of</span> <span className="lg:block">Continuous Learning</span>
+          <motion.h2 className="apply__title font-bold mx-auto lg:mx-0 mb-8 md:mb-0 pt-8 md:pt-10 text-2xl md:text-3xl xl:text-4xl text-center sm:w-2/3 lg:text-start lg:w-2/3">
+            <span>A Journey of</span>{" "}
+            <span className="lg:block">Continuous Learning</span>
           </motion.h2>
           <p className="apply__body hidden sm:block w-2/3 lg:w-4/5 text-center lg:text-start  mx-auto lg:mx-0 lg:block pb-8 md:pb-10 pt-4">
             As a web developer, I am committed to lifelong learning and

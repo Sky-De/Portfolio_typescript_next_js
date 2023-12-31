@@ -33,7 +33,7 @@ const QuickIntro = () => {
       <div className="textContent text-center lg:text-start mb-4 lg:mb-0">
         <h3 className="text-3xl lg:text-5xl font-bold mb-6">Quick Intro</h3>
         <p className="w-full mx-auto lg:mx-0 md:w-2/3 apply__body">
-          I am enthusiastic about utilizing any tool that can assist in
+          I am enthusiastic about mastering and utilizing any tool that can assist in
           achieving objectives in a suitable manner. In this video, I have used
           <span className="font-bold text-black dark:text-white">
             {" "}
