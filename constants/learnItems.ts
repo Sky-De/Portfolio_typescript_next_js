@@ -12,6 +12,7 @@ export const DeepenListData = [
   "Node-js",
   "Testing",
   "Mongodb",
+  "Next-js",
 ];
 export const ExploreListData = [
   "JavaScript",
@@ -19,5 +20,4 @@ export const ExploreListData = [
   "Redux",
   "SCSS",
   "React-js",
-  "Next-js",
 ];

@@ -19,7 +19,7 @@ const LearnItem = ({ index, item }: LearnItemProps) => {
       // viewport={{ amount: 0.8 }}
       transition={{ duration: 0.5, delay: 0.2 * index }}
       key={uuid()}
-      className={`apply__learn--item bg-bg-secondary-dark dark:bg-bg-secondary-light dark:text-heading-light text-sm md:text-base`}
+      className={`apply__learn--item bg-bg-secondary-dark dark:bg-bg-secondary-light dark:text-heading-light text-sm md:text-base transition-colors`}
     >
       {item}
     </motion.li>

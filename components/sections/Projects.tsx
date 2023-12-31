@@ -101,7 +101,7 @@ const Projects = () => {
               className="project--info flex flex-col gap-1 items-center md:items-start lg:w-2/5 md:gap-4"
             >
               <h2
-                className="text-heading-light dark:text-heading-dark font-bold text-3xl md:text-4xl py-4"
+                className="text-heading-light dark:text-heading-dark font-bold text-3xl md:text-4xl py-4 transition-colors"
                 key={uuid()}
               >
                 {selectedProject.title}

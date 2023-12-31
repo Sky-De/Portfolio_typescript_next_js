@@ -11,7 +11,7 @@ const Footer = () => {
       initial="hidden"
       animate="visible"
       transition={{ duration: 0.8 }}
-      className="bg-bg-secondary-light dark:bg-bg-secondary-dark footer  mt-auto footer sticky bottom-0 w-full flex justify-center items-center gap-4"
+      className="transition-colors bg-bg-secondary-light dark:bg-bg-secondary-dark footer  mt-auto footer sticky bottom-0 w-full flex justify-center items-center gap-4"
     >
       <Link href="https://www.linkedin.com/in/sky-de-763248228">
         <i className="bx bxl-linkedin-square apply__footer--item"></i>

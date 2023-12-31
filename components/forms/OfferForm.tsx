@@ -73,10 +73,11 @@ const OfferForm = () => {
       <form className="pt-4 pb-6" onSubmit={handleFormSubmit}>
         {/* step ----------------------------------- 1 */}
         <div
-          className={`flex flex-col justify-center items-center gap-5 lg:gap-0 mt-4 ${
+          className={`flex flex-col justify-center items-center mt-2 ${
             step !== 1 ? "hidden" : ""
           }`}
         >
+          <h3 className="text-xl mb-4 apply__mainColor">About Positon</h3>
           <InputWrapper title="type" iconClass="bx-time-five">
             <div className="flex gap-4 items-center flex-wrap justify-center">
               <CheckBox
@@ -110,7 +111,11 @@ const OfferForm = () => {
             />
           </InputWrapper>
 
-          <InputWrapper title="description" iconClass="bx-message-square-dots" exteraStyle="hidden lg:flex">
+          <InputWrapper
+            title="description"
+            iconClass="bx-message-square-dots"
+            exteraStyle=""
+          >
             <textarea
               name="description"
               id=""
@@ -162,6 +167,7 @@ const OfferForm = () => {
             step !== 2 ? "hidden" : ""
           }`}
         >
+          <h3 className="text-xl mb-4 apply__mainColor">About Company</h3>
           <InputWrapper title="your role" iconClass="bx-user">
             <input
               type="text"
@@ -174,7 +180,7 @@ const OfferForm = () => {
           <InputWrapper
             title="name"
             iconClass="bx-info-circle"
-            exteraStyle="hidden lg:flex"
+            exteraStyle=""
           >
             <input
               type="text"
