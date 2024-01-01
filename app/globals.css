@@ -230,6 +230,12 @@ input, textarea{
 
 
 /* contact form --------------------------- */
+.stepper__item--shadow {
+ box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px 0px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px 0px inset;
+}
+.stepper__item{
+  @apply text-white dark:text-white stepper__item--shadow;
+}
 .stepper{
   --color: #F87C56;
   display: flex;
@@ -334,7 +340,7 @@ input, textarea{
 /* form action btn */
 
 .formAction button {
-  @apply bg-bg-primary-dark text-heading-dark dark:bg-bg-primary-light dark:text-heading-light px-3 py-2 hover:opacity-70 transition-opacity duration-500 rounded-sm cursor-pointer;
+  @apply bg-bg-primary-dark text-heading-dark dark:bg-bg-primary-light dark:text-heading-light px-3 py-2 hover:opacity-70 transition-opacity duration-500 rounded-sm cursor-pointer stepper__item--shadow;
 }
 
 .formAction button:disabled {
@@ -406,6 +412,7 @@ summary {
 /* btn */
 .callToActionBtn{
   transition: opacity 0.6s ease;
+  @apply stepper__item--shadow;
   
 }
 .callToActionBtn:hover{
@@ -429,8 +436,6 @@ color: rgb(239 68 68)!important;
  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px 0px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px 0px inset;
 }
 
-
-
 /*  */
 .apply__onlyWide{
   @apply hidden lg:inline-block;
@@ -442,4 +447,6 @@ color: rgb(239 68 68)!important;
 i.bx.wideOnly{
   @apply hidden lg:inline-block
 }
+
+/* shadow */
 

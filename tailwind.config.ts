@@ -10,17 +10,17 @@ const config: Config = {
   theme: {
     // darkMode: "class",
     fontSize: {
-    xs: ['12px', '16px'],
-    sm: ['14px', '20px'],
-    base: ['16px', '19.5px'],
-    lg: ['18px', '21.94px'],
-    xl: ['20px', '24.38px'],
-    '2xl': ['24px', '29.26px'],
-    '3xl': ['28px', '43px'],
-    '4xl': ['34px', '48px'],
-    '5xl': ['41px', '52px'],
-    '8xl': ['96px', '106px'],
-  },
+      xs: ["12px", "16px"],
+      sm: ["14px", "20px"],
+      base: ["16px", "19.5px"],
+      lg: ["18px", "21.94px"],
+      xl: ["20px", "24.38px"],
+      "2xl": ["24px", "29.26px"],
+      "3xl": ["28px", "43px"],
+      "4xl": ["34px", "48px"],
+      "5xl": ["41px", "52px"],
+      "8xl": ["96px", "106px"],
+    },
     extend: {
       dropShadow: {
         light: ["0 0 5px rgba(0, 0, 0, 0.2)", "0 0 6px rgba(0, 0, 0, 0.1)"],
@@ -45,10 +45,10 @@ const config: Config = {
           //   light: "#f3f6fc",
           //   dark: "#2d2f31",
           // },
-            primary: {
-              light: "#FFFFFF",
-              dark: "#000000",
-            },
+          primary: {
+            light: "#FFFFFF",
+            dark: "#000000",
+          },
           secondary: {
             light: "#e3e3e3",
             dark: "#131313",
@@ -69,6 +69,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: ["prettier-plugin-tailwindcss"],
 };
 export default config;

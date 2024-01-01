@@ -19,7 +19,7 @@ const Contact = () => {
       }}
       initial="hide"
       whileInView="show"
-      viewport={{ amount: 0.8 }}
+      // viewport={{ amount: 0.2 }}
       transition={{ duration: 0.5, delay: 0.5 }}
       id="contact"
       className="section contactSection snap-start snap-always"
@@ -58,7 +58,7 @@ const Contact = () => {
           areaTitle="link to my telegram"
           delay={5}
           iconClass="bxl-telegram"
-          link="https://github.com/Sky-De"
+          link="https://t.me/SkyDe1991"
           title="Telegram"
         />
       </div>

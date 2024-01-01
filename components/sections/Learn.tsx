@@ -33,21 +33,12 @@ const Learn = () => {
             <span className="lg:block">Continuous Learning</span>
           </motion.h2>
           <p className="apply__body hidden sm:block w-2/3 lg:w-4/5 text-center lg:text-start  mx-auto lg:mx-0 lg:block pb-8 md:pb-10 pt-4">
-            As a web developer, I am committed to lifelong learning and
-            continuous professional development.{" "}
-            <span className="hidden lg:inline">
-              I am always seeking out new opportunities to expand my knowledge
-              and skills, ensuring that I remain at the forefront of the
-              ever-evolving tech landscape. My passion for learning is fueled by
-              my curiosity and desire to create innovative and impactful web
-              solutions.
-              {/* Discipline: I am committed to lifelong learning and continuous professional development. I set aside time each day to learn new things, even if it's just for a few minutes. For example, I learned English by having a 7-minute daily conversation for 470 days in a row. I am also learning about web development and other tech skills.
-              Self-Motivation: I am able to learn new things on my own, without the need for external motivation. I am driven by my curiosity and desire to grow as a person and professional.
-              Adaptability: I am able to quickly adapt to new learning environments and situations. I am also able to pivot my learning goals as needed. For example, when I started learning web development, I realized that I needed to learn JavaScript first. So, I pivoted my learning goals to focus on JavaScript.
-              Collaboration: I am a team player and I am always eager to learn from others. I am also able to share my knowledge and skills with others. I believe that we can all learn from each other and grow together.
-              Communication: I am an effective communicator, both verbally and in writing. I am able to clearly explain complex concepts and ideas. I am also able to listen actively and understand others' perspectives.
-              Empathy: I am able to put myself in other people's shoes and understand their needs and motivations. This helps me to tailor my learning approach to the specific needs of the situation. */}
-            </span>
+            Parallel to my commitment to long-term learning is my innate ability
+            to absorb new information rapidly. I possess a natural curiosity and
+            an eagerness to explore the ever-expanding world of web development.
+            This combination of traits empowers me to grasp complex concepts
+            quickly, enabling me to stay abreast of the latest trends and
+            advancements in the field.
           </p>
         </div>
         <div className="lg:pt-8">

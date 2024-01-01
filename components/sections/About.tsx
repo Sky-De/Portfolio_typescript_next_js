@@ -45,14 +45,14 @@ const About = () => {
           whileInView="show"
           viewport={{ amount: 0.8 }}
           transition={{ duration: 0.5, delay: 0.5 }}
-          className="about--image w-[250px] h-[250px] border grid place-content-center"
+          className="border grid place-content-center rounded-full"
         >
           <Image
             src="/avatar.jpg"
             alt="psk"
-            width={250}
-            height={250}
-            className="about--image"
+            width={150}
+            height={150}
+            className="mt-2 md:w-[250px] md:h-[250px] object-cover rounded-full"
           />
         </motion.div>
         <motion.div

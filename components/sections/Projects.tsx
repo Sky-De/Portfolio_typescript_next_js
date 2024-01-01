@@ -32,7 +32,7 @@ const Projects = () => {
       }}
       initial="hide"
       whileInView="show"
-      viewport={{ amount: 0.8 }}
+      // viewport={{ amount: 0.8 }}
       transition={{ duration: 0.5, delay: 0.5 }}
       id="projects"
       className="section snap-start snap-always relative"
@@ -143,7 +143,7 @@ const Projects = () => {
         {/* project links------------------- */}
         <motion.div
           variants={{
-            hide: { opacity: 0, y: 100 },
+            hide: { opacity: 0, y: 80 },
             show: { opacity: 1, y: 0 },
           }}
           initial="hide"

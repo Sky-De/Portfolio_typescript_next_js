@@ -27,7 +27,7 @@ const ProjectFeaturesModel = () => {
       <CloseBtn handleClick={()=> dispatch(closefeatureModel())}/>
       <div
         onClick={(e) => e.stopPropagation()}
-        className="relative flex w-full h-1/2 bg-bg-secondary-light dark:bg-bg-secondary-dark text-heading-light dark:text-heading-dark mx-2"
+        className="relative flex w-full lg:w-1/2 lg:mx-auto h-1/2 bg-bg-secondary-light dark:bg-bg-secondary-dark text-heading-light dark:text-heading-dark mx-2"
         >
         <h3 className="font-bold apply__title text-lg absolute top-3 left-3">Features</h3>
         <ol className="p-2 list-disc  m-auto grid md:grid-cols-2 ">

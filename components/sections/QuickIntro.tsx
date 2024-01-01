@@ -25,7 +25,7 @@ const QuickIntro = () => {
       ref={qIntroRef}
       initial="hide"
       whileInView="show"
-      viewport={{ amount: 0.8 }}
+      // viewport={{ amount: 0.8 }}
       transition={{ duration: 0.75, delay: 0.25 }}
       id="qintro"
       className="SECTION section snap-start snap-always w-full flex flex-col justify-evenly lg:flex-row lg:items-center p-2 "
@@ -48,7 +48,7 @@ const QuickIntro = () => {
           in web development and who i am, Enjoy!
         </p>
       </div>
-      <div className="mediaContent rounded-lg dark:border pb-3">
+      <div className="rounded-lg dark:border pb-3 bg-black">
         <video
           poster="./vidPoster.png"
           className="rounded-lg "
