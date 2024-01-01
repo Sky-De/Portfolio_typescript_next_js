@@ -1,10 +1,11 @@
+"use client";
 import { useIsInView } from "@/hooks/useIsInVeiw";
 import { useRef } from "react";
 import { motion } from "framer-motion";
 import ContactItem from "../contactItem/ContactItem";
 import CallToActionBtn from "../buttons/CallToActionBtn";
-import HiringSvg from "@/public/Hiring.svg";
 import Image from "next/image";
+import "./style.css";
 
 const Contact = () => {
   const projectsRef = useRef<HTMLElement>(null);

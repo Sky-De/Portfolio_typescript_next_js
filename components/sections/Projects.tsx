@@ -1,3 +1,4 @@
+"use client";
 import { useIsInView } from "@/hooks/useIsInVeiw";
 import { useRef } from "react";
 import { motion } from "framer-motion";

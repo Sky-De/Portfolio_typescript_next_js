@@ -1,0 +1,72 @@
+
+/* -------------contactSection-------------- */
+.contactSection {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 50px 1fr;
+  padding: 1rem;
+  justify-items: center;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .contactSection {
+  grid-template-columns: 1fr 10px 1fr;
+  grid-template-rows: 1fr;
+}
+  
+}
+.apply__contact--item {
+  transition: all .4s ease;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  gap: 2rem;
+  border: 2px solid;
+  padding: .7rem 1rem;
+  @apply rounded-sm bg-bg-primary-light dark:bg-bg-primary-dark;
+}
+.apply__contact--item:hover{
+  filter: invert(100%);
+}
+.apply__contact--item, .apply__contact--item i{
+  @apply text-heading-light dark:text-heading-dark;
+}
+.apply__contact--item i{
+  font-size: 2.5rem;
+  @apply text-heading-light dark:text-heading-dark;
+}
+
+
+
+
+/* -------------aboutSection-------------- */
+
+summary {
+  list-style: none; 
+  cursor: pointer;
+  position: relative;
+  user-select: none;
+  transition: border 1s ease;
+  @apply border-2 border-gray-300 py-2 lg:py-4 dark:border-gray-600 rounded-sm;
+  }
+  summary::before {
+    display: none;
+  }
+
+/* LEARN SECTION ------------------------------------*/
+.apply__learn--list {
+  @apply flex w-full flex-wrap justify-center gap-2;
+}
+.apply__learn--item {
+  @apply py-2 px-3 cursor-pointer hover:opacity-60 font-semibold rounded-xl text-heading-dark;
+}
+.apply__learn--section {
+  @apply w-full flex flex-col items-center gap-4 pb-2 mb-4;
+}
+
+
+
+/* crousel btn Projects-------------------------------------*/
+.apply__carousel--btn {
+  @apply text-heading-dark rounded-full bg-bg-primary-dark dark:bg-bg-primary-light dark:text-heading-light mx-2 xl:mx-0 p-1;
+}

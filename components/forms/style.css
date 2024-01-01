@@ -1,0 +1,112 @@
+
+/* ----------------------------- */
+.apply__dashBorder--top {
+  @apply border-t-4 border-dashed border-heading-dark dark:border-heading-light;
+}
+.apply__dashBorder--bot {
+  @apply border-b-4 border-dashed border-heading-dark  dark:border-heading-light;
+}
+
+
+/* form icons ----------------------*/
+i.bx.wideOnly{
+  @apply hidden lg:inline-block
+}
+
+
+/* salary slider----------------- */
+.slider {
+    width: 250px;
+    height: 10px;
+    margin: 0 .5rem;
+    border-radius: 10px;
+    @apply bg-bg-primary-dark dark:bg-bg-primary-light
+}
+
+.slider__thumb {
+    top: -12px;
+    display: grid;
+    padding: .30rem .5rem;
+    place-content: center;
+    cursor: pointer;
+    border-radius: 50%;
+    @apply bg-bg-primary-dark dark:bg-bg-primary-light text-heading-dark dark:text-heading-light border border-black
+}
+
+
+/* offer(contact) form --------------------------- */
+.stepper__item--shadow {
+ box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px 0px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px 0px inset;
+}
+.stepper__item{
+  @apply text-white dark:text-white stepper__item--shadow;
+}
+.stepper{
+  --color: #F87C56;
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  margin-top: 2rem;
+  transition: all 0.6s ease;
+}
+.apply__stepperTitle{
+  @apply hidden lg:block
+}
+
+.stepper div p{
+  background: #d3bfbf;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  position: relative;
+  transition: all .5s ease;
+}
+.stepper div h4{
+  /* color: #0288d1; */
+  font-weight: bold;
+  transition: all 0.6s ease;
+}
+
+.stepper div p::before{
+  transition: all .5s ease;
+  background: rgb(130, 130, 130);
+  content: "";
+  border-radius: 4px;
+  width: 0;
+  position: absolute;
+  height: 5px;
+  left: 130%;
+}
+.stepper div:last-child p::before{
+  content: "";
+  width: 0;
+}
+.stepper div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .4rem;
+}
+
+.stepper div.activeStep:last-child p::before{
+  width: 0;
+}
+.stepper div.activeStep.activeLine p::before{
+  background: var(--color);
+  width: 230%;
+}
+@media screen and (max-width:767px) {
+.stepper div.activeStep.activeLine p::before{
+  width: 3.5rem;
+}
+  
+}
+.stepper div.activeStep h4{
+  color: var(--color);
+  font-weight: bold;
+}
+.stepper div.activeStep p{
+  background: var(--color);
+}

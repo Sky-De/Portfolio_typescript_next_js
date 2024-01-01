@@ -1,4 +1,5 @@
 "use client";
+import "./style.css";
 import { useAppDispatch } from '@/hooks/reduxHooks';
 import { closeContatctModel } from '@/redux/features/models/modelSlice';
 import React, { MouseEventHandler } from 'react';

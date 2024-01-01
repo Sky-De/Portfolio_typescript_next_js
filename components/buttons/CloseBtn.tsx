@@ -10,12 +10,3 @@ const CloseBtn = ({ handleClick }: CloseBtnProps) => {
 }
 
 export default CloseBtn
-
-// React.FunctionComponent<
-//   React.DetailedHTMLProps<
-//     React.ButtonHTMLAttributes<HTMLButtonElement>,
-//     HTMLButtonElement
-//   > & {
-//     title: string;
-//   }
-// > = ({ title, ...props }) => <button {...props}>{title}</button>;

@@ -1,0 +1,69 @@
+/* header -----ham----------------------------------*/
+.apply__ham {
+  @apply after:bg-heading-light dark:after:bg-heading-dark before:bg-heading-light dark:before:bg-heading-dark h-5 w-8 relative cursor-pointer bg-transparent dark:bg-transparent;
+}
+.apply__ham::after,
+.apply__ham::before {
+  transition: all 0.6s ease-in;
+  transform: rotate(0) translateY(0) translateX(0);
+  border-radius: 50px;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  left: 0;
+}
+.apply__ham::after {
+  top: 0px;
+  color: #e3e3e3;
+}
+.apply__ham::before {
+  bottom: 2px;
+}
+.apply__ham.active::before {
+  transform: rotate(-45deg) translateY(-8px) translateX(5px);
+}
+.apply__ham.active::after {
+  transform: rotate(45deg) translateY(5px) translateX(3px);
+}
+
+
+
+
+/* header------NAV--------------------------------------------------- */
+.apply__navItem {
+  font-family: "Roboto", sans-serif;
+  @apply capitalize dark:text-heading-dark text-heading-light h-[45px] px-6 flex justify-center items-center;
+}
+.apply__navItem:hover {
+  animation: wiggleOne 0.5s;
+}
+.apply__nav {
+  /* box-shadow: 0px 0px 3px 3px rgb(207, 207, 207); */
+  @apply bg-bg-primary-light dark:bg-bg-primary-dark;
+}
+
+.active {
+  @apply bg-heading-light dark:bg-heading-dark text-heading-dark dark:text-heading-light rounded-sm;
+}
+@keyframes wiggleOne {
+  0%{ transform: rotate(0deg);}
+  50%{ transform: rotate(5deg);}
+  100%{ transform: rotate(0deg);}
+}
+/* ---------------------------------------------------------------- */
+.apply__footer--item {
+  @apply text-heading-light dark:text-heading-dark cursor-pointer text-xl md:text-3xl hover:opacity-60;
+}
+
+
+/* theme mode icons-------------------- */
+.bx-sun,.bxs-moon {
+  font-size: 1.4rem;
+}
+
+.bx.bx-check {
+  font-size: 1.8rem;
+  cursor: pointer;
+  @apply text-heading-dark;
+}

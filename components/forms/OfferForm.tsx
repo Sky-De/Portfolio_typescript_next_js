@@ -9,6 +9,7 @@ import GoogleReCAPTCHA from "../reCAPTCHA/GoogleReCAPTCHA";
 import { useFormSender } from "@/hooks/useFormSender";
 import LoaderCube from "../loader/LoaderCube";
 import Message from "../message/Message";
+import "./style.css";
 
 export type FormDataState = {
   type: {

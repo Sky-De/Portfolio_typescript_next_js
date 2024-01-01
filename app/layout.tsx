@@ -2,8 +2,9 @@
 import "./globals.css";
 import AppProviders from "@/providers/AppProviders";
 import { Header, Footer, ContactModel, ProjectFeaturesModel, ProjectImageModel } from "@/components";
-import { useEffect, useState } from "react";
 import LoaderCube from "@/components/loader/LoaderCube";
+import { Metadata } from "next";
+import { useEffect, useState } from "react";
 
 // export const metadata: Metadata = {
 //   title: "Create Next App",
@@ -15,16 +16,6 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-
-  
-
-
-
-
-
-
-
-
    const [loading, setLoading] = useState(true);
 
    useEffect(() => {
