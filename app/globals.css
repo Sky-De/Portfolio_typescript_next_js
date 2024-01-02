@@ -92,7 +92,7 @@ input, textarea{
 /* btn----------------callToActionBtn */
 .callToActionBtn{
   transition: opacity 0.6s ease;
-  @apply model__shadow;
+  @apply model__shadow text-lg text-white bg-black dark:text-black dark:bg-white px-4 py-4 w-2/3 md:w-1/2 lg:w-[78%] rounded-2xl font-semibold;
   
 }
 .callToActionBtn:hover{
