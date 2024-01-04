@@ -1,10 +1,11 @@
 "use client";
-import { useAppDispatch, useAppSelector } from "@/hooks/reduxHooks";
-import { setActiveSkill } from "@/redux/features/skill/skillSlice";
+import { FC } from "react";
 import { motion } from "framer-motion";
-import LoaderCircle from "../loader/LoaderCircle";
+import { setActiveSkill } from "@/redux/features/skill/skillSlice";
+import { useAppDispatch, useAppSelector } from "@/hooks/reduxHooks";
+import { Brain_Of_Skills_Animation_Props } from "@/constants/animationProps";
 
-function BrainOfSkill() {
+const BrainOfSkill: FC = () => {
   const { currentSkill } = useAppSelector((state) => state.skill);
 
   const dispatch = useAppDispatch();
@@ -18,14 +19,7 @@ function BrainOfSkill() {
   return (
     <>
       <motion.svg
-        variants={{
-          hide: { scale: 0.8, opacity: 0 },
-          show: { scale: 1, opacity: 1 },
-        }}
-        initial="hide"
-        whileInView="show"
-        viewport={{ amount: 0.8 }}
-        transition={{ duration: 0.75, delay: 0.25 }}
+        {...Brain_Of_Skills_Animation_Props}
         xmlns="http://www.w3.org/2000/svg"
         width="380.628"
         height="361.182"
@@ -1587,12 +1581,11 @@ function BrainOfSkill() {
         transition={{ duration: 0.75, delay: 0.25 }}
         className="text-body-light dark:text-body-dark font-bold opacity-75 text-sm"
       >
-          <span className="lg:hidden">Tap</span>
-          <span className="hidden lg:inline-block tracking-wider">Click </span>
-
+        <span className="lg:hidden">Tap</span>
+        <span className="hidden lg:inline-block tracking-wider">Click </span>
       </motion.span>
     </>
   );
-}
+};
 
 export default BrainOfSkill;

@@ -1,6 +1,7 @@
+import { FC } from "react";
 import Introduction from "./Introduction";
 
-const Skill = () => {
+const Skill: FC = () => {
   return <Introduction />;
 };
 

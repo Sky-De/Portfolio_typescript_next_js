@@ -1,5 +1,6 @@
+import { FC } from "react";
 import "./style.css";
-const LoaderCube = () => {
+const LoaderCube: FC = () => {
   return (
     <div className="loader m-auto">
       <div className="loader-square"></div>
@@ -11,6 +12,6 @@ const LoaderCube = () => {
       <div className="loader-square"></div>
     </div>
   );
-}
+};
 
-export default LoaderCube
+export default LoaderCube;

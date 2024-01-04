@@ -1,6 +1,6 @@
 "use client";
 import { useIsInView } from "@/hooks/useIsInVeiw";
-import { useRef } from "react";
+import { FC, useRef } from "react";
 import { motion } from "framer-motion";
 import LearnList from "../learnList/LearnList";
 import {
@@ -8,28 +8,25 @@ import {
   ExploreListData,
   MasterListData,
 } from "@/constants/learnItems";
+import { immediate_Fade_In_View_Animation_Props } from "@/constants/animationProps";
 
-const Learn = () => {
+const Learn: FC = () => {
   const learnRef = useRef<HTMLElement>(null);
   // checks and actives navItems depend on related sections
   useIsInView({ navName: "Learn", ref: learnRef });
   return (
     <motion.section
       ref={learnRef}
-      variants={{
-        hide: { opacity: 0 },
-        show: { opacity: 1 },
-      }}
-      initial="hide"
-      whileInView="show"
-      viewport={{ amount: 0.8 }}
-      transition={{ duration: 0.5, delay: 0 }}
+      {...immediate_Fade_In_View_Animation_Props}
       id="learn"
       className="section snap-start snap-always"
     >
       <div className="flex w-full items-center flex-col lg:flex-row px-2 md:justify-center my-auto">
         <div className="learn__intro lg:w-2/3">
-          <motion.h2 className="apply__title font-bold mx-auto lg:mx-0 mb-8 md:mb-0 pt-8 md:pt-10 text-2xl md:text-3xl xl:text-4xl text-center sm:w-2/3 lg:text-start lg:w-2/3">
+          <motion.h2
+            {...immediate_Fade_In_View_Animation_Props}
+            className="apply__title font-bold mx-auto lg:mx-0 mb-8 md:mb-0 pt-8 md:pt-10 text-2xl md:text-3xl xl:text-4xl text-center sm:w-2/3 lg:text-start lg:w-2/3"
+          >
             <span>A Journey of</span>{" "}
             <span className="lg:block">Continuous Learning</span>
           </motion.h2>

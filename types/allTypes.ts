@@ -1,8 +1,12 @@
-import { InputHTMLAttributes, MouseEventHandler, ReactNode } from "react";
+import {
+  Dispatch,
+  InputHTMLAttributes,
+  MouseEventHandler,
+  ReactNode,
+  SetStateAction,
+} from "react";
 
-
-
-
+// contact section --------------------------------
 export type ContactFormActionProps = {
   step: number;
   handlePreStep: MouseEventHandler<HTMLButtonElement>;
@@ -20,7 +24,7 @@ export type ContactItemProps = {
   delay: number;
 };
 
-
+// btns------------------
 export type CloseBtnProps = {
   handleClick: () => void;
 };
@@ -29,7 +33,7 @@ export type ThemeBtnProps = {
   type: "mobile" | "desktop";
 };
 
-
+// form and input---------------------
 export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   label: string;
 }
@@ -40,8 +44,6 @@ export interface InputWrapperProps {
   children: ReactNode;
   exteraStyle?: string;
 }
-
-
 
 export type FormDataState = {
   type: {
@@ -59,7 +61,6 @@ export type FormDataState = {
   userWebsiteUrl: string;
 };
 
-
 export const initialFormDataState: FormDataState = {
   type: {
     contract: false,
@@ -74,4 +75,27 @@ export const initialFormDataState: FormDataState = {
   userRole: "",
   userWebsiteUrl: "",
   salaryRange: [23, 32],
+};
+
+// ---------------learn section
+
+export type LearnItemProps = {
+  index: number;
+  item: string;
+};
+
+export type LearnListProps = {
+  title: string;
+  learnListItems: string[];
+};
+
+// message----------------------
+export type MessageType = {
+  type: "error" | "success";
+  messagge: string;
+};
+
+// google
+export type GoogleReCAPTCHAProps = {
+  setCaptcha: Dispatch<SetStateAction<string | null | undefined>>;
 };

@@ -1,22 +1,21 @@
 "use client";
-import "./style.scss";
+import { FC } from "react";
+import { motion } from "framer-motion";
 import { MockupProps } from "@/constants/projectsData";
 import { openImageModel } from "@/redux/features/models/modelSlice";
 import { useAppDispatch } from "@/hooks/reduxHooks";
-import { motion } from "framer-motion";
+import { slide_Left_Animation_Props } from "@/constants/animationProps";
+import "./style.scss";
 
-function Mockup({laptopCoverUrl,mobileCoverUrl,tableCoverUrl}:MockupProps) {
+const Mockup: FC<MockupProps> = ({
+  laptopCoverUrl,
+  mobileCoverUrl,
+  tableCoverUrl,
+}) => {
   const dispatch = useAppDispatch();
   return (
     <motion.section
-      variants={{
-        hide: { opacity: 0, x: 200},
-        show: { opacity: 1, x: 0 },
-      }}
-      initial="hide"
-      whileInView="show"
-      viewport={{ amount: 0.3 }}
-      transition={{ duration: 0.5, delay: 0.5 }}
+      {...slide_Left_Animation_Props}
       className="h-auto md:w-2/3 w-full flex items-center gap-2 mt-8"
     >
       {/* Mobile SVG */}
@@ -125,6 +124,6 @@ function Mockup({laptopCoverUrl,mobileCoverUrl,tableCoverUrl}:MockupProps) {
       </svg>
     </motion.section>
   );
-}
+};
 
 export default Mockup;

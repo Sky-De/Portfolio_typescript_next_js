@@ -1,13 +1,11 @@
 // import { useTheme } from "next-themes";
-import { Dispatch, SetStateAction } from "react";
+import { GoogleReCAPTCHAProps } from "@/types/allTypes";
+import { FC } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
-type GoogleReCAPTCHAProps = {
-  setCaptcha: Dispatch<SetStateAction<string | null | undefined>>;
-};
 
 const siteKey = process.env.NEXT_PUBLIC_CHAPTCHA_SITE_KEY || "";
 
-const GoogleReCAPTCHA = ({ setCaptcha }: GoogleReCAPTCHAProps) => {
+const GoogleReCAPTCHA: FC<GoogleReCAPTCHAProps> = ({ setCaptcha }) => {
   // const { theme, setTheme } = useTheme();
   return (
     <>
@@ -25,4 +23,4 @@ const GoogleReCAPTCHA = ({ setCaptcha }: GoogleReCAPTCHAProps) => {
   );
 };
 
-export default GoogleReCAPTCHA
+export default GoogleReCAPTCHA;

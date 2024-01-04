@@ -1,11 +1,11 @@
 "use client";
-import { useIsInView } from "@/hooks/useIsInVeiw";
 import { motion } from "framer-motion";
-import { useRef } from "react";
+import { FC, useRef } from "react";
+import { useIsInView } from "@/hooks/useIsInVeiw";
+import { long_Fade_In_Veiw_Animation_Props } from "@/constants/animationProps";
+import { QI_VIDEO_URL } from "@/constants/videos";
 
-const QuickIntro = () => {
-  const VIDEO_URL: string =
-    "https://res.cloudinary.com/dxukz1zt5/video/upload/v1700577963/portfolio/xpsjucuadkodkagebztp.mp4";
+const QuickIntro: FC = () => {
   const vidRef = useRef<HTMLVideoElement>(null);
   const qIntroRef = useRef<HTMLElement>(null);
   // checks and actives navItems depend on related sections
@@ -18,23 +18,17 @@ const QuickIntro = () => {
 
   return (
     <motion.section
-      variants={{
-        hide: { opacity: 0 },
-        show: { opacity: 1 },
-      }}
       ref={qIntroRef}
-      initial="hide"
-      whileInView="show"
-      // viewport={{ amount: 0.8 }}
-      transition={{ duration: 0.75, delay: 0.25 }}
+      {...long_Fade_In_Veiw_Animation_Props}
       id="qintro"
       className="SECTION section snap-start snap-always w-full flex flex-col justify-evenly lg:flex-row lg:items-center p-2 "
     >
       <div className="textContent text-center lg:text-start mb-4 lg:mb-0">
         <h3 className="text-3xl lg:text-5xl font-bold mb-6">Quick Intro</h3>
         <p className="w-full mx-auto lg:mx-0 md:w-2/3 apply__body">
-          I am enthusiastic about mastering and utilizing any tool that can assist in
-          achieving objectives in a suitable manner. In this video, I have used
+          I am enthusiastic about mastering and utilizing any tool that can
+          assist in achieving objectives in a suitable manner. In this video, I
+          have used
           <span className="font-bold text-black dark:text-white">
             {" "}
             Adobe Illustrator
@@ -55,7 +49,7 @@ const QuickIntro = () => {
           controlsList="nodownload"
           ref={vidRef}
           onPlay={requestFullScrennHandler}
-          src={VIDEO_URL}
+          src={QI_VIDEO_URL}
           controls
         ></video>
         <p className="mt-3 leading-7 text-center apply__body text-xs">

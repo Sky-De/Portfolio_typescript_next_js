@@ -1,32 +1,29 @@
-.frame{
-    cursor: pointer;
-    @apply stroke-heading-light dark:stroke-heading-dark;
+.frame {
+  cursor: pointer;
+  @apply stroke-heading-light dark:stroke-heading-dark;
 }
-.frame__mobile{
-    &--con{
+.frame__mobile {
+  &--con {
     width: 100%;
     height: 100%;
-    }
-    &--item{
-
-    }
+  }
+  &--item {
+  }
 }
-.frame__laptop{
-    &--con{
+.frame__laptop {
+  &--con {
     // flex: 1;
     width: 100%;
     height: 100%;
-    }
-    &--item{
-
-    }
+  }
+  &--item {
+  }
 }
-.frame__tablet{
-    &--con{
+.frame__tablet {
+  &--con {
     width: 200%;
     height: 100%;
-    }
-    &--item{
-
-    }
+  }
+  &--item {
+  }
 }

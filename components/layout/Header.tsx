@@ -6,11 +6,11 @@ import { NavItems } from "@/constants/navItems";
 import { useAppSelector } from "@/hooks/reduxHooks";
 import { LogoThemeBtn } from "../buttons/LogoThemeBtn";
 import { motion, AnimatePresence } from "framer-motion";
-import Link from "next/link";
 import {
-  fadeAnimationProps,
-  slideDownAnimationProps,
+  fade_Animation_Props,
+  slide_Down_Animation_Props,
 } from "@/constants/animationProps";
+import Link from "next/link";
 
 const Header: FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -30,7 +30,7 @@ const Header: FC = () => {
 
   return (
     <motion.header
-      {...slideDownAnimationProps}
+      {...slide_Down_Animation_Props}
       className=" header sticky top-0 w-ful after:bg-bg-secondary-light dark:after:bg-bg-secondary-dark z-30"
     >
       <div className="header__content flex items-center h-full relative mx-auto px-2">
@@ -39,7 +39,7 @@ const Header: FC = () => {
         <AnimatePresence>
           {isOpen && (
             <motion.nav
-              {...fadeAnimationProps}
+              {...fade_Animation_Props}
               className="absolute py-8 overflow-hidden bg-bg-secondary-light dark:bg-bg-secondary-dark w-full h-auto top-[100%] left-0 md:hidden flex flex-col items-center gap-2 z-20 "
             >
               {NavItems.map((item) => (

@@ -1,13 +1,18 @@
 "use client";
-import { useRef, useState } from "react";
-import { useIsInView } from "@/hooks/useIsInVeiw";
 import { motion } from "framer-motion";
-import Image from "next/image";
-import { AboutItemsData } from "@/constants/aboutItems";
-import AboutItem from "../aboutItem/AboutItem";
 import { v4 as uuid } from "uuid";
+import { useIsInView } from "@/hooks/useIsInVeiw";
+import { AboutItemsData } from "@/constants/aboutItems";
+import { FC, useRef, useState } from "react";
+import Image from "next/image";
+import AboutItem from "../aboutItem/AboutItem";
+import {
+  fade_Animation_Props,
+  fade_Scale_Animation_Props,
+  slide_Right_Animation_Props,
+} from "@/constants/animationProps";
 
-const About = () => {
+const About: FC = () => {
   const aboutRef = useRef<HTMLElement>(null);
   // checks and actives navItems depend on related sections
   useIsInView({ navName: "About", ref: aboutRef });
@@ -23,29 +28,13 @@ const About = () => {
   return (
     <motion.section
       ref={aboutRef}
-      variants={{
-        hide: { opacity: 0 },
-        show: { opacity: 1 },
-      }}
-      initial="hide"
-      // animate="show"
-      whileInView="show"
-      viewport={{ amount: 0.8 }}
-      transition={{ duration: 0.5, delay: 0.5 }}
+      {...fade_Animation_Props}
       id="about"
       className="section snap-start snap-always"
     >
       <div className="about flex flex-col items-center justify-evenly w-full md:flex-row-reverse">
         <motion.div
-          variants={{
-            hide: { opacity: 0, scale: 0.8 },
-            show: { opacity: 1, scale: 1 },
-          }}
-          initial="hide"
-          // animate="show"
-          whileInView="show"
-          viewport={{ amount: 0.8 }}
-          transition={{ duration: 0.5, delay: 0.5 }}
+          {...fade_Scale_Animation_Props}
           className="border grid place-content-center rounded-full"
         >
           <Image
@@ -57,15 +46,7 @@ const About = () => {
           />
         </motion.div>
         <motion.div
-          variants={{
-            hide: { opacity: 0, x: -100 },
-            show: { opacity: 1, x: 0 },
-          }}
-          initial="hide"
-          // animate="show"
-          whileInView="show"
-          // viewport={{ amount: 0.8 }}
-          transition={{ duration: 0.5, delay: 0.5 }}
+          {...slide_Right_Animation_Props}
           className="about__content w-[350px] lg:w-[400px] h-[700px] max-w-full overflow-scroll my-4 flex flex-col lg:justify-center gap-1"
         >
           {AboutItemsData.map((item, i) => (

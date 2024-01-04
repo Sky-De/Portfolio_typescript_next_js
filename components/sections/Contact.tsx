@@ -1,27 +1,21 @@
 "use client";
-import { useIsInView } from "@/hooks/useIsInVeiw";
-import { useRef } from "react";
 import { motion } from "framer-motion";
-import ContactItem from "../contactItem/ContactItem";
+import { FC, useRef } from "react";
+import { useIsInView } from "@/hooks/useIsInVeiw";
+import { fade_In_Veiw_Animation_Props } from "@/constants/animationProps";
 import CallToActionBtn from "../buttons/CallToActionBtn";
+import ContactItem from "../contactItem/ContactItem";
 import Image from "next/image";
 import "./style.css";
 
-const Contact = () => {
+const Contact: FC = () => {
   const projectsRef = useRef<HTMLElement>(null);
   // checks and actives navItems depend on related sections
   useIsInView({ navName: "Contact", ref: projectsRef });
   return (
     <motion.section
       ref={projectsRef}
-      variants={{
-        hide: { opacity: 0 },
-        show: { opacity: 1 },
-      }}
-      initial="hide"
-      whileInView="show"
-      // viewport={{ amount: 0.2 }}
-      transition={{ duration: 0.5, delay: 0.5 }}
+      {...fade_In_Veiw_Animation_Props}
       id="contact"
       className="section contactSection snap-start snap-always"
     >

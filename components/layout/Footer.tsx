@@ -1,4 +1,4 @@
-import { slideUpAnimationProps } from "@/constants/animationProps";
+import { slide_Up_Animation_Props } from "@/constants/animationProps";
 import { motion } from "framer-motion";
 import { FC } from "react";
 import Link from "next/link";
@@ -6,7 +6,7 @@ import Link from "next/link";
 const Footer: FC = () => {
   return (
     <motion.footer
-      {...slideUpAnimationProps}
+      {...slide_Up_Animation_Props}
       className="transition-colors bg-bg-secondary-light dark:bg-bg-secondary-dark footer  mt-auto footer sticky bottom-0 w-full flex justify-center items-center gap-4"
     >
       <Link href="https://www.linkedin.com/in/sky-de-763248228">

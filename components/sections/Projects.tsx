@@ -1,6 +1,6 @@
 "use client";
 import { useIsInView } from "@/hooks/useIsInVeiw";
-import { useRef } from "react";
+import { FC, useRef } from "react";
 import { motion } from "framer-motion";
 import { useAppDispatch, useAppSelector } from "@/hooks/reduxHooks";
 import {
@@ -8,17 +8,22 @@ import {
   setNextProject,
   setPreProject,
 } from "@/redux/features/projects/projectSlice";
+import { v4 as uuid } from "uuid";
+import { openfeatureModel } from "@/redux/features/models/modelSlice";
 import Image from "next/image";
 import Link from "next/link";
-import { v4 as uuid } from "uuid";
 import Mockup from "../mockups/Mockup";
-import { openfeatureModel } from "@/redux/features/models/modelSlice";
+import {
+  fade_In_Veiw_Animation_Props,
+  short_Slide_Up_Animation_Props,
+  slide_Right_Animation_Props,
+} from "@/constants/animationProps";
 
-const Projects = () => {
+const Projects: FC = () => {
   const { projects, selectedProject, selectedProjectId } = useAppSelector(
     (state) => state.projects
   );
-  
+
   const dispatch = useAppDispatch();
 
   const projectsRef = useRef<HTMLElement>(null);
@@ -27,14 +32,7 @@ const Projects = () => {
   return (
     <motion.section
       ref={projectsRef}
-      variants={{
-        hide: { opacity: 0 },
-        show: { opacity: 1 },
-      }}
-      initial="hide"
-      whileInView="show"
-      // viewport={{ amount: 0.8 }}
-      transition={{ duration: 0.5, delay: 0.5 }}
+      {...fade_In_Veiw_Animation_Props}
       id="projects"
       className="section snap-start snap-always relative"
     >
@@ -91,14 +89,8 @@ const Projects = () => {
         {selectedProject && (
           <div className="flex flex-col lg:flex-row md:mt-auto md:px-16 items-center md:justify-evenly lg:gap-4">
             <motion.div
-              variants={{
-                hide: { opacity: 0, x: -100 },
-                show: { opacity: 1, x: 0 },
-              }}
-              initial="hide"
-              whileInView="show"
+              {...slide_Right_Animation_Props}
               viewport={{ amount: 0.3 }}
-              transition={{ duration: 0.5, delay: 0.5 }}
               className="project--info flex flex-col gap-1 items-center md:items-start lg:w-2/5 md:gap-4"
             >
               <h2
@@ -143,14 +135,8 @@ const Projects = () => {
         )}
         {/* project links------------------- */}
         <motion.div
-          variants={{
-            hide: { opacity: 0, y: 80 },
-            show: { opacity: 1, y: 0 },
-          }}
-          initial="hide"
-          whileInView="show"
+          {...short_Slide_Up_Animation_Props}
           viewport={{ amount: 0.2 }}
-          transition={{ duration: 0.5, delay: 0.5 }}
           className="project--links flex flex-col justify-center items-center gap-3 md:items-start md:w-full md:ml-32 my-auto"
         >
           <span className="font-bold hidden md:inline">

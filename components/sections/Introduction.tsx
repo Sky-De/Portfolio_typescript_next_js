@@ -1,13 +1,17 @@
 "use client";
-import BrainOfSkills from "../skillsHero/BrainOfSkills";
-import { useAppSelector } from "@/hooks/reduxHooks";
 import { motion } from "framer-motion";
-import { useRef } from "react";
-import { useIsInView } from "@/hooks/useIsInVeiw";
+import { FC, useRef } from "react";
 import { v4 as uuid } from "uuid";
+import { useIsInView } from "@/hooks/useIsInVeiw";
+import { useAppSelector } from "@/hooks/reduxHooks";
+import {
+  fade_In_Veiw_Animation_Props,
+  long_Fade_In_Veiw_Animation_Props,
+} from "@/constants/animationProps";
 import CallToActionBtn from "../buttons/CallToActionBtn";
+import BrainOfSkills from "../skillsHero/BrainOfSkills";
 
-const Introduction = () => {
+const Introduction: FC = () => {
   const { currentSkill, currentSkillData: skill } = useAppSelector(
     (state) => state.skill
   );
@@ -18,13 +22,7 @@ const Introduction = () => {
   return (
     <motion.section
       ref={introRef}
-      variants={{
-        hide: { opacity: 0 },
-        show: { opacity: 1 },
-      }}
-      initial="hide"
-      whileInView="show"
-      transition={{ duration: 0.75, delay: 0.25 }}
+      {...long_Fade_In_Veiw_Animation_Props}
       id="skills"
       className="section snap-start snap-always w-full"
     >
@@ -39,14 +37,7 @@ const Introduction = () => {
           {currentSkill === "SKY" ? (
             <motion.div
               className="h-full text-center lg:text-start pt-5 lg:pt-0"
-              variants={{
-                hide: { opacity: 0 },
-                show: { opacity: 1 },
-              }}
-              initial="hide"
-              whileInView="show"
-              viewport={{ amount: 0.8 }}
-              transition={{ duration: 0.5, delay: 0.25 }}
+              {...fade_In_Veiw_Animation_Props}
             >
               <motion.h2
                 className="font-bold text-3xl md:text-4xl xl:text-5xl apply__title mb-8 md:mb-0"

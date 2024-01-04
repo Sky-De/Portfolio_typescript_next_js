@@ -1,22 +1,14 @@
 "use client";
 import { v4 as uuid } from "uuid";
-import { motion} from "framer-motion";
+import { motion } from "framer-motion";
+import { FC } from "react";
+import { LearnItemProps } from "@/types/allTypes";
+import { fade_Up_Animation_Props } from "@/constants/animationProps";
 
-type LearnItemProps = {
-    index: number;
-    item: string;
-}
-
-const LearnItem = ({ index, item }: LearnItemProps) => {
+const LearnItem: FC<LearnItemProps> = ({ index, item }) => {
   return (
     <motion.li
-      variants={{
-        hide: { opacity: 0, x: -100, y: 100 },
-        show: { opacity: 1, x: 0, y: 0 },
-      }}
-      initial="hide"
-      whileInView="show"
-      // viewport={{ amount: 0.8 }}
+      {...fade_Up_Animation_Props}
       transition={{ duration: 0.5, delay: 0.2 * index }}
       key={uuid()}
       className={`apply__learn--item bg-bg-secondary-dark dark:bg-bg-secondary-light dark:text-heading-light text-sm md:text-base transition-colors`}
@@ -26,4 +18,4 @@ const LearnItem = ({ index, item }: LearnItemProps) => {
   );
 };
 
-export default LearnItem
+export default LearnItem;

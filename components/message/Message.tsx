@@ -1,8 +1,5 @@
+import { MessageType } from "@/types/allTypes";
 
-type MessageType = {
-    type: "error" | "success";
-    messagge: string;
-}
 const Message = (props: MessageType) => {
   return (
     <div
@@ -14,12 +11,12 @@ const Message = (props: MessageType) => {
     >
       <i
         className={`bx ${
-          props.type === "success" ? "bx-check" : "bxs-error-alt"  
+          props.type === "success" ? "bx-check" : "bxs-error-alt"
         }`}
       ></i>
       <p className={``}>{props.messagge}</p>
     </div>
   );
-}
+};
 
 export default Message;
