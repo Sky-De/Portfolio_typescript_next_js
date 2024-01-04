@@ -1,15 +1,8 @@
-import React, { ReactNode } from "react";
-
-interface InputWrapperProps {
-  title: string;
-  iconClass?: string;
-  children: ReactNode;
-  exteraStyle?: string;
-}
+import { InputWrapperProps } from "@/types/allTypes";
 
 const InputWrapper: React.FC<InputWrapperProps> = ({
   title,
-  iconClass="",
+  iconClass = "",
   exteraStyle,
   children,
 }) => {
@@ -23,6 +16,7 @@ const InputWrapper: React.FC<InputWrapperProps> = ({
         <i className={`bx ${iconClass} apply__mainColor wideOnly`}></i>
         <h3 className="capitalize font-semibold">{title}</h3>
       </div>
+
       <div className="input-content">{children}</div>
     </div>
   );

@@ -1,10 +1,10 @@
 "use client";
 import { AboutProps } from "@/constants/aboutItems";
-import React from "react";
+import { FC } from "react";
+import { v4 as uuid } from "uuid";
 import TextMarker from "../textMarker/TextMarker";
-import {v4 as uuid} from "uuid";
 
-const AboutItem = ({ desc, title, isOpan, handleClick }: AboutProps) => {
+const AboutItem: FC<AboutProps> = ({ desc, title, isOpan, handleClick }) => {
   return (
     <details open={isOpan} onClick={handleClick}>
       <summary

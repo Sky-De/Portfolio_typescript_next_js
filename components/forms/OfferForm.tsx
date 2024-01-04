@@ -1,72 +1,46 @@
+import { useStep } from "@/hooks/useStep";
+import { FC, useState } from "react";
+import { useFormSender } from "@/hooks/useFormSender";
 import { CheckBox } from "./Input";
-import Stepper from "../stepper/Stepper";
+import { FormDataState, initialFormDataState } from "@/types/allTypes";
 import ContactFromAction from "../buttons/ContactFormAction";
 import InputWrapper from "./InputWrapper";
 import ReactSlider from "react-slider";
-import { useStep } from "@/hooks/useStep";
-import { useState } from "react";
 import GoogleReCAPTCHA from "../reCAPTCHA/GoogleReCAPTCHA";
-import { useFormSender } from "@/hooks/useFormSender";
 import LoaderCube from "../loader/LoaderCube";
 import Message from "../message/Message";
+import Stepper from "../stepper/Stepper";
 import "./style.css";
 
-export type FormDataState = {
-  type: {
-    partTime: boolean;
-    fullTime: boolean;
-    contract: boolean;
-  };
-  role: string;
-  description: string;
-  salaryRange: [number,number];
-  userRole: string;
-  userName: string;
-  userEmail: string;
-  timeZone: string;
-  userWebsiteUrl: string;
-};
-
-const initialFormDataState: FormDataState = {
-  type: {
-    contract:false,
-    fullTime:false,
-    partTime:false
-  },
-  role: "",
-  description: "",
-  timeZone: "",
-  userEmail: "",
-  userName: "",
-  userRole: "",
-  userWebsiteUrl: "",
-  salaryRange: [23, 32],
-};
-
-const OfferForm = () => {
+const OfferForm: FC = () => {
   const [formData, setFormData] = useState<FormDataState>(initialFormDataState);
   const [captcha, setCaptcha] = useState<string | null>();
   const { step, handleNextStep, handlePreStep, submitIsDone } = useStep();
   const { isError, isLoading, isSended, sendForm } = useFormSender();
 
-  const handleSliderChange = (newValue:any) => {
-    setFormData({...formData, salaryRange: newValue});
+  const handleSliderChange = (newValue: any) => {
+    setFormData({ ...formData, salaryRange: newValue });
   };
 
   const handleFormSubmit = () => {
-    if(!captcha) return 
-    sendForm({...formData});
+    if (!captcha) return;
+    sendForm({ ...formData });
     submitIsDone();
     setFormData(initialFormDataState);
-  }
-  
-  const handelChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-   setFormData({...formData, [e.target.name] : e.target.value});
-  }
+  };
 
-  const checkBoxHandler = (e : React.ChangeEvent<HTMLInputElement>) => {
-    setFormData({...formData, type: {...formData.type ,[e.target.name] : e.target.checked}})
-  }
+  const handelChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const checkBoxHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFormData({
+      ...formData,
+      type: { ...formData.type, [e.target.name]: e.target.checked },
+    });
+  };
   return (
     <section className="relative h-full flex flex-col rounded-sm model__shadow">
       <Stepper step={step} isDone={isSended} />
@@ -78,7 +52,9 @@ const OfferForm = () => {
             step !== 1 ? "hidden" : ""
           }`}
         >
-          <h3 className="text-xl mb-4 apply__mainColor lg:hidden">About Positon</h3>
+          <h3 className="text-xl mb-4 apply__mainColor lg:hidden">
+            About Positon
+          </h3>
           <InputWrapper title="type" iconClass="bx-time-five">
             <div className="flex gap-4 items-center flex-wrap justify-center">
               <CheckBox
@@ -168,7 +144,9 @@ const OfferForm = () => {
             step !== 2 ? "hidden" : ""
           }`}
         >
-          <h3 className="text-xl mb-4 apply__mainColor lg:hidden">About Company</h3>
+          <h3 className="text-xl mb-4 apply__mainColor lg:hidden">
+            About Company
+          </h3>
           <InputWrapper title="your role" iconClass="bx-user">
             <input
               type="text"
@@ -178,11 +156,7 @@ const OfferForm = () => {
             />
           </InputWrapper>
 
-          <InputWrapper
-            title="name"
-            iconClass="bx-info-circle"
-            exteraStyle=""
-          >
+          <InputWrapper title="name" iconClass="bx-info-circle" exteraStyle="">
             <input
               type="text"
               name="userName"
@@ -258,6 +232,6 @@ const OfferForm = () => {
       />
     </section>
   );
-}
+};
 
 export default OfferForm;

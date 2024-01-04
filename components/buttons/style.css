@@ -1,8 +1,9 @@
-
-
 /* form action btn */
 .stepper__item--shadow {
- box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px 0px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px 0px inset;
+  box-shadow:
+    rgba(0, 0, 0, 0.4) 0px 2px 4px 0px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+    rgba(0, 0, 0, 0.2) 0px -3px 0px 0px inset;
 }
 .formAction button {
   @apply bg-bg-primary-dark text-heading-dark dark:bg-bg-primary-light dark:text-heading-light px-3 py-2 hover:opacity-70 transition-opacity duration-500 rounded-sm cursor-pointer stepper__item--shadow;

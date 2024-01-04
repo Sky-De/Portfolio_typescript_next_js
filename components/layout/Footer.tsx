@@ -1,16 +1,12 @@
-import Link from "next/link";
+import { slideUpAnimationProps } from "@/constants/animationProps";
 import { motion } from "framer-motion";
+import { FC } from "react";
+import Link from "next/link";
 
-const Footer = () => {
+const Footer: FC = () => {
   return (
     <motion.footer
-      variants={{
-        hidden: { opacity: 0, y: 200 },
-        visible: { opacity: 1, y: 0 },
-      }}
-      initial="hidden"
-      animate="visible"
-      transition={{ duration: 0.8 }}
+      {...slideUpAnimationProps}
       className="transition-colors bg-bg-secondary-light dark:bg-bg-secondary-dark footer  mt-auto footer sticky bottom-0 w-full flex justify-center items-center gap-4"
     >
       <Link href="https://www.linkedin.com/in/sky-de-763248228">

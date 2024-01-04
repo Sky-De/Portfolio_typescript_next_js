@@ -1,5 +1,5 @@
 "use client";
-import React, { FC } from "react";
+import { FC } from "react";
 import { motion } from "framer-motion";
 import { useAppDispatch } from "@/hooks/reduxHooks";
 import { openContatctModel } from "@/redux/features/models/modelSlice";

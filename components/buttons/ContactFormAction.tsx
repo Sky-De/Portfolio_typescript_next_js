@@ -1,25 +1,18 @@
 "use client";
+import { useAppDispatch } from "@/hooks/reduxHooks";
+import { closeContatctModel } from "@/redux/features/models/modelSlice";
+import { ContactFormActionProps } from "@/types/allTypes";
+import { FC } from "react";
 import "./style.css";
-import { useAppDispatch } from '@/hooks/reduxHooks';
-import { closeContatctModel } from '@/redux/features/models/modelSlice';
-import React, { MouseEventHandler } from 'react';
-type ContactFormActionProps = {
-  step: number;
-  handlePreStep: MouseEventHandler<HTMLButtonElement>;
-  handleNextStep: MouseEventHandler<HTMLButtonElement>;
-  handleSubmit: MouseEventHandler<HTMLButtonElement>;
-  captcha: string | null | undefined;
-  isLoading: boolean;
-};
 
-const ContactFormAction = ({
+const ContactFormAction: FC<ContactFormActionProps> = ({
   step,
   captcha,
   handlePreStep,
   handleNextStep,
   handleSubmit,
   isLoading,
-}: ContactFormActionProps) => {
+}) => {
   const dispatch = useAppDispatch();
   const handleCloseModel = () => dispatch(closeContatctModel());
   return (
@@ -41,8 +34,12 @@ const ContactFormAction = ({
           Send
         </button>
       )}
-      {step > 3  && (
-        <button disabled={isLoading} className="mx-auto" onClick={handleCloseModel}>
+      {step > 3 && (
+        <button
+          disabled={isLoading}
+          className="mx-auto"
+          onClick={handleCloseModel}
+        >
           close
         </button>
       )}

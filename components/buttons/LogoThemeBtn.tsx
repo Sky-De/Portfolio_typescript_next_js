@@ -1,15 +1,12 @@
 "use client";
 import { useState, useEffect, FC } from "react";
 import { useTheme } from "next-themes";
-
-type ThemeBtnProps = {
-  type: "mobile" | "desktop";
-};
+import { ThemeBtnProps } from "@/types/allTypes";
 
 export const LogoThemeBtn: FC<ThemeBtnProps> = ({ type }) => {
+  // type for customizing btn in deffrent sizes
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
-  // console.log(theme);
   useEffect(() => {
     setMounted(true);
   }, []);
@@ -36,5 +33,3 @@ export const LogoThemeBtn: FC<ThemeBtnProps> = ({ type }) => {
     </h1>
   );
 };
-
-

@@ -1,21 +1,15 @@
-import Link from 'next/link';
-import React from 'react';
+import { FC } from "react";
 import { motion } from "framer-motion";
-type ContactItemProps = {
-  iconClass: string;
-  title: string;
-  link: string;
-  areaTitle: string;
-  delay: number;
-};
+import { ContactItemProps } from "@/types/allTypes";
+import Link from "next/link";
 
-const ContactItem = ({
+const ContactItem: FC<ContactItemProps> = ({
   iconClass,
   title,
   link,
   delay,
   areaTitle,
-}: ContactItemProps) => {
+}) => {
   return (
     <Link
       target="_blank"
