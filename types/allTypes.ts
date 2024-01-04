@@ -3,8 +3,11 @@ import {
   InputHTMLAttributes,
   MouseEventHandler,
   ReactNode,
+  RefObject,
   SetStateAction,
 } from "react";
+
+// All types are here exept redux types that are defined within thier files
 
 // contact section --------------------------------
 export type ContactFormActionProps = {
@@ -99,3 +102,41 @@ export type MessageType = {
 export type GoogleReCAPTCHAProps = {
   setCaptcha: Dispatch<SetStateAction<string | null | undefined>>;
 };
+
+// about--------------
+export type AboutProps = {
+  title: string;
+  desc: string[];
+  isOpan?: boolean;
+  handleClick?: (e: React.MouseEvent<HTMLDetailsElement, MouseEvent>) => void;
+};
+
+// skill--------------
+export type skillsDetailsPops = {
+  id: string;
+  alt: string;
+  title: string;
+  icon: string;
+  description: string;
+  features: string[];
+};
+
+//--- hooks-------------
+export interface FormSenderReturn {
+  isLoading: boolean;
+  isError: boolean;
+  isSended: boolean;
+  sendForm: (formData?: FormDataState) => Promise<void>;
+}
+
+export type UseIsInViewProps = {
+  ref: RefObject<HTMLElement>;
+  navName: string;
+};
+
+export interface UseStepReturn {
+  step: number;
+  handleNextStep: () => void;
+  handlePreStep: () => void;
+  submitIsDone: () => void;
+}

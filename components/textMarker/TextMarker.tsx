@@ -1,12 +1,10 @@
-import React from "react";
+import React, { FC } from "react";
 
-const TextMarker = ({ text }: { text: string }) => {
+const TextMarker: FC<{ text: string }> = ({ text }) => {
   const words = text.split(" ");
 
   return (
-    <li
-      className={`apply__body lg:text-base  ml-1 mb-1 first-letter:ml-1 `}
-    >
+    <li className={`apply__body lg:text-base  ml-1 mb-1 first-letter:ml-1 `}>
       {words.map((word, index) => {
         if (word.startsWith("@")) {
           const trimmedWord = word.substring(1);

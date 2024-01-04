@@ -1,7 +1,7 @@
+import { UseStepReturn } from "@/types/allTypes";
 import { useState } from "react";
 
-
-export const useStep = () => {
+export const useStep = (): UseStepReturn => {
   const [step, setStep] = useState<number>(1);
   const handleNextStep = () => {
     if (step === 3) return;
@@ -15,5 +15,5 @@ export const useStep = () => {
     setStep(4);
   };
 
-  return { step, handleNextStep, handlePreStep, submitIsDone }
-}
+  return { step, handleNextStep, handlePreStep, submitIsDone };
+};

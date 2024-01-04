@@ -10,4 +10,16 @@ import ContactModel from "./Models/ContactModel";
 import ProjectFeaturesModel from "./Models/ProjectFeaturesModel";
 import ProjectImageModel from "./Models/ProjectImageModel";
 
-export { About, Contact, Introduction, Learn, Projects, QuickIntro, Header, Footer, ContactModel,ProjectFeaturesModel, ProjectImageModel };
+export {
+  About,
+  Contact,
+  Introduction,
+  Learn,
+  Projects,
+  QuickIntro,
+  Header,
+  Footer,
+  ContactModel,
+  ProjectFeaturesModel,
+  ProjectImageModel,
+};

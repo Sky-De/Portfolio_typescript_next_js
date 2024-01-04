@@ -18,13 +18,11 @@ import WebpackIcon from "@/public/skillIcons/Webpack.svg";
 import XdIcon from "@/public/skillIcons/Xd.svg";
 import ReduxIcon from "@/public/skillIcons/Redux.svg";
 
-
 export type MockupProps = {
   mobileCoverUrl: string;
   tableCoverUrl: string;
   laptopCoverUrl: string;
 };
-
 
 export const projectsData: ProjectState[] = [
   {

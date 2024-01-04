@@ -1,9 +1,4 @@
-export type AboutProps = {
-  title: string;
-  desc: string[];
-  isOpan?: boolean;
-  handleClick?: (e: React.MouseEvent<HTMLDetailsElement, MouseEvent>) => void;
-};
+import { AboutProps } from "@/types/allTypes";
 
 export const AboutItemsData: AboutProps[] = [
   {
@@ -34,13 +29,3 @@ export const AboutItemsData: AboutProps[] = [
     ],
   },
 ];
-
-
-{
-  /* Discipline: I am committed to lifelong learning and continuous professional development. I set aside time each day to learn new things, even if it's just for a few minutes. For example, I learned English by having a 7-minute daily conversation for 470 days in a row. I am also learning about web development and other tech skills.
-  Self-Motivation: I am able to learn new things on my own, without the need for external motivation. I am driven by my curiosity and desire to grow as a person and professional.
-              Adaptability: I am able to quickly adapt to new learning environments and situations. I am also able to pivot my learning goals as needed. For example, when I started learning web development, I realized that I needed to learn JavaScript first. So, I pivoted my learning goals to focus on JavaScript.
-              Collaboration: I am a team player and I am always eager to learn from others. I am also able to share my knowledge and skills with others. I believe that we can all learn from each other and grow together.
-              Communication: I am an effective communicator, both verbally and in writing. I am able to clearly explain complex concepts and ideas. I am also able to listen actively and understand others' perspectives.
-              Empathy: I am able to put myself in other people's shoes and understand their needs and motivations. This helps me to tailor my learning approach to the specific needs of the situation. */
-}

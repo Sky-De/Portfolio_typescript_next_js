@@ -1,7 +1,13 @@
 "use client";
 import "./globals.css";
 import AppProviders from "@/providers/AppProviders";
-import { Header, Footer, ContactModel, ProjectFeaturesModel, ProjectImageModel } from "@/components";
+import {
+  Header,
+  Footer,
+  ContactModel,
+  ProjectFeaturesModel,
+  ProjectImageModel,
+} from "@/components";
 import LoaderCube from "@/components/loader/LoaderCube";
 import { Metadata } from "next";
 import { useEffect, useState } from "react";
@@ -16,14 +22,14 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-   const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
 
-   useEffect(() => {
-     const timer = setTimeout(() => {
-       setLoading(false);
-     }, 700);
-     return () => clearTimeout(timer);
-   }, []);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 700);
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <html lang="en">

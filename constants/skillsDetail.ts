@@ -1,4 +1,6 @@
-export const skillsDetails = [
+import { skillsDetailsPops } from "@/types/allTypes";
+
+export const skillsDetails: skillsDetailsPops[] = [
   {
     id: "JEST",
     alt: "JEST LOGO SVG",

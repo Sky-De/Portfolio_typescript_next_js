@@ -1,4 +1,4 @@
-export const MasterListData = [
+export const MasterListData: string[] = [
   "React-native",
   "Three-js",
   "E2E-Test",
@@ -6,7 +6,7 @@ export const MasterListData = [
   "Docker",
   "Linux",
 ];
-export const DeepenListData = [
+export const DeepenListData: string[] = [
   "Tailwind",
   "Express-js",
   "Node-js",
@@ -14,7 +14,7 @@ export const DeepenListData = [
   "Mongodb",
   "Next-js",
 ];
-export const ExploreListData = [
+export const ExploreListData: string[] = [
   "JavaScript",
   "TypeScript",
   "Redux",

@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { FC } from "react";
 
-const Stepper = ({step = 1, isDone } :{ step:number, isDone:boolean }) => {
+const Stepper: FC<{ step: number; isDone: boolean }> = ({
+  step = 1,
+  isDone,
+}) => {
   return (
     <div className="steps stepper pb-6 apply__dashBorder--bot">
       <div className={`activeStep ${step > 1 ? "activeLine" : ""}`}>
@@ -29,10 +32,6 @@ const Stepper = ({step = 1, isDone } :{ step:number, isDone:boolean }) => {
       </div>
     </div>
   );
-}
+};
 
 export default Stepper;
-
-
-
-

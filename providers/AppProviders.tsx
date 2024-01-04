@@ -7,7 +7,7 @@ type Props = {
   children: ReactNode;
 };
 
-export const AppProviders: FC<Props> = ({ children }: Props) => {
+export const AppProviders: FC<Props> = ({ children }) => {
   return (
     <Provider store={store}>
       <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
