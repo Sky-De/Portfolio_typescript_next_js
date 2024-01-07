@@ -96,6 +96,14 @@ export const fade_Up_Animation_Props = {
   initial: "hide",
   whileInView: "show",
 };
+export const fade_Scale_item_Animation_Props = {
+  variants: {
+    hide: { opacity: 0, scale: 0 },
+    show: { opacity: 1, scale: 1 },
+  },
+  initial: "hide",
+  whileInView: "show",
+};
 
 export const fade_Scale_Animation_Props = {
   variants: {
