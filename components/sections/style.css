@@ -61,6 +61,9 @@ summary::before {
 }
 
 /* crousel btn Projects-------------------------------------*/
-.apply__carousel--btn {
+.apply__carousel--btnIcon {
   @apply text-heading-dark rounded-full bg-bg-primary-dark dark:bg-bg-primary-light dark:text-heading-light mx-2 xl:mx-0 p-1;
+}
+.apply__carousel--btn {
+  @apply absolute bottom-[10%] sm:bottom-[40%] text-3xl dark:text-white hover:opacity-50;
 }

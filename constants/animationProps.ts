@@ -13,7 +13,7 @@ export const short_Slide_Up_Animation_Props = {
     visible: { opacity: 1, y: 0 },
   },
   initial: "hidden",
-  animate: "visible",
+  whileInView: "visible",
   transition: { duration: 0.5, delay: 0.5 },
 };
 

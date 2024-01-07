@@ -42,17 +42,17 @@ const Projects: FC = () => {
         onClick={() => {
           dispatch(setPreProject());
         }}
-        className="absolute bottom-[10%] sm:bottom-[40%] left-0 text-3xl dark:text-white hover:opacity-50"
+        className="apply__carousel--btn left-0"
       >
-        <i className="bx bx-chevron-left apply__carousel--btn"></i>
+        <i className="bx bx-chevron-left apply__carousel--btnIcon"></i>
       </button>
       <button
         onClick={() => {
           dispatch(setNextProject());
         }}
-        className="absolute bottom-[10%] sm:bottom-[40%] text-3xl right-0 dark:text-white hover:opacity-50"
+        className="apply__carousel--btn right-0"
       >
-        <i className="bx bx-chevron-right apply__carousel--btn"></i>
+        <i className="bx bx-chevron-right apply__carousel--btnIcon"></i>
       </button>
       {/* controlls - bottom -----------------------------------*/}
       {projects && (
@@ -136,7 +136,7 @@ const Projects: FC = () => {
         {/* project links------------------- */}
         <motion.div
           {...short_Slide_Up_Animation_Props}
-          viewport={{ amount: 0.8 }}
+          viewport={{ amount: 0.2 }}
           className="project--links flex flex-col justify-center items-center gap-3 md:items-start md:w-full md:ml-32 my-auto"
         >
           <span className="font-bold hidden md:inline">
