@@ -50,7 +50,7 @@ const Projects: FC = () => {
         onClick={() => {
           dispatch(setNextProject());
         }}
-        className="absolute bottom-[10%] sm:bottom-[40%] right-0 dark:text-white hover:opacity-50"
+        className="absolute bottom-[10%] sm:bottom-[40%] text-3xl right-0 dark:text-white hover:opacity-50"
       >
         <i className="bx bx-chevron-right apply__carousel--btn"></i>
       </button>
@@ -136,7 +136,7 @@ const Projects: FC = () => {
         {/* project links------------------- */}
         <motion.div
           {...short_Slide_Up_Animation_Props}
-          viewport={{ amount: 0.2 }}
+          viewport={{ amount: 0.8 }}
           className="project--links flex flex-col justify-center items-center gap-3 md:items-start md:w-full md:ml-32 my-auto"
         >
           <span className="font-bold hidden md:inline">
