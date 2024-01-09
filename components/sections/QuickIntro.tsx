@@ -20,6 +20,7 @@ const QuickIntro: FC = () => {
     <motion.section
       ref={qIntroRef}
       {...long_Fade_In_Veiw_Animation_Props}
+      viewport={{ amount: 1 }}
       id="qintro"
       className="SECTION section snap-start snap-always w-full flex flex-col justify-evenly lg:flex-row lg:items-center p-2 "
     >
