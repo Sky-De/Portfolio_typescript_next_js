@@ -205,7 +205,12 @@ const OfferForm: FC = () => {
       </form>
       {step > 3 && (
         <>
-          {isLoading && <LoaderCube />}
+          {isLoading && (
+            <div className="flex flex-col items-center h-[200px] border">
+              <p className="font-semibold">Submitting</p>
+              <LoaderCube />
+            </div>
+          )}
 
           {isSended && (
             <Message

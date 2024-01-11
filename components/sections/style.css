@@ -67,3 +67,7 @@ summary::before {
 .apply__carousel--btn {
   @apply absolute bottom-[10%] sm:bottom-[40%] text-3xl dark:text-white hover:opacity-50;
 }
+
+.test {
+  transition: width 1s ease !important;
+}
