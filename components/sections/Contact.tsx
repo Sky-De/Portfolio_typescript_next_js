@@ -58,7 +58,17 @@ const Contact: FC = () => {
         />
       </div>
       <div className="m-4 font-light text-xl">OR</div>
-      <div className="w-full grid place-items-center">
+      <motion.div
+        variants={{
+          hidden: { opacity: 0 },
+          visible: { opacity: 1 },
+        }}
+        initial="hidden"
+        whileInView="visible"
+        transition={{ duration: 0.75, delay: 0.5 }}
+        viewport={{ amount: 1 }}
+        className="w-full grid place-items-center"
+      >
         <Image
           title="https://storyset.com/job"
           className="hidden lg:block w-2/3 mx-auto"
@@ -68,7 +78,7 @@ const Contact: FC = () => {
           alt="Hiring Svg"
         />
         <CallToActionBtn label="Scale your hiring" />
-      </div>
+      </motion.div>
     </motion.section>
   );
 };

@@ -20,8 +20,8 @@ const ContactItem: FC<ContactItemProps> = ({
     >
       <motion.li
         variants={{
-          hide: { opacity: 0, x: -100 },
-          show: { opacity: 1, x: 0 },
+          hide: { opacity: 0, scale: 0 },
+          show: { opacity: 1, scale: 1 },
         }}
         initial="hide"
         whileInView="show"
