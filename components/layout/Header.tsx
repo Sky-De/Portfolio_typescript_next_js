@@ -31,7 +31,7 @@ const Header: FC = () => {
   return (
     <motion.header
       {...slide_Down_Animation_Props}
-      className=" header sticky top-0 w-ful after:bg-bg-secondary-light dark:after:bg-bg-secondary-dark z-30"
+      className="header sticky top-0 w-ful after:bg-bg-secondary-light dark:after:bg-bg-secondary-dark z-30"
     >
       <div className="header__content flex items-center h-full relative mx-auto px-2">
         <LogoThemeBtn type="desktop" />

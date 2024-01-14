@@ -1,3 +1,19 @@
+/* header ---------------------------------------*/
+.header {
+  height: var(--header);
+  position: relative;
+}
+.header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: -1;
+  height: 50%;
+}
+.header__content {
+  max-width: var(--max-width-container);
+}
 /* header -----ham----------------------------------*/
 .apply__ham {
   background: transparent !important;
@@ -29,23 +45,6 @@
 }
 
 /* header------NAV--------------------------------------------------- */
-.header {
-  height: var(--header);
-  position: relative;
-}
-.header::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  background: #2b2b2b;
-  z-index: -1;
-  height: 50%;
-}
-.header__content {
-  max-width: var(--max-width-container);
-}
-
 .apply__navItem {
   font-family: "Roboto", sans-serif;
   @apply capitalize dark:text-heading-dark text-heading-light h-[45px] px-6 flex justify-center items-center;
