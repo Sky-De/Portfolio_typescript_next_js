@@ -29,6 +29,23 @@
 }
 
 /* header------NAV--------------------------------------------------- */
+.header {
+  height: var(--header);
+  position: relative;
+}
+.header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: #2b2b2b;
+  z-index: -1;
+  height: 50%;
+}
+.header__content {
+  max-width: var(--max-width-container);
+}
+
 .apply__navItem {
   font-family: "Roboto", sans-serif;
   @apply capitalize dark:text-heading-dark text-heading-light h-[45px] px-6 flex justify-center items-center;
@@ -55,9 +72,12 @@
     transform: rotate(0deg);
   }
 }
-/* ---------------------------------------------------------------- */
+/* --footer-------------------------------------------------------------- */
+.apply__footer {
+  @apply transition-colors h-[var(--footer)] bg-bg-secondary-light dark:bg-bg-secondary-dark mt-auto sticky bottom-0 w-full flex justify-center items-center gap-4;
+}
 .apply__footer--item {
-  @apply text-heading-light dark:text-heading-dark cursor-pointer text-xl md:text-3xl hover:opacity-60;
+  @apply text-heading-light dark:text-heading-dark cursor-pointer text-3xl md:text-4xl hover:opacity-60;
 }
 
 /* theme mode icons-------------------- */

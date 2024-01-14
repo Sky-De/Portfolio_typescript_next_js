@@ -5,10 +5,7 @@ import Link from "next/link";
 
 const Footer: FC = () => {
   return (
-    <motion.footer
-      {...slide_Up_Animation_Props}
-      className="transition-colors bg-bg-secondary-light dark:bg-bg-secondary-dark footer  mt-auto footer sticky bottom-0 w-full flex justify-center items-center gap-4"
-    >
+    <motion.footer {...slide_Up_Animation_Props} className="apply__footer">
       <Link href="https://www.linkedin.com/in/sky-de-763248228">
         <i className="bx bxl-linkedin-square apply__footer--item"></i>
       </Link>
