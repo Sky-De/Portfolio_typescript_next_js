@@ -45,6 +45,7 @@ textarea {
   z-index: -1;
   height: 50%;
 }
+
 .header__content {
   max-width: var(--max-width-container);
 }
