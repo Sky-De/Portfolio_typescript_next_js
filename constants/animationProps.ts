@@ -34,7 +34,7 @@ export const slide_Left_Animation_Props = {
   },
   initial: "hide",
   whileInView: "show",
-  viewport: { amount: 0.3 },
+  // viewport: { amount: 0.3 },
   transition: { duration: 0.5, delay: 0.5 },
 };
 export const slide_Right_Animation_Props = {

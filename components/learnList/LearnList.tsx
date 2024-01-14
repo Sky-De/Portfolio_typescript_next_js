@@ -2,6 +2,7 @@ import { FC } from "react";
 import { v4 as uuid } from "uuid";
 import { LearnListProps } from "@/types/allTypes";
 import LearnItem from "./LearnItem";
+import "./style.css";
 
 const LearnList: FC<LearnListProps> = ({ title, learnListItems = [] }) => {
   return (

@@ -33,6 +33,7 @@ const Projects: FC = () => {
     <motion.section
       ref={projectsRef}
       {...fade_In_Veiw_Animation_Props}
+      viewport={{ amount: 0.5 }}
       id="projects"
       className="section snap-start snap-always relative"
     >
@@ -90,7 +91,7 @@ const Projects: FC = () => {
           <div className="flex flex-col lg:flex-row md:mt-auto md:px-16 items-center md:justify-evenly lg:gap-4">
             <motion.div
               {...slide_Right_Animation_Props}
-              viewport={{ amount: 0.3 }}
+              // viewport={{ amount: 1 }}
               className="project--info flex flex-col gap-1 items-center md:items-start lg:w-2/5 md:gap-4"
             >
               <h2

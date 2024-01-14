@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { MockupProps } from "@/constants/projectsData";
 import { openImageModel } from "@/redux/features/models/modelSlice";
 import { useAppDispatch } from "@/hooks/reduxHooks";
-import { slide_Left_Animation_Props } from "@/constants/animationProps";
+import { fade_In_Veiw_Animation_Props } from "@/constants/animationProps";
 import "./style.scss";
 
 const Mockup: FC<MockupProps> = ({
@@ -15,7 +15,7 @@ const Mockup: FC<MockupProps> = ({
   const dispatch = useAppDispatch();
   return (
     <motion.section
-      {...slide_Left_Animation_Props}
+      {...fade_In_Veiw_Animation_Props}
       className="h-auto md:w-2/3 w-full flex items-center gap-2 mt-8"
     >
       {/* Mobile SVG */}

@@ -20,7 +20,7 @@ const QuickIntro: FC = () => {
     <motion.section
       ref={qIntroRef}
       {...long_Fade_In_Veiw_Animation_Props}
-      viewport={{ amount: 1 }}
+      viewport={{ amount: 0.2 }}
       id="qintro"
       className="SECTION section snap-start snap-always w-full flex flex-col justify-evenly lg:flex-row lg:items-center p-2 "
     >
@@ -53,7 +53,7 @@ const QuickIntro: FC = () => {
           src={QI_VIDEO_URL}
           controls
         ></video>
-        <p className="mt-3 leading-7 text-center apply__body text-xs">
+        <p className="mt-3 leading-7 text-center apply__body text-xs px-2 md:px-0">
           <span className="text-warning rounded-sm font-bold text-sm">
             Attention:
           </span>{" "}
