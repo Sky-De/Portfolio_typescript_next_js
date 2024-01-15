@@ -55,8 +55,9 @@ const QuickIntro: FC = () => {
         ></video>
         <p className="mt-3 leading-7 text-center apply__body text-xs px-2 md:px-0">
           <span className="text-warning rounded-sm font-bold text-sm">
-            Attention:
-          </span>{" "}
+            Attention:{"  "}
+          </span>
+          {"  "}
           this video contains music, so please be sure to adjust your volume
           accordingly.
         </p>
