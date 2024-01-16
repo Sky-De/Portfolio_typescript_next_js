@@ -52,9 +52,9 @@ const OfferForm: FC = () => {
             step !== 1 ? "hidden" : ""
           }`}
         >
-          <h3 className="text-xl mb-4 apply__mainColor lg:hidden">
-            About Positon
-          </h3>
+          <em className="text-lg mb-4 apply__mainColor lg:hidden">
+            ** About Positon **
+          </em>
           <InputWrapper title="type" iconClass="bx-time-five">
             <div className="flex gap-4 items-center flex-wrap justify-center">
               <CheckBox
@@ -144,9 +144,9 @@ const OfferForm: FC = () => {
             step !== 2 ? "hidden" : ""
           }`}
         >
-          <h3 className="text-xl mb-4 apply__mainColor lg:hidden">
-            About Company
-          </h3>
+          <em className="text-lg mb-4 apply__mainColor lg:hidden">
+            ** About Company **
+          </em>
           <InputWrapper title="your role" iconClass="bx-user">
             <input
               type="text"
