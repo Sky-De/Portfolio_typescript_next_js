@@ -40,9 +40,9 @@ const Learn: FC = () => {
           </p>
         </div>
         <div className="lg:pt-8">
-          <LearnList title="Master" learnListItems={MasterListData} />
-          <LearnList title="Deepen" learnListItems={DeepenListData} />
           <LearnList title="Explore" learnListItems={ExploreListData} />
+          <LearnList title="Deepen" learnListItems={DeepenListData} />
+          <LearnList title="Master" learnListItems={MasterListData} />
         </div>
       </div>
     </motion.section>
