@@ -25,8 +25,10 @@ export const LogoThemeBtn: FC<ThemeBtnProps> = ({ type }) => {
         <span className="translate-y-[-3px] md:translate-y-[1px]">SIGN</span>
         <span className="translate-y-[1px] md:translate-y-[3px]">VELOP</span>
         <i
-          className={`absolute top-2 left-[95%] bx ${
-            theme === "light" ? "bx-sun text-black" : "bxs-moon dark:text-white"
+          className={`transition-transform absolute top-2 left-[95%] bx ${
+            theme === "light"
+              ? "animate-sunAnimation bx-sun text-black"
+              : "animate-moonAnimation bxs-moon dark:text-white"
           }`}
         ></i>
       </span>

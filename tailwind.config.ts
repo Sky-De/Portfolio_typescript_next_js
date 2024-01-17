@@ -22,18 +22,7 @@ const config: Config = {
       "8xl": ["96px", "106px"],
     },
     extend: {
-      dropShadow: {
-        light: ["0 0 5px rgba(0, 0, 0, 0.2)", "0 0 6px rgba(0, 0, 0, 0.1)"],
-        dark: [
-          "0 0 3px rgba(255, 255, 255, 0.2)",
-          "0 0 4px rgba(255, 255, 255, 0.1)",
-        ],
-      },
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
+      // COLORS----------------------------------------------------------------
       colors: {
         stepColor: "#F87C56",
         bg: {
@@ -67,8 +56,37 @@ const config: Config = {
         error: "#F44336", // Material Design error color (red)
         success: "#4CAF50", // Material Design success color (green)
       },
+      // BG-image----------------------------------------------------------------
+      backgroundImage: {
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "gradient-conic":
+          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      },
+      // shadows----------------------------------------------------------------
+      dropShadow: {
+        light: ["0 0 5px rgba(0, 0, 0, 0.2)", "0 0 6px rgba(0, 0, 0, 0.1)"],
+        dark: [
+          "0 0 3px rgba(255, 255, 255, 0.2)",
+          "0 0 4px rgba(255, 255, 255, 0.1)",
+        ],
+      },
+      // ANIMAION----------------------------------------------------------------
+      keyframes: {
+        rotateF: {
+          "0%": { transform: "rotate(0deg)", opacity: "0" },
+          "100%": { transform: "rotate(360deg)", opacity: "1" },
+        },
+        rotateB: {
+          "0%": { transform: "rotate(360deg)", opacity: "0" },
+          "100%": { transform: "rotate(0deg)", opacity: "1" },
+        },
+      },
+      animation: {
+        sunAnimation: "rotateF 1s ease-in-out",
+        moonAnimation: "rotateB 1s ease-in-out",
+      },
     },
   },
-  plugins: ["prettier-plugin-tailwindcss"],
+  // plugins: ["prettier-plugin-tailwindcss"],
 };
 export default config;
