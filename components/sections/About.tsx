@@ -35,7 +35,7 @@ const About: FC = () => {
       <div className="about flex flex-col items-center justify-evenly w-full md:flex-row-reverse">
         <motion.div
           {...fade_Scale_Animation_Props}
-          className="border grid place-content-center rounded-full"
+          className="hidden border md:grid place-content-center rounded-full"
         >
           <Image
             src="/avatar.jpg"

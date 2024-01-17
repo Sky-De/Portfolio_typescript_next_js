@@ -1,4 +1,3 @@
-"use client";
 import { v4 as uuid } from "uuid";
 import { motion } from "framer-motion";
 import { FC } from "react";

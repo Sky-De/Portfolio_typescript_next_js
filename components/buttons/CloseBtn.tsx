@@ -1,3 +1,4 @@
+"use client";
 import { CloseBtnProps } from "@/types/allTypes";
 import { FC } from "react";
 

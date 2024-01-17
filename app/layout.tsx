@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 import "./globals.css";
 import AppProviders from "@/providers/AppProviders";
 import {
@@ -22,14 +22,14 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 700);
-    return () => clearTimeout(timer);
-  }, []);
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     setLoading(false);
+  //   }, 700);
+  //   return () => clearTimeout(timer);
+  // }, []);
 
   return (
     <html lang="en">
@@ -42,20 +42,20 @@ export default function RootLayout({
       <body
         className={`flex flex-col bg-bg-primary-light dark:bg-bg-primary-dark relative transition-colors duration-700`}
       >
-        {loading ? (
+        {/* {loading ? (
           <div className="h-[100svh] grid place-items-center">
             <LoaderCube />
           </div>
-        ) : (
-          <AppProviders>
-            <Header />
-            <ProjectImageModel />
-            <ProjectFeaturesModel />
-            <ContactModel />
-            {children}
-            <Footer />
-          </AppProviders>
-        )}
+        ) : ( */}
+        <AppProviders>
+          <Header />
+          <ProjectImageModel />
+          <ProjectFeaturesModel />
+          <ContactModel />
+          {children}
+          <Footer />
+        </AppProviders>
+        {/* )} */}
       </body>
     </html>
   );

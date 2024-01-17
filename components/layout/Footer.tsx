@@ -1,3 +1,4 @@
+"use client";
 import { slide_Up_Animation_Props } from "@/constants/animationProps";
 import { motion } from "framer-motion";
 import { FC } from "react";

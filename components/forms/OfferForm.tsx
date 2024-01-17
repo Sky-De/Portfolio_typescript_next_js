@@ -1,3 +1,4 @@
+"use client";
 import { useStep } from "@/hooks/useStep";
 import { FC, useState } from "react";
 import { useFormSender } from "@/hooks/useFormSender";

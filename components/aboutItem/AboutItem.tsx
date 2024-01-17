@@ -1,8 +1,7 @@
-"use client";
-import { AboutProps } from "@/constants/aboutItems";
 import { FC } from "react";
 import { v4 as uuid } from "uuid";
 import TextMarker from "../textMarker/TextMarker";
+import { AboutProps } from "@/types/allTypes";
 
 const AboutItem: FC<AboutProps> = ({ desc, title, isOpan, handleClick }) => {
   return (
