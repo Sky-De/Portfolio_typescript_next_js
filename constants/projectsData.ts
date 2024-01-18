@@ -17,6 +17,7 @@ import TsIcon from "@/public/skillIcons/Ts.svg";
 import WebpackIcon from "@/public/skillIcons/Webpack.svg";
 import XdIcon from "@/public/skillIcons/Xd.svg";
 import ReduxIcon from "@/public/skillIcons/Redux.svg";
+import Tailwind from "@/public/skillIcons/Tailwind.svg";
 
 export const projectsData: ProjectState[] = [
   {
@@ -215,23 +216,38 @@ export const projectsData: ProjectState[] = [
   },
   {
     id: 10,
-    title: "Admin Dashboard",
+    title: "2D Web Game",
     description:
-      "this is ... admin dashboard with charts and some other UI features like calander for plan and so on",
+      "Challenge your senses and test your luck with this stylish 2D game! With relaxing music, guess your way through each level with ease. Start playing today!",
     features: [
-      "Light/Dark mode",
-      "representing data within Data Grid",
-      "another thibng",
+      "Fully Responsive",
+      "Music",
+      "Click sound",
+      "High score",
+      "Luck mode",
+      "Sense mode",
+      "Reset game",
     ],
     images: {
-      mobileCoverUrl: "",
-      tableCoverUrl: "",
-      laptopCoverUrl: "",
+      mobileCoverUrl:
+        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1705596902/portfolio/projects-images/sixthSenceGame/syvwuqhqts39i54vxzr6.png",
+      tableCoverUrl:
+        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1705596901/portfolio/projects-images/sixthSenceGame/ry1d3on0xp3fpsguvucc.png",
+      laptopCoverUrl:
+        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1705596902/portfolio/projects-images/sixthSenceGame/rgbzo5qrnmatf6vk9rvu.png",
     },
-    techIcons: [AeIcon, AiIcon, CssIcon],
-    otherTechs: ["test", "anotehr"],
-    repoUrl: "",
-    liveUrl: "",
+    techIcons: [
+      NextIcon,
+      ReduxIcon,
+      Tailwind,
+      SassIcon,
+      HtmlIcon,
+      AeIcon,
+      AiIcon,
+    ],
+    otherTechs: [],
+    repoUrl: "https://github.com/Sky-De/the_sixth_sense",
+    liveUrl: "https://2d-free-game-skyde.netlify.app",
   },
   {
     id: 11,
@@ -239,9 +255,21 @@ export const projectsData: ProjectState[] = [
     description:
       "BookShare is a personalized app for book lovers. Connect with others and share your thoughts on your favorite reads. Click the demo to join the community!",
     features: [
-      "Light/Dark mode",
-      "representing data within Data Grid",
-      "another thibng",
+      "Fully Responsive",
+      "Dark-light mode",
+      "Stunning design",
+      "Auth ( Email / Google )",
+      "Email Verification",
+      "Create / Edit / delete post",
+      "Like / Unlike Post",
+      "BookMark / Unbookmark Post",
+      "Profile page",
+      "Profile setting page",
+      "Edit user image / name",
+      "Feedback section",
+      "Delete user",
+      "Pagination",
+      "Breadcrumb navigation",
     ],
     images: {
       mobileCoverUrl:
