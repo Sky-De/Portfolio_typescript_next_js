@@ -27,7 +27,7 @@ const AboutItems: FC = () => {
       <div className="list-disc flex flex-col gap-[1px] md:gap-3 sm:my-1 lg:my-3 h-[40svh]">
         {AboutItemsData[selectedItemIndex].desc.length > 0 &&
           AboutItemsData[selectedItemIndex].desc.map((item) => (
-            <div key={uuid()}>
+            <div className="border-b-2 border-dashed pb-2 mb-1" key={uuid()}>
               <TextMarker text={item} />
             </div>
           ))}
