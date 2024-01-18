@@ -20,7 +20,12 @@ const Contact: FC = () => {
       className="section contactSection snap-start snap-always"
     >
       <div className="flex flex-col gap-3 mt-8">
-        <h3 className="font-bold text-center lg:text-start">Connect Now</h3>
+        <motion.h3
+          {...fade_In_Veiw_Animation_Props}
+          className="font-bold text-center lg:text-start animate-pulse"
+        >
+          Connect Now
+        </motion.h3>
         <ContactItem
           areaTitle="link to my linkedin"
           delay={1}

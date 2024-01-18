@@ -5,10 +5,9 @@ export const AboutItemsData: AboutProps[] = [
     title: "Web Development Journey",
     desc: [
       "@+3 @years with a fervent passion for learning, crafting and maintaining high-quality web applications",
-      "My proficiency extends across a spectrum of @front-end and @back-end technologies",
-      "Encompassing @HTML, @CSS, @JavaScript, @TypeScript, @React.js, @Redux, @Node.js, and @Express.js.",
+      "My proficiency extends across a spectrum of @front-end and @back-end technologies with focus on front-end",
+      "Encompassing @HTML, @CSS, @JavaScript, @TypeScript, @React.js, @Redux, @Tailwind, @MUI, @Node.js, @MongoDb, and @Express.js.",
       "I possess a good understanding of user experience @(UX) and user interface @(UI) design principles",
-      "constantly seeking innovative ways to elevate the user experience of my creations.",
     ],
   },
   {
