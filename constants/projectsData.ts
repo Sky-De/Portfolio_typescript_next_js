@@ -235,69 +235,100 @@ export const projectsData: ProjectState[] = [
   },
   {
     id: 11,
-    title: "Admin Dashboard",
+    title: "Book Share (MERN)",
     description:
-      "this is ... admin dashboard with charts and some other UI features like calander for plan and so on",
+      "BookShare is a personalized app for book lovers. Connect with others and share your thoughts on your favorite reads. Click the demo to join the community!",
     features: [
       "Light/Dark mode",
       "representing data within Data Grid",
       "another thibng",
     ],
     images: {
-      mobileCoverUrl: "",
-      tableCoverUrl: "",
-      laptopCoverUrl: "",
+      mobileCoverUrl:
+        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1705588789/portfolio/projects-images/BookShare/ilwsmu7idkhbpejutb6m.png",
+      tableCoverUrl:
+        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1705588789/portfolio/projects-images/BookShare/fu2ix4bk31tml5owg9u0.png",
+      laptopCoverUrl:
+        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1705588789/portfolio/projects-images/BookShare/kcxm09azc7ibrwzcrhja.png",
     },
-    techIcons: [AeIcon, AiIcon, CssIcon],
-    otherTechs: ["test", "anotehr"],
-    repoUrl: "",
-    liveUrl: "",
+    techIcons: [
+      TsIcon,
+      ReactIcon,
+      ReduxIcon,
+      NodeIcon,
+      ExpressIcon,
+      MongodbIcon,
+      GitIcon,
+    ],
+    otherTechs: ["axios", "nodeMailer", "cors", "JWT", "bcrypt", "..."],
+    repoUrl: "https://github.com/Sky-De/typescript_mern_app",
+    liveUrl: "https://book-share-app-skyde.netlify.app/",
   },
   {
     id: 12,
-    title: "Admin Dashboard",
+    title: "YouTube Clone",
     description:
-      "this is ... admin dashboard with charts and some other UI features like calander for plan and so on",
+      "My platform is a user-friendly clone of YouTube that lets you easily search for and watch your favorite videos.",
     features: [
-      "Light/Dark mode",
-      "representing data within Data Grid",
-      "another thibng",
+      "Fully responsive",
+      "Aside nav",
+      "Search functionality",
+      "Categorised videos",
+      "Skeleton loading",
+      "Live data fetching",
+      "Video page",
     ],
     images: {
-      mobileCoverUrl: "",
-      tableCoverUrl: "",
-      laptopCoverUrl: "",
+      mobileCoverUrl:
+        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1705583934/portfolio/projects-images/youTubeClone/vz5o1er54pbv5esitd8p.png",
+      tableCoverUrl:
+        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1705583934/portfolio/projects-images/youTubeClone/vuk3vzwklwo21dlogfqt.png",
+      laptopCoverUrl:
+        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1705583934/portfolio/projects-images/youTubeClone/rmvtgelhyvbhuanvjfrx.png",
     },
-    techIcons: [AeIcon, AiIcon, CssIcon],
-    otherTechs: ["test", "anotehr"],
-    repoUrl: "",
-    liveUrl: "",
+    techIcons: [JsIcon, ReactIcon, MuiIcon, CssIcon, GitIcon],
+    otherTechs: ["Rapid-api", ".env"],
+    repoUrl: "https://github.com/Sky-De/Youtube_Clone_App",
+    liveUrl: "https://youtube-clone-app-skyde.netlify.app/",
   },
   {
     id: 13,
     title: "Admin Dashboard",
     description:
-      "this is ... admin dashboard with charts and some other UI features like calander for plan and so on",
+      "This is a stylish UI admin dashboard featuring MUI and Nivo charts, with multiple tabs to manage data and users.",
     features: [
-      "Light/Dark mode",
-      "representing data within Data Grid",
-      "another thibng",
+      "Dark-light mode",
+      "Stunning design",
+      "Calendar",
+      "Dashboard tab",
+      "Manage tab",
+      "Profiles tab",
+      "FAQ tab",
+      "Data grid Filters",
+      "Bar chart",
+      "Line chart",
+      "Pie chart",
+      "Geography chart",
+      "Data grid pagination",
     ],
     images: {
-      mobileCoverUrl: "",
-      tableCoverUrl: "",
-      laptopCoverUrl: "",
+      mobileCoverUrl:
+        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1705581584/portfolio/projects-images/adminDashboard/fnd8ivv0hen51gyihjce.png",
+      tableCoverUrl:
+        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1705581584/portfolio/projects-images/adminDashboard/zvrh4doupxsrechzgomz.png",
+      laptopCoverUrl:
+        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1705581584/portfolio/projects-images/adminDashboard/lb5msuvnjgazwdnrxqmg.png",
     },
-    techIcons: [AeIcon, AiIcon, CssIcon],
-    otherTechs: ["test", "anotehr"],
-    repoUrl: "",
-    liveUrl: "",
+    techIcons: [ReactIcon, JsIcon, CssIcon, MuiIcon, GitIcon],
+    otherTechs: ["full-calendar", "Data-grid"],
+    repoUrl: "https://github.com/Sky-De/React-Admin-Dashboard",
+    liveUrl: "https://react-admin-dashboar-skyde.netlify.app",
   },
   {
     id: 14,
     title: "Todo App",
     description:
-      "This is a Progressive Web Application (PWA) built using TypeScript, which provides you with an intuitive UI/UX to manage your tasks.",
+      "Try my unique task management tool! My TypeScript-built PWA makes organizing work and personal tasks easy and user-friendly.",
     features: [
       "Fully responsive",
       "Offline data persistent",
@@ -320,7 +351,7 @@ export const projectsData: ProjectState[] = [
       laptopCoverUrl:
         "https://res.cloudinary.com/dxukz1zt5/image/upload/v1705577516/portfolio/projects-images/todoApp/xtpxqt5hynwrznqauvag.png",
     },
-    techIcons: [ReactIcon, TsIcon, CssIcon],
+    techIcons: [ReactIcon, TsIcon, CssIcon, GitIcon],
     otherTechs: ["PWA", "Context"],
     repoUrl: "https://github.com/Sky-De/TypeScript-ToDoApp",
     liveUrl: "https://typescript-todo-skyde.netlify.app/",

@@ -1,11 +1,11 @@
 "use client";
 import { FC } from "react";
 import { motion } from "framer-motion";
-import { MockupProps } from "@/constants/projectsData";
 import { openImageModel } from "@/redux/features/models/modelSlice";
 import { useAppDispatch } from "@/hooks/reduxHooks";
 import { fade_In_Veiw_Animation_Props } from "@/constants/animationProps";
 import "./style.scss";
+import { MockupProps } from "@/types/allTypes";
 
 const Mockup: FC<MockupProps> = ({
   laptopCoverUrl,

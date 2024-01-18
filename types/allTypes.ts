@@ -140,3 +140,10 @@ export interface UseStepReturn {
   handlePreStep: () => void;
   submitIsDone: () => void;
 }
+
+// ---project section
+export type MockupProps = {
+  mobileCoverUrl: string;
+  tableCoverUrl: string;
+  laptopCoverUrl: string;
+};
