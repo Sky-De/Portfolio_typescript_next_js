@@ -62,6 +62,7 @@ const Projects: FC = () => {
             {projects.map((pro) => (
               <span
                 onClick={() => dispatch(setActiveProject(pro.id))}
+                title={pro.id + ""}
                 className={`transition-all duration-700 rounded-full cursor-pointer block px-[0.30rem] py-[0.30rem] border border-heading-light dark:border-heading-dark ${
                   pro.id === selectedProjectId
                     ? "bg-bg-primary-dark px-[0.60rem] dark:bg-bg-primary-light"

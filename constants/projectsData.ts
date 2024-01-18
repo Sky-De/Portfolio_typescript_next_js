@@ -242,6 +242,7 @@ export const projectsData: ProjectState[] = [
       Tailwind,
       SassIcon,
       HtmlIcon,
+      GitIcon,
       AeIcon,
       AiIcon,
     ],
