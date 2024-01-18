@@ -1,4 +1,5 @@
-import { MockupProps, projectsData } from "@/constants/projectsData";
+import { projectsData } from "@/constants/projectsData";
+import { MockupProps } from "@/types/allTypes";
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 
 export type ProjectState = {
@@ -9,6 +10,8 @@ export type ProjectState = {
   id: number;
   description: string;
   otherTechs: string[];
+  repoUrl: string;
+  liveUrl: string;
 };
 type ProjectsState = {
   projects: ProjectState[];

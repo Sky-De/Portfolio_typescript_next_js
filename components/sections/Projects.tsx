@@ -158,7 +158,7 @@ const Projects: FC = () => {
           </button>
 
           <Link
-            href={"#"}
+            href={selectedProject ? selectedProject.liveUrl : ""}
             target="_blank"
             className="flex items-center opacity-100 md:opacity-70 gap-2 hover:opacity-100 transition-opacity"
           >
@@ -166,14 +166,13 @@ const Projects: FC = () => {
             Live Demo
           </Link>
           <Link
-            href={"#"}
+            href={selectedProject ? selectedProject.repoUrl : ""}
             target="_blank"
-            className="flex items-center opacity-100 md:opacity-70 gap-2 hover:opacity-100 transition-opacity"
+            className="flex items-center opacity-100 md:opacity-70 gap-2 hover:opacity-100 transition-opacity cursor-pointer"
           >
             <i className="bx bxl-github apply__footer--item "></i>
             Github Repositorty{" "}
           </Link>
-          <Link href={"#"}></Link>
         </motion.div>
       </div>
     </motion.section>

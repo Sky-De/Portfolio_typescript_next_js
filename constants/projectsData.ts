@@ -18,12 +18,6 @@ import WebpackIcon from "@/public/skillIcons/Webpack.svg";
 import XdIcon from "@/public/skillIcons/Xd.svg";
 import ReduxIcon from "@/public/skillIcons/Redux.svg";
 
-export type MockupProps = {
-  mobileCoverUrl: string;
-  tableCoverUrl: string;
-  laptopCoverUrl: string;
-};
-
 export const projectsData: ProjectState[] = [
   {
     id: 1,
@@ -56,6 +50,8 @@ export const projectsData: ProjectState[] = [
       HtmlIcon,
     ],
     otherTechs: ["nivo-charts", "calendar"],
+    repoUrl: "",
+    liveUrl: "",
   },
   {
     id: 2,
@@ -74,6 +70,8 @@ export const projectsData: ProjectState[] = [
     },
     techIcons: [HtmlIcon, CssIcon, JsIcon, ReactIcon, MuiIcon, GitIcon],
     otherTechs: ["nivo-charts", "calendar"],
+    repoUrl: "",
+    liveUrl: "",
   },
   {
     id: 3,
@@ -92,6 +90,8 @@ export const projectsData: ProjectState[] = [
     },
     techIcons: [AeIcon, AiIcon, CssIcon],
     otherTechs: ["test", "anotehr"],
+    repoUrl: "",
+    liveUrl: "",
   },
   {
     id: 4,
@@ -110,6 +110,8 @@ export const projectsData: ProjectState[] = [
     },
     techIcons: [AeIcon, AiIcon, CssIcon],
     otherTechs: ["test", "anotehr"],
+    repoUrl: "",
+    liveUrl: "",
   },
   {
     id: 5,
@@ -128,6 +130,8 @@ export const projectsData: ProjectState[] = [
     },
     techIcons: [AeIcon, AiIcon, CssIcon],
     otherTechs: ["test", "anotehr"],
+    repoUrl: "",
+    liveUrl: "",
   },
   {
     id: 6,
@@ -146,6 +150,8 @@ export const projectsData: ProjectState[] = [
     },
     techIcons: [AeIcon, AiIcon, CssIcon],
     otherTechs: ["test", "anotehr"],
+    repoUrl: "",
+    liveUrl: "",
   },
   {
     id: 7,
@@ -164,6 +170,8 @@ export const projectsData: ProjectState[] = [
     },
     techIcons: [AeIcon, AiIcon, CssIcon],
     otherTechs: ["test", "anotehr"],
+    repoUrl: "",
+    liveUrl: "",
   },
   {
     id: 8,
@@ -182,6 +190,8 @@ export const projectsData: ProjectState[] = [
     },
     techIcons: [AeIcon, AiIcon, CssIcon],
     otherTechs: ["test", "anotehr"],
+    repoUrl: "",
+    liveUrl: "",
   },
   {
     id: 9,
@@ -200,6 +210,8 @@ export const projectsData: ProjectState[] = [
     },
     techIcons: [AeIcon, AiIcon, CssIcon],
     otherTechs: ["test", "anotehr"],
+    repoUrl: "",
+    liveUrl: "",
   },
   {
     id: 10,
@@ -218,6 +230,8 @@ export const projectsData: ProjectState[] = [
     },
     techIcons: [AeIcon, AiIcon, CssIcon],
     otherTechs: ["test", "anotehr"],
+    repoUrl: "",
+    liveUrl: "",
   },
   {
     id: 11,
@@ -236,6 +250,8 @@ export const projectsData: ProjectState[] = [
     },
     techIcons: [AeIcon, AiIcon, CssIcon],
     otherTechs: ["test", "anotehr"],
+    repoUrl: "",
+    liveUrl: "",
   },
   {
     id: 12,
@@ -254,6 +270,8 @@ export const projectsData: ProjectState[] = [
     },
     techIcons: [AeIcon, AiIcon, CssIcon],
     otherTechs: ["test", "anotehr"],
+    repoUrl: "",
+    liveUrl: "",
   },
   {
     id: 13,
@@ -272,23 +290,39 @@ export const projectsData: ProjectState[] = [
     },
     techIcons: [AeIcon, AiIcon, CssIcon],
     otherTechs: ["test", "anotehr"],
+    repoUrl: "",
+    liveUrl: "",
   },
   {
     id: 14,
-    title: "Admin Dashboard",
+    title: "Todo App",
     description:
-      "this is ... admin dashboard with charts and some other UI features like calander for plan and so on",
+      "This is a Progressive Web Application (PWA) built using TypeScript, which provides you with an intuitive UI/UX to manage your tasks.",
     features: [
-      "Light/Dark mode",
-      "representing data within Data Grid",
-      "another thibng",
+      "Fully responsive",
+      "Offline data persistent",
+      "Dark-light mode",
+      "Stunning design",
+      "PWA ready",
+      "Delete task",
+      "Add the task",
+      "Edit the task",
+      "Mark the task as done",
+      "Mark the task as undone",
+      "Reset all the tasks",
+      "Reverse the order of the tasks",
     ],
     images: {
-      mobileCoverUrl: "",
-      tableCoverUrl: "",
-      laptopCoverUrl: "",
+      mobileCoverUrl:
+        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1705577516/portfolio/projects-images/todoApp/vibesyxqq1er2qfqyifm.png",
+      tableCoverUrl:
+        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1705577515/portfolio/projects-images/todoApp/ahv1q1s7n0ztpswhjung.png",
+      laptopCoverUrl:
+        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1705577516/portfolio/projects-images/todoApp/xtpxqt5hynwrznqauvag.png",
     },
-    techIcons: [AeIcon, AiIcon, CssIcon],
-    otherTechs: ["test", "anotehr"],
+    techIcons: [ReactIcon, TsIcon, CssIcon],
+    otherTechs: ["PWA", "Context"],
+    repoUrl: "https://github.com/Sky-De/TypeScript-ToDoApp",
+    liveUrl: "https://typescript-todo-skyde.netlify.app/",
   },
 ];
