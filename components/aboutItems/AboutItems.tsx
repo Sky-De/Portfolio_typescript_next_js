@@ -3,7 +3,6 @@ import { FC, useState } from "react";
 import { v4 as uuid } from "uuid";
 import TextMarker from "../textMarker/TextMarker";
 import { AboutItemsData } from "@/constants/aboutItems";
-// import { motion } from "framer-motion";
 
 const AboutItems: FC = () => {
   const [selectedItemIndex, setSelectedItemIndex] = useState<number>(0);
@@ -13,8 +12,10 @@ const AboutItems: FC = () => {
         {AboutItemsData &&
           AboutItemsData.map((item, index) => (
             <h3
-              className={`cursor-pointer font-semibold text-2xl border-b-2 p-1 w-fit ${
-                selectedItemIndex === index ? "text-red-700" : ""
+              className={`cursor-pointer  text-2xl border-b-2 p-1 w-fit ${
+                selectedItemIndex === index
+                  ? "text-stepColor border-b-stepColor font-bold"
+                  : "font-semibold"
               }`}
               key={uuid()}
               onClick={() => setSelectedItemIndex(index)}
@@ -26,7 +27,9 @@ const AboutItems: FC = () => {
       <div className="list-disc flex flex-col gap-[1px] md:gap-3 sm:my-1 lg:my-3 h-[40svh]">
         {AboutItemsData[selectedItemIndex].desc.length > 0 &&
           AboutItemsData[selectedItemIndex].desc.map((item) => (
-            <TextMarker key={uuid()} text={item} />
+            <div key={uuid()}>
+              <TextMarker text={item} />
+            </div>
           ))}
       </div>
     </div>

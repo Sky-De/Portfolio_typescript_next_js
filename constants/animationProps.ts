@@ -65,7 +65,7 @@ export const fade_In_Veiw_Animation_Props = {
   },
   initial: "hide",
   whileInView: "show",
-  transition: { duration: 0.5, delay: 0.5 },
+  transition: { duration: 0.75, delay: 0.5 },
 };
 
 export const long_Fade_In_Veiw_Animation_Props = {

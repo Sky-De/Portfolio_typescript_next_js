@@ -5,6 +5,7 @@ import { FC, useRef } from "react";
 import Image from "next/image";
 import {
   fade_Animation_Props,
+  fade_In_Veiw_Animation_Props,
   fade_Scale_Animation_Props,
   slide_Right_Animation_Props,
 } from "@/constants/animationProps";
@@ -17,7 +18,6 @@ const About: FC = () => {
   return (
     <motion.section
       ref={aboutRef}
-      {...fade_Animation_Props}
       id="about"
       className="section snap-start snap-always"
     >
@@ -35,7 +35,7 @@ const About: FC = () => {
           />
         </motion.div>
         <motion.div
-          {...slide_Right_Animation_Props}
+          {...fade_In_Veiw_Animation_Props}
           className="about__content w-[350px] lg:w-[600px] h-[700px] max-w-full overflow-scroll my-4 flex flex-col lg:justify-center gap-1"
         >
           {/* FIX--change this name to AboutITems */}

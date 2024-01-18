@@ -25,14 +25,14 @@ const LayoutContent = ({ children }: { children: React.ReactNode }) => {
           <LoaderCube />
         </div>
       ) : (
-        <>
+        <div className="h-screen flex flex-col">
           <Header />
           <ProjectImageModel />
           <ProjectFeaturesModel />
           <ContactModel />
           {children}
           <Footer />
-        </>
+        </div>
       )}
     </>
   );
