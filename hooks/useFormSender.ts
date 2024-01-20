@@ -24,7 +24,7 @@ export const useFormSender = (): FormSenderReturn => {
         setFormData(initialFormDataState);
       }
     } catch (error) {
-      console.log(error);
+      // console.log(error);
       setIsLoading(false);
       setIsSended(false);
       setIsError(true);

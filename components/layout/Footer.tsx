@@ -10,13 +10,16 @@ const Footer: FC = () => {
       {...slide_Up_Animation_Props}
       className="apply__footer mt-auto"
     >
-      <Link href="https://www.linkedin.com/in/sky-de-763248228">
+      <Link
+        aria-label="linkedin-link"
+        href="https://www.linkedin.com/in/sky-de-763248228"
+      >
         <i className="bx bxl-linkedin-square apply__footer--item"></i>
       </Link>
-      <Link href="mailto:sky.de1991@gmail.com">
+      <Link aria-label="email-link" href="mailto:sky.de1991@gmail.com">
         <i className="bx bxl-google apply__footer--item"></i>
       </Link>
-      <Link href="https://github.com/Sky-De">
+      <Link aria-label="github-link" href="https://github.com/Sky-De">
         <i className="bx bxl-github apply__footer--item"></i>
       </Link>
     </motion.footer>

@@ -25,7 +25,7 @@ const OfferForm: FC = () => {
 
   const handleFormSubmit = () => {
     if (!captcha) return;
-    console.log(formData);
+    // console.log(formData);
 
     sendForm();
     submitIsDone();

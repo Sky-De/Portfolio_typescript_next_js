@@ -40,6 +40,7 @@ const Projects: FC = () => {
       {/* ABSOLUTE BTNS */}
       {/* controlls - middle------------ */}
       <button
+        aria-label="pre-Project"
         onClick={() => {
           dispatch(setPreProject());
         }}
@@ -48,6 +49,7 @@ const Projects: FC = () => {
         <i className="bx bx-chevron-left apply__carousel--btnIcon"></i>
       </button>
       <button
+        aria-label="next-Project"
         onClick={() => {
           dispatch(setNextProject());
         }}

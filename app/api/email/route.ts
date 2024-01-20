@@ -5,7 +5,6 @@ import nodemailer from "nodemailer";
 
 const email = process.env.NEXT_PUBLIC_EMAIL;
 const pass = process.env.NEXT_PUBLIC_APP_PASS;
-console.log(email, pass);
 
 let config = {
   service: "gmail",
@@ -17,9 +16,9 @@ let config = {
 
 export const POST = async (req: Request, res: NextApiResponse) => {
   const formData: FormDataState = await req.json();
-  console.log(formData);
+  // console.log(formData);
 
-  // refactore message text
+  //FIX-- refactore message text
   const message = {
     from: "portfolio",
     to: email,
@@ -43,7 +42,7 @@ export const POST = async (req: Request, res: NextApiResponse) => {
 
     await transporter.sendMail(message);
 
-    return new NextResponse("done");
+    return new NextResponse("Form sended!");
   } catch (error) {
     return new NextResponse(error as string);
   }

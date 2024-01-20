@@ -19,13 +19,13 @@ const Contact: FC = () => {
       id="contact"
       className="section contactSection snap-start snap-always"
     >
-      <div className="flex flex-col gap-3 mt-8">
-        <motion.h3
+      <ul className="flex flex-col gap-3 mt-8">
+        {/* <motion.h3
           {...fade_In_Veiw_Animation_Props}
           className="font-bold text-center lg:text-start animate-pulse"
         >
           Connect Now
-        </motion.h3>
+        </motion.h3> */}
         <ContactItem
           areaTitle="link to my linkedin"
           delay={1}
@@ -61,7 +61,7 @@ const Contact: FC = () => {
           link="https://t.me/SkyDe1991"
           title="Telegram"
         />
-      </div>
+      </ul>
       <div className="m-4 font-light text-xl">OR</div>
       <motion.div
         variants={{

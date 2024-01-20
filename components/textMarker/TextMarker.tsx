@@ -1,10 +1,10 @@
 import React, { FC } from "react";
 
 const TextMarker: FC<{ text: string }> = ({ text }) => {
-  const words = text.split(" ");
-
+  const initWord = "// " + text;
+  const words = initWord.split(" ");
   return (
-    <li className={`apply__body lg:text-base  ml-1 mb-1 first-letter:ml-1 `}>
+    <span className={`apply__body lg:text-base  ml-1 mb-1 first-letter:ml-1 `}>
       {words.map((word, index) => {
         if (word.startsWith("@")) {
           const trimmedWord = word.substring(1);
@@ -16,7 +16,7 @@ const TextMarker: FC<{ text: string }> = ({ text }) => {
         }
         return <React.Fragment key={index}>{word} </React.Fragment>;
       })}
-    </li>
+    </span>
   );
 };
 

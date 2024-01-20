@@ -11,7 +11,7 @@ const BrainOfSkill: FC = () => {
   const dispatch = useAppDispatch();
   const handleClick = (e: React.MouseEvent<SVGCircleElement, MouseEvent>) => {
     const target = e.target as HTMLElement;
-    console.log(target.id);
+    // console.log(target.id);
     //
     dispatch(setActiveSkill(target.id));
   };
