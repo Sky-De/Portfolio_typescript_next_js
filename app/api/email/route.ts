@@ -17,6 +17,8 @@ let config = {
 
 export const POST = async (req: Request, res: NextApiResponse) => {
   const formData: FormDataState = await req.json();
+  console.log(formData);
+
   // refactore message text
   const message = {
     from: "portfolio",

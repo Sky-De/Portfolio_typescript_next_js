@@ -126,7 +126,9 @@ export interface FormSenderReturn {
   isLoading: boolean;
   isError: boolean;
   isSended: boolean;
-  sendForm: (formData?: FormDataState) => Promise<void>;
+  formData: FormDataState;
+  setFormData: Dispatch<SetStateAction<FormDataState>>;
+  sendForm: () => Promise<void>;
 }
 
 export type UseIsInViewProps = {

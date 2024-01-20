@@ -1,12 +1,17 @@
-import { FormDataState, FormSenderReturn } from "@/types/allTypes";
+import {
+  FormDataState,
+  FormSenderReturn,
+  initialFormDataState,
+} from "@/types/allTypes";
 import { useState } from "react";
 
 export const useFormSender = (): FormSenderReturn => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [formData, setFormData] = useState<FormDataState>(initialFormDataState);
   const [isError, setIsError] = useState<boolean>(false);
   const [isSended, setIsSended] = useState<boolean>(false);
 
-  const sendForm = async (formData?: FormDataState) => {
+  const sendForm = async () => {
     try {
       setIsLoading(true);
       const result = await fetch("http://localhost:3000/api/email", {
@@ -16,13 +21,15 @@ export const useFormSender = (): FormSenderReturn => {
       if (result.ok) {
         setIsLoading(false);
         setIsSended(true);
+        setFormData(initialFormDataState);
       }
     } catch (error) {
       console.log(error);
       setIsLoading(false);
+      setIsSended(false);
       setIsError(true);
     }
   };
 
-  return { isLoading, isError, isSended, sendForm };
+  return { isLoading, isError, isSended, sendForm, formData, setFormData };
 };

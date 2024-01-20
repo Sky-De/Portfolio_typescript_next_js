@@ -14,10 +14,10 @@ import Stepper from "../stepper/Stepper";
 import "./style.css";
 
 const OfferForm: FC = () => {
-  const [formData, setFormData] = useState<FormDataState>(initialFormDataState);
   const [captcha, setCaptcha] = useState<string | null>();
   const { step, handleNextStep, handlePreStep, submitIsDone } = useStep();
-  const { isError, isLoading, isSended, sendForm } = useFormSender();
+  const { isError, isLoading, isSended, sendForm, formData, setFormData } =
+    useFormSender();
 
   const handleSliderChange = (newValue: any) => {
     setFormData({ ...formData, salaryRange: newValue });
@@ -25,7 +25,9 @@ const OfferForm: FC = () => {
 
   const handleFormSubmit = () => {
     if (!captcha) return;
-    sendForm({ ...formData });
+    console.log(formData);
+
+    sendForm();
     submitIsDone();
     setFormData(initialFormDataState);
   };
