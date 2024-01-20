@@ -237,6 +237,7 @@ export const projectsData: ProjectState[] = [
         "https://res.cloudinary.com/dxukz1zt5/image/upload/v1705596902/portfolio/projects-images/sixthSenceGame/rgbzo5qrnmatf6vk9rvu.png",
     },
     techIcons: [
+      TsIcon,
       NextIcon,
       ReduxIcon,
       Tailwind,
@@ -348,7 +349,7 @@ export const projectsData: ProjectState[] = [
       laptopCoverUrl:
         "https://res.cloudinary.com/dxukz1zt5/image/upload/v1705581584/portfolio/projects-images/adminDashboard/lb5msuvnjgazwdnrxqmg.png",
     },
-    techIcons: [ReactIcon, JsIcon, CssIcon, MuiIcon, GitIcon],
+    techIcons: [JsIcon, ReactIcon, CssIcon, MuiIcon, GitIcon],
     otherTechs: ["full-calendar", "Data-grid"],
     repoUrl: "https://github.com/Sky-De/React-Admin-Dashboard",
     liveUrl: "https://react-admin-dashboar-skyde.netlify.app",
@@ -380,7 +381,7 @@ export const projectsData: ProjectState[] = [
       laptopCoverUrl:
         "https://res.cloudinary.com/dxukz1zt5/image/upload/v1705577516/portfolio/projects-images/todoApp/xtpxqt5hynwrznqauvag.png",
     },
-    techIcons: [ReactIcon, TsIcon, CssIcon, GitIcon],
+    techIcons: [TsIcon, ReactIcon, CssIcon, GitIcon],
     otherTechs: ["PWA", "Context"],
     repoUrl: "https://github.com/Sky-De/TypeScript-ToDoApp",
     liveUrl: "https://typescript-todo-skyde.netlify.app/",
