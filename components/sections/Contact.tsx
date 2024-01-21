@@ -75,6 +75,7 @@ const Contact: FC = () => {
         className="w-full grid place-items-center"
       >
         <Image
+          loading="lazy"
           title="https://storyset.com/job"
           className="hidden lg:block w-2/3 mx-auto"
           width={200}

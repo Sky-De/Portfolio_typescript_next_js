@@ -5,6 +5,7 @@ const P404 = () => {
   return (
     <div className="section flex flex-col gap-8 w-full ">
       <Image
+        loading="lazy"
         title="https://storyset.com/"
         width={100}
         height={100}

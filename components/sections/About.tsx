@@ -27,6 +27,7 @@ const About: FC = () => {
           className="hidden border md:grid place-content-center rounded-full"
         >
           <Image
+            loading="lazy"
             src="/avatar.jpg"
             alt="psk"
             width={150}

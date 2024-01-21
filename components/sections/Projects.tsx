@@ -108,6 +108,7 @@ const Projects: FC = () => {
                 {selectedProject.techIcons.length > 0 &&
                   selectedProject.techIcons.map((icon) => (
                     <Image
+                      loading="lazy"
                       src={icon}
                       width={30}
                       height={30}
