@@ -44,7 +44,6 @@ const OfferForm: FC = () => {
       ...formData,
       type: { ...formData.type, [e.target.name]: e.target.checked },
     });
-    console.log(formData);
   };
   return (
     <section className="relative h-full flex flex-col rounded-sm model__shadow">

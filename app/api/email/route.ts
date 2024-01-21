@@ -1,6 +1,4 @@
 import { FormDataState } from "@/types/allTypes";
-import { NextApiRequest, NextApiResponse } from "next";
-import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
 const email = process.env.NEXT_PUBLIC_EMAIL;
