@@ -1,7 +1,7 @@
 import "./globals.css";
 import AppProviders from "@/providers/AppProviders";
 import { Metadata } from "next";
-import LayoutContent from "@/components/layout/LayoutContent";
+import LayoutContent from "@/components/layout/LayoutItems";
 
 // FIX--meaning full metadata
 export const metadata: Metadata = {
@@ -18,6 +18,13 @@ export default function RootLayout({
     <html lang="en">
       <head>
         {/* <meta name="robots" content="noindex"></meta> */}
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1"
+        ></meta>
+        <link rel="manifest" href="/manifest.json" />
+        <link rel="apple-touch-icon" href="/icon.png"></link>
+        <meta name="theme-color" content="#77bfa3" />
         <link
           href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
           rel="stylesheet"

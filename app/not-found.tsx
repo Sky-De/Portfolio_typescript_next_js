@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const P404 = () => {
   return (
-    <div className="h-auto  lg:w-[50%] lg:mx-auto my-auto flex flex-col gap-4">
+    <div className="section flex flex-col gap-8 w-full ">
       <Image
         title="https://storyset.com/"
         width={100}
@@ -12,7 +12,10 @@ const P404 = () => {
         src="404.svg"
         alt=""
       />
-      <Link href="/" className="callToActionBtn mx-auto w-full text-center">
+      <Link
+        href="/"
+        className="callToActionBtn mx-auto w-full text-center max-w-[200px]"
+      >
         Back Home
       </Link>
     </div>
