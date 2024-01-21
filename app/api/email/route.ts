@@ -1,5 +1,5 @@
 import { FormDataState } from "@/types/allTypes";
-import { NextApiResponse } from "next";
+import { NextApiRequest, NextApiResponse } from "next";
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
@@ -14,9 +14,9 @@ let config = {
   },
 };
 
-export const POST = async (req: Request, res: NextApiResponse) => {
+export const POST = async (req: Request) => {
   const formData: FormDataState = await req.json();
-  // console.log(formData);
+  console.log(formData);
 
   //FIX-- refactore message text
   const message = {
@@ -42,8 +42,8 @@ export const POST = async (req: Request, res: NextApiResponse) => {
 
     await transporter.sendMail(message);
 
-    return new NextResponse("Form sended!");
+    return new Response("Form sended!");
   } catch (error) {
-    return new NextResponse(error as string);
+    return new Response(error as string);
   }
 };

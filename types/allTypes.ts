@@ -39,6 +39,7 @@ export type ThemeBtnProps = {
 // form and input---------------------
 export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   label: string;
+  checkBoxChangeHandler: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 export interface InputWrapperProps {

@@ -21,6 +21,7 @@ const OfferForm: FC = () => {
 
   const handleSliderChange = (newValue: any) => {
     setFormData({ ...formData, salaryRange: newValue });
+    console.log(formData);
   };
 
   const handleFormSubmit = () => {
@@ -43,6 +44,7 @@ const OfferForm: FC = () => {
       ...formData,
       type: { ...formData.type, [e.target.name]: e.target.checked },
     });
+    console.log(formData);
   };
   return (
     <section className="relative h-full flex flex-col rounded-sm model__shadow">
@@ -61,18 +63,21 @@ const OfferForm: FC = () => {
           <InputWrapper title="type" iconClass="bx-time-five">
             <div className="flex gap-4 items-center flex-wrap justify-center">
               <CheckBox
+                checkBoxChangeHandler={checkBoxHandler}
                 label="Part-time"
                 name="partTime"
-                onChange={checkBoxHandler}
+                onChange={() => console.log("dsd")}
                 key={"part-time"}
               />
               <CheckBox
+                checkBoxChangeHandler={checkBoxHandler}
                 label="Full-time"
                 name="fullTime"
                 onChange={checkBoxHandler}
                 key={"full-time"}
               />
               <CheckBox
+                checkBoxChangeHandler={checkBoxHandler}
                 label="Contract"
                 name="contract"
                 onChange={checkBoxHandler}
