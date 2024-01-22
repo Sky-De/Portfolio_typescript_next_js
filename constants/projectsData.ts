@@ -196,23 +196,30 @@ export const projectsData: ProjectState[] = [
   },
   {
     id: 9,
-    title: "Admin Dashboard",
+    title: "Free Gym Coach",
     description:
-      "this is ... admin dashboard with charts and some other UI features like calander for plan and so on",
+      "This app uses cutting-edge technology to provide you with clear and concise exercise guidance. With detailed illustrations, GIFs, and YouTube videos, you can be sure you're doing your workouts correctly.",
     features: [
-      "Light/Dark mode",
-      "representing data within Data Grid",
-      "another thibng",
+      "Fully Responsive",
+      "Stunning design",
+      "Search",
+      "Details page",
+      "Horizontal scroll",
+      "Exercise Gif",
+      "Categorized exercises",
     ],
     images: {
-      mobileCoverUrl: "",
-      tableCoverUrl: "",
-      laptopCoverUrl: "",
+      mobileCoverUrl:
+        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1705925201/portfolio/projects-images/freeCoachApp/rgfnwunj4evijfuqm49m.png",
+      tableCoverUrl:
+        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1705925201/portfolio/projects-images/freeCoachApp/wcvd2mbgt96owzouykju.png",
+      laptopCoverUrl:
+        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1705925201/portfolio/projects-images/freeCoachApp/larwlyfwp590a9bqw1fi.png",
     },
     techIcons: [AeIcon, AiIcon, CssIcon],
     otherTechs: ["test", "anotehr"],
-    repoUrl: "",
-    liveUrl: "",
+    repoUrl: "https://github.com/Sky-De/Free-Gym-Coach-App",
+    liveUrl: "https://free-coach-skyde.netlify.app",
   },
   {
     id: 10,
