@@ -91,11 +91,11 @@ const Projects: FC = () => {
         className="flex flex-col items-center gap-5  w-full  mx-12 py-5"
       >
         {selectedProject && (
-          <div className="flex flex-col lg:flex-row md:mt-auto md:px-16 items-center md:justify-evenly lg:gap-4">
+          <div className="flex flex-col lg:flex-row md:mt-auto md:px-16 items-center  md:justify-evenly lg:gap-4">
             <motion.div
               {...slide_Right_Animation_Props}
               // viewport={{ amount: 1 }}
-              className="project--info flex flex-col gap-1 items-center md:items-start lg:w-2/5 md:gap-4"
+              className="project--info flex flex-col gap-1 items-center lg:items-start lg:w-2/5 md:gap-4"
             >
               <h2
                 className="apply__title font-semibold text-3xl md:text-4xl py-4 transition-colors"
@@ -142,7 +142,7 @@ const Projects: FC = () => {
         <motion.div
           {...short_Slide_Up_Animation_Props}
           viewport={{ amount: 0.2 }}
-          className="project--links flex flex-col justify-center items-center gap-3 md:items-start md:w-full md:ml-32 my-auto"
+          className="project--links flex flex-col justify-center items-center gap-3 lg:items-start md:w-full lg:ml-32 my-auto"
         >
           <span className="font-bold hidden md:inline">
             Explore more details
