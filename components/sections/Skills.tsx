@@ -24,8 +24,9 @@ const Skills: FC = () => {
       ref={introRef}
       // {...long_Fade_In_Veiw_Animation_Props}
       id="skills"
-      className="section snap-start snap-always w-full"
+      className="section snap-start snap-always w-full relative"
     >
+      <span className="section__title">Skills</span>
       <div className="skills flex flex-col lg:flex-row-reverse tall:flex-col items-center px-4 w-full pt-6 lg:pt-0 gap-2">
         <BrainOfSkills />
         <div

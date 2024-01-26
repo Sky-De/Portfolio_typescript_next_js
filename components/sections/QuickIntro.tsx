@@ -22,8 +22,9 @@ const QuickIntro: FC = () => {
       {...long_Fade_In_Veiw_Animation_Props}
       viewport={{ amount: 0.2 }}
       id="qintro"
-      className="SECTION section snap-start snap-always w-full flex flex-col justify-evenly lg:flex-row lg:items-center p-2 "
+      className="SECTION section snap-start snap-always w-full flex flex-col justify-evenly lg:flex-row lg:items-center p-2 relative"
     >
+      <span className="section__title">Q-Intro</span>
       <div className="textContent text-center lg:text-start mb-4 lg:mb-0">
         <h3 className="text-3xl lg:text-5xl font-bold mb-6">Quick Intro</h3>
         <p className="w-full mx-auto lg:mx-0 md:w-2/3 apply__body">

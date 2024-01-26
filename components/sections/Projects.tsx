@@ -37,6 +37,7 @@ const Projects: FC = () => {
       id="projects"
       className="section snap-start snap-always relative"
     >
+      <span className="section__title">Projects</span>
       {/* ABSOLUTE BTNS */}
       {/* controlls - middle------------ */}
       <button

@@ -19,8 +19,9 @@ const About: FC = () => {
     <motion.section
       ref={aboutRef}
       id="about"
-      className="section snap-start snap-always"
+      className="section snap-start snap-always relative"
     >
+      <span className="section__title">About</span>
       <div className="about flex flex-col items-center justify-evenly w-full md:flex-row-reverse">
         <motion.div
           {...fade_Scale_Animation_Props}

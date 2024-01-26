@@ -19,8 +19,9 @@ const Learn: FC = () => {
       ref={learnRef}
       {...immediate_Fade_In_View_Animation_Props}
       id="learn"
-      className="section snap-start snap-always"
+      className="section snap-start snap-always relative"
     >
+      <span className="section__title">Learn</span>
       <div className="flex w-full items-center flex-col lg:flex-row px-2 md:justify-center my-auto">
         <div className="learn__intro lg:w-2/3">
           <motion.h2

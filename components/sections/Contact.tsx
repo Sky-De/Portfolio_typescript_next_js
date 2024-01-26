@@ -17,15 +17,11 @@ const Contact: FC = () => {
       ref={projectsRef}
       {...fade_In_Veiw_Animation_Props}
       id="contact"
-      className="section contactSection snap-start snap-always"
+      className="section contactSection snap-start snap-always relative"
     >
+      <span className="section__title">Contact</span>
+
       <ul className="flex flex-col gap-3 mt-8">
-        {/* <motion.h3
-          {...fade_In_Veiw_Animation_Props}
-          className="font-bold text-center lg:text-start animate-pulse"
-        >
-          Connect Now
-        </motion.h3> */}
         <ContactItem
           areaTitle="link to my linkedin"
           delay={1}
