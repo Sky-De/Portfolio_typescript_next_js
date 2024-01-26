@@ -85,6 +85,9 @@ const config: Config = {
         sunAnimation: "rotateF 1s ease-in-out",
         moonAnimation: "rotateB 1s ease-in-out",
       },
+      screens: {
+        tall: { raw: "(min-height: 900px)" },
+      },
     },
   },
   // plugins: ["prettier-plugin-tailwindcss"],

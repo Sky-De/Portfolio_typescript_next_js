@@ -26,7 +26,7 @@ const Skills: FC = () => {
       id="skills"
       className="section snap-start snap-always w-full"
     >
-      <div className="skills flex flex-col lg:flex-row-reverse items-center px-4 w-full pt-6 lg:pt-0 gap-2">
+      <div className="skills flex flex-col lg:flex-row-reverse tall:flex-col items-center px-4 w-full pt-6 lg:pt-0 gap-2">
         <BrainOfSkills />
         <div
           className={`skillShow w-full  h-[250px] ${
@@ -35,14 +35,14 @@ const Skills: FC = () => {
         >
           {/* developer intro---------------------- */}
           {currentSkill === "SKY" ? (
-            <motion.div className="h-full text-center lg:text-start pt-5 lg:pt-0">
-              <h2 className="font-bold text-3xl md:text-4xl xl:text-5xl apply__title mb-8 md:mb-0">
+            <motion.div className="h-full flex flex-col items-center lg:items-start lg:text-start pt-5 lg:pt-0">
+              <h2 className="font-bold text-3xl md:text-4xl xl:text-5xl apply__title mb-8 md:mb-0 text-center lg:text-start tall:text-center">
                 SkyDe <span className="hidden sm:inline">|</span>{" "}
                 <p className="block ">Briliant, Self-Taught</p>{" "}
                 <p>Web Developer</p>
               </h2>
               <motion.p
-                className="w-2/3 lg:w-3/5 text-lg mt-3 mx-auto lg:mx-0 hidden sm:block apply__body mb-6"
+                className="w-2/3 lg:w-3/5 text-lg mt-3 mx-auto lg:mx-0 hidden sm:block apply__body mb-6 tall:text-center"
                 variants={{
                   hide: { x: -50, opacity: 0 },
                   show: { x: 0, opacity: 1 },

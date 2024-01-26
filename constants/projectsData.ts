@@ -17,249 +17,11 @@ import TsIcon from "@/public/skillIcons/Ts.svg";
 import WebpackIcon from "@/public/skillIcons/Webpack.svg";
 import XdIcon from "@/public/skillIcons/Xd.svg";
 import ReduxIcon from "@/public/skillIcons/Redux.svg";
-import Tailwind from "@/public/skillIcons/Tailwind.svg";
+import TailwindIcon from "@/public/skillIcons/Tailwind.svg";
 
 export const projectsData: ProjectState[] = [
   {
     id: 1,
-    title: "Admin Dashboard",
-    description:
-      "this is ... admin dashboard with charts and some other UI features like calander for plan and so on",
-    features: [
-      "Light/Dark mode",
-      "representing data within Data Grid",
-      "CRUD operation for user",
-      "email auth",
-      "google auth",
-      "another thibng",
-    ],
-    images: {
-      mobileCoverUrl:
-        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1702644156/portfolio/snzsm8fzun5sqlunes5j.png",
-      tableCoverUrl:
-        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1702643661/portfolio/jldvgrexoc8lj8apgu2e.png",
-      laptopCoverUrl:
-        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1702644156/portfolio/lwwqbjdffjy0eon7mqaj.png",
-    },
-    techIcons: [
-      ReduxIcon,
-      AeIcon,
-      AiIcon,
-      CssIcon,
-      ExpressIcon,
-      GitIcon,
-      HtmlIcon,
-    ],
-    otherTechs: ["nivo-charts", "calendar"],
-    repoUrl: "",
-    liveUrl: "",
-  },
-  {
-    id: 2,
-    title: "Admin Dashboard",
-    description:
-      "this is ... admin dashboard with charts and some other UI features like calander for plan and so on",
-    features: [
-      "Light/Dark mode",
-      "representing data within Data Grid",
-      "another thibng",
-    ],
-    images: {
-      mobileCoverUrl: "",
-      tableCoverUrl: "",
-      laptopCoverUrl: "",
-    },
-    techIcons: [HtmlIcon, CssIcon, JsIcon, ReactIcon, MuiIcon, GitIcon],
-    otherTechs: ["nivo-charts", "calendar"],
-    repoUrl: "",
-    liveUrl: "",
-  },
-  {
-    id: 3,
-    title: "Admin Dashboard",
-    description:
-      "this is ... admin dashboard with charts and some other UI features like calander for plan and so on",
-    features: [
-      "Light/Dark mode",
-      "representing data within Data Grid",
-      "another thibng",
-    ],
-    images: {
-      mobileCoverUrl: "",
-      tableCoverUrl: "",
-      laptopCoverUrl: "",
-    },
-    techIcons: [AeIcon, AiIcon, CssIcon],
-    otherTechs: ["test", "anotehr"],
-    repoUrl: "",
-    liveUrl: "",
-  },
-  {
-    id: 4,
-    title: "Admin Dashboard",
-    description:
-      "this is ... admin dashboard with charts and some other UI features like calander for plan and so on",
-    features: [
-      "Light/Dark mode",
-      "representing data within Data Grid",
-      "another thibng",
-    ],
-    images: {
-      mobileCoverUrl: "",
-      tableCoverUrl: "",
-      laptopCoverUrl: "",
-    },
-    techIcons: [AeIcon, AiIcon, CssIcon],
-    otherTechs: ["test", "anotehr"],
-    repoUrl: "",
-    liveUrl: "",
-  },
-  {
-    id: 5,
-    title: "Admin Dashboard",
-    description:
-      "this is ... admin dashboard with charts and some other UI features like calander for plan and so on",
-    features: [
-      "Light/Dark mode",
-      "representing data within Data Grid",
-      "another thibng",
-    ],
-    images: {
-      mobileCoverUrl: "",
-      tableCoverUrl: "",
-      laptopCoverUrl: "",
-    },
-    techIcons: [AeIcon, AiIcon, CssIcon],
-    otherTechs: ["test", "anotehr"],
-    repoUrl: "",
-    liveUrl: "",
-  },
-  {
-    id: 6,
-    title: "Admin Dashboard",
-    description:
-      "this is ... admin dashboard with charts and some other UI features like calander for plan and so on",
-    features: [
-      "Light/Dark mode",
-      "representing data within Data Grid",
-      "another thibng",
-    ],
-    images: {
-      mobileCoverUrl: "",
-      tableCoverUrl: "",
-      laptopCoverUrl: "",
-    },
-    techIcons: [AeIcon, AiIcon, CssIcon],
-    otherTechs: ["test", "anotehr"],
-    repoUrl: "",
-    liveUrl: "",
-  },
-  {
-    id: 7,
-    title: "Admin Dashboard",
-    description:
-      "this is ... admin dashboard with charts and some other UI features like calander for plan and so on",
-    features: [
-      "Light/Dark mode",
-      "representing data within Data Grid",
-      "another thibng",
-    ],
-    images: {
-      mobileCoverUrl: "",
-      tableCoverUrl: "",
-      laptopCoverUrl: "",
-    },
-    techIcons: [AeIcon, AiIcon, CssIcon],
-    otherTechs: ["test", "anotehr"],
-    repoUrl: "",
-    liveUrl: "",
-  },
-  {
-    id: 8,
-    title: "Admin Dashboard",
-    description:
-      "this is ... admin dashboard with charts and some other UI features like calander for plan and so on",
-    features: [
-      "Light/Dark mode",
-      "representing data within Data Grid",
-      "another thibng",
-    ],
-    images: {
-      mobileCoverUrl: "",
-      tableCoverUrl: "",
-      laptopCoverUrl: "",
-    },
-    techIcons: [AeIcon, AiIcon, CssIcon],
-    otherTechs: ["test", "anotehr"],
-    repoUrl: "",
-    liveUrl: "",
-  },
-  {
-    id: 9,
-    title: "Free Gym Coach",
-    description:
-      "This app uses cutting-edge technology to provide you with clear and concise exercise guidance. With detailed illustrations, GIFs, and YouTube videos, you can be sure you're doing your workouts correctly.",
-    features: [
-      "Fully Responsive",
-      "Stunning design",
-      "Search",
-      "Details page",
-      "Horizontal scroll",
-      "Exercise Gif",
-      "Categorized exercises",
-    ],
-    images: {
-      mobileCoverUrl:
-        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1705925201/portfolio/projects-images/freeCoachApp/rgfnwunj4evijfuqm49m.png",
-      tableCoverUrl:
-        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1705925201/portfolio/projects-images/freeCoachApp/wcvd2mbgt96owzouykju.png",
-      laptopCoverUrl:
-        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1705925201/portfolio/projects-images/freeCoachApp/larwlyfwp590a9bqw1fi.png",
-    },
-    techIcons: [AeIcon, AiIcon, CssIcon],
-    otherTechs: ["test", "anotehr"],
-    repoUrl: "https://github.com/Sky-De/Free-Gym-Coach-App",
-    liveUrl: "https://free-coach-skyde.netlify.app",
-  },
-  {
-    id: 10,
-    title: "2D Web Game",
-    description:
-      "Challenge your senses and test your luck with this stylish 2D game! With relaxing music, guess your way through each level with ease. Start playing today!",
-    features: [
-      "Fully Responsive",
-      "Music",
-      "Click sound",
-      "High score",
-      "Luck mode",
-      "Sense mode",
-      "Reset game",
-    ],
-    images: {
-      mobileCoverUrl:
-        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1705596902/portfolio/projects-images/sixthSenceGame/syvwuqhqts39i54vxzr6.png",
-      tableCoverUrl:
-        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1705596901/portfolio/projects-images/sixthSenceGame/ry1d3on0xp3fpsguvucc.png",
-      laptopCoverUrl:
-        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1705596902/portfolio/projects-images/sixthSenceGame/rgbzo5qrnmatf6vk9rvu.png",
-    },
-    techIcons: [
-      TsIcon,
-      NextIcon,
-      ReduxIcon,
-      Tailwind,
-      SassIcon,
-      HtmlIcon,
-      GitIcon,
-      AeIcon,
-      AiIcon,
-    ],
-    otherTechs: [],
-    repoUrl: "https://github.com/Sky-De/the_sixth_sense",
-    liveUrl: "https://2d-free-game-skyde.netlify.app",
-  },
-  {
-    id: 11,
     title: "Book Share (MERN)",
     description:
       "BookShare is a personalized app for book lovers. Connect with others and share your thoughts on your favorite reads. Click the demo to join the community!",
@@ -302,34 +64,96 @@ export const projectsData: ProjectState[] = [
     liveUrl: "https://book-share-app-skyde.netlify.app/",
   },
   {
-    id: 12,
-    title: "YouTube Clone",
+    id: 2,
+    title: "2D Web Game",
     description:
-      "My platform is a user-friendly clone of YouTube that lets you easily search for and watch your favorite videos.",
+      "Challenge your senses and test your luck with this stylish 2D game! With relaxing music, guess your way through each level with ease. Start playing today!",
     features: [
-      "Fully responsive",
-      "Aside nav",
-      "Search functionality",
-      "Categorised videos",
-      "Skeleton loading",
-      "Live data fetching",
-      "Video page",
+      "Fully Responsive",
+      "Music",
+      "Click sound",
+      "High score",
+      "Luck mode",
+      "Sense mode",
+      "Reset game",
     ],
     images: {
       mobileCoverUrl:
-        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1705583934/portfolio/projects-images/youTubeClone/vz5o1er54pbv5esitd8p.png",
+        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1705596902/portfolio/projects-images/sixthSenceGame/syvwuqhqts39i54vxzr6.png",
       tableCoverUrl:
-        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1705583934/portfolio/projects-images/youTubeClone/vuk3vzwklwo21dlogfqt.png",
+        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1705596901/portfolio/projects-images/sixthSenceGame/ry1d3on0xp3fpsguvucc.png",
       laptopCoverUrl:
-        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1705583934/portfolio/projects-images/youTubeClone/rmvtgelhyvbhuanvjfrx.png",
+        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1705596902/portfolio/projects-images/sixthSenceGame/rgbzo5qrnmatf6vk9rvu.png",
     },
-    techIcons: [JsIcon, ReactIcon, MuiIcon, CssIcon, GitIcon],
-    otherTechs: ["Rapid-api", ".env"],
-    repoUrl: "https://github.com/Sky-De/Youtube_Clone_App",
-    liveUrl: "https://youtube-clone-app-skyde.netlify.app/",
+    techIcons: [
+      TsIcon,
+      NextIcon,
+      ReduxIcon,
+      TailwindIcon,
+      SassIcon,
+      HtmlIcon,
+      AeIcon,
+      AiIcon,
+      GitIcon,
+    ],
+    otherTechs: [],
+    repoUrl: "https://github.com/Sky-De/the_sixth_sense",
+    liveUrl: "https://2d-free-game-skyde.netlify.app",
   },
   {
-    id: 13,
+    id: 3,
+    title: "Portfolio",
+    description:
+      "this is ... admin dashboard with charts and some other UI features like calander for plan and so on",
+    features: [
+      "Light/Dark mode",
+      "representing data within Data Grid",
+      "another thibng",
+    ],
+    images: {
+      mobileCoverUrl: "",
+      tableCoverUrl: "",
+      laptopCoverUrl: "",
+    },
+    techIcons: [AeIcon, AiIcon, CssIcon],
+    otherTechs: ["test", "anotehr"],
+    repoUrl: "",
+    liveUrl: "",
+  },
+  {
+    id: 4,
+    title: "Todo App",
+    description:
+      "Try my unique task management tool! My TypeScript-built PWA makes organizing work and personal tasks easy and user-friendly.",
+    features: [
+      "Fully responsive",
+      "Offline data persistent",
+      "Dark-light mode",
+      "Stunning design",
+      "PWA ready",
+      "Delete task",
+      "Add the task",
+      "Edit the task",
+      "Mark the task as done",
+      "Mark the task as undone",
+      "Reset all the tasks",
+      "Reverse the order of the tasks",
+    ],
+    images: {
+      mobileCoverUrl:
+        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1705577516/portfolio/projects-images/todoApp/vibesyxqq1er2qfqyifm.png",
+      tableCoverUrl:
+        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1705577515/portfolio/projects-images/todoApp/ahv1q1s7n0ztpswhjung.png",
+      laptopCoverUrl:
+        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1705577516/portfolio/projects-images/todoApp/xtpxqt5hynwrznqauvag.png",
+    },
+    techIcons: [TsIcon, ReactIcon, CssIcon, GitIcon],
+    otherTechs: ["PWA", "Context"],
+    repoUrl: "https://github.com/Sky-De/TypeScript-ToDoApp",
+    liveUrl: "https://typescript-todo-skyde.netlify.app/",
+  },
+  {
+    id: 5,
     title: "Admin Dashboard",
     description:
       "This is a stylish UI admin dashboard featuring MUI and Nivo charts, with multiple tabs to manage data and users.",
@@ -362,35 +186,89 @@ export const projectsData: ProjectState[] = [
     liveUrl: "https://react-admin-dashboar-skyde.netlify.app",
   },
   {
-    id: 14,
-    title: "Todo App",
+    id: 6,
+    title: "Music App",
     description:
-      "Try my unique task management tool! My TypeScript-built PWA makes organizing work and personal tasks easy and user-friendly.",
+      "Experience the best of music with ease on my free online music app. Discover the latest top tracks and singers with lyrics that will keep you captivated. Start your journey to musical bliss today!",
     features: [
-      "Fully responsive",
-      "Offline data persistent",
-      "Dark-light mode",
+      "Fully Responsive",
       "Stunning design",
-      "PWA ready",
-      "Delete task",
-      "Add the task",
-      "Edit the task",
-      "Mark the task as done",
-      "Mark the task as undone",
-      "Reset all the tasks",
-      "Reverse the order of the tasks",
+      "Search",
+      "Top songs",
+      "Top charts",
+      "Top artists",
+      "Music lyrics",
+      "Song Details pages",
+      "Artist Details pages",
+      "Around-You musics",
+      "Shuffle",
+      "Repeat",
     ],
     images: {
       mobileCoverUrl:
-        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1705577516/portfolio/projects-images/todoApp/vibesyxqq1er2qfqyifm.png",
+        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1706042801/portfolio/projects-images/musicApp/kmhzdo2446zraglyqfup.png",
       tableCoverUrl:
-        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1705577515/portfolio/projects-images/todoApp/ahv1q1s7n0ztpswhjung.png",
+        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1706044317/portfolio/projects-images/musicApp/xjpktgsldggafpudaou4.png",
       laptopCoverUrl:
-        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1705577516/portfolio/projects-images/todoApp/xtpxqt5hynwrznqauvag.png",
+        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1706042801/portfolio/projects-images/musicApp/yul45bh8is9ru6wkxsja.png",
     },
-    techIcons: [TsIcon, ReactIcon, CssIcon, GitIcon],
-    otherTechs: ["PWA", "Context"],
-    repoUrl: "https://github.com/Sky-De/TypeScript-ToDoApp",
-    liveUrl: "https://typescript-todo-skyde.netlify.app/",
+    techIcons: [JsIcon, ReactIcon, ReduxIcon, TailwindIcon, GitIcon],
+    otherTechs: ["Vite", "Swiper", "Rapid-api"],
+    repoUrl: "https://github.com/Sky-De/music-player-app",
+    liveUrl: "https://music-app-skyde.netlify.app/",
+  },
+  {
+    id: 7,
+    title: "YouTube Clone",
+    description:
+      "My platform is a user-friendly clone of YouTube that lets you easily search for and watch your favorite videos.",
+    features: [
+      "Fully responsive",
+      "Aside nav",
+      "Search functionality",
+      "Categorised videos",
+      "Skeleton loading",
+      "Live data fetching",
+      "Video page",
+    ],
+    images: {
+      mobileCoverUrl:
+        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1705583934/portfolio/projects-images/youTubeClone/vz5o1er54pbv5esitd8p.png",
+      tableCoverUrl:
+        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1705583934/portfolio/projects-images/youTubeClone/vuk3vzwklwo21dlogfqt.png",
+      laptopCoverUrl:
+        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1705583934/portfolio/projects-images/youTubeClone/rmvtgelhyvbhuanvjfrx.png",
+    },
+    techIcons: [JsIcon, ReactIcon, MuiIcon, CssIcon, GitIcon],
+    otherTechs: ["Rapid-api", ".env"],
+    repoUrl: "https://github.com/Sky-De/Youtube_Clone_App",
+    liveUrl: "https://youtube-clone-app-skyde.netlify.app/",
+  },
+  {
+    id: 8,
+    title: "Free Gym Coach",
+    description:
+      "This app uses cutting-edge technology to provide you with clear and concise exercise guidance. With detailed illustrations, GIFs, and YouTube videos, you can be sure you're doing your workouts correctly.",
+    features: [
+      "Fully Responsive",
+      "Stunning design",
+      "Search",
+      "Details page",
+      "Horizontal scroll",
+      "Exercise Gif",
+      "Categorized exercises",
+    ],
+    images: {
+      mobileCoverUrl:
+        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1705925201/portfolio/projects-images/freeCoachApp/rgfnwunj4evijfuqm49m.png",
+      tableCoverUrl:
+        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1705925201/portfolio/projects-images/freeCoachApp/wcvd2mbgt96owzouykju.png",
+      laptopCoverUrl:
+        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1705925201/portfolio/projects-images/freeCoachApp/larwlyfwp590a9bqw1fi.png",
+    },
+    techIcons: [JsIcon, ReactIcon, MuiIcon, CssIcon, GitIcon],
+    otherTechs: ["Rapid-api", "Context"],
+    repoUrl: "https://github.com/Sky-De/Free-Gym-Coach-App",
+    liveUrl: "https://free-coach-skyde.netlify.app",
   },
 ];

@@ -1,6 +1,5 @@
 "use client";
 import { FC } from "react";
-import { motion } from "framer-motion";
 import { closeImageModel } from "@/redux/features/models/modelSlice";
 import { useAppDispatch, useAppSelector } from "@/hooks/reduxHooks";
 import CloseBtn from "../buttons/CloseBtn";
