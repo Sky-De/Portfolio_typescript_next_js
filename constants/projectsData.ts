@@ -103,8 +103,7 @@ export const projectsData: ProjectState[] = [
   {
     id: 3,
     title: "Portfolio",
-    description:
-      "this is ... admin dashboard with charts and some other UI features like calander for plan and so on",
+    description: "add data for this after finishing project",
     features: [
       "Light/Dark mode",
       "representing data within Data Grid",
@@ -270,5 +269,184 @@ export const projectsData: ProjectState[] = [
     otherTechs: ["Rapid-api", "Context"],
     repoUrl: "https://github.com/Sky-De/Free-Gym-Coach-App",
     liveUrl: "https://free-coach-skyde.netlify.app",
+  },
+  {
+    id: 9,
+    title: "Infinit Anime App",
+    description:
+      "This platform offers lightning-fast anime exploration with unmatched quality, powered by TypeScript and Next.js server actions.",
+    features: [
+      "Fully Responsive",
+      "Stunning design",
+      "Smooth loading",
+      "Server actions",
+    ],
+    images: {
+      mobileCoverUrl:
+        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1706292357/portfolio/projects-images/infinitAnime/ve1madvcxfv9jaxnyk5n.png",
+      tableCoverUrl:
+        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1706292357/portfolio/projects-images/infinitAnime/ndxxd87npgduybfgm5i2.png",
+      laptopCoverUrl:
+        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1706292358/portfolio/projects-images/infinitAnime/ranerdnordroad86kvdd.png",
+    },
+    techIcons: [TsIcon, NextIcon, TailwindIcon, CssIcon, GitIcon],
+    otherTechs: [],
+    repoUrl: "https://github.com/Sky-De/Next-Js-Server-Action",
+    liveUrl: "https://next-js-server-action.vercel.app/",
+  },
+  {
+    id: 10,
+    title: "AI_Share App",
+    description:
+      "This Next.js TypeScript app lets you perform CRUD operations, search for AI technology, and share your favorite AI with others..",
+    features: [
+      "Fully Responsive",
+      "Stunning design",
+      "Smooth loading",
+      "tag search",
+      "create post",
+      "edit post",
+      "delete post",
+      "user profile page",
+      "pagination",
+      "google auth",
+      "github auth",
+      "next auth",
+    ],
+    images: {
+      mobileCoverUrl:
+        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1706364774/portfolio/projects-images/AiSahre/qmpmsbwlvfwcycfae6e0.png",
+      tableCoverUrl:
+        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1706364774/portfolio/projects-images/AiSahre/godjy3bckvgdxyb4bz65.png",
+      laptopCoverUrl:
+        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1706364774/portfolio/projects-images/AiSahre/acjnxafbvc7vhh5n13dt.png",
+    },
+    techIcons: [TsIcon, NextIcon, TailwindIcon, CssIcon, GitIcon],
+    otherTechs: ["google-Auth", "gitHub-Auth"],
+    repoUrl: "https://github.com/Sky-De/typescript-next-js-13-app",
+    liveUrl: "https://ai-share-sky-de.netlify.app",
+  },
+  {
+    id: 11,
+    title: "Shoping Cart",
+    description:
+      "Simple store app offers a seamless shopping experience with a built-in cart that persists across pages. You can relax and enjoy stress-free shopping with our app!",
+    features: [
+      "Fully Responsive",
+      "Stunning design",
+      "Smooth loading",
+      "cart",
+      "multiple items",
+      "add / remove items",
+      "total price",
+      "item price",
+    ],
+    images: {
+      mobileCoverUrl:
+        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1706367040/portfolio/projects-images/shoppingCart/kmntuvjzysb82pt8wvkq.png",
+      tableCoverUrl:
+        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1706367040/portfolio/projects-images/shoppingCart/gpihteh8siwkotelvysg.png",
+      laptopCoverUrl:
+        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1706367040/portfolio/projects-images/shoppingCart/whc4m0kkzhii0umei8bh.png",
+    },
+    techIcons: [TsIcon, ReactIcon, CssIcon, GitIcon],
+    otherTechs: ["context"],
+    repoUrl: "https://github.com/Sky-De/react-typeScript-shopping-cart",
+    liveUrl: "https://shopping-cart-typescript-skyde.netlify.app/",
+  },
+  {
+    id: 12,
+    title: "Fylo_LP (old)",
+    description:
+      "I created a highly appealing landing page design that was based on a challenging assignment from Frontend Mentor. This project is one of my oldest and was developed entirely using HTML and SCSS.",
+    features: ["Fully Responsive", "Stunning design", "frontend mentor"],
+    images: {
+      mobileCoverUrl:
+        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1706369807/portfolio/projects-images/fyloLanding/vtazfzgps8tzcmduvflb.png",
+      tableCoverUrl:
+        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1706369806/portfolio/projects-images/fyloLanding/olx1dtthztfp9pvqlw1q.png",
+      laptopCoverUrl:
+        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1706369807/portfolio/projects-images/fyloLanding/twssrr4wkwtsghsisq0o.png",
+    },
+    techIcons: [HtmlIcon, SassIcon, GitIcon],
+    otherTechs: [],
+    repoUrl: "https://github.com/Sky-De/react-typeScript-shopping-cart",
+    liveUrl: "https://github.com/Sky-De/Fylo-landing-page",
+  },
+  {
+    id: 13,
+    title: "Tip_calculator (old)",
+    description:
+      "I have developed a tip calculator that is based on Frontend Mentor challenges. It is a vanilla HTML, SCSS, and JS app, and happens to be one of my oldest projects.",
+    features: ["Fully Responsive", "Stunning design", "frontend mentor"],
+    images: {
+      mobileCoverUrl:
+        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1706370438/portfolio/projects-images/tipCalc/robvxzwcyfurb2v6zd20.png",
+      tableCoverUrl:
+        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1706370438/portfolio/projects-images/tipCalc/qohtyqev7az8zmizqduh.png",
+      laptopCoverUrl:
+        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1706370439/portfolio/projects-images/tipCalc/ww9ri0jlhlbphkureggp.png",
+    },
+    techIcons: [JsIcon, HtmlIcon, SassIcon, GitIcon],
+    otherTechs: [],
+    repoUrl: "https://github.com/Sky-De/lvl2-Tip-calculator-app",
+    liveUrl: "https://tip-calculator-app-sky-de.netlify.app/",
+  },
+  {
+    id: 14,
+    title: "Easybank_LP (old)",
+    description:
+      "I created this landing page as one of my earliest projects, featuring an attention-grabbing design inspired by a Frontend Mentor project.",
+    features: ["Fully Responsive", "Stunning design", "frontend mentor"],
+    images: {
+      mobileCoverUrl:
+        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1706370819/portfolio/projects-images/easyBankLanding/mghqeqcm0kipy7glxmck.png",
+      tableCoverUrl:
+        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1706370820/portfolio/projects-images/easyBankLanding/cax4dxiobaginpukdie9.png",
+      laptopCoverUrl:
+        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1706370820/portfolio/projects-images/easyBankLanding/zqmpnkoh799xpo5iegry.png",
+    },
+    techIcons: [JsIcon, HtmlIcon, SassIcon, GitIcon],
+    otherTechs: [],
+    repoUrl: "https://github.com/Sky-De/Easybank-landing-page",
+    liveUrl: "https://easybank-landing-pagerespinsive.netlify.app/",
+  },
+  {
+    id: 15,
+    title: "Landing Page",
+    description:
+      "This landing page is a perfect blend of aesthetics and functionality, crafted with the best UI design using Tailwind CSS. You can deploy it right away and make a lasting impression on your audience.",
+    features: ["Fully Responsive", "Stunning design", "dark / light"],
+    images: {
+      mobileCoverUrl:
+        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1706371492/portfolio/projects-images/tailwindLanding/hcvigwnbfgfmbxexkeyb.png",
+      tableCoverUrl:
+        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1706371491/portfolio/projects-images/tailwindLanding/yd9bczdajmcfofdpdamo.png",
+      laptopCoverUrl:
+        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1706371491/portfolio/projects-images/tailwindLanding/amoedcz5muncwj387tg7.png",
+    },
+    techIcons: [JsIcon, HtmlIcon, TailwindIcon, SassIcon, GitIcon],
+    otherTechs: [],
+    repoUrl: "https://github.com/Sky-De/LandingPage-TailwindCSS",
+    liveUrl: "https://tailwind-landingpage-skyde.netlify.app/",
+  },
+  {
+    id: 16,
+    title: "Tailwind App",
+    description:
+      "This landing page is a perfect blend of aesthetics and functionality, crafted with the best UI design using Tailwind CSS. You can deploy it right away and make a lasting impression on your audience.",
+    features: ["Fully Responsive", "Stunning design", "dark / light"],
+    images: {
+      mobileCoverUrl:
+        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1706372281/portfolio/projects-images/tailwindProjectAcme/zpitfaegc49cz3swqoe6.png",
+      tableCoverUrl:
+        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1706372281/portfolio/projects-images/tailwindProjectAcme/opl2enw4edp291o2ow7c.png",
+      laptopCoverUrl:
+        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1706372281/portfolio/projects-images/tailwindProjectAcme/nokxnymybexibaa2767t.png",
+    },
+    techIcons: [JsIcon, HtmlIcon, TailwindIcon, GitIcon],
+    otherTechs: [],
+    repoUrl: "https://github.com/Sky-De/Tailwind-CSS-Project",
+    liveUrl: "https://tailwind-css-project-sky-de.netlify.app/",
   },
 ];
