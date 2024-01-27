@@ -120,3 +120,11 @@ textarea {
 .apply__onlyWide {
   @apply hidden lg:inline-block;
 }
+
+/* hover */
+@media (hover: hover) {
+  /* when hover is supported */
+  .desktopHover:hover {
+    opacity: 0.5;
+  }
+}

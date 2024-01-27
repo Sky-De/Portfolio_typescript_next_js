@@ -36,7 +36,7 @@ const Skills: FC = () => {
         >
           {/* developer intro---------------------- */}
           {currentSkill === "SKY" ? (
-            <motion.div className="h-full flex flex-col items-center lg:items-start lg:text-start pt-5 lg:pt-0">
+            <motion.div className="h-full flex flex-col items-center lg:items-start lg:text-start pt-5 lg:pt-0 tall:items-center">
               <h2 className="font-bold text-3xl md:text-4xl xl:text-5xl apply__title mb-8 md:mb-0 text-center lg:text-start tall:text-center">
                 SkyDe <span className="hidden sm:inline">|</span>{" "}
                 <p className="block ">Briliant, Self-Taught</p>{" "}

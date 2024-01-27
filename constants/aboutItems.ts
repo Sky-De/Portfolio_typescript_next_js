@@ -24,7 +24,7 @@ export const AboutItemsData: AboutProps[] = [
       "@Disciplined and @determined: Lifelong learning fuels my commitment to meeting deadlines and overcoming challenges. My engineering and web development background drives me to succeed.",
       "@Adaptable and @versatile: Proven @+2 @years in high-profile national projects and @+5 @years self-employment as a @Surveying @Engineer, I Skilled at adapting to changing requirements to ensure project success.",
       "@Sharp @problem-solving: My engineering background and @high @IQ refine my ability to identify, analyze, and resolve complex issues, even under pressure.",
-      "@Exceptional @collaborator: A team player thriving in collaborative settings, I share knowledge and insights with enthusiasm. I communicate effectively to build rapport and foster a harmonious work environment.",
+      "@Exceptional @collaborator: A team player thriving in collaborative settings, I share knowledge and insights with enthusiasm.",
     ],
   },
 ];

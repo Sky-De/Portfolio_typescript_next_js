@@ -22,16 +22,16 @@ const Learn: FC = () => {
       className="section snap-start snap-always relative"
     >
       <span className="section__title">Learn</span>
-      <div className="flex w-full items-center flex-col lg:flex-row px-2 md:justify-center my-auto">
+      <div className="flex w-full items-center flex-col lg:flex-row px-2 md:justify-center my-auto tall:flex-col">
         <div className="learn__intro lg:w-2/3">
           <motion.h2
             {...immediate_Fade_In_View_Animation_Props}
-            className="apply__title font-bold mx-auto lg:mx-0 mb-8 md:mb-0 pt-8 md:pt-10 text-2xl md:text-3xl xl:text-4xl text-center sm:w-2/3 lg:text-start lg:w-2/3"
+            className="apply__title font-bold mx-auto lg:mx-0 mb-8 md:mb-0 pt-8 md:pt-10 text-2xl md:text-3xl xl:text-4xl text-center sm:w-2/3 lg:text-start lg:w-2/3 tall:text-center tall:mx-auto"
           >
             <span>A Journey of</span>{" "}
             <span className="lg:block">Continuous Learning</span>
           </motion.h2>
-          <p className="apply__body hidden sm:block w-2/3 lg:w-4/5 text-center lg:text-start  mx-auto lg:mx-0 lg:block pb-8 md:pb-10 pt-4">
+          <p className="apply__body hidden sm:block w-2/3 lg:w-4/5 text-center lg:text-start  mx-auto lg:mx-0 lg:block pb-8 md:pb-10 pt-4 tall:text-center tall:mx-auto">
             Parallel to my commitment to long-term learning is my innate ability
             to absorb new information rapidly. I possess a natural curiosity and
             an eagerness to explore the ever-expanding world of web development.

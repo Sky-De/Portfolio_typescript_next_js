@@ -22,7 +22,7 @@ const About: FC = () => {
       className="section snap-start snap-always relative"
     >
       <span className="section__title">About</span>
-      <div className="about flex flex-col items-center justify-evenly w-full md:flex-row-reverse">
+      <div className="about flex flex-col items-center justify-evenly w-full md:flex-row-reverse tall:flex-col">
         <motion.div
           {...fade_Scale_Animation_Props}
           className="hidden border md:grid place-content-center rounded-full"

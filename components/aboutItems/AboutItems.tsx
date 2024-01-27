@@ -24,7 +24,7 @@ const AboutItems: FC = () => {
             </h3>
           ))}
       </div>
-      <ul className="list-disc flex flex-col gap-[1px] md:gap-3 sm:my-1 lg:my-3 h-[40svh]">
+      <ul className="list-disc flex flex-col gap-[1px] md:gap-3 sm:my-1 lg:my-3 h-[40svh] tall:mt-8">
         {AboutItemsData[selectedItemIndex].desc.length > 0 &&
           AboutItemsData[selectedItemIndex].desc.map((item) => (
             <li className="border-b-2 border-dashed pb-2 mb-1" key={uuid()}>

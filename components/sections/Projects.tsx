@@ -45,7 +45,7 @@ const Projects: FC = () => {
         onClick={() => {
           dispatch(setPreProject());
         }}
-        className="apply__carousel--btn left-0"
+        className="apply__carousel--btn left-0 desktopHover"
       >
         <i className="bx bx-chevron-left apply__carousel--btnIcon"></i>
       </button>
@@ -54,7 +54,7 @@ const Projects: FC = () => {
         onClick={() => {
           dispatch(setNextProject());
         }}
-        className="apply__carousel--btn right-0"
+        className="apply__carousel--btn right-0 desktopHover"
       >
         <i className="bx bx-chevron-right apply__carousel--btnIcon"></i>
       </button>

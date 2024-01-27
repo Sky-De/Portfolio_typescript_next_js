@@ -22,12 +22,14 @@ const QuickIntro: FC = () => {
       {...long_Fade_In_Veiw_Animation_Props}
       viewport={{ amount: 0.2 }}
       id="qintro"
-      className="SECTION section snap-start snap-always w-full flex flex-col justify-evenly lg:flex-row lg:items-center p-2 relative"
+      className="SECTION section snap-start snap-always w-full flex flex-col justify-evenly lg:flex-row lg:items-center p-2 relative tall:flex-col"
     >
       <span className="section__title">Q-Intro</span>
       <div className="textContent text-center lg:text-start mb-4 lg:mb-0">
-        <h3 className="text-3xl lg:text-5xl font-bold mb-6">Quick Intro</h3>
-        <p className="w-full mx-auto lg:mx-0 md:w-2/3 apply__body">
+        <h3 className="text-3xl lg:text-5xl font-bold mb-6 tall:text-center">
+          Quick Intro
+        </h3>
+        <p className="w-full mx-auto lg:mx-0 md:w-2/3 apply__body tall:text-center tall:mx-auto tall:text-2xl tall:leading-8">
           I am enthusiastic about mastering and utilizing any tool that can
           assist in achieving objectives in a suitable manner. In this video, I
           have used
