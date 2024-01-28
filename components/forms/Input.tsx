@@ -16,7 +16,7 @@ export const CheckBox: FC<InputProps> = ({
     <label className="input__control flex gap-2 cursor-pointer select-none  text-heading-light dark:text-heading-dark">
       {label}
       <input
-        className="cursor-pointer"
+        className="cursor-pointer accent-green-400 scale-150"
         checked={isChecked}
         type="checkbox"
         {...props}
