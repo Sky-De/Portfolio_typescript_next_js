@@ -103,21 +103,37 @@ export const projectsData: ProjectState[] = [
   {
     id: 3,
     title: "Portfolio",
-    description: "add data for this after finishing project",
+    description:
+      "My personal portfolio is the perfect showcase of my exceptional abilities and skills. I am more than capable of bringing my unparalleled creativity to your team and making a significant impact.",
     features: [
-      "Light/Dark mode",
-      "representing data within Data Grid",
-      "another thibng",
+      "Fully Responsive",
+      "Dark-light mode",
+      "Stunning design",
+      "Google-RECAPTCHA",
+      "Contact Form",
     ],
     images: {
-      mobileCoverUrl: "",
-      tableCoverUrl: "",
-      laptopCoverUrl: "",
+      mobileCoverUrl:
+        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1706469904/portfolio/projects-images/myPortfolio/byyy79hzayx8pl3ihtvq.png",
+      tableCoverUrl:
+        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1706469904/portfolio/projects-images/myPortfolio/puxgvhcyjca75safhvbp.png",
+      laptopCoverUrl:
+        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1706469905/portfolio/projects-images/myPortfolio/ihvux5teb4fvtg1fwyvk.png",
     },
-    techIcons: [AeIcon, AiIcon, CssIcon],
-    otherTechs: ["test", "anotehr"],
-    repoUrl: "",
-    liveUrl: "",
+    techIcons: [
+      TsIcon,
+      NextIcon,
+      TailwindIcon,
+      CssIcon,
+      ReduxIcon,
+      XdIcon,
+      AeIcon,
+      AiIcon,
+      GitIcon,
+    ],
+    otherTechs: ["nodeMailer", "framer-motion", "PWA"],
+    repoUrl: "https://github.com/Sky-De/Portfolio_typescript_next_js",
+    liveUrl: "https://github.com/Sky-De/Portfolio_typescript_next_js",
   },
   {
     id: 4,
