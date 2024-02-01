@@ -143,7 +143,7 @@ const Projects: FC = () => {
         <motion.div
           {...short_Slide_Up_Animation_Props}
           viewport={{ amount: 0.2 }}
-          className="project--links flex flex-col justify-center items-center gap-3 lg:items-start md:w-full lg:ml-32 my-auto"
+          className="flex flex-col justify-center items-center gap-3 lg:items-start md:w-full lg:ml-32 my-auto"
         >
           <span className="font-bold hidden md:inline">
             Explore more details
@@ -156,7 +156,7 @@ const Projects: FC = () => {
                 })
               );
             }}
-            className="flex items-center opacity-100 md:opacity-70 gap-2 hover:opacity-100 transition-opacity"
+            className="flex items-center opacity-100 md:hover:opacity-70 gap-2  transition-opacity"
           >
             <i className="bx bx-hive apply__footer--item"></i>
             Features{" "}
@@ -165,7 +165,7 @@ const Projects: FC = () => {
           <Link
             href={selectedProject ? selectedProject.liveUrl : ""}
             target="_blank"
-            className="flex items-center opacity-100 md:opacity-70 gap-2 hover:opacity-100 transition-opacity"
+            className="flex items-center opacity-100 md:hover:opacity-70 gap-2 transition-opacity"
           >
             <i className="bx bxl-netlify apply__footer--item"></i>
             Live Demo
@@ -173,7 +173,7 @@ const Projects: FC = () => {
           <Link
             href={selectedProject ? selectedProject.repoUrl : ""}
             target="_blank"
-            className="flex items-center opacity-100 md:opacity-70 gap-2 hover:opacity-100 transition-opacity cursor-pointer"
+            className="flex items-center opacity-100 md:hover:opacity-70 gap-2 transition-opacity cursor-pointer"
           >
             <i className="bx bxl-github apply__footer--item "></i>
             Github Repositorty{" "}
