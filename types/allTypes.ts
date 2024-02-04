@@ -118,7 +118,7 @@ export type skillsDetailsPops = {
   alt: string;
   title: string;
   icon: string;
-  description: string;
+  // description: string;
   features: string[];
 };
 
