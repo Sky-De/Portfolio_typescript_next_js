@@ -10,7 +10,6 @@ import {
   fade_Animation_Props,
   slide_Down_Animation_Props,
 } from "@/constants/animationProps";
-import Link from "next/link";
 
 const Header: FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -43,7 +42,7 @@ const Header: FC = () => {
               className="absolute py-8 overflow-hidden bg-bg-secondary-light dark:bg-bg-secondary-dark w-full h-auto top-[100%] left-0 md:hidden flex flex-col items-center gap-2 z-20 "
             >
               {NavItems.map((item) => (
-                <Link
+                <a
                   onClick={navAndCloseHandler}
                   className={`apply__navItem ${
                     currentPath === item.name ? "active" : ""
@@ -52,7 +51,7 @@ const Header: FC = () => {
                   key={uuid()}
                 >
                   {item.name}
-                </Link>
+                </a>
               ))}
             </motion.nav>
           )}
@@ -61,7 +60,7 @@ const Header: FC = () => {
         {/* !MOBILE NAV---------------------------- */}
         <nav className="hidden md:flex sm:items-center sm:ml-auto absolute right-0 bottom-[-6px] apply__nav z-10 drop-shadow-light dark:drop-shadow-dark">
           {NavItems.map((item) => (
-            <Link
+            <a
               className={`apply__navItem ${
                 currentPath === item.name ? "active" : ""
               }`}
@@ -69,7 +68,7 @@ const Header: FC = () => {
               key={uuid()}
             >
               {item.name}
-            </Link>
+            </a>
           ))}
         </nav>
         {/* Ham-------------- */}
