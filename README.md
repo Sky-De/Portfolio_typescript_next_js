@@ -18,6 +18,7 @@ Feel free to give it a start 🌟
 ![line]
 
 ## Tech Stack
+
 ![Static Badge](https://img.shields.io/badge/TypeScript-black?style=for-the-badge&logo=typescript)
 ![Static Badge](https://img.shields.io/badge/Next%2Fjs-black?style=for-the-badge&logo=nextdotjs)
 ![Static Badge](https://img.shields.io/badge/Redux-black?style=for-the-badge&logo=redux)
@@ -32,32 +33,32 @@ Feel free to give it a start 🌟
 ![line]
 
 ## Features
+
 - Fully Responsive
 - Dark-light mode
 - Stunning design
 - Google-RECAPTCHA
 - Contact Form
-  
+
 ![line]
 
 ## Demo
 
 Take a look at the live project deployed on Netlify
 
-[Live Demo](https://book-share-app-skyde.netlify.app)
+[Live Demo](https://skyde-portfolio.netlify.app/)
 
 ![line]
 
 ## Preview
 
-** ------------------------------------- DESKTOP  -------------------------------------**
+** ------------------------------------- DESKTOP -------------------------------------**
 
 <img src="https://github.com/Sky-De/Portfolio_typescript_next_js/assets/79264045/1d257a11-3531-4b85-a5ef-dbea081a7509" width="80%">
 
 <img src="https://github.com/Sky-De/Portfolio_typescript_next_js/assets/79264045/51da5e9a-054c-45e1-a4e5-328e53c3f1b0" width="80%">
 
 <img src="https://github.com/Sky-De/Portfolio_typescript_next_js/assets/79264045/d55f9fa0-a007-4ab8-a303-668d55085ae4" width="80%">
-
 
 ** -------------------------------------- Mobile ------------------------------------**
 
@@ -70,18 +71,23 @@ Take a look at the live project deployed on Netlify
 ## About
 
 ### 1. Elegant UI Design
+
 Immerse yourself in a visually appealing user interface that seamlessly guides you through six distinct sections: Skills, Quick Introduction, Projects, Learning, About, and a Contact form. The design ensures a captivating experience, with a mandatory vertical scroll to unveil each layer.
 
 ### 2. Responsive Across Devices
+
 Experience a consistent and delightful journey across all devices - mobile, tablet, and desktop. The responsive design guarantees optimal performance and aesthetic regardless of the screen size.
 
 ### 3. Smooth Animations with Framer Motion
+
 Enjoy smooth and engaging animations implemented with Framer Motion. Every interaction, from scrolling to transitioning between sections, is designed to provide a polished and enjoyable user experience.
 
 ### 4. Redux Toolkit State Management
+
 Harness the power of state management with Redux Toolkit, seamlessly integrated with TypeScript. I've meticulously crafted a robust architecture, employing React custom hooks to handle actions and facilitate smooth data flow throughout the application.
 
 ### 5. Contact Form with Nodemailer and Google Recaptcha
+
 Connect with me effortlessly through the secure and interactive Contact section. The contact form, backed by Nodemailer, enables you to send job offers directly. Rest easy knowing your communication is protected by Google Recaptcha, ensuring a secure and spam-resistant channel.
 
 ![line]
@@ -106,9 +112,11 @@ npm install
 # Run the project
 npm run dev
 ```
+
 ![line]
 
 [line]: https://user-images.githubusercontent.com/75939390/137615281-3a875960-92cc-407f-97fe-fd2319bdb252.png
+
 ## Contact
 
 **skyDe**

@@ -133,7 +133,7 @@ export const projectsData: ProjectState[] = [
     ],
     otherTechs: ["nodeMailer", "framer-motion", "PWA"],
     repoUrl: "https://github.com/Sky-De/Portfolio_typescript_next_js",
-    liveUrl: "https://github.com/Sky-De/Portfolio_typescript_next_js",
+    liveUrl: "https://skyde-portfolio.netlify.app/",
   },
   {
     id: 4,
