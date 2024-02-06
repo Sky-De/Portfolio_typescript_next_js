@@ -1,26 +1,18 @@
 import { skillsDetails } from "@/constants/skillsDetail";
+import { skillsDetailsPops } from "@/types/allTypes";
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 
-export type SkillType = {
-  id: string;
-  alt: string;
-  title: string;
-  icon: string;
-  description: string;
-  features: string[];
-};
-export const InitialSkill: SkillType = {
+export const InitialSkill: skillsDetailsPops = {
   id: "",
   alt: "",
   title: "",
   icon: "",
-  description: "",
   features: [],
 };
 
 type SkillState = {
   currentSkill: string;
-  currentSkillData: SkillType;
+  currentSkillData: skillsDetailsPops;
 };
 
 type SkillPayload = string;

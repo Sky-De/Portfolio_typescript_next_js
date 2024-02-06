@@ -14,7 +14,7 @@ let config = {
 
 export const POST = async (req: Request) => {
   const formData: FormDataState = await req.json();
-  console.log(formData);
+  // console.log(formData);
 
   //FIX-- refactore message text
   const message = {

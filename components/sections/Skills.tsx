@@ -4,10 +4,6 @@ import { FC, useRef } from "react";
 import { v4 as uuid } from "uuid";
 import { useIsInView } from "@/hooks/useIsInVeiw";
 import { useAppSelector } from "@/hooks/reduxHooks";
-import {
-  fade_In_Veiw_Animation_Props,
-  long_Fade_In_Veiw_Animation_Props,
-} from "@/constants/animationProps";
 import CallToActionBtn from "../buttons/CallToActionBtn";
 import BrainOfSkills from "../skillsHero/BrainOfSkills";
 
