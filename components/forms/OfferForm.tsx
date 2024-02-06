@@ -21,7 +21,7 @@ const OfferForm: FC = () => {
 
   const handleSliderChange = (newValue: any) => {
     setFormData({ ...formData, salaryRange: newValue });
-    console.log(formData);
+    // console.log(formData);
   };
 
   const handleFormSubmit = () => {
