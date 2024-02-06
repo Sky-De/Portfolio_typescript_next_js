@@ -30,6 +30,7 @@ export const skillsDetails: skillsDetailsPops[] = [
     features: [
       "semantic HTML",
       "technical SEO",
+      "core web vitals",
       "elememts / attributes",
       "forms / input types",
       "imports / META tags",
