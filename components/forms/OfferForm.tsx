@@ -213,7 +213,7 @@ const OfferForm: FC = () => {
       {step > 3 && (
         <>
           {isLoading && (
-            <div className="flex flex-col items-center h-[200px] border">
+            <div className="flex flex-col items-center h-[200px]">
               <p className="font-semibold">Submitting</p>
               <LoaderCube />
             </div>

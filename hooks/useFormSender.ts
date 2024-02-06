@@ -14,7 +14,7 @@ export const useFormSender = (): FormSenderReturn => {
   const sendForm = async () => {
     try {
       setIsLoading(true);
-      const result = await fetch("http://localhost:3000/api/email", {
+      const result = await fetch("https://skyde-portfolio.netlify.app", {
         method: "POST",
         body: JSON.stringify({ ...formData }),
       });

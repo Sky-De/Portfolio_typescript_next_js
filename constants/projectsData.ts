@@ -111,6 +111,7 @@ export const projectsData: ProjectState[] = [
       "Stunning design",
       "Google-RECAPTCHA",
       "Contact Form",
+      "sitemap",
     ],
     images: {
       mobileCoverUrl:
