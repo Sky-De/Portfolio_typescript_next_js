@@ -14,10 +14,13 @@ export const useFormSender = (): FormSenderReturn => {
   const sendForm = async () => {
     try {
       setIsLoading(true);
-      const result = await fetch("https://skyde-portfolio.netlify.app", {
-        method: "POST",
-        body: JSON.stringify({ ...formData }),
-      });
+      const result = await fetch(
+        "https://skyde-portfolio.netlify.app/api/email",
+        {
+          method: "POST",
+          body: JSON.stringify({ ...formData }),
+        }
+      );
       if (result.ok) {
         setIsLoading(false);
         setIsSended(true);
