@@ -39,6 +39,7 @@ Feel free to give it a start 🌟
 - Stunning design
 - Google-RECAPTCHA
 - Contact Form
+- Mandatory scroll Y
 
 ![line]
 
