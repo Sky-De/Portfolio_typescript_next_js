@@ -13,6 +13,8 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    "types": ["jest", "jest-dom"],
+    "typeRoots": ["node_modules/@types", "node_modules/@testing-library"],
     "plugins": [
       {
         "name": "next"
@@ -27,7 +29,8 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "next-sitemap.config.js"
+    "next-sitemap.config.js",
+    "./jest-setup.js"
   ],
   "exclude": ["node_modules"]
 }
