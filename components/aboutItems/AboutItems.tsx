@@ -5,10 +5,10 @@ import TextMarker from "../textMarker/TextMarker";
 import { AboutItemsData } from "@/constants/aboutItems";
 
 const AboutItems: FC = () => {
-  const [selectedItemIndex, setSelectedItemIndex] = useState<number>(1);
+  const [selectedItemIndex, setSelectedItemIndex] = useState<number>(0);
   return (
     <div className="h-[80vh] flex flex-col justify-evenly">
-      <p role="alert">{selectedItemIndex}</p>
+      {/* <p role="alert">{selectedItemIndex}</p> */}
       <div className="flex flex-col gap-2 items-center md:items-start">
         {AboutItemsData &&
           AboutItemsData.map((item, index) => (
