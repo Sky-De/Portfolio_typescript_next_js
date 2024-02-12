@@ -20,18 +20,20 @@ test("online work H3 title render", async () => {
   expect(aboutTitle2).toBeInTheDocument();
   expect(aboutTitle2.tagName).toBe("H3");
 
-  // await act(async () => {
-  //   userEvent.click(aboutTitle2);
-  // });
-  // const aboutTitle2_1 = screen.getByRole("heading", { name: /online work/i });
+  await act(async () => {
+    userEvent.click(aboutTitle2);
+  });
 
-  // // Wait for the next update of the component
-  // await waitFor(() => {
-  //   // Ensure the class is applied after state update
-  //   expect(aboutTitle2_1).toHaveClass(
-  //     "text-stepColor border-b-stepColor font-bold"
-  //   );
-  // });
+  // Wait for the next update of the component
+  await waitFor(() => {
+    const aboutTitle2_afterClick = screen.getByRole("heading", {
+      name: /online work/i,
+    });
+    // Ensure the class is applied after state update
+    expect(aboutTitle2_afterClick).toHaveClass(
+      "text-stepColor border-b-stepColor font-bold"
+    );
+  });
 });
 
 test("abilities H3 title render", () => {
