@@ -29,7 +29,7 @@ const ContactItem: FC<ContactItemProps> = ({
         href={link}
         title={areaTitle}
       >
-        <i className={`bx ${iconClass}`}></i>
+        <i data-testid="contact-item-icon" className={`bx ${iconClass}`}></i>
         {title}
       </Link>
     </motion.li>
