@@ -131,6 +131,7 @@ export const projectsData: ProjectState[] = [
       AeIcon,
       AiIcon,
       GitIcon,
+      JestIcon,
     ],
     otherTechs: ["nodeMailer", "framer-motion", "PWA"],
     repoUrl: "https://github.com/Sky-De/Portfolio_typescript_next_js",

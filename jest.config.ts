@@ -9,9 +9,12 @@ const createJestConfig = nextJest({
 /** @type {import('jest').Config} */
 const config = {
   // Add more setup options before each test is run
-  setupFilesAfterEnv: ["./jest.setup.ts"],
+  setupFilesAfterEnv: ["./jest.setup.ts", "./setupTests.ts"],
   testEnvironment: "jest-environment-jsdom",
   preset: "ts-jest",
+  moduleNameMapper: {
+    "^framer-motion$": "./__mocks__/framer-motion.js", // Add your mock for Framer Motion
+  },
 };
 
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
