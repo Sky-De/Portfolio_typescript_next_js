@@ -1,5 +1,19 @@
 import React from "react";
 
+interface MotionFooterProps extends React.HTMLAttributes<HTMLElement> {
+  variants?: any;
+  initial?: any;
+  whileInView?: any;
+  viewport?: any;
+  transition?: any;
+}
+interface MotionHeaderProps extends React.HTMLAttributes<HTMLElement> {
+  variants?: any;
+  initial?: any;
+  whileInView?: any;
+  viewport?: any;
+  transition?: any;
+}
 interface MotionButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   onClick: () => void;
@@ -53,4 +67,22 @@ export const motion = {
     children,
     ...rest
   }: MotionLiProps) => <li {...rest}>{children}</li>,
+  footer: ({
+    variants,
+    initial,
+    whileInView,
+    transition,
+    className,
+    children,
+    ...rest
+  }: MotionFooterProps) => <footer {...rest}>{children}</footer>,
+  header: ({
+    variants,
+    initial,
+    whileInView,
+    transition,
+    className,
+    children,
+    ...rest
+  }: MotionHeaderProps) => <header {...rest}>{children}</header>,
 };

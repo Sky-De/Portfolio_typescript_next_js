@@ -12,12 +12,14 @@ class ResizeObserverMock {
 }
 global.ResizeObserver = ResizeObserverMock;
 
+const secondStepTitle = "** About Positon **";
+
 describe("OfferForm component", () => {
   it("should render correctly with initial step", () => {
     const { getByText, getByLabelText } = customRender(<OfferForm />);
 
     // Test for elements rendered in the initial step
-    expect(getByText("** About Positon **")).toBeInTheDocument();
+    expect(getByText(secondStepTitle)).toBeInTheDocument();
     expect(getByText("type")).toBeInTheDocument();
     expect(getByText("role")).toBeInTheDocument();
 
@@ -46,14 +48,14 @@ describe("OfferForm component", () => {
     fireEvent.click(backButton);
 
     // Test if the form moved to the previous step
-    expect(getByText("** About Positon **")).toBeInTheDocument();
+    expect(getByText(secondStepTitle)).toBeInTheDocument();
   });
 
   it("should render correctly with initial step", () => {
     const { getByText, getByLabelText } = customRender(<OfferForm />);
 
     // Test for elements rendered in the initial step
-    expect(getByText("** About Positon **")).toBeInTheDocument();
+    expect(getByText(secondStepTitle)).toBeInTheDocument();
     expect(getByText("type")).toBeInTheDocument();
 
     // Test for form inputs
@@ -69,7 +71,7 @@ describe("OfferForm component", () => {
     fireEvent.click(nextButton);
 
     // Test if the form moved to the next step
-    expect(getByText("** About Positon **")).toBeInTheDocument();
+    expect(getByText(secondStepTitle)).toBeInTheDocument();
   });
 
   it("should move to the previous step when back button is clicked", () => {
@@ -81,14 +83,14 @@ describe("OfferForm component", () => {
     fireEvent.click(backButton);
 
     // Test if the form moved to the previous step
-    expect(getByText("** About Positon **")).toBeInTheDocument();
+    expect(getByText(secondStepTitle)).toBeInTheDocument();
   });
 
   it("should render correctly with initial step", () => {
     const { getByText, getByLabelText } = customRender(<OfferForm />);
 
     // Test for elements rendered in the initial step
-    expect(getByText("** About Positon **")).toBeInTheDocument();
+    expect(getByText(secondStepTitle)).toBeInTheDocument();
     expect(getByText("type")).toBeInTheDocument();
     expect(getByText("role")).toBeInTheDocument();
 
@@ -105,7 +107,7 @@ describe("OfferForm component", () => {
     fireEvent.click(nextButton);
 
     // Test if the form moved to the next step
-    expect(getByText("** About Positon **")).toBeInTheDocument();
+    expect(getByText(secondStepTitle)).toBeInTheDocument();
   });
 
   it("should move to the previous step when Back button is clicked", () => {
@@ -117,7 +119,7 @@ describe("OfferForm component", () => {
     fireEvent.click(backButton);
 
     // Test if the form moved to the previous step
-    expect(getByText("** About Positon **")).toBeInTheDocument();
+    expect(getByText(secondStepTitle)).toBeInTheDocument();
   });
 
   it("should display an error message if form submission fails", async () => {
