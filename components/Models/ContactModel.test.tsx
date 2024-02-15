@@ -5,7 +5,7 @@ import { openContatctModel } from "@/redux/features/models/modelSlice";
 import { act } from "react-dom/test-utils";
 
 describe("ContactModel", () => {
-  it("contactModel must be renderd", async () => {
+  it("contactModel must be renderd", () => {
     customRender(<ContactModel />);
     const divElement = screen.getByTestId("contactModel");
     expect(divElement).toBeInTheDocument();

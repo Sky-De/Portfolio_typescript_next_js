@@ -1,5 +1,4 @@
 import { store } from "@/redux/store/store";
-import ContactModel from "./ContactModel";
 import { customRender, fireEvent, screen } from "@/test-utils";
 import { openfeatureModel } from "@/redux/features/models/modelSlice";
 import { act } from "react-dom/test-utils";
@@ -10,16 +9,16 @@ const mockFeatureProps = {
 };
 
 describe("Project features model", () => {
-  it("contactModel must be renderd", () => {
+  it("projectFeaturesModel must be renderd", () => {
     customRender(<ProjectFeaturesModel />);
     const divElement = screen.getByTestId("featuresModel");
     expect(divElement).toBeInTheDocument();
   });
 
-  it("click on contactModel must close contactModel", async () => {
+  it("click on projectFeaturesModel must close projectFeaturesModel", async () => {
     customRender(<ProjectFeaturesModel />);
     expect(store.getState().models.featuresModel.isOpen).toBe(false);
-    // opens contact model
+    // opens projectFeaturesModel
     act(() => {
       store.dispatch(openfeatureModel({ ...mockFeatureProps }));
       expect(store.getState().models.featuresModel.isOpen).toBe(true);
