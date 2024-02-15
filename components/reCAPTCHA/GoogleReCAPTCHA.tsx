@@ -9,7 +9,10 @@ const GoogleReCAPTCHA: FC<GoogleReCAPTCHAProps> = ({ setCaptcha }) => {
   // const { theme, setTheme } = useTheme();
   return (
     <>
-      <p className="w-[90%] md:w-1/3 text-center mt-16">
+      <p
+        data-testid="GoogleReCAPTCHA-description"
+        className="w-[90%] md:w-1/3 text-center mt-16"
+      >
         Before submitting the form, make sure to verify your information. You
         will not be able to edit after the verification process.
       </p>
