@@ -1,6 +1,21 @@
 import React from "react";
-
+// refactore types - remove and use global
+interface MotionDivProps extends React.HTMLAttributes<HTMLElement> {
+  onClick: () => void;
+  variants?: any;
+  initial?: any;
+  whileInView?: any;
+  viewport?: any;
+  transition?: any;
+}
 interface MotionFooterProps extends React.HTMLAttributes<HTMLElement> {
+  variants?: any;
+  initial?: any;
+  whileInView?: any;
+  viewport?: any;
+  transition?: any;
+}
+interface MotionSectionProps extends React.HTMLAttributes<HTMLElement> {
   variants?: any;
   initial?: any;
   whileInView?: any;
@@ -84,7 +99,7 @@ export const motion = {
     className,
     children,
     ...rest
-  }: MotionHeaderProps) => <header {...rest}>{children}</header>,
+  }: MotionSectionProps) => <header {...rest}>{children}</header>,
   section: ({
     variants,
     initial,
@@ -94,4 +109,18 @@ export const motion = {
     children,
     ...rest
   }: MotionHeaderProps) => <section {...rest}>{children}</section>,
+  div: ({
+    variants,
+    onClick,
+    initial,
+    whileInView,
+    transition,
+    className,
+    children,
+    ...rest
+  }: MotionDivProps) => (
+    <div onClick={onClick} {...rest}>
+      {children}
+    </div>
+  ),
 };

@@ -13,6 +13,7 @@ const ContactModel: FC = () => {
   const handleCloseModel = () => dispatch(closeContatctModel());
   return (
     <motion.div
+      data-testid="contactModel"
       key={String(contactModel.isOpen)}
       {...fade_Animation_Props}
       className={`${
