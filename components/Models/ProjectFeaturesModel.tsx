@@ -11,6 +11,7 @@ const ProjectFeaturesModel: FC = () => {
   const dispatch = useAppDispatch();
   return (
     <div
+      data-testid="featuresModel"
       className={`${
         featuresModel.isOpen === false ? "hidden" : "block"
       } absolute top-0 left-0 w-full h-full z-40 backdrop-blur-sm flex items-center`}
