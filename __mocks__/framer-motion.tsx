@@ -85,4 +85,13 @@ export const motion = {
     children,
     ...rest
   }: MotionHeaderProps) => <header {...rest}>{children}</header>,
+  section: ({
+    variants,
+    initial,
+    whileInView,
+    transition,
+    className,
+    children,
+    ...rest
+  }: MotionHeaderProps) => <section {...rest}>{children}</section>,
 };

@@ -15,11 +15,13 @@ const Mockup: FC<MockupProps> = ({
   const dispatch = useAppDispatch();
   return (
     <motion.section
+      data-testid="section"
       {...fade_In_Veiw_Animation_Props}
       className="h-auto md:w-2/3 w-full flex items-center gap-2 mt-8"
     >
       {/* Mobile SVG */}
       <svg
+        data-testid="svg-mobile"
         xmlns="http://www.w3.org/2000/svg"
         width="375"
         height="667"
@@ -53,6 +55,7 @@ const Mockup: FC<MockupProps> = ({
 
       {/* Tablet SVG */}
       <svg
+        data-testid="svg-tablet"
         xmlns="http://www.w3.org/2000/svg"
         width="820"
         height="1180"
@@ -86,6 +89,7 @@ const Mockup: FC<MockupProps> = ({
 
       {/* Laptop SVG */}
       <svg
+        data-testid="svg-laptop"
         xmlns="http://www.w3.org/2000/svg"
         width="1920"
         height="869"
