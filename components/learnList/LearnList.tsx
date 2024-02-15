@@ -6,7 +6,7 @@ import "./style.css";
 
 const LearnList: FC<LearnListProps> = ({ title, learnListItems = [] }) => {
   return (
-    <section className="apply__learn--section">
+    <section data-testid="learnListSection" className="apply__learn--section">
       <h3 className="apply__body italic">{`" ${title} "`}</h3>
       <ul className="apply__learn--list">
         {learnListItems.length > 0 &&

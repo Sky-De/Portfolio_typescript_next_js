@@ -4,10 +4,8 @@ import { useIsInView } from "@/hooks/useIsInVeiw";
 import { FC, useRef } from "react";
 import Image from "next/image";
 import {
-  fade_Animation_Props,
   fade_In_Veiw_Animation_Props,
   fade_Scale_Animation_Props,
-  slide_Right_Animation_Props,
 } from "@/constants/animationProps";
 import AboutItems from "../aboutItems/AboutItems";
 

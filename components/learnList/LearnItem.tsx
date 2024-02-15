@@ -8,6 +8,7 @@ import "./style.css";
 const LearnItem: FC<LearnItemProps> = ({ index, item }) => {
   return (
     <motion.li
+      data-testid="learnItem"
       {...fade_Scale_item_Animation_Props}
       transition={{ duration: 0.5, delay: 0.2 * index }}
       key={uuid()}

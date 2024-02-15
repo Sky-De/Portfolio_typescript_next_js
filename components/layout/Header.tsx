@@ -29,6 +29,7 @@ const Header: FC = () => {
 
   return (
     <motion.header
+      data-testid="header"
       {...slide_Down_Animation_Props}
       className="header sticky top-0 w-ful after:bg-bg-secondary-light dark:after:bg-bg-secondary-dark z-30"
     >
