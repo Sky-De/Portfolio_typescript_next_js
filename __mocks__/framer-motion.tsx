@@ -1,5 +1,19 @@
 import React from "react";
 // refactore types - remove and use global
+
+interface MotionSpanProps extends React.HTMLAttributes<HTMLElement> {
+  variants?: any;
+  initial?: any;
+  whileInView?: any;
+  viewport?: any;
+  transition?: any;
+}
+interface MotionSvgProps extends React.SVGProps<SVGSVGElement> {
+  variants?: any;
+  initial?: any;
+  whileInView?: any;
+  transition?: any;
+}
 interface MotionDivProps extends React.HTMLAttributes<HTMLElement> {
   onClick: () => void;
   variants?: any;
@@ -109,6 +123,32 @@ export const motion = {
     children,
     ...rest
   }: MotionHeaderProps) => <section {...rest}>{children}</section>,
+  svg: ({
+    variants,
+    initial,
+    whileInView,
+    transition,
+    className,
+    children,
+    ...rest
+  }: MotionSvgProps) => (
+    <svg className={className} {...rest}>
+      {children}
+    </svg>
+  ),
+  span: ({
+    variants,
+    initial,
+    whileInView,
+    transition,
+    className,
+    children,
+    ...rest
+  }: MotionSpanProps) => (
+    <span className={className} {...rest}>
+      {children}
+    </span>
+  ),
   div: ({
     variants,
     onClick,

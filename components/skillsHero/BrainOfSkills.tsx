@@ -19,6 +19,7 @@ const BrainOfSkill: FC = () => {
   return (
     <>
       <motion.svg
+        data-testid="con-svg"
         {...Brain_Of_Skills_Animation_Props}
         xmlns="http://www.w3.org/2000/svg"
         width="380.628"
@@ -195,6 +196,7 @@ const BrainOfSkill: FC = () => {
                 ></path>
               </g>
               <circle
+                data-testid="js-circle"
                 id="JS"
                 cx="25.877"
                 cy="25.877"
@@ -263,6 +265,7 @@ const BrainOfSkill: FC = () => {
                 ></path>
               </g>
               <circle
+                data-testid="sky-circle"
                 id="SKY"
                 cx="25.877"
                 cy="25.877"
@@ -367,6 +370,7 @@ const BrainOfSkill: FC = () => {
                 ></path>
               </g>
               <circle
+                data-testid="webpack-circle"
                 id="WEBPACK"
                 cx="20.901"
                 cy="20.901"
@@ -496,6 +500,7 @@ const BrainOfSkill: FC = () => {
                 ></circle>
               </g>
               <circle
+                data-testid="react-circle"
                 id="REACT"
                 cx="23.406"
                 cy="23.406"
@@ -543,6 +548,7 @@ const BrainOfSkill: FC = () => {
                 ></path>
               </g>
               <circle
+                data-testid="tailwind-circle"
                 id="TAILWIND"
                 cx="20.024"
                 cy="20.024"
@@ -596,6 +602,7 @@ const BrainOfSkill: FC = () => {
                 ></path>
               </g>
               <circle
+                data-testid="ae-circle"
                 id="AE"
                 cx="18.93"
                 cy="18.93"
@@ -641,6 +648,7 @@ const BrainOfSkill: FC = () => {
                 ></path>
               </g>
               <circle
+                data-testid="html-circle"
                 id="HTML"
                 cx="20.901"
                 cy="20.901"
@@ -680,6 +688,7 @@ const BrainOfSkill: FC = () => {
                 ></path>
               </g>
               <circle
+                data-testid="css-circle"
                 id="CSS"
                 cx="23.177"
                 cy="23.177"
@@ -766,6 +775,7 @@ const BrainOfSkill: FC = () => {
                 ></path>
               </g>
               <circle
+                data-testid="jest-circle"
                 id="JEST"
                 cx="19.413"
                 cy="19.413"
@@ -833,6 +843,7 @@ const BrainOfSkill: FC = () => {
                 ></path>
               </g>
               <circle
+                data-testid="sass-circle"
                 id="SASS"
                 cx="23.245"
                 cy="23.245"
@@ -896,6 +907,7 @@ const BrainOfSkill: FC = () => {
                 ></ellipse>
               </g>
               <circle
+                data-testid="ai-circle"
                 id="AI"
                 cx="15.84"
                 cy="15.84"
@@ -954,6 +966,7 @@ const BrainOfSkill: FC = () => {
                 ></path>
               </g>
               <circle
+                data-testid="xd-circle"
                 id="XD"
                 cx="22.179"
                 cy="22.179"
@@ -1036,6 +1049,7 @@ const BrainOfSkill: FC = () => {
                 ></path>
               </g>
               <circle
+                data-testid="node-circle"
                 id="NODE"
                 cx="23.389"
                 cy="23.389"
@@ -1094,6 +1108,7 @@ const BrainOfSkill: FC = () => {
                 ></path>
               </g>
               <circle
+                data-testid="mongodb-circle"
                 id="MONGODB"
                 cx="22.203"
                 cy="22.203"
@@ -1154,6 +1169,7 @@ const BrainOfSkill: FC = () => {
                 ></path>
               </g>
               <circle
+                data-testid="next-circle"
                 id="NEXT"
                 cx="20.901"
                 cy="20.901"
@@ -1217,6 +1233,7 @@ const BrainOfSkill: FC = () => {
                 ></path>
               </g>
               <circle
+                data-testid="express-circle"
                 id="EXPRESS"
                 cx="21.794"
                 cy="21.794"
@@ -1295,6 +1312,7 @@ const BrainOfSkill: FC = () => {
                 ></path>
               </g>
               <circle
+                data-testid="mui-circle"
                 id="MUI"
                 cx="19.496"
                 cy="19.496"
@@ -1361,6 +1379,7 @@ const BrainOfSkill: FC = () => {
                 ></path>
               </g>
               <circle
+                data-testid="redux-circle"
                 id="REDUX"
                 cx="20.69"
                 cy="20.69"
@@ -1504,6 +1523,7 @@ const BrainOfSkill: FC = () => {
                 </g>
               </g>
               <circle
+                data-testid="git-circle"
                 id="GIT"
                 cx="20.294"
                 cy="20.294"
@@ -1552,6 +1572,7 @@ const BrainOfSkill: FC = () => {
                 ></path>
               </g>
               <circle
+                data-testid="ts-circle"
                 id="TS"
                 cx="29.98"
                 cy="29.98"
