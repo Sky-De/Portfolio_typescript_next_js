@@ -6,11 +6,14 @@ import { useIsInView } from "@/hooks/useIsInVeiw";
 import { useAppSelector } from "@/hooks/reduxHooks";
 import CallToActionBtn from "../buttons/CallToActionBtn";
 import BrainOfSkills from "../skillsHero/BrainOfSkills";
+import ScrollDownIcon from "../ScrollDownIcon/ScrollDownIcon";
+import { useTheme } from "next-themes";
 
 const Skills: FC = () => {
   const { currentSkill, currentSkillData: skill } = useAppSelector(
     (state) => state.skill
   );
+  const { theme } = useTheme();
   const introRef = useRef<HTMLElement>(null);
   // checks and actives navItems depend on related sections
   useIsInView({ navName: "Skills", ref: introRef });
@@ -95,6 +98,7 @@ const Skills: FC = () => {
           )}
         </div>
       </div>
+      <ScrollDownIcon color={theme === "dark" ? "#fff" : "#000"} />
     </motion.section>
   );
 };
