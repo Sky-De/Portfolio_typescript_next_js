@@ -10,7 +10,7 @@ describe("QuickIntro secton", () => {
     expect(qaSectionElement.tagName).toBe("SECTION");
   });
 
-  test("Q-intro section must have span with title Projects for mobile devices", () => {
+  test("Q-intro section must have span with title Q-Intro for mobile devices", () => {
     customRender(<QuickIntro />);
     const spanElement = screen.getByText("Q-Intro");
     expect(spanElement).toBeInTheDocument();

@@ -20,15 +20,20 @@ const Skills: FC = () => {
 
   return (
     <motion.section
+      data-testid="skill-secion"
       ref={introRef}
       // {...long_Fade_In_Veiw_Animation_Props}
       id="skills"
       className="section snap-start snap-always w-full relative"
     >
       <span className="section__title">Skills</span>
-      <div className="skills flex flex-col lg:flex-row-reverse tall:flex-col items-center px-4 w-full pt-6 lg:pt-0 gap-2">
+      <div
+        data-testid="BrainOfSkills-con"
+        className="skills flex flex-col lg:flex-row-reverse tall:flex-col items-center px-4 w-full pt-6 lg:pt-0 gap-2"
+      >
         <BrainOfSkills />
         <div
+          data-testid="skillShow"
           className={`skillShow w-full  h-[250px] ${
             currentSkill === "SKY" ? "lg:h-auto" : "lg:h-[250px]"
           }  my-auto`}
@@ -61,6 +66,7 @@ const Skills: FC = () => {
             <>
               {/* skills show case ---------------------- */}
               <motion.h2
+                data-testid="skillTitle"
                 key={currentSkill}
                 variants={{
                   hide: { opacity: 0 },

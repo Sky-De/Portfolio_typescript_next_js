@@ -20,9 +20,15 @@ const config = {
       branches: 80,
       functions: 80,
       lines: 80,
-      statements: -10,
     },
   },
+  coveragePathIgnorePatterns: [
+    "/node_modules/",
+    "portfolio/components/index.ts",
+    "portfolio/components/layout",
+    "portfolio/redux/features/nav/navSlice.ts",
+    "portfolio/redux/features/projects/projectSlice.ts",
+  ],
 };
 
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async

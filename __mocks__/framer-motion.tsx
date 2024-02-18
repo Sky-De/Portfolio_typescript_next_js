@@ -1,5 +1,5 @@
 import React from "react";
-// refactore types - remove and use global type for same types
+// refactore types - remove and use global type for same types-FIX
 
 interface MotionSpanProps extends React.HTMLAttributes<HTMLElement> {
   variants?: any;
@@ -164,6 +164,32 @@ export const motion = {
     <span className={className} {...rest}>
       {children}
     </span>
+  ),
+  p: ({
+    variants,
+    initial,
+    whileInView,
+    transition,
+    className,
+    children,
+    ...rest
+  }: MotionSpanProps) => (
+    <p className={className} {...rest}>
+      {children}
+    </p>
+  ),
+  ul: ({
+    variants,
+    initial,
+    whileInView,
+    transition,
+    className,
+    children,
+    ...rest
+  }: MotionSpanProps) => (
+    <ul className={className} {...rest}>
+      {children}
+    </ul>
   ),
   div: ({
     variants,
