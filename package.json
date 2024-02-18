@@ -10,7 +10,8 @@
     "postbuild": "next-sitemap",
     "test": "jest",
     "test:watch": "jest --watchAll",
-    "coverage": "jest --coverage"
+    "coverage": "jest --coverage",
+    "clean:cache": "jest --clearCache"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.7",

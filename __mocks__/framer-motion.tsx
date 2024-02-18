@@ -1,5 +1,5 @@
 import React from "react";
-// refactore types - remove and use global
+// refactore types - remove and use global type for same types
 
 interface MotionSpanProps extends React.HTMLAttributes<HTMLElement> {
   variants?: any;
@@ -113,7 +113,7 @@ export const motion = {
     className,
     children,
     ...rest
-  }: MotionSectionProps) => <header {...rest}>{children}</header>,
+  }: MotionHeaderProps) => <header {...rest}>{children}</header>,
   section: ({
     variants,
     initial,
@@ -122,7 +122,7 @@ export const motion = {
     className,
     children,
     ...rest
-  }: MotionHeaderProps) => <section {...rest}>{children}</section>,
+  }: MotionSectionProps) => <section {...rest}>{children}</section>,
   svg: ({
     variants,
     initial,
@@ -164,3 +164,12 @@ export const motion = {
     </div>
   ),
 };
+
+// export const useInView = jest.fn();
+// export const useInView = jest.mock("framer-motion", () => ({
+//   useInView: jest.fn(() => ({ ref: {}, inView: true })),
+// }));
+
+export const useInView = jest
+  .fn()
+  .mockImplementation(() => ({ sectionRef: {}, inView: true }));

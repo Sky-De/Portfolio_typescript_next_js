@@ -15,6 +15,7 @@ const About: FC = () => {
   useIsInView({ navName: "About", ref: aboutRef });
   return (
     <motion.section
+      data-testid="about-section"
       ref={aboutRef}
       id="about"
       className="section snap-start snap-always relative"
@@ -35,10 +36,10 @@ const About: FC = () => {
           />
         </motion.div>
         <motion.div
+          data-testid="about-items-con"
           {...fade_In_Veiw_Animation_Props}
           className="about__content w-[350px] lg:w-[600px] h-[700px] max-w-full overflow-scroll my-4 flex flex-col lg:justify-center gap-1"
         >
-          {/* FIX--change this name to AboutITems */}
           <AboutItems />
         </motion.div>
       </div>
