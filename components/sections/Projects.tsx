@@ -31,6 +31,7 @@ const Projects: FC = () => {
   useIsInView({ navName: "Projects", ref: projectsRef });
   return (
     <motion.section
+      data-testid="projects-section"
       ref={projectsRef}
       {...fade_In_Veiw_Animation_Props}
       viewport={{ amount: 0.5 }}
@@ -41,6 +42,7 @@ const Projects: FC = () => {
       {/* ABSOLUTE BTNS */}
       {/* controlls - middle------------ */}
       <button
+        data-testid="preProject-btn"
         aria-label="pre-Project"
         onClick={() => {
           dispatch(setPreProject());
@@ -50,6 +52,7 @@ const Projects: FC = () => {
         <i className="bx bx-chevron-left apply__carousel--btnIcon"></i>
       </button>
       <button
+        data-testid="nextProject-btn"
         aria-label="next-Project"
         onClick={() => {
           dispatch(setNextProject());
@@ -60,10 +63,14 @@ const Projects: FC = () => {
       </button>
       {/* controlls - bottom -----------------------------------*/}
       {projects && (
-        <div className="flex absolute bottom-4 md:bottom-10 flex-col items-center  w-full justify-center gap-2">
+        <div
+          data-testid="controlls-bottom-con"
+          className="flex absolute bottom-4 md:bottom-10 flex-col items-center  w-full justify-center gap-2"
+        >
           <div className="hidden md:flex  w-full justify-center gap-2">
             {projects.map((pro) => (
               <span
+                data-testid="controlls-bottom"
                 onClick={() => dispatch(setActiveProject(pro.id))}
                 title={pro.id + ""}
                 className={`transition-all duration-700 rounded-full cursor-pointer block px-[0.30rem] py-[0.30rem] border border-heading-light dark:border-heading-dark ${
@@ -85,9 +92,9 @@ const Projects: FC = () => {
           )}
         </div>
       )}
-
       {/* Project content------------------------------------------------- */}
       <div
+        data-testid="project-content"
         key={selectedProjectId}
         className="flex flex-col items-center gap-5  w-full  mx-12 py-5"
       >
