@@ -43,6 +43,13 @@ interface MotionHeaderProps extends React.HTMLAttributes<HTMLElement> {
   viewport?: any;
   transition?: any;
 }
+interface MotionHeadingProps extends React.HTMLAttributes<HTMLElement> {
+  variants?: any;
+  initial?: any;
+  whileInView?: any;
+  viewport?: any;
+  transition?: any;
+}
 interface MotionButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   onClick: () => void;
@@ -114,6 +121,15 @@ export const motion = {
     children,
     ...rest
   }: MotionHeaderProps) => <header {...rest}>{children}</header>,
+  h2: ({
+    variants,
+    initial,
+    whileInView,
+    transition,
+    className,
+    children,
+    ...rest
+  }: MotionHeadingProps) => <h2 {...rest}>{children}</h2>,
   section: ({
     variants,
     initial,

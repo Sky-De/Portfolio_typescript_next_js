@@ -8,20 +8,12 @@ describe("Contact section", () => {
     expect(contactSectionElement).toBeInTheDocument();
   });
 
-  test("Contact section must have span for mobile device with text About", () => {
+  test("Contact section must have span for mobile device with text Contact", () => {
     customRender(<Contact />);
     const contactSpanlement = screen.getByText(/contact/i);
     expect(contactSpanlement).toHaveClass("section__title");
     expect(contactSpanlement).toBeInTheDocument();
     expect(contactSpanlement.tagName).toBe("SPAN");
-  });
-
-  test("About section must have span for mobile device with text About", () => {
-    customRender(<Contact />);
-    const contactUllement = screen.getByText(/contact/i);
-    expect(contactUllement).toHaveClass("section__title");
-    expect(contactUllement).toBeInTheDocument();
-    expect(contactUllement.tagName).toBe("SPAN");
   });
 
   test("Image must render and as expected", () => {
