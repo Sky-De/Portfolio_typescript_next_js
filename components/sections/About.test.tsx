@@ -2,7 +2,7 @@ import "framer-motion";
 import { About } from "..";
 import { customRender, screen } from "@/test-utils";
 
-describe("About", () => {
+describe("About section", () => {
   test("About section must render", () => {
     customRender(<About />);
     const aboutSectionElement = screen.getByTestId("about-section");
@@ -12,6 +12,7 @@ describe("About", () => {
   test("About section must have span for mobile device with text About", () => {
     customRender(<About />);
     const aboutSpanlement = screen.getByText(/about/i);
+    expect(aboutSpanlement).toHaveClass("section__title");
     expect(aboutSpanlement).toBeInTheDocument();
   });
 

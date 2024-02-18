@@ -14,6 +14,7 @@ const Contact: FC = () => {
   useIsInView({ navName: "Contact", ref: projectsRef });
   return (
     <motion.section
+      data-testid="contact-section"
       ref={projectsRef}
       {...fade_In_Veiw_Animation_Props}
       id="contact"
