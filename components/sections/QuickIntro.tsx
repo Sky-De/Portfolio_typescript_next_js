@@ -18,6 +18,7 @@ const QuickIntro: FC = () => {
 
   return (
     <motion.section
+      data-testid="quickIntro-section"
       ref={qIntroRef}
       {...long_Fade_In_Veiw_Animation_Props}
       viewport={{ amount: 0.2 }}
@@ -48,6 +49,7 @@ const QuickIntro: FC = () => {
       </div>
       <div className="rounded-lg dark:border pb-3 bg-black">
         <video
+          data-testid="qIntro-video"
           poster="./vidPoster.png"
           className="rounded-lg "
           controlsList="nodownload"
