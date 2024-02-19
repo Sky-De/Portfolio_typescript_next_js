@@ -13,7 +13,6 @@ const Skills: FC = () => {
   const { currentSkill, currentSkillData: skill } = useAppSelector(
     (state) => state.skill
   );
-  const { theme } = useTheme();
   const introRef = useRef<HTMLElement>(null);
   // checks and actives navItems depend on related sections
   useIsInView({ navName: "Skills", ref: introRef });
@@ -104,7 +103,7 @@ const Skills: FC = () => {
           )}
         </div>
       </div>
-      <ScrollDownIcon color={theme === "dark" ? "#fff" : "#000"} />
+      <ScrollDownIcon />
     </motion.section>
   );
 };
