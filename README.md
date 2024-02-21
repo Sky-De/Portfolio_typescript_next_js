@@ -1,6 +1,6 @@
 # Personal Portfolio
 
-<a href="https://skyde-portfolio.netlify.app/" tartget="_blank"><img src="https://github.com/Sky-De/Portfolio_typescript_next_js/assets/79264045/50b621ca-b26c-4dc3-a752-147a80076b2c"></a>
+<a href="https://skyde-portfolio.netlify.app/" target="_blank" ><img src="https://github.com/Sky-De/Portfolio_typescript_next_js/assets/79264045/50b621ca-b26c-4dc3-a752-147a80076b2c"></a>
 
 <img src="https://github.com/Sky-De/Portfolio_typescript_next_js/assets/79264045/d9879c46-7bde-4940-acac-2009f9faea43">
 
