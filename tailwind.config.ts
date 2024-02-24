@@ -86,7 +86,8 @@ const config: Config = {
         moonAnimation: "rotateB 1s ease-in-out",
       },
       screens: {
-        tall: { raw: "(min-height: 900px)" },
+        tall: { raw: "(min-height: 1800px) and (max-width: 1025px)" },
+        widest: { raw: "(min-width: 2550px)" },
       },
     },
   },

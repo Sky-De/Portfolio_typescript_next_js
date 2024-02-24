@@ -1602,8 +1602,10 @@ const BrainOfSkill: FC = () => {
         transition={{ duration: 0.75, delay: 0.25 }}
         className="text-body-light dark:text-body-dark font-bold opacity-75 text-sm"
       >
-        <span className="lg:hidden">Tap</span>
-        <span className="hidden lg:inline-block tracking-wider">Click </span>
+        <span className="lg:hidden italic">Tap on skills</span>
+        <span className="hidden italic lg:inline-block tracking-wider">
+          Click on skills
+        </span>
       </motion.span>
     </>
   );

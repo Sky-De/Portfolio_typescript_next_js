@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactNode } from "react";
 // refactore types - remove and use global type for same types-FIX
 
 interface MotionSpanProps extends React.HTMLAttributes<HTMLElement> {

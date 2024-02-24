@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { useIsInView } from "@/hooks/useIsInVeiw";
-import { FC, useRef } from "react";
+import { FC, forwardRef, useRef } from "react";
 import Image from "next/image";
 import {
   fade_In_Veiw_Animation_Props,
@@ -38,7 +38,7 @@ const About: FC = () => {
         <motion.div
           data-testid="about-items-con"
           {...fade_In_Veiw_Animation_Props}
-          className="about__content w-[350px] lg:w-[600px] h-[700px] max-w-full overflow-scroll my-4 flex flex-col lg:justify-center gap-1"
+          className="about__content w-[350px] lg:w-[600px] h-[700px] max-w-full overflow-scroll my-4 flex flex-col lg:justify-center widest:justify-normal gap-1"
         >
           <AboutItems />
         </motion.div>

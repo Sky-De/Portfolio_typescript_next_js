@@ -56,5 +56,5 @@
   @apply flex w-full flex-wrap justify-center gap-2;
 }
 .apply__learn--item {
-  @apply py-2 px-3 md:py-3 md:px-4 cursor-pointer hover:opacity-60 font-semibold rounded-xl text-heading-dark bg-bg-secondary-dark dark:bg-bg-secondary-light dark:text-heading-light text-sm md:text-base transition-colors;
+  @apply select-none py-2 px-3 md:py-3 md:px-4 hover:opacity-60 font-semibold rounded-xl text-heading-dark bg-bg-secondary-dark dark:bg-bg-secondary-light dark:text-heading-light text-sm md:text-base transition-colors;
 }

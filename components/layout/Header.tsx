@@ -44,6 +44,7 @@ const Header: FC = () => {
             >
               {NavItems.map((item) => (
                 <a
+                  data-testid="desktop-navItem"
                   onClick={navAndCloseHandler}
                   className={`apply__navItem ${
                     currentPath === item.name ? "active" : ""
@@ -62,6 +63,7 @@ const Header: FC = () => {
         <nav className="hidden md:flex sm:items-center sm:ml-auto absolute right-0 bottom-[-6px] apply__nav z-10 drop-shadow-light dark:drop-shadow-dark">
           {NavItems.map((item) => (
             <a
+              data-testid="mobile-navItem"
               className={`apply__navItem ${
                 currentPath === item.name ? "active" : ""
               }`}
