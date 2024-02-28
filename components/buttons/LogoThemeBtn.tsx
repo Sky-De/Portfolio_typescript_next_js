@@ -20,19 +20,15 @@ export const LogoThemeBtn: FC<ThemeBtnProps> = ({ type }) => {
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
       className="logo flex items-center justify-center text-[3rem] px-1 cursor-pointer relative select-none"
     >
-      DE{" "}
-      <span className="inline-flex flex-col text-sm ml-1 font-bold">
-        <span className="translate-y-[-3px] md:translate-y-[1px]">SIGN</span>
-        <span className="translate-y-[1px] md:translate-y-[3px]">VELOP</span>
-        <i
-          data-testid="theme-icon"
-          className={`transition-transform absolute top-2 left-[95%] bx ${
-            theme === "light"
-              ? "animate-sunAnimation bx-sun text-black"
-              : "animate-moonAnimation bxs-moon dark:text-white"
-          }`}
-        ></i>
-      </span>
+      SKY
+      <i
+        data-testid="theme-icon"
+        className={`transition-transform absolute top-2 left-[115%] bx ${
+          theme === "light"
+            ? "animate-sunAnimation bx-sun text-black"
+            : "animate-moonAnimation bxs-moon dark:text-white"
+        }`}
+      ></i>
     </h1>
   );
 };

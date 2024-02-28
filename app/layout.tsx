@@ -2,6 +2,7 @@ import "./globals.css";
 import AppProviders from "@/providers/AppProviders";
 import { Metadata } from "next";
 import LayoutContent from "@/components/layout/LayoutItems";
+import {} from "next/font/google";
 
 // FIX--meaning full metadata
 export const metadata: Metadata = {

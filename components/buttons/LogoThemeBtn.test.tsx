@@ -3,6 +3,9 @@ import { LogoThemeBtn } from "./LogoThemeBtn";
 import { customRender, fireEvent, renderHook, screen } from "@/test-utils";
 import { ThemeProvider, useTheme } from "next-themes";
 
+// logo changed/ add new tests but do not remove this test / just comment them out for the case
+// that we backed to pre design
+
 describe("LogoThemeBtn", () => {
   test("render of H1 element", () => {
     customRender(<LogoThemeBtn type="desktop" />);
