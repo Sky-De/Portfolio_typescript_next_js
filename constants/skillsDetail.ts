@@ -4,7 +4,7 @@ export const skillsDetails: skillsDetailsPops[] = [
   {
     id: "JEST",
     alt: "JEST LOGO SVG",
-    title: "JEST",
+    title: "jest",
     icon: "Jest",
     features: [
       "unit testing",
@@ -25,7 +25,7 @@ export const skillsDetails: skillsDetailsPops[] = [
   {
     id: "HTML",
     alt: "HTML LOGO SVG",
-    title: "HTML",
+    title: "html",
     icon: "Html",
     features: [
       "semantic HTML",
@@ -50,7 +50,7 @@ export const skillsDetails: skillsDetailsPops[] = [
   {
     id: "CSS",
     alt: "CSS LOGO SVG",
-    title: "CSS",
+    title: "css",
     icon: "Css",
     features: [
       "selectors(basic/complex)",
@@ -73,7 +73,7 @@ export const skillsDetails: skillsDetailsPops[] = [
   {
     id: "TS",
     alt: "TS LOGO SVG",
-    title: "TYPESCRIPT",
+    title: "typescript",
     icon: "Typescript",
     features: [
       "static Typing",
@@ -88,7 +88,7 @@ export const skillsDetails: skillsDetailsPops[] = [
   {
     id: "SASS",
     alt: "SASS LOGO SVG",
-    title: "SASS",
+    title: "sass",
     icon: "Sass",
     features: [
       "varibles",
@@ -106,7 +106,7 @@ export const skillsDetails: skillsDetailsPops[] = [
   {
     id: "TAILWIND",
     alt: "TAILWIND LOGO SVG",
-    title: "TAILWIND",
+    title: "tailwind",
     icon: "Tailwind",
     features: [
       "utility first",
@@ -127,7 +127,7 @@ export const skillsDetails: skillsDetailsPops[] = [
   {
     id: "MUI",
     alt: "MATERIAL LOGO SVG",
-    title: "MATERIAL UI",
+    title: "material ui",
     icon: "Mui",
     features: [
       "MUI fundamentals",
@@ -143,7 +143,7 @@ export const skillsDetails: skillsDetailsPops[] = [
   {
     id: "JS",
     alt: "JAVASCRIPT LOGO SVG",
-    title: "JAVASCRIPT",
+    title: "javascript",
     icon: "Js",
     features: [
       "varibles & primitives",
@@ -168,7 +168,7 @@ export const skillsDetails: skillsDetailsPops[] = [
   {
     id: "WEBPACK",
     alt: "WEBPACK LOGO SVG",
-    title: "WEBPACK",
+    title: "webpack",
     icon: "Webpack",
     features: [
       "configs for bundling",
@@ -185,7 +185,7 @@ export const skillsDetails: skillsDetailsPops[] = [
   {
     id: "REACT",
     alt: "REACT JS LOGO SVG",
-    title: "REACT JS",
+    title: "react js",
     icon: "React",
     features: [
       "fundamentals",
@@ -211,7 +211,7 @@ export const skillsDetails: skillsDetailsPops[] = [
   {
     id: "REDUX",
     alt: "REDUX LOGO SVG",
-    title: "REDUX",
+    title: "redux",
     icon: "Redux",
     features: [
       "fundamentals",
@@ -230,7 +230,7 @@ export const skillsDetails: skillsDetailsPops[] = [
   {
     id: "NODE",
     alt: "NODE JS LOGO SVG",
-    title: "NODE JS",
+    title: "node js",
     icon: "Node",
     features: [
       "basic familarity",
@@ -244,7 +244,7 @@ export const skillsDetails: skillsDetailsPops[] = [
   {
     id: "EXPRESS",
     alt: "EXPRESS JS LOGO SVG",
-    title: "EXPRESS JS",
+    title: "express js",
     icon: "Express",
     features: [
       "faster server side development",
@@ -258,7 +258,7 @@ export const skillsDetails: skillsDetailsPops[] = [
   {
     id: "MONGODB",
     alt: "MONGO DB LOGO SVG",
-    title: "MONGO DB",
+    title: "mongoDB",
     icon: "Mongodb",
     features: [
       "fundamentals",
@@ -274,7 +274,7 @@ export const skillsDetails: skillsDetailsPops[] = [
   {
     id: "NEXT",
     alt: "NEXT JS LOGO SVG",
-    title: "NEXT JS",
+    title: "next js",
     icon: "Next",
     features: [
       "Server-side rendering (SSR)",
@@ -290,7 +290,7 @@ export const skillsDetails: skillsDetailsPops[] = [
   {
     id: "GIT",
     alt: "GIT LOGO SVG",
-    title: "GIT",
+    title: "git",
     icon: "Git",
     features: [
       "version control",
@@ -305,7 +305,7 @@ export const skillsDetails: skillsDetailsPops[] = [
   {
     id: "XD",
     alt: "ADOBE XD LOGO SVG",
-    title: "ADOBE XD",
+    title: "adobe XD",
     icon: "Xd",
     features: [
       "fundamentals",
@@ -318,7 +318,7 @@ export const skillsDetails: skillsDetailsPops[] = [
   {
     id: "AI",
     alt: "ADOBE ILLUSTRATOR LOGO SVG",
-    title: "A-ILLUSTRATOR",
+    title: "a-illustrator",
     icon: "Ai",
     features: [
       "basic familarity",
@@ -329,7 +329,7 @@ export const skillsDetails: skillsDetailsPops[] = [
   {
     id: "AE",
     alt: "ADOBE AFTER EFFECT LOGO SVG",
-    title: "A-AFTER EFFECT",
+    title: "a-aftrer effects",
     icon: "Ae",
     features: [
       "fundamentals",

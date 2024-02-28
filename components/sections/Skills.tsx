@@ -7,7 +7,6 @@ import { useAppSelector } from "@/hooks/reduxHooks";
 import CallToActionBtn from "../buttons/CallToActionBtn";
 import BrainOfSkills from "../skillsHero/BrainOfSkills";
 import ScrollDownIcon from "../ScrollDownIcon/ScrollDownIcon";
-import { useTheme } from "next-themes";
 
 const Skills: FC = () => {
   const { currentSkill, currentSkillData: skill } = useAppSelector(
@@ -75,7 +74,7 @@ const Skills: FC = () => {
                 whileInView="show"
                 // exit="hide"
                 transition={{ duration: 0.5, delay: 0.25 }}
-                className="text-3xl md:text-4xl font-bold text-center lg:text-start"
+                className="text-3xl md:text-4xl font-bold text-center lg:text-start capitalize"
               >
                 {skill.title}
               </motion.h2>
@@ -94,7 +93,7 @@ const Skills: FC = () => {
                 className=" flex flex-col flex-wrap list-disc px-6 h-full overflow-scroll gap-6 md:gap-2 md:py-4 mt-4 md:mt-0"
               >
                 {skill.features.map((item, index) => (
-                  <li className="" key={uuid()}>
+                  <li className="capitalize" key={uuid()}>
                     {item}
                   </li>
                 ))}

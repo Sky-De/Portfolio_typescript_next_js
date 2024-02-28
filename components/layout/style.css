@@ -49,9 +49,9 @@
   font-family: "Roboto", sans-serif;
   @apply capitalize dark:text-heading-dark text-heading-light h-[45px] px-6 flex justify-center items-center;
 }
-.apply__navItem:hover {
+/* .apply__navItem:hover {
   animation: wiggleOne 0.5s;
-}
+} */
 .apply__nav {
   /* box-shadow: 0px 0px 3px 3px rgb(207, 207, 207); */
   @apply bg-bg-primary-light dark:bg-bg-primary-dark;
