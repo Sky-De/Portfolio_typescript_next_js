@@ -37,6 +37,7 @@ export const slide_Left_Animation_Props = {
   // viewport: { amount: 0.3 },
   transition: { duration: 0.5, delay: 0.5 },
 };
+
 export const slide_Right_Animation_Props = {
   variants: {
     hide: { opacity: 0, x: -100 },
@@ -65,7 +66,7 @@ export const fade_In_Veiw_Animation_Props = {
   },
   initial: "hide",
   whileInView: "show",
-  transition: { duration: 0.75, delay: 0.5 },
+  transition: { duration: 0.75, delay: 0.3 },
 };
 
 export const long_Fade_In_Veiw_Animation_Props = {
