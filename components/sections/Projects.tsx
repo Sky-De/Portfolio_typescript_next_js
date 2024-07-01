@@ -65,7 +65,7 @@ const Projects: FC = () => {
       {projects && (
         <div
           data-testid="controlls-bottom-con"
-          className="flex absolute bottom-4 md:bottom-10 flex-col items-center  w-full justify-center gap-2"
+          className="flex absolute bottom-4 md:bottom-10 flex-col items-center w-fit left-[50%] translate-x-[-50%] justify-center gap-2 border"
         >
           <div className="hidden md:flex  w-full justify-center gap-2">
             {projects.map((pro) => (

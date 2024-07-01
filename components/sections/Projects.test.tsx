@@ -48,7 +48,7 @@ describe("Project section", () => {
     const divElement = screen.getByTestId("controlls-bottom-con");
     expect(divElement).toBeInTheDocument();
     expect(divElement).toHaveClass(
-      "flex absolute bottom-4 md:bottom-10 flex-col items-center  w-full justify-center gap-2"
+      "flex absolute bottom-4 md:bottom-10 flex-col items-center w-fit left-[50%] translate-x-[-50%] justify-center gap-2"
     );
   });
 
