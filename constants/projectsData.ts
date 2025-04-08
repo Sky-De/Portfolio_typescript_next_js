@@ -139,6 +139,32 @@ export const projectsData: ProjectState[] = [
   },
   {
     id: 4,
+    title: "3D iPhone15",
+    description:
+      "Fully responsive apple iphone 15 webpage that contais 3D model and smooth animation with moder UI, based on JSM project but enhanced by TS, SOLID principles and tested with JEST and Vitest. Take a look!",
+    features: [
+      "Fully Responsive",
+      "3D model",
+      "Stunning design",
+      "GSAP animations",
+      "Video animatin",
+      "Stunning UX",
+    ],
+    images: {
+      mobileCoverUrl:
+        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1719836488/portfolio/projects-images/3D-iPhone/wzs6lwwlhkf8upsv3ttv.png",
+      tableCoverUrl:
+        "https://res.cloudinary.com/dxukz1zt5/image/upload/v1719836488/portfolio/projects-images/3D-iPhone/wds9wkquorptciw5wjgc.png",
+      laptopCoverUrl:
+        " https://res.cloudinary.com/dxukz1zt5/image/upload/v1719836489/portfolio/projects-images/3D-iPhone/dmhzuiz7pvvmlezcdz1g.png",
+    },
+    techIcons: [TsIcon, ReactIcon, TailwindIcon, CssIcon, GitIcon, JestIcon],
+    otherTechs: ["vite", "GSAP", "THREE.JS", "vitest"],
+    repoUrl: "https://github.com/Sky-De/3D_apple_react_ts",
+    liveUrl: "https://skyde-3d-iphone15.netlify.app/",
+  },
+  {
+    id: 5,
     title: "Todo App",
     description:
       "Try my unique task management tool! My TypeScript-built PWA makes organizing work and personal tasks easy and user-friendly.",
@@ -170,7 +196,7 @@ export const projectsData: ProjectState[] = [
     liveUrl: "https://typescript-todo-skyde.netlify.app/",
   },
   {
-    id: 5,
+    id: 6,
     title: "Admin Dashboard",
     description:
       "This is a stylish UI admin dashboard featuring MUI and Nivo charts, with multiple tabs to manage data and users.",
@@ -203,7 +229,7 @@ export const projectsData: ProjectState[] = [
     liveUrl: "https://react-admin-dashboar-skyde.netlify.app",
   },
   {
-    id: 6,
+    id: 7,
     title: "Music App",
     description:
       "Experience the best of music with ease on my free online music app. Discover the latest top tracks and singers with lyrics that will keep you captivated. Start your journey to musical bliss today!",
@@ -235,7 +261,7 @@ export const projectsData: ProjectState[] = [
     liveUrl: "https://music-app-skyde.netlify.app/",
   },
   {
-    id: 7,
+    id: 8,
     title: "YouTube Clone",
     description:
       "My platform is a user-friendly clone of YouTube that lets you easily search for and watch your favorite videos.",
@@ -262,7 +288,7 @@ export const projectsData: ProjectState[] = [
     liveUrl: "https://youtube-clone-app-skyde.netlify.app/",
   },
   {
-    id: 8,
+    id: 9,
     title: "Free Gym Coach",
     description:
       "This app uses cutting-edge technology to provide you with clear and concise exercise guidance. With detailed illustrations, GIFs, and YouTube videos, you can be sure you're doing your workouts correctly.",
@@ -289,7 +315,7 @@ export const projectsData: ProjectState[] = [
     liveUrl: "https://free-coach-skyde.netlify.app",
   },
   {
-    id: 9,
+    id: 10,
     title: "Infinit Anime App",
     description:
       "This platform offers lightning-fast anime exploration with unmatched quality, powered by TypeScript and Next.js server actions.",
@@ -313,7 +339,7 @@ export const projectsData: ProjectState[] = [
     liveUrl: "https://next-js-server-action.vercel.app/",
   },
   {
-    id: 10,
+    id: 11,
     title: "AI_Share App",
     description:
       "This Next.js TypeScript app lets you perform CRUD operations, search for AI technology, and share your favorite AI with others..",
@@ -345,7 +371,7 @@ export const projectsData: ProjectState[] = [
     liveUrl: "https://ai-share-sky-de.netlify.app",
   },
   {
-    id: 11,
+    id: 12,
     title: "Shoping Cart",
     description:
       "Simple store app offers a seamless shopping experience with a built-in cart that persists across pages. You can relax and enjoy stress-free shopping with our app!",
@@ -373,7 +399,7 @@ export const projectsData: ProjectState[] = [
     liveUrl: "https://shopping-cart-typescript-skyde.netlify.app/",
   },
   {
-    id: 12,
+    id: 13,
     title: "Fylo_LP (old)",
     description:
       "I created a highly appealing landing page design that was based on a challenging assignment from Frontend Mentor. This project is one of my oldest and was developed entirely using HTML and SCSS.",
@@ -392,7 +418,7 @@ export const projectsData: ProjectState[] = [
     liveUrl: "https://github.com/Sky-De/Fylo-landing-page",
   },
   {
-    id: 13,
+    id: 14,
     title: "Tip_calculator (old)",
     description:
       "I have developed a tip calculator that is based on Frontend Mentor challenges. It is a vanilla HTML, SCSS, and JS app, and happens to be one of my oldest projects.",
@@ -411,7 +437,7 @@ export const projectsData: ProjectState[] = [
     liveUrl: "https://tip-calculator-app-sky-de.netlify.app/",
   },
   {
-    id: 14,
+    id: 15,
     title: "Easybank_LP (old)",
     description:
       "I created this landing page as one of my earliest projects, featuring an attention-grabbing design inspired by a Frontend Mentor project.",
@@ -430,7 +456,7 @@ export const projectsData: ProjectState[] = [
     liveUrl: "https://easybank-landing-pagerespinsive.netlify.app/",
   },
   {
-    id: 15,
+    id: 16,
     title: "Landing Page",
     description:
       "This landing page is a perfect blend of aesthetics and functionality, crafted with the best UI design using Tailwind CSS. You can deploy it right away and make a lasting impression on your audience.",
@@ -449,7 +475,7 @@ export const projectsData: ProjectState[] = [
     liveUrl: "https://tailwind-landingpage-skyde.netlify.app/",
   },
   {
-    id: 16,
+    id: 17,
     title: "Tailwind App",
     description:
       "This landing page is a perfect blend of aesthetics and functionality, crafted with the best UI design using Tailwind CSS. You can deploy it right away and make a lasting impression on your audience.",

@@ -109,3 +109,7 @@ i.bx.wideOnly {
 .stepper div.activeStep p {
   background: var(--color);
 }
+/* --------------------------------------- */
+.input-content input,textarea{
+  border: 1px solid 
+}
