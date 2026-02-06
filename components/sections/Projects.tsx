@@ -169,14 +169,14 @@ const Projects: FC = () => {
             Features{" "}
           </button>
 
-          <Link
-            href={selectedProject ? selectedProject.liveUrl : ""}
+         {selectedProject?.liveUrl && ( <Link
+            href={selectedProject.liveUrl}
             target="_blank"
             className="flex items-center opacity-100 md:hover:opacity-70 gap-2 transition-opacity"
           >
             <i className="bx bxl-netlify apply__footer--item"></i>
             Live Demo
-          </Link>
+          </Link>)}
           <Link
             href={selectedProject ? selectedProject.repoUrl : ""}
             target="_blank"

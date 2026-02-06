@@ -161,7 +161,7 @@ export const projectsData: ProjectState[] = [
     techIcons: [TsIcon, ReactIcon, TailwindIcon, CssIcon, GitIcon, JestIcon],
     otherTechs: ["vite", "GSAP", "THREE.JS", "vitest"],
     repoUrl: "https://github.com/Sky-De/3D_apple_react_ts",
-    liveUrl: "https://skyde-3d-iphone15.netlify.app/",
+    liveUrl: "",
   },
   {
     id: 5,
